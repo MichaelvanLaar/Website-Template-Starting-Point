@@ -1,192 +1,236 @@
-﻿<!doctype html>  
+﻿<!doctype html>
 
-<!--[if lt IE 7 ]> <html lang="de" class="no-js ie6"> <![endif]-->
-<!--[if IE 7 ]>    <html lang="de" class="no-js ie7"> <![endif]-->
-<!--[if IE 8 ]>    <html lang="de" class="no-js ie8"> <![endif]-->
-<!--[if IE 9 ]>    <html lang="de" class="no-js ie9"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!--> <html lang="de" class="no-js"> <!--<![endif]-->
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="de"> <!--<![endif]-->
 
 <head>
 
-  <meta charset="utf-8" />
+	<meta charset="utf-8">
 
-  <title>Basic Template</title>
-  <meta name="description" content="" />
-  <meta name="keywords" content="" />
-  <meta name="author" content="" />
-  
-  <!-- Created by Michael van Laar - http://www.michael-van-laar.de -->
+	<title>Basic Template</title>
+	<meta name="description" content="">
+	<meta name="keywords" content="" />
+	<meta name="author" content="">
 
-  <meta name="robots" content="index, follow, noodp" />
-  <!--[if IE]><meta http-equiv="imagetoolbar" content="false" /><![endif]-->
-  
-  <link rel="shortcut icon" href="/favicon.ico" />
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+	<!-- Created by Michael van Laar - http://www.michael-van-laar.de -->
 
-  <script src="js/libs/modernizr-1.7-and-webfontloadenhancer-1.2.min.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-  <link rel="stylesheet" href="css/style.css?v=2" />
+	<script src="js/libs/webfontloadenhancer-1.2.min.js"></script>
+	<link rel="stylesheet" href="css/style.css">
+
+	<!-- Superfish dropdown menu
+	     If you don’t need Superfish you can remove the following stylesheet and the script initialisiation in “js/script.js”. -->
+	<link rel="stylesheet" href="css/superfish-and-accordion.css">
+	<!-- Depending on the Superfish style you need to load “css/superfish-navbar.css” or “css/superfish-vertical.css”
+	     in addition to “superfish-and-accordion.css”.
+	     TO DO: Change the media queries in all superfish css files as well as in the script initialisiation (in “js/script.js”)
+		        according to your layout. -->
+
+	<!-- Facebook Open Graph Data -->
+	<meta property="og:title" content="" />
+	<meta property="og:description" content="" />
+	<meta property="og:image" content="" />
+	
+	<link rel="canonical" href="" />
+
+	<link rel="alternate" type="application/rss+xml" title="RSS" href="" />
+
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-touch-icon-114x114-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="apple-touch-icon-72x72-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png">
+	
+	<script src="js/libs/modernizr-2.0.6.min.js"></script>
 
 </head>
 
 <body>
 
-  <!--[if lt IE 9 ]>
-    <noscript>
-	  <div id="ie-js-warning-shader"></div>
-      <iframe src="ie-js-warning.html" id="ie-js-warning" marginheight="0" marginwidth="0" frameborder="0"></iframe>
-	</noscript>
-  <![endif]-->
+	<!--[if lt IE 9 ]>
+		<noscript>
+			<div id="ie-js-warning-shader"></div>
+			<iframe src="ie-js-warning.html" id="ie-js-warning" marginheight="0" marginwidth="0" frameborder="0"></iframe>
+		</noscript>
+	<![endif]-->
 
-  <ul id="skiplinks">
-    <li><a href="#main-navigation">Direkt zur Navigation springen (Enter drücken)</a></li>
-    <li><a href="#main">Direkt zum Hauptinhalt springen (Enter drücken)</a></li>
-  </ul> <!-- end of #skiplinks -->
+	<ul id="skiplinks">
+		<li><a href="#main-navigation">Direkt zur Navigation springen (Enter drücken)</a></li>
+		<li><a href="#main">Direkt zum Hauptinhalt springen (Enter drücken)</a></li>
+	</ul> <!-- end of #skiplinks -->
 
-  <div id="root">
-  
-    <header id="page-header" role="banner">
-      <h1>(H1) Lorem ipsum dolor sit amet</h1>
-	  <nav id="main-navigation">
-	    <ul>
-          <li class="active parent"><a href="#" title="">Active</a>
-            <ul>
-              <li class="active"><a href="#" title="">Active</a></li>
-              <li class="parent"><a href="#" title="">Lorem</a>
-                <ul>
-                  <li><a href="#" title="">Lorem</a></li>
-                  <li><a href="#" title="">Ipsum</a></li>
-                  <li class="last"><a href="#" title="">Dolor</a></li>
-                </ul>
-              </li>
-              <li class="active parent"><a href="#" title="">Active</a>
-                <ul>
-                  <li><a href="#" title="">Lorem</a></li>
-                  <li><a href="#" title="">Ipsum</a></li>
-                  <li class="last active"><a href="#" title="">Active</a></li>
-                </ul>
-              </li>
-              <li class="last active parent"><a href="#" title="">Active</a>
-                <ul>
-                  <li><a href="#" title="">Lorem</a></li>
-                  <li><a href="#" title="">Ipsum</a></li>
-                  <li class="last"><a href="#">Dolor</a></li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-          <li class="parent"><a href="#" title="">Lorem</a>
-            <ul>
-              <li><a href="#" title="">Lorem</a></li>
-              <li class="parent"><a href="#" title="">Lorem</a>
-                <ul>
-                  <li><a href="#" title="">Lorem</a></li>
-                  <li><a href="#" title="">Ipsum</a></li>
-                  <li class="last"><a href="#" title="">Dolor</a></li>
-                </ul>
-              </li>
-              <li class="parent"><a href="#" title="">Dolor</a>
-                <ul>
-                  <li><a href="#" title="">Lorem</a></li>
-                  <li class="parent"><a href="#" title="">Ipsum</a></li>
-                  <li class="last"><a href="#" title="">Dolor</a></li>
-                </ul>
-              </li>
-              <li class="last"><a href="#" title="">Sit amet</a></li>
-            </ul>
-          </li>
-          <li><a href="#" title="">Dolor</a></li>
-          <li><a href="#" title="">Sit amet</a></li>
-          <li class="last parent"><a href="#" title="">Consectetuer</a>
-            <ul>
-              <li><a href="#" title="">Lorem</a></li>
-              <li class="parent"><a href="#" title="">Lorem</a>
-                <ul>
-                  <li><a href="#" title="">Lorem</a></li>
-                  <li><a href="#" title="">Ipsum</a></li>
-                  <li class="last"><a href="#" title="">Dolor</a></li>
-                </ul>
-              </li>
-              <li class="parent"><a href="#" title="">Dolor</a>
-                <ul>
-                  <li><a href="#" title="">Lorem</a></li>
-                  <li class="parent"><a href="#" title="">Ipsum</a></li>
-                  <li class="last"><a href="#" title="">Dolor</a></li>
-                </ul>
-              </li>
-              <li class="last"><a href="#" title="">Sit amet</a></li>
-            </ul>
-          </li>
-		</ul>
-	  </nav> <!-- end of #main-navigation -->
-    </header> <!-- end of #page-header -->
+	<div id="root">
+
+		<header id="page-header" role="banner" class="clearfix">
+			<h1>(H1) Lorem ipsum dolor sit amet</h1>
+			<nav id="main-navigation" class="clearfix">
+				<ul class="sf-menu ac-menu noaccordion">
+					<li class="current">
+						<a href="#a">menu item</a>
+						<ul class="acitem noaccordion">
+							<li>
+								<a href="#aa">menu item that is quite long</a>
+							</li>
+							<li class="current">
+								<a href="#ab">menu item</a>
+								<ul class="acitem">
+									<li class="current"><a href="#">menu item</a></li>
+									<li><a href="#aba">menu item</a></li>
+									<li><a href="#abb">menu item</a></li>
+									<li><a href="#abc">menu item</a></li>
+									<li><a href="#abd">menu item</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">menu item</a>
+								<ul class="acitem">
+									<li><a href="#">menu item</a></li>
+									<li><a href="#">menu item</a></li>
+									<li><a href="#">menu item</a></li>
+									<li><a href="#">menu item</a></li>
+									<li><a href="#">menu item</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">menu item</a>
+								<ul class="acitem">
+									<li><a href="#">menu item</a></li>
+									<li><a href="#">menu item</a></li>
+									<li><a href="#">menu item</a></li>
+									<li><a href="#">menu item</a></li>
+									<li><a href="#">menu item</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">menu item</a>
+					</li>
+					<li>
+						<a href="#">menu item</a>
+						<ul class="acitem">
+							<li>
+								<a href="#">menu item</a>
+								<ul class="acitem">
+									<li><a href="#">short</a></li>
+									<li><a href="#">short</a></li>
+									<li><a href="#">short</a></li>
+									<li><a href="#">short</a></li>
+									<li><a href="#">short</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">menu item</a>
+								<ul class="acitem">
+									<li><a href="#">menu item</a></li>
+									<li><a href="#">menu item</a></li>
+									<li><a href="#">menu item</a></li>
+									<li><a href="#">menu item</a></li>
+									<li><a href="#">menu item</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">menu item</a>
+								<ul class="acitem">
+									<li><a href="#">menu item</a></li>
+									<li><a href="#">menu item</a></li>
+									<li><a href="#">menu item</a></li>
+									<li><a href="#">menu item</a></li>
+									<li><a href="#">menu item</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">menu item</a>
+								<ul class="acitem">
+									<li><a href="#">menu item</a></li>
+									<li><a href="#">menu item</a></li>
+									<li><a href="#">menu item</a></li>
+									<li><a href="#">menu item</a></li>
+									<li><a href="#">menu item</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">menu item</a>
+								<ul class="acitem">
+									<li><a href="#">menu item</a></li>
+									<li><a href="#">menu item</a></li>
+									<li><a href="#">menu item</a></li>
+									<li><a href="#">menu item</a></li>
+									<li><a href="#">menu item</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">menu item</a>
+					</li>	
+				</ul>
+			</nav> <!-- end of #main-navigation -->
+		</header> <!-- end of #page-header -->
+
+		<div id="main" role="main" class="clearfix">
+			<h2>(H2) Lorem ipsum dolor sit amet</h2>
+			<p><a href="http://www.heise.de">Lorem ipsum dolor sit amet, consectetuer adipiscing</a> elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+			<p><img src="images/goethe.jpg" /></p>
+			<h3>(H3) Lorem ipsum dolor sit amet</h3>
+			<blockquote cite="">
+				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+			</blockquote>
+			<p><a href="http://www.google.de"><img src="apple-touch-icon.png" /></a></p>
+			<ul>
+				<li>Lorem ipsum dolor sit amet</li>
+				<li>consectetuer adipiscing elit</li>
+				<li>sed diam nonummy</li>
+				<li>nibh euismod tincidunt ut laoreet dolore</li>
+			</ul>
+			<h4>(H4) Lorem ipsum dolor sit amet</h4>
+			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+			<ol>
+				<li>Lorem ipsum dolor sit amet</li>
+				<li>consectetuer adipiscing elit</li>
+				<li>sed diam nonummy</li>
+			</ol>
+		</div> <!-- end of #main -->
     
-    <div id="main" role="main">
-	  <h2>(H2) Lorem ipsum dolor sit amet</h2>
-	  <p><a href="http://www.heise.de">Lorem ipsum dolor sit amet, consectetuer adipiscing</a> elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
-      <h3>(H3) Lorem ipsum dolor sit amet</h3>
-	  <blockquote cite="">
-	    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
-	  </blockquote>
-	  <p><a href="http://www.google.de"><img src="apple-touch-icon.png" width="57" height="57" /></a></p>
-	  <ul>
-        <li>Lorem ipsum dolor sit amet</li>
-        <li>consectetuer adipiscing elit</li>
-        <li>sed diam nonummy</li>
-        <li>nibh euismod tincidunt ut laoreet dolore</li>
-      </ul>
-	  <h4>(H4) Lorem ipsum dolor sit amet</h4>
-	  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
-	  <ol>
-        <li>Lorem ipsum dolor sit amet</li>
-        <li>consectetuer adipiscing elit</li>
-        <li>sed diam nonummy</li>
-	  </ol>
-    </div> <!-- end of #main -->
-    
-	<aside id="sidebar">
-	  <h2>(H2) Lorem ipsum dolor sit amet</h2>
-	  <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
-	  <h3>(H3) Lorem ipsum dolor sit amet</h3>
-	  <p>Lorem ipsum dolor sit amet, adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet.</p>
-	  <p><a href="test.pdf" class="iconize">consectetuer sdf sdf sdf asd asdf asdf asd asdf asdfsdfasdf</a> <a href="test.doc" class="iconize">consectetuer sdf sdf sdf asd asdf asdf asd asdf asdfsdfasdf</a></p>
-	  <h4>(H4) Lorem ipsum dolor sit amet</h4>
-	  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-	</aside> <!-- end of #sidebar -->
+		<aside id="sidebar" class="clearfix">
+			<h2>(H2) Lorem ipsum dolor sit amet</h2>
+			<p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+			<h3>(H3) Lorem ipsum dolor sit amet</h3>
+			<p>Lorem ipsum dolor sit amet, adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet.</p>
+			<p><a href="test.pdf" class="iconize">consectetuer sdf sdf sdf asd asdf asdf asd asdf asdfsdfasdf</a> <a href="test.doc" class="iconize">consectetuer sdf sdf sdf asd asdf asdf asd asdf asdfsdfasdf</a></p>
+			<h4>(H4) Lorem ipsum dolor sit amet</h4>
+			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+		</aside> <!-- end of #sidebar -->
 	
-    <footer id="page-footer">
-	  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
-    </footer> <!-- end of #page-footer -->
-	
-  </div> <!-- end of #root -->
+		<footer id="page-footer" class="clearfix">
+			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+		</footer> <!-- end of #page-footer -->
 
-  
-  <!-- JavaScript  JavaScript  JavaScript  JavaScript  JavaScript  JavaScript -->
-  
-  <!-- Grab Google CDN's jQuery. fall back to local if necessary -->
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
-  <script>!window.jQuery && document.write(unescape('%3Cscript src="js/libs/jquery-1.6.1.min.js"%3E%3C/script%3E'))</script>
-  
-  <script src="js/plugins.js"></script>
-  <script src="js/script.js"></script>
-  
-  <!-- TO DO: If you change the ID of the navigation or the class names of parent elements, don't forget to adjust the ID call in suckerfish-navigation-for-ie6-ie7.min.jquery.js, too. -->
-  <!--[if lt IE 8 ]>
-    <script type="text/javascript"  src="js/libs/suckerfish-navigation-for-ie6-ie7.min.jquery.js"></script>
-  <![endif]-->
+	</div> <!--! end of #root -->
 
-  <!-- asynchronous google analytics: mathiasbynens.be/notes/async-analytics-snippet 
-       change the UA-XXXXX-X to be your site's ID -->
-  <!--<script>
-   var _gaq = [['_setAccount', 'UA-XXXXX-X'], ['_trackPageview']];
-   (function(d, t) {
-    var g = d.createElement(t),
-        s = d.getElementsByTagName(t)[0];
-    g.async = true;
-    g.src = ('https:' == location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    s.parentNode.insertBefore(g, s);
-   })(document, 'script');
-  </script>-->
+
+
+	<!-- JavaScript at the bottom for fast page loading -->
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="js/libs/jquery-1.6.2.min.js"><\/script>')</script>
+
+	<script defer src="js/plugins.js"></script>
+	<script defer src="js/script.js"></script>
+
+	<!-- TO DO: Change UA-XXXXX-X to be your site’s ID -->
+	<script>
+		window._gaq = [['_setAccount','UAXXXXXXXX1'],['_gat._anonymizeIp'],['_trackPageview'],['_trackPageLoadTime']];
+		Modernizr.load({
+			load: ('https:' == location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js'
+		});
+	</script>
+
+	<!--[if lt IE 7 ]>
+		<script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+		<script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+	<![endif]-->
   
 </body>
 </html>
