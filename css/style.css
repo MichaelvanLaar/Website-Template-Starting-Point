@@ -398,6 +398,39 @@ ul li *, ol li * {
 	margin-top: 0;
 }
 
+ul ul,
+ol ol,
+ul ol,
+ol ul {
+	margin-bottom: 0;
+	margin-top: 0;
+}
+
+blockquote {
+	margin: 1.5384615384615384615384615384615em 40px; /* 20px / 13px */
+	font-style: italic;
+}
+
+blockquote p {
+	font-style: italic;
+}
+
+cite {
+	font-style: normal;
+}
+
+pre, code, code var {
+	font-family: "Lucida Console", "Courier New", Courier, monospace;
+}
+
+abbr {
+	cursor: help;
+}
+
+del {
+	text-decoration: line-through;
+}
+
 h1 {
 	font-size: 1.6923076923076923076923076923077em; /* 22px / 13px */
 	line-height: 0.90909090909090909090909090909091; /* 20px / 22px */
@@ -430,7 +463,10 @@ h4 {
    4.4  Embedded content
    ========================================================================== */
 
-img, embed, object, video {	max-width: 100%; }
+img, embed, object, video {
+	max-width: 100%;
+	height: auto;
+}
 
 
 /* =============================================================================
