@@ -9,10 +9,12 @@ jQuery Plugins
 
 1. Skiplink Focus Fix
 2. Printed Footer Links 
-3. hoverIntent
-4. Superfish
-5. Supersubs (flexible widths for Superfish menu)
-6. Simple JQuery Accordion Plugin
+3. Enhanced jQuery Placeholder plugin (polyfill)
+4. Sisyphus (autosave form input)
+5. hoverIntent
+6. Superfish
+7. Supersubs (flexible widths for Superfish menu)
+8. Simple JQuery Accordion Plugin
 
 */
 
@@ -93,7 +95,538 @@ jQuery Plugins
 
 
 	/* =============================================================================
-	   3.  hoverIntent - jQuery Plugin
+	   3.  Enhanced jQuery Placeholder plugin (polyfill) - jQuery Plugin
+	       https://github.com/dciccale/placeholder-enhanced
+	   ========================================================================== */
+	
+	$.fn.placeholderEnhanced = function() {
+	
+		// don't act on absent elements
+		if(!this.length) return;
+		
+		var // placeholder css class (if you change the class name, be sure to change the c below to "placeholder")
+			c = "placeholder",
+			// if browser supports placeholder attribute, use native events to show/hide placeholder
+			hasNativeSupport = c in document.createElement("input");
+			
+			
+			// extra check for Opera: Opera 11 supports placeholder only for input, and you cannot style it yet, even with a class you can't.
+			// http://my.opera.com/ODIN/blog/2010/12/17/new-html5-features-in-opera-11
+			// http://dev.opera.com/forums/topic/841252?t=1296553904&page=1#comment8072202
+			// this is fixed for version 11.50
+			if($.browser.opera && $.browser.version < '11.50') hasNativeSupport = false;
+			
+		// ensure not sending placeholder value when placeholder is not supported
+		if (!hasNativeSupport) {
+			$('form').submit(function() {
+				// form
+				var $this = $(this);
+				
+				// empty input value if is the same as the placeholder attribute
+				$this.find('input[placeholder], textarea[placeholder]').each(function () {
+					var e = $(this);
+					if (e.attr('value') === e.attr('placeholder')) {
+						e.val('');
+					}
+				});
+			});
+		}
+
+		return this.each(function () {
+
+			var e = $(this), d = e.attr("placeholder"), ispassword = e.attr('type') === "password";
+
+			// on focus
+			var placeholderOnFocus = function () {
+				if(e.hasClass(c)) {
+					if(!hasNativeSupport) {
+						e.val('');
+					}
+					e.removeClass(c);
+				}
+			};
+
+			// on blur
+			var placeholderOnBlur = function (event) {
+				// if there is no initial value
+				// or initial value is equal to placeholder, init the placeholder
+				if(!e.val() || e.val() === d) {
+					if(!hasNativeSupport) {
+						if(!ispassword) {
+							e.addClass(c).val(d);
+						}
+						else {
+							showInput(fakePassw);
+							hideInput(e);
+						}
+					}
+					else {
+						e.addClass(c)
+					}
+				}
+			};
+
+			// hides password input
+			var hideInput = function(e) {
+				e.css({position: 'absolute', left: '-9999em'});
+			};
+
+			// shows dummy text input
+			var showInput = function(e) {
+				return e.removeAttr('style');
+			};
+
+			// placeholder for text and textarea
+			if(!ispassword || hasNativeSupport) {
+				e.bind('focus.placeholder', placeholderOnFocus);
+			}
+
+			// placeholder for password
+			else {
+				// get class from the original input if any (to keep any styling)
+				var inputCssClass = (e[0].className) ? ' ' + e[0].className : '',
+				// get size attr also
+						size = (e[0].size) ? 'size=' + e[0].size : '';
+			
+				// create input with tabindex="-1" to skip tabbing
+				var fakePassw = $('<input type="text" class="' + c + inputCssClass + '" value="' + d + '"' + size + ' tabindex="-1" />');
+				
+				// trigger password focus when focus is on text input
+				fakePassw.bind('focus.placeholder', function() {
+					e.trigger('focus.placeholder');
+				});
+				
+				// insert the text input
+				e.before(fakePassw)
+				// focus event to show the real password input
+				.bind('focus.placeholder', function() {
+					showInput(e);
+					hideInput(fakePassw);
+				});
+			}
+			
+			// bind blur event and trigger on load
+			e.bind('blur.placeholder', placeholderOnBlur)
+			.trigger('blur.placeholder');
+		
+		});
+	};
+	
+	// auto-initialize the plugin
+	$(function () {
+		$('input[placeholder], textarea[placeholder]').placeholderEnhanced();
+    });
+	
+	// if placeholder is not supported, the jQuery val function returns the placeholder
+	// redefine the val function to fix this
+	var hasNativeSupport = "placeholder" in document.createElement("input");
+	if($.browser.opera && $.browser.version < '11.50') hasNativeSupport = false;
+	if(!hasNativeSupport) {
+		var jQval = $.fn.val;
+		$.fn.val = function (value) {
+			if (!arguments.length) {
+				return $(this).attr("value") === $(this).attr("placeholder") ? "" : $(this).attr("value");
+			}
+			return jQval.call(this, value);
+		};
+	}
+
+
+	/* =============================================================================
+	   4.  Sisyphus - jQuery Plugin
+	       http://simsalabim.github.com/sisyphus/
+	   ========================================================================== */
+
+	$.sisyphus = function() {
+		return Sisyphus.getInstance();
+	};
+
+	$.fn.sisyphus = function( options ) {
+		var sisyphus = Sisyphus.getInstance();
+		sisyphus.setOptions( options )
+		sisyphus.protect( this );
+		return sisyphus;
+	};
+
+
+	Sisyphus = ( function() {
+		var params = {
+			instantiated: null,
+			started: null
+		};
+
+		function init () {
+		
+			return {
+			
+			
+				/**
+				 * Set plugin initial options
+				 *
+				 * @param [Object] options
+				 *
+				 * @return void
+				 */
+				setInitialOptions: function ( options ) {
+					var defaults = {
+						excludeFields: null,
+						customKeyPrefix: "",
+						timeout: 0,
+						onSave: function() {},
+						onRestore: function() {},
+						onRelease: function() {}
+					};
+					this.options = this.options || $.extend( defaults, options );
+				}, 
+			
+				/**
+				 * Set plugin options
+				 *
+				 * @param [Object] options
+				 *
+				 * @return void
+				 */
+				setOptions: function ( options ) {
+					this.options = this.options || this.setInitialOptions( options );
+					this.options = $.extend( this.options, options );
+				}, 
+			
+			
+				/**
+				 * Protect specified forms, store it's fields data to local storage and restore them on page load
+				 *
+				 * @param [Object] targets    forms object(s), result of jQuery selector
+				 * @param Object options      plugin options
+				 *
+				 * @return void
+				 */
+				protect: function( targets ) {
+					targets = targets || {};
+					var self = this;
+					this.targets = this.targets || [];
+					this.href = location.hostname + location.pathname + location.search;
+				
+					this.targets = $.merge( this.targets, targets );
+					this.targets = $.unique( this.targets );
+					this.targets = $( this.targets );
+					if ( ! this.isLocalStorageAvailable() ) {
+						return false;
+					}
+				
+					self.restoreAllData();
+					self.bindReleaseData();
+					if ( ! params.started ) {
+						self.bindSaveData();
+						params.started = true;
+					}
+				},
+			
+			
+				/**
+				 * Check if local storage is available
+				 *
+				 * @return Boolean
+				 */
+				isLocalStorageAvailable: function() {
+					try {
+						return localStorage.getItem;
+					} catch ( e ) {
+						return false;
+					}
+				},
+			
+			
+				/**
+				 * Bind saving data
+				 *
+				 * @return void
+				 */
+				bindSaveData: function() {
+					var self = this;
+				
+					if ( self.options.timeout ) {
+						self.saveDataByTimeout();
+					}
+				
+					self.targets.each( function() {
+						var targetFormId = $( this ).attr( "id" );
+						var fieldsToProtect = $( this ).find( ":input" ).not( ":submit" ).not( ":reset" ).not( ":button" );
+						
+						fieldsToProtect.each( function() {
+							if ( $.inArray( this, self.options.excludeFields ) !== -1 ) {
+								// Returning non-false is the same as a continue statement in a for loop; it will skip immediately to the next iteration.
+								return true;
+							}
+							var field = $( this );
+							var prefix = self.href + targetFormId + field.attr( "name" ) + self.options.customKeyPrefix;
+							if ( field.is( ":text" ) || field.is( "textarea" ) ) {
+								if ( ! self.options.timeout ) {
+									self.bindSaveDataImmediately( field, prefix );
+								}
+							} else {
+								self.bindSaveDataOnChange( field, prefix );
+							}
+						} );
+					} )
+				},
+			
+			
+				/**
+				 * Save all protected forms data to Local Storage.
+				 * Common method, necessary to not lead astray user firing 'data are saved' when select/checkbox/radio
+				 * is changed and saved, while textfield data are saved only by timeout
+				 *
+				 * @return void
+				 */
+				saveAllData: function() {
+					var self = this;
+					self.targets.each( function() {
+						var targetFormId = $( this ).attr( "id" );
+						var fieldsToProtect = $( this ).find( ":input" ).not( ":submit" ).not( ":reset" ).not( ":button" );
+						
+						fieldsToProtect.each( function() {
+							if ( $.inArray( this, self.options.excludeFields ) !== -1 ) {
+								// Returning non-false is the same as a continue statement in a for loop; it will skip immediately to the next iteration.
+								return true;
+							}
+							var field = $( this );
+							var prefix = self.href + targetFormId + field.attr( "name" ) + self.options.customKeyPrefix;
+							var value = field.val();
+						
+							if ( field.is(":checkbox") ) {
+								if ( field.attr( "name" ).indexOf( "[" ) != -1 ) {
+									value = [];
+									$( "[name='" + field.attr( "name" ) +"']:checked" ).each( function() {
+										value.push( $( this ).val() );
+									} );
+								} else {
+									value = field.is( ":checked" );
+								}
+								self.saveToLocalStorage( prefix, value, false );
+							} else if ( field.is( ":radio" ) ) {
+								if ( field.is( ":checked" ) ) {
+									value = field.val();
+									self.saveToLocalStorage( prefix, value, false );
+								}
+							} else {
+								self.saveToLocalStorage( prefix, value, false );
+							}
+						} );
+					} );
+					if ( $.isFunction( self.options.onSave ) ) {
+						self.options.onSave.call();
+					}
+				},
+			
+			
+				/**
+				 * Restore forms data from Local Storage
+				 *
+				 * @return void
+				 */
+				restoreAllData: function() {
+					var self = this;
+					var restored = false;
+				
+					self.targets.each( function() {
+						var target = $( this );
+						var targetFormId = target.attr( "id" );
+						var fieldsToProtect = target.find( ":input" ).not( ":submit" ).not( ":reset" ).not( ":button" );
+						
+						fieldsToProtect.each( function() {
+							if ( $.inArray( this, self.options.excludeFields ) !== -1 ) {
+								// Returning non-false is the same as a continue statement in a for loop; it will skip immediately to the next iteration.
+								return true;
+							}
+							var field = $( this );
+							var prefix = self.href + targetFormId + field.attr( "name" ) + self.options.customKeyPrefix;
+							var resque = localStorage.getItem( prefix );
+							if ( resque ) {
+								self.restoreFieldsData( field, resque );
+								restored = true;
+							}
+						} );
+					} );
+				
+					if ( restored && $.isFunction( self.options.onRestore ) ) {
+						self.options.onRestore.call();
+					}
+				},
+			
+			
+				/**
+				 * Restore form field data from local storage
+				 *
+				 * @param Object field    jQuery form element object
+				 * @param String resque   previously stored fields data
+				 *
+				 * @return void
+				 */
+				restoreFieldsData: function( field, resque ) {
+					if ( field.is(":checkbox") && resque !== 'false' && field.attr("name").indexOf("[") === -1 ) {
+						field.attr( "checked", "checked" );
+					} else if ( field.is(":radio") ) {
+						if (field.val() === resque) {
+							field.attr("checked", "checked");
+						}
+					} else if ( field.attr( "name" ).indexOf( "[" ) === -1 ) {
+						field.val( resque ); 
+					} else {
+						resque = resque.split( "," );
+						field.val( resque ); 
+					}
+				},
+			
+			
+				/**
+				 * Bind immediate saving (on typing/checking/changing) field data to local storage when user fills it
+				 *
+				 * @param Object field    jQuery form element object
+				 * @param String prefix   prefix used as key to store data in local storage
+				 *
+				 * @return void
+				 */
+				bindSaveDataImmediately: function( field, prefix ) {
+					var self = this;
+					if ( $.browser.msie == null ) {
+						field.get(0).oninput = function() {
+							self.saveToLocalStorage( prefix, field.val() );
+						}
+					} else {
+						field.get(0).onpropertychange = function() {
+							self.saveToLocalStorage( prefix, field.val() );
+						}
+					}
+				},
+			
+			
+				/**
+				 * Save data to Local Storage and fire callback if defined
+				 *
+				 * @param String key
+				 * @param String value
+				 * @param Boolean [true] fireCallback
+				 *
+				 * @return void
+				 */
+				saveToLocalStorage: function( key, value, fireCallback ) {
+					// if fireCallback is undefined it should be true
+					fireCallback = fireCallback == null ? true : fireCallback;
+					try {
+						localStorage.setItem( key, value + "" );
+					} catch (e) { 
+						//QUOTA_EXCEEDED_ERR
+					}
+					if ( fireCallback && value !== "" && $.isFunction( this.options.onSave ) ) {
+						this.options.onSave.call();
+					}
+				},
+			
+			
+				/**
+				 * Bind saving field data on change
+				 *
+				 * @param Object field    jQuery form element object
+				 * @param String prefix   prefix used as key to store data in local storage
+				 *
+				 * @return void
+				 */
+				bindSaveDataOnChange: function( field, prefix ) {
+					var self = this;
+					field.change( function() {
+						self.saveAllData();
+					} );
+				},
+			
+			
+				/**
+				 * Saving (by timeout) field data to local storage when user fills it
+				 *
+				 * @return void
+				 */
+				saveDataByTimeout: function() {
+					var self = this;
+					var targetForms = self.targets;
+					setTimeout( ( function( targetForms ) {
+						function timeout() {
+							self.saveAllData();
+							setTimeout( timeout, self.options.timeout * 1000 );
+						}
+						return timeout;
+					} )( targetForms ), self.options.timeout * 1000 );
+				},
+			
+			
+				/**
+				 * Bind release form fields data from local storage on submit/reset form
+				 *
+				 * @return void
+				 */
+				bindReleaseData: function() {
+					var self = this;
+					self.targets.each( function( i ) {
+						var target = $( this );
+						var fieldsToProtect = target.find( ":input" ).not( ":submit" ).not( ":reset" ).not( ":button" );
+						var formId = target.attr( "id" );
+						$( this ).bind( "submit reset", function() {
+							self.releaseData( formId, fieldsToProtect );
+						} )
+					} )
+				
+				
+				},
+			
+			
+				/**
+				 * Bind release form fields data from local storage on submit/resett form
+				 *
+				 * @param String targetFormId
+				 * @param Object fieldsToProtect    jQuery object contains form fields to protect
+				 *
+				 * @return void
+				 */
+				releaseData: function( targetFormId, fieldsToProtect ) {
+					var released = false;
+					var self = this;
+					fieldsToProtect.each( function() {
+						if ( $.inArray( this, self.options.excludeFields ) !== -1 ) {
+							// Returning non-false is the same as a continue statement in a for loop; it will skip immediately to the next iteration.
+							return true;
+						}
+						var field = $( this );
+						var prefix = self.href + targetFormId + field.attr( "name" ) + self.options.customKeyPrefix;
+						localStorage.removeItem( prefix );
+						released = true;
+					} );
+				
+					if ( released && $.isFunction( self.options.onRelease ) ) {
+						self.options.onRelease.call();
+					}
+				}
+			
+			};
+		}
+
+		return {
+		
+			getInstance: function() {
+				if ( ! params.instantiated ) {
+					params.instantiated = init();
+					params.instantiated.setInitialOptions();
+				}
+				return params.instantiated; 
+			},
+		
+			free: function() {
+				params = {};
+				return null;
+			}
+		};
+	} )();
+
+
+	/* =============================================================================
+	   5.  hoverIntent - jQuery Plugin
 	       http://cherne.net/brian/resources/jquery.hoverIntent.html
 	   ========================================================================== */
 
@@ -175,7 +708,7 @@ jQuery Plugins
 
 
 	/* =============================================================================
-	   4.  Superfish v1.4.8 - jQuery Plugin
+	   6.  Superfish v1.4.8 - jQuery Plugin
 	       http://users.tpg.com.au/j_birch/plugins/superfish/
 	   ========================================================================== */
 
@@ -288,7 +821,7 @@ jQuery Plugins
 
 
 	/* =============================================================================
-	   5.  Supersubs v0.2b - jQuery Plugin
+	   7.  Supersubs v0.2b - jQuery Plugin
 	       http://users.tpg.com.au/j_birch/plugins/superfish/
 	   ========================================================================== */
 
@@ -365,7 +898,7 @@ jQuery Plugins
 
 
 	/* =============================================================================
-	   6.  Simple JQuery Accordion Plugin - jQuery Plugin
+	   8.  Simple JQuery Accordion Plugin - jQuery Plugin
 	       http://www.i-marco.nl/weblog/archive/2010/02/27/yup_yet_another_jquery_accordi
 	   ========================================================================== */
 

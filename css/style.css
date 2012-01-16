@@ -36,13 +36,14 @@
    5.2  Alignments
    5.3  Clearfix
    5.4  Misc little helpers
+   5.5  Remove telephone number styling inserted by the Skype browser plug-in
 
    6    MEDIA QUERIES
-   6.1  (480px)  Small screen devices, held in landscape mode
-   6.2  (600px)  Smaller tablets (like Amazon Kindle), held in portrait mode
-   6.3  (768px)  Ten-inch tablets (like the iPad), held in portrait mode
-   6.4  (1024px) Ten-inch tablets (like the iPad), held in landscape mode
-   6.5  (1200px) Widescreen displays
+   6.1  (480px and above)  Small screen devices, held in landscape mode
+   6.2  (600px and above)  Smaller tablets (like Kindle), held in portrait mode
+   6.3  (768px and above)  Ten-inch tablets (like iPad), held in portrait mode
+   6.4  (1024px and above) Ten-inch tablets (like iPad), held in landscape mode
+   6.5  (1200px and above) Widescreen displays
 
    7    PRINT STYLES
    7.1  Hide print specific content from screen
@@ -465,6 +466,9 @@ h4 {
 
 img, embed, object, video {
 	max-width: 100%;
+}
+
+img {
 	height: auto;
 }
 
@@ -496,7 +500,8 @@ select {
 
 input[type="submit"],
 input[type="button"],
-input[type="reset"] {
+input[type="reset"],
+button {
 	border: 1px solid #00e;
 	color: #fff;
 	font-family: Arial, Helvetica, sans-serif;
@@ -518,7 +523,8 @@ input[type="reset"] {
 
 input:focus,
 textarea:focus,
-select:focus {
+select:focus,
+button:focus {
 	-webkit-box-shadow: 1px 1px 2px #3c3cee, -1px 1px 2px #3c3cee, -1px -1px 2px #3c3cee, 1px -1px 2px #3c3cee;
 	-moz-box-shadow: 1px 1px 2px #3c3cee, -1px 1px 2px #3c3cee, -1px -1px 2px #3c3cee, 1px -1px 2px #3c3cee;
 	box-shadow: 1px 1px 2px #3c3cee, -1px 1px 2px #3c3cee, -1px -1px 2px #3c3cee, 1px -1px 2px #3c3cee;
@@ -528,13 +534,15 @@ select:focus {
 
 input[type="submit"]:focus,
 input[type="button"]:focus,
-input[type="reset"]:focus {
+input[type="reset"]:focus,
+button:focus {
 	border-color: #fff;
 }
 
 input[type="submit"]:active,
 input[type="button"]:active,
-input[type="reset"]:active {
+input[type="reset"]:active,
+button:active {
 	border-color: #fff;
 	-webkit-box-shadow: 1px 1px 2px #3c3cee, -1px 1px 2px #3c3cee, -1px -1px 2px #3c3cee, 1px -1px 2px #3c3cee;
 	-moz-box-shadow: 1px 1px 2px #3c3cee, -1px 1px 2px #3c3cee, -1px -1px 2px #3c3cee, 1px -1px 2px #3c3cee;
@@ -548,6 +556,12 @@ input[type="reset"]:active {
 	background-image: linear-gradient(top, #00e, #77e);
 	-pie-background: linear-gradient(#00e, #77e);
 	behavior: url('js/libs/pie.htc');
+}
+
+::-webkit-input-placeholder,
+:-moz-placeholder,
+.placeholder {
+	color: #aaa;
 }
 
 
@@ -647,6 +661,20 @@ input[type="reset"]:active {
 .nobr { white-space: nowrap; }
 
 
+/* =============================================================================
+   5.5  Remove telephone number styling inserted by the Skype browser plug-in
+   ========================================================================== */
+
+.js body span.skype_pnh_container {
+	display: none !important;
+	visibility: hidden !important;
+}
+
+.js body span[class^="skype_pnh_print_container"] {
+	display: inline !important;
+}
+
+
 
 
 /* =============================================================================
@@ -655,7 +683,7 @@ input[type="reset"]:active {
 
 
 /* =============================================================================
-   6.1  (480px) Small screen devices, held in landscape mode
+   6.1  (480px and above) Small screen devices, held in landscape mode
    ========================================================================== */
 
 @media only screen and (min-width: 480px) {
@@ -680,7 +708,7 @@ input[type="reset"]:active {
 
 
 /* =============================================================================
-   6.2  (600px) Smaller tablets (like Amazon Kindle), held in portrait mode
+   6.2  (600px and above) Smaller tablets (like Kindle), held in portrait mode
    ========================================================================== */
 
 @media only screen and (min-width: 600px) {
@@ -705,7 +733,7 @@ input[type="reset"]:active {
 
 
 /* =============================================================================
-   6.3  (768px) Ten-inch tablets (like the iPad), held in portrait mode
+   6.3  (768px and above) Ten-inch tablets (like iPad), held in portrait mode
    ========================================================================== */
 
 @media only screen and (min-width: 768px) {
@@ -730,7 +758,7 @@ input[type="reset"]:active {
 
 
 /* =============================================================================
-   6.4  (1024px) Ten-inch tablets (like the iPad), held in landscape mode
+   6.4  (1024px and above) Ten-inch tablets (like iPad), held in landscape mode
    ========================================================================== */
 
 @media only screen and (min-width: 980px) {
@@ -770,7 +798,7 @@ input[type="reset"]:active {
 
 
 /* =============================================================================
-   6.5  (1200px) Widescreen displays
+   6.5  (1200px and above) Widescreen displays
    ========================================================================== */
 
 @media only screen and (min-width: 1200px) {
@@ -821,7 +849,7 @@ input[type="reset"]:active {
 	/* ==== 7.2.1  Base ===================================================== */
 
 	* { background: transparent !important; color: black !important; text-shadow: none !important; filter:none !important; -ms-filter: none !important; }
-	@page { margin: 0.5cm; }
+	@page { margin: 2cm; }
 	body { font-size: 12pt; }
 
 	/* ==== 7.2.2  Links ==================================================== */
@@ -829,7 +857,7 @@ input[type="reset"]:active {
 	a, a:visited { text-decoration: underline; }
 
 	.print-links-footer {
-		border: 1px solid #000;
+		border: 0.5pt solid #000;
 		padding: 0 1.5384615384615384615384615384615em;
 		page-break-inside: avoid;
 	}

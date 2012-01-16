@@ -8,6 +8,7 @@ Individual JavaScript for [Project name]
 jQuery Scripts
 
 1. Menu initialisation (JQuery Accordion Plugin / Superfish)
+2. Sisyphus initialisation
 
 */
 
@@ -37,4 +38,15 @@ jQuery Scripts
 	});
 
 
+	/* =============================================================================
+	   2.  Sisyphus initialisation
+	   ========================================================================== */
+
+	$(document).ready(function(){
+		if($('form').length > 0){
+			$('form').sisyphus();
+		}
+	});
+
+	
 })(this.jQuery);
