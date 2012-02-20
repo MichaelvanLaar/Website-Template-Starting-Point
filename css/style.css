@@ -480,6 +480,7 @@ img {
 input[type="text"],
 input[type="password"],
 input[type="search"],
+input[type="email"],
 textarea,
 select {
 	border: 1px solid #00e;
@@ -490,6 +491,7 @@ select {
 input[type="text"],
 input[type="password"],
 input[type="search"],
+input[type="email"],
 textarea {
 	padding: 0.23076923076923076923076923076923em; /* 3px / 13px */
 }

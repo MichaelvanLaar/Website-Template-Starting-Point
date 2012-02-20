@@ -56,7 +56,7 @@ jQuery Plugins
 
 	$(document).ready(function(){
 		//get the container and target
-		var links = $('#main a[href]:not([href^=#],[href^=mailto],[href^=javascript],:has(img))');
+		var links = $('#main').find('a[href]:not([href^=#],[href^=mailto],[href^=javascript],:has(img))');
 
 		if($(links).length){
 			//create a container and heading for the footnotes
@@ -75,8 +75,12 @@ jQuery Plugins
 			$.each(links, function(i){
 				var linkText = $(this).text();
 				var linkValue = $(this).attr('href');
-				if(linkValue.substring(0,1) === '/'){
-					linkValue = 'http://www.'+document.location.host + linkValue;
+				if(linkValue.substring(0,6) !== 'http://'){
+					if(linkValue.substring(0,1) === '/'){
+						linkValue = 'http://www.' + document.location.host + linkValue;
+					} else {					
+						linkValue = 'http://www.' + document.location.host + '/' + linkValue;
+					}
 				}
 				//create element to hold span with class to hide except on print
 				var newElement = $('<sup></sup>', {
