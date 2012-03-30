@@ -38,7 +38,9 @@
    5.4  Misc little helpers
    5.5  Remove telephone number styling inserted by the Skype browser plug-in
 
-   6    MEDIA QUERIES
+   6    MEDIA QUERIES  =>  Important:
+                           Break points should always be adjusted to the final
+                           layout, not to screen sizes of certain devices.
    6.1  (480px and above)  Small screen devices, held in landscape mode
    6.2  (600px and above)  Smaller tablets (like Kindle), held in portrait mode
    6.3  (768px and above)  Ten-inch tablets (like iPad), held in portrait mode
