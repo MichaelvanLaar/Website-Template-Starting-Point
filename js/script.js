@@ -29,9 +29,9 @@ jQuery Scripts
 		if (document.documentElement.clientWidth < 571) {   // Initialise Simple JQuery Accordion Plugin for small screens
 			$('.ac-menu').initAcMenu();
 		} else {   // Initialise Superfish (with Supersubs) for screens wider than 570px (= width of #main)
-			$('.sf-menu').supersubs({ 
-				minWidth:    12,   // minimum width of sub-menus in em units 
-				maxWidth:    27,   // maximum width of sub-menus in em units 
+			$('.sf-menu').supersubs({
+				minWidth:    12,   // minimum width of sub-menus in em units
+				maxWidth:    27,   // maximum width of sub-menus in em units
 				extraWidth:  1     // extra width can ensure lines don't sometimes turn over due to slight rounding differences and font-family
 			}).superfish({dropShadows: false});   // rather use CSS3 box shadows
 		}

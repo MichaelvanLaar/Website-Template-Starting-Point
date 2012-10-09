@@ -8,7 +8,7 @@ JavaScript Plugins for [Project name]
 jQuery Plugins
 
 1. Skiplink Focus Fix
-2. Printed Footer Links 
+2. Printed Footer Links
 3. Enhanced jQuery Placeholder plugin (polyfill)
 4. Sisyphus (autosave form input)
 5. hoverIntent
@@ -45,8 +45,8 @@ jQuery Plugins
 						$(this).remove();
 					});
 			});
-		};
-	})
+		}
+	});
 
 
 	/* =============================================================================
@@ -78,7 +78,7 @@ jQuery Plugins
 				if(linkValue.substring(0,6) !== 'http://'){
 					if(linkValue.substring(0,1) === '/'){
 						linkValue = 'http://www.' + document.location.host + linkValue;
-					} else {					
+					} else {
 						linkValue = 'http://www.' + document.location.host + '/' + linkValue;
 					}
 				}
@@ -165,7 +165,7 @@ jQuery Plugins
 						}
 					}
 					else {
-						e.addClass(c)
+						e.addClass(c);
 					}
 				}
 			};
@@ -247,7 +247,7 @@ jQuery Plugins
 
 	$.fn.sisyphus = function( options ) {
 		var sisyphus = Sisyphus.getInstance();
-		sisyphus.setOptions( options )
+		sisyphus.setOptions( options );
 		sisyphus.protect( this );
 		return sisyphus;
 	};
@@ -281,7 +281,7 @@ jQuery Plugins
 						onRelease: function() {}
 					};
 					this.options = this.options || $.extend( defaults, options );
-				}, 
+				},
 			
 				/**
 				 * Set plugin options
@@ -293,7 +293,7 @@ jQuery Plugins
 				setOptions: function ( options ) {
 					this.options = this.options || this.setInitialOptions( options );
 					this.options = $.extend( this.options, options );
-				}, 
+				},
 			
 			
 				/**
@@ -370,8 +370,8 @@ jQuery Plugins
 							} else {
 								self.bindSaveDataOnChange( field, prefix );
 							}
-						} );
-					} )
+						});
+					});
 				},
 			
 			
@@ -474,10 +474,10 @@ jQuery Plugins
 							field.attr("checked", "checked");
 						}
 					} else if ( field.attr( "name" ).indexOf( "[" ) === -1 ) {
-						field.val( resque ); 
+						field.val( resque );
 					} else {
 						resque = resque.split( "," );
-						field.val( resque ); 
+						field.val( resque );
 					}
 				},
 			
@@ -492,14 +492,14 @@ jQuery Plugins
 				 */
 				bindSaveDataImmediately: function( field, prefix ) {
 					var self = this;
-					if ( $.browser.msie == null ) {
+					if ( $.browser.msie === null ) {
 						field.get(0).oninput = function() {
 							self.saveToLocalStorage( prefix, field.val() );
-						}
+						};
 					} else {
 						field.get(0).onpropertychange = function() {
 							self.saveToLocalStorage( prefix, field.val() );
-						}
+						};
 					}
 				},
 			
@@ -515,10 +515,10 @@ jQuery Plugins
 				 */
 				saveToLocalStorage: function( key, value, fireCallback ) {
 					// if fireCallback is undefined it should be true
-					fireCallback = fireCallback == null ? true : fireCallback;
+					fireCallback = fireCallback === null ? true : fireCallback;
 					try {
 						localStorage.setItem( key, value + "" );
-					} catch (e) { 
+					} catch (e) {
 						//QUOTA_EXCEEDED_ERR
 					}
 					if ( fireCallback && value !== "" && $.isFunction( this.options.onSave ) ) {
@@ -574,8 +574,8 @@ jQuery Plugins
 						var formId = target.attr( "id" );
 						$( this ).bind( "submit reset", function() {
 							self.releaseData( formId, fieldsToProtect );
-						} )
-					} )
+						});
+					});
 				
 				
 				},
@@ -618,7 +618,7 @@ jQuery Plugins
 					params.instantiated = init();
 					params.instantiated.setInitialOptions();
 				}
-				return params.instantiated; 
+				return params.instantiated;
 			},
 		
 			free: function() {
@@ -733,7 +733,7 @@ jQuery Plugins
 					o.retainPath=($.inArray($$[0],o.$path)>-1);
 					$$.hideSuperfishUl();
 					if (o.$path.length && $$.parents(['li.',o.hoverClass].join('')).length<1){over.call(o.$path);}
-				},o.delay);	
+				},o.delay);
 			},
 			getMenu = function($menu){
 				var menu = $menu.parents(['ul.',c.menuClass,':first'].join(''))[0];
@@ -776,7 +776,7 @@ jQuery Plugins
 	sf.op = {};
 	sf.IE7fix = function(){
 		var o = sf.op;
-		if ($.browser.msie && $.browser.version > 6 && o.dropShadows && o.animation.opacity!=undefined)
+		if ($.browser.msie && $.browser.version > 6 && o.dropShadows && o.animation.opacity!==undefined)
 			this.toggleClass(sf.c.shadowClass+'-off');
 		};
 	sf.c = {
@@ -850,7 +850,7 @@ jQuery Plugins
 			// cache all ul elements
 			$ULs = $$.find('ul');
 			// loop through each ul in menu
-			$ULs.each(function(i) {	
+			$ULs.each(function(i) {
 				// cache this ul
 				var $ul = $ULs.eq(i);
 				// get all (li) children of this ul
@@ -906,7 +906,7 @@ jQuery Plugins
 	       http://www.i-marco.nl/weblog/archive/2010/02/27/yup_yet_another_jquery_accordi
 	   ========================================================================== */
 
-	jQuery.fn.initAcMenu = function() {  
+	jQuery.fn.initAcMenu = function() {
 		return this.each(function(){
 			var theMenu = $(this).get(0);
 			$('.acitem', this).hide();
@@ -927,22 +927,22 @@ jQuery Plugins
 							}
 							else {
 								$(this).prev().removeClass('active');
-							}    
+							}
 						});
 						return false;
 					}
 					else {
 						if(theElement.hasClass('acitem') && theElement.is(':visible')) {
 							if($(parent).hasClass('collapsible')) {
-								$('.acitem:visible', parent).first().slideUp('normal', 
+								$('.acitem:visible', parent).first().slideUp('normal',
 								function() {
 									$(this).prev().removeClass('active');
 								});
-								return false;  
+								return false;
 							}
 							return false;
 						}
-						if(theElement.hasClass('acitem') && !theElement.is(':visible')) {         
+						if(theElement.hasClass('acitem') && !theElement.is(':visible')) {
 							$('.acitem:visible', parent).first().slideUp('normal', function() {
 								$(this).prev().removeClass('active');
 							});

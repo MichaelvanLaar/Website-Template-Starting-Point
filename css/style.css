@@ -186,28 +186,29 @@ td { vertical-align: top; }
 
 
 /* =============================================================================
-   3.1  Internet Explorer JavaScript warning
+   3.1  Internet Explorer warnings
    ========================================================================== */
 
-#ie-js-warning-shader {
+.warning-shader {
 	background: #000;
 	bottom: 0;
+	filter:progid:DXImageTransform.Microsoft.Alpha(opacity=70);
 	height: 100%;
 	left: 0;
+	opacity: 0.7;
 	position: fixed;
 	right: 0;
 	top: 0;
 	width: 100%;
 	z-index: 1000;
-	filter:progid:DXImageTransform.Microsoft.Alpha(opacity=70);
 }
 
-.ie6 #ie-js-warning-shader {
+.lt-ie7 .warning-shader {
 	height: 10000px;
 	position: absolute;
 }
 
-#ie-js-warning {
+.ie-warning {
 	border: 5px solid #ed7f00;
 	display: block;
 	height: 430px;
@@ -220,86 +221,8 @@ td { vertical-align: top; }
 	z-index: 1001;
 }
 
-.ie6 #ie-js-warning {
+.lt-ie7 .ie-warning {
 	position: absolute;
-}
-
-html.ie-js-warning-page {
-	overflow-y: hidden;
-}
-
-.ie-js-warning-page body {
-	background: #ed952f url('../images/ie-js-warning-background.png') repeat-x top left;
-	font-family: Verdana, Arial, Helvetica, sans-serif;
-	font-size: 16px;
-	line-height: 24px;
-	padding: 20px;
-}
-
-.ie-js-warning-page p, .ie-js-warning-page ol {
-	font-family: Verdana, Arial, Helvetica, sans-serif;
-	margin-bottom: 20px;
-	margin-top: 20px;
-}
-
-.ie-js-warning-page strong, .ie-js-warning-page b {
-	font-family: Verdana, Arial, Helvetica, sans-serif;
-}
-
-.ie-js-warning-page li.first {
-	margin-bottom: 20px;
-}
-
-.ie-js-warning-page a, .ie-js-warning-page a:link,
-.ie-js-warning-page a:visited, .ie-js-warning-page a:hover {
-	color: #fff;
-	text-decoration: underline;
-}
-
-.ie-js-warning-page h1 {
-	background: transparent;
-	color: #ed7f00;
-	font-family: Verdana, Arial, Helvetica, sans-serif;
-	font-size: 40px;
-	font-weight: normal;
-	height: auto;
-	left: auto;
-	letter-spacing: normal;
-	line-height: 1;
-	margin: 0 0 20px;
-	padding: 0;
-	position: relative;
-	text-transform: none;
-	top: auto;
-	width: auto;
-}
-
-.ie-js-warning-page h2 {
-	background: transparent;
-	color: #fff;
-	font-family: Verdana, Arial, Helvetica, sans-serif;
-	font-size: 24px;
-	font-weight: bold;
-	height: auto;
-	left: auto;
-	letter-spacing: normal;
-	line-height: 28px;
-	margin: 20px 0;
-	padding: 0;
-	position: relative;
-	text-transform: none;
-	top: auto;
-	width: auto;
-}
-
-.ie-js-warning-page .white, .ie-js-warning-page ol {
-	color: #fff;
-}
-
-.ie-js-warning-page .ie-logo {
-	display: inline;
-	float: right;
-	margin: -15px 20px 0 20px;
 }
 
 

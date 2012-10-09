@@ -1,9 +1,10 @@
 ﻿<!doctype html>
 
-<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="de"> <![endif]-->
-<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="de"> <![endif]-->
-<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="de"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="de"> <!--<![endif]-->
+<!--[if lt IE 7]>      <html class="no-js lt-ie10 lt-ie9 lt-ie8 lt-ie7" lang="de"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie10 lt-ie9 lt-ie8" lang="de"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie10 lt-ie9" lang="de"> <![endif]-->
+<!--[if IE 9]>         <html class="no-js lt-ie10" lang="de"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js" lang="de"> <!--<![endif]-->
 
 <head>
 
@@ -61,10 +62,15 @@
 
 <body>
 
-	<!--[if lt IE 9 ]>
+	<!--[if lte IE 7]>
+		<div class="warning-shader"></div>
+		<iframe src="ie-warnings/old-ie-warning.html" class="ie-warning" marginheight="0" marginwidth="0" frameborder="0"></iframe>
+	<![endif]-->
+
+	<!--[if IE 8 ]>
 		<noscript>
-			<div id="ie-js-warning-shader"></div>
-			<iframe src="ie-js-warning.html" id="ie-js-warning" marginheight="0" marginwidth="0" frameborder="0"></iframe>
+			<div class="warning-shader"></div>
+			<iframe src="ie-warnings/ie-js-warning.html" class="ie-warning" marginheight="0" marginwidth="0" frameborder="0"></iframe>
 		</noscript>
 	<![endif]-->
 
@@ -229,8 +235,8 @@
 
 	<!-- JavaScript at the bottom for fast page loading -->
 
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-	<script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.2.min.js"><\/script>')</script>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="js/libs/jquery-1.8.2.min.js"><\/script>')</script>
 
 	<script defer src="js/plugins.js"></script>
 	<script defer src="js/script.js"></script>
@@ -248,10 +254,5 @@
 		<script src="js/libs/selectivizr.min.js"></script>
 	<![endif]-->
 
-	<!--[if lt IE 7 ]>
-		<script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
-		<script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
-	<![endif]-->
-  
 </body>
 </html>
