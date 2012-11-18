@@ -6,17 +6,18 @@ JavaScript Plugins for [Project name]
 /* PLUGIN DIRECTORY
 
 jQuery Plugins:
-1. Skiplink Focus Fix
-2. Printed Footer Links
-3. Enhanced jQuery Placeholder plugin (polyfill)
-4. Sisyphus (autosave form input)
-5. hoverIntent
-6. Superfish
-7. Supersubs (flexible widths for Superfish menu)
-8. Simple JQuery Accordion Plugin
+1.  Skiplink Focus Fix
+2.  Printed Footer Links
+3.  Enhanced jQuery Placeholder plugin (polyfill)
+4.  Sisyphus (autosave form input)
+5.  hoverIntent
+6.  Superfish
+7.  Supersubs (flexible widths for Superfish menu)
+8.  Simple JQuery Accordion Plugin
+9.  Automatic event tracking for Google Analytics
 
 Non-jQuery libs:
-9. enquire.js
+10. enquire.js
 
 */
 
@@ -965,7 +966,51 @@ Non-jQuery libs:
 
 
 /* =============================================================================
-   9.  enquire.js
+   9.  Automatic event tracking for Google Analytics - jQuery Plugin
+       http://www.thomashutter.com/index.php/2011/10/google-analytics-klicks-mit-automatisiertem-klick-event-tracking-messen/
+   ========================================================================== */
+
+jQuery(document).ready(function($) {
+	var filetypes = /\.(zip|exe|pdf|doc*|xls*|ppt*|mp3)$/i;
+	var baseHref = '';
+	if (jQuery('base').attr('href') !== undefined) {
+		baseHref = jQuery('base').attr('href');
+	}
+	jQuery('a').each(function() {
+		var href = jQuery(this).attr('href');
+		if (href && (href.match(/^https?\:/i)) && (!href.match(document.domain))) {
+			jQuery(this).click(function() {
+				var extLink = href.replace(/^https?\:\/\//i, '');
+				_gaq.push(['_trackEvent', 'Extern', 'Klick', extLink]);
+				if (jQuery(this).attr('target') !== undefined && jQuery(this).attr('target').toLowerCase() != '_blank') {
+					setTimeout(function() { location.href = href; }, 200);
+					return false;
+				}
+			});
+		}
+		else if (href && href.match(/^mailto\:/i)) {
+			jQuery(this).click(function() {
+				var mailLink = href.replace(/^mailto\:/i, '');
+				_gaq.push(['_trackEvent', 'E-Mail', 'Klick', mailLink]);
+			});
+		}
+		else if (href && href.match(filetypes)) {
+			jQuery(this).click(function() {
+				var extension = (/[.]/.exec(href)) ? /[^.]+$/.exec(href) : undefined;
+				var filePath = href;
+				_gaq.push(['_trackEvent', 'Download', 'Klick-' + extension, filePath]);
+				if (jQuery(this).attr('target') !== undefined && jQuery(this).attr('target').toLowerCase() != '_blank') {
+					setTimeout(function() { location.href = baseHref + href; }, 200);
+					return false;
+				}
+			});
+		}
+	});
+});
+
+
+/* =============================================================================
+   10.  enquire.js
    ========================================================================== */
 
 // enquire v1.5.0 - Awesome Media Queries in JavaScript
