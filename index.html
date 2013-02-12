@@ -1,4 +1,4 @@
-﻿<!doctype html>
+﻿<!DOCTYPE html>
 
 <!--[if lt IE 7]>      <html class="no-js lt-ie10 lt-ie9 lt-ie8 lt-ie7" lang="de"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie10 lt-ie9 lt-ie8" lang="de"> <![endif]-->
@@ -22,21 +22,22 @@
 	<meta name="HandheldFriendly" content="True">
 	<meta name="MobileOptimized" content="320"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
-	<meta http-equiv="cleartype" content="on">
+	<!--[if IEMobile]><meta http-equiv="cleartype" content="on"><![endif]-->
+
+	<link rel="shortcut icon" href="favicon.ico" />
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="apple-touch-icon-144x144-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-touch-icon-114x114-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="apple-touch-icon-72x72-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" href="apple-touch-icon-57x57-precomposed.png">
+	<meta name="msapplication-TileImage" content="apple-touch-icon-144x144-precomposed.png">
+	<meta name="msapplication-TileColor" content="#05327d">
 
 	<!-- Webfont Load Enhancer
 	     If you don’t use webfonts you can remove the following script element. -->
 	<script src="js/libs/webfontloadenhancer-1.2.min.js"></script>
 
-	<link rel="stylesheet" href="css/style.css" />
-
-	<!-- Superfish dropdown menu
-	     If you don’t need Superfish you can remove the following stylesheet and the script initialisiation in “js/script.js”. -->
-	<link rel="stylesheet" href="css/superfish-and-accordion.css" />
-	<!-- Depending on the Superfish style you need to load “css/superfish-navbar.css” or “css/superfish-vertical.css”
-	     in addition to “superfish-and-accordion.css”.
-	     TO DO: Change the media queries in all superfish css files as well as in the script initialisiation (in “js/script.js”)
-		        according to your layout. -->
+	<link rel="stylesheet" href="styles/normalize.min.css" />
+	<link rel="stylesheet" href="styles/style.css" />
 
 	<script src="js/libs/modernizr-2.6.2.custom.min.js"></script>
 	<script>Modernizr.load({ test: Modernizr.mq('(min-width: 0px)'), nope: 'js/libs/respond.custom.min.js' });</script>
@@ -52,11 +53,6 @@
 
 	<!-- TO DO: Remove the following link element if your website doesn’t offer RSS feeds. -->
 	<link rel="alternate" type="application/rss+xml" title="RSS" href="" />
-
-	<link rel="shortcut icon" href="favicon.ico" />
-	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-touch-icon-114x114-precomposed.png" />
-	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="apple-touch-icon-72x72-precomposed.png" />
-	<link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png" />
 	
 </head>
 
@@ -79,164 +75,160 @@
 		<li><a href="#main">Direkt zum Hauptinhalt springen (Enter drücken)</a></li>
 	</ul> <!-- end of #skiplinks -->
 
-	<div id="root">
+	<div id="page-header-container" class="clearfix">
+		<div class="wrapper">
+			<header id="page-header" role="banner" class="clearfix">
+				<h1>(H1) Lorem ipsum dolor sit amet</h1>
+				<nav id="main-navigation" class="clearfix">
+					<ul id="main-navigation-list">
+						<li class="parent has_children">
+							<a href="#1">Menu item 1</a>
+							<ul>
+								<li>
+									<a href="#11">Menu item 1.1 with a very long title</a>
+								</li>
+								<li class="parent has_children">
+									<a href="#12">Menu item 1.2</a>
+									<ul>
+										<li class="current"><a href="#121">Current active menu item 1.2.1</a></li>
+										<li><a href="#122">Menu item 1.2.2</a></li>
+										<li><a href="#123">Menu item 1.2.3</a></li>
+										<li><a href="#124">Menu item 1.2.4</a></li>
+										<li><a href="#125">Menu item 1.2.5</a></li>
+									</ul>
+								</li>
+								<li class="has_children">
+									<a href="#13">Menu item 1.3</a>
+									<ul>
+										<li><a href="#131">Menu item 1.3.1</a></li>
+										<li><a href="#132">Menu item 1.3.2</a></li>
+										<li><a href="#133">Menu item 1.3.3</a></li>
+										<li><a href="#134">Menu item 1.3.4</a></li>
+										<li><a href="#135">Menu item 1.3.5</a></li>
+									</ul>
+								</li>
+								<li class="has_children">
+									<a href="#14">Menu item 1.4</a>
+									<ul>
+										<li><a href="#141">Menu item 1.4.1</a></li>
+										<li><a href="#142">Menu item 1.4.2</a></li>
+										<li><a href="#143">Menu item 1.4.3</a></li>
+										<li><a href="#144">Menu item 1.4.4</a></li>
+										<li><a href="#145">Menu item 1.4.5</a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="#2">Menu item 2</a>
+						</li>
+						<li class="has_children">
+							<a href="#3">Menu item 3</a>
+							<ul>
+								<li class="has_children">
+									<a href="#31">Menu item 3.1</a>
+									<ul>
+										<li><a href="#311">Menu item 3.1.1</a></li>
+										<li><a href="#312">Menu item 3.1.2</a></li>
+										<li><a href="#313">Menu item 3.1.3</a></li>
+										<li><a href="#314">Menu item 3.1.4</a></li>
+									</ul>
+								</li>
+								<li class="has_children">
+									<a href="#32">Menu item 3.2</a>
+									<ul>
+										<li><a href="#321">Menu item 3.2.1</a></li>
+										<li><a href="#322">Menu item 3.2.2</a></li>
+										<li><a href="#323">Menu item 3.2.3</a></li>
+										<li><a href="#324">Menu item 3.2.4</a></li>
+										<li><a href="#325">Menu item 3.2.5</a></li>
+									</ul>
+								</li>
+								<li class="has_children">
+									<a href="#33">Menu item 3.3</a>
+									<ul>
+										<li><a href="#331">Menu item 3.3.1</a></li>
+										<li><a href="#332">Menu item 3.3.2</a></li>
+										<li><a href="#333">Menu item 3.3.3</a></li>
+									</ul>
+								</li>
+								<li><a href="#34">Menu item 3.4</a></li>
+								<li class="has_children">
+									<a href="#35">Menu item 3.5</a>
+									<ul>
+										<li><a href="#351">Menu item 3.5.1</a></li>
+										<li><a href="#352">Menu item 3.5.2</a></li>
+										<li><a href="#353">Menu item 3.5.3</a></li>
+										<li><a href="#354">Menu item 3.5.4</a></li>
+										<li><a href="#355">Menu item 3.5.5</a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="#4">Menu item 4</a>
+						</li>	
+					</ul> <!-- end of #main-navigation-list -->
+				</nav> <!-- end of #main-navigation -->
+			</header> <!-- end of #page-header -->
+		</div> <!-- end of .wrapper -->
+	</div> <!-- end of #page-header-container -->
 
-		<header id="page-header" role="banner" class="clearfix">
-			<h1>(H1) Lorem ipsum dolor sit amet</h1>
-			<nav id="main-navigation" class="clearfix">
-				<ul class="sf-menu ac-menu noaccordion">
-					<li class="current">
-						<a href="#a">menu item</a>
-						<ul class="acitem noaccordion">
-							<li>
-								<a href="#aa">menu item that is quite long</a>
-							</li>
-							<li class="current">
-								<a href="#ab">menu item</a>
-								<ul class="acitem">
-									<li class="current"><a href="#">menu item</a></li>
-									<li><a href="#aba">menu item</a></li>
-									<li><a href="#abb">menu item</a></li>
-									<li><a href="#abc">menu item</a></li>
-									<li><a href="#abd">menu item</a></li>
-								</ul>
-							</li>
-							<li>
-								<a href="#">menu item</a>
-								<ul class="acitem">
-									<li><a href="#">menu item</a></li>
-									<li><a href="#">menu item</a></li>
-									<li><a href="#">menu item</a></li>
-									<li><a href="#">menu item</a></li>
-									<li><a href="#">menu item</a></li>
-								</ul>
-							</li>
-							<li>
-								<a href="#">menu item</a>
-								<ul class="acitem">
-									<li><a href="#">menu item</a></li>
-									<li><a href="#">menu item</a></li>
-									<li><a href="#">menu item</a></li>
-									<li><a href="#">menu item</a></li>
-									<li><a href="#">menu item</a></li>
-								</ul>
-							</li>
-						</ul>
-					</li>
-					<li>
-						<a href="#">menu item</a>
-					</li>
-					<li>
-						<a href="#">menu item</a>
-						<ul class="acitem">
-							<li>
-								<a href="#">menu item</a>
-								<ul class="acitem">
-									<li><a href="#">short</a></li>
-									<li><a href="#">short</a></li>
-									<li><a href="#">short</a></li>
-									<li><a href="#">short</a></li>
-									<li><a href="#">short</a></li>
-								</ul>
-							</li>
-							<li>
-								<a href="#">menu item</a>
-								<ul class="acitem">
-									<li><a href="#">menu item</a></li>
-									<li><a href="#">menu item</a></li>
-									<li><a href="#">menu item</a></li>
-									<li><a href="#">menu item</a></li>
-									<li><a href="#">menu item</a></li>
-								</ul>
-							</li>
-							<li>
-								<a href="#">menu item</a>
-								<ul class="acitem">
-									<li><a href="#">menu item</a></li>
-									<li><a href="#">menu item</a></li>
-									<li><a href="#">menu item</a></li>
-									<li><a href="#">menu item</a></li>
-									<li><a href="#">menu item</a></li>
-								</ul>
-							</li>
-							<li>
-								<a href="#">menu item</a>
-								<ul class="acitem">
-									<li><a href="#">menu item</a></li>
-									<li><a href="#">menu item</a></li>
-									<li><a href="#">menu item</a></li>
-									<li><a href="#">menu item</a></li>
-									<li><a href="#">menu item</a></li>
-								</ul>
-							</li>
-							<li>
-								<a href="#">menu item</a>
-								<ul class="acitem">
-									<li><a href="#">menu item</a></li>
-									<li><a href="#">menu item</a></li>
-									<li><a href="#">menu item</a></li>
-									<li><a href="#">menu item</a></li>
-									<li><a href="#">menu item</a></li>
-								</ul>
-							</li>
-						</ul>
-					</li>
-					<li>
-						<a href="#">menu item</a>
-					</li>	
+	<div id="main-container" class="clearfix">
+		<div class="wrapper">
+			<div id="main" role="main" class="clearfix">
+				<h2>(H2) Lorem ipsum dolor sit amet</h2>
+				<p><a href="http://www.heise.de">Lorem ipsum dolor sit amet, consectetuer adipiscing</a> elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+				<p><img src="images/goethe.jpg" width="530" height="419" /></p>
+				<h3>(H3) Lorem ipsum dolor sit amet</h3>
+				<blockquote cite="">
+					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+				</blockquote>
+				<p><a href="http://www.google.de"><img src="apple-touch-icon.png" /></a></p>
+				<ul>
+					<li>Lorem ipsum dolor sit amet</li>
+					<li>consectetuer adipiscing elit</li>
+					<li>sed diam nonummy</li>
+					<li>nibh euismod tincidunt ut laoreet dolore</li>
 				</ul>
-			</nav> <!-- end of #main-navigation -->
-		</header> <!-- end of #page-header -->
-
-		<div id="main" role="main" class="clearfix">
-			<h2>(H2) Lorem ipsum dolor sit amet</h2>
-			<p><a href="http://www.heise.de">Lorem ipsum dolor sit amet, consectetuer adipiscing</a> elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
-			<p><img src="images/goethe.jpg" width="530" height="419" /></p>
-			<h3>(H3) Lorem ipsum dolor sit amet</h3>
-			<blockquote cite="">
+				<h4>(H4) Lorem ipsum dolor sit amet</h4>
 				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
-			</blockquote>
-			<p><a href="http://www.google.de"><img src="apple-touch-icon.png" /></a></p>
-			<ul>
-				<li>Lorem ipsum dolor sit amet</li>
-				<li>consectetuer adipiscing elit</li>
-				<li>sed diam nonummy</li>
-				<li>nibh euismod tincidunt ut laoreet dolore</li>
-			</ul>
-			<h4>(H4) Lorem ipsum dolor sit amet</h4>
-			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
-			<ol>
-				<li>Lorem ipsum dolor sit amet</li>
-				<li>consectetuer adipiscing elit</li>
-				<li>sed diam nonummy</li>
-			</ol>
-		</div> <!-- end of #main -->
-    
-		<aside id="sidebar" class="clearfix">
-			<h2>(H2) Lorem ipsum dolor sit amet</h2>
-			<p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
-			<form>
-				<input type="text" value="" />
-				<input type="submit" value="Absenden" />
-			</form>
-			<h3>(H3) Lorem ipsum dolor sit amet</h3>
-			<p>Lorem ipsum dolor sit amet, adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet.</p>
-			<h4>(H4) Lorem ipsum dolor sit amet</h4>
-			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-		</aside> <!-- end of #sidebar -->
+				<ol>
+					<li>Lorem ipsum dolor sit amet</li>
+					<li>consectetuer adipiscing elit</li>
+					<li>sed diam nonummy</li>
+				</ol>
+			</div> <!-- end of #main -->
+	    
+			<aside id="sidebar" class="clearfix">
+				<h2>(H2) Lorem ipsum dolor sit amet</h2>
+				<p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+				<form>
+					<input type="text" value="" />
+					<input type="submit" value="Absenden" />
+				</form>
+				<h3>(H3) Lorem ipsum dolor sit amet</h3>
+				<p>Lorem ipsum dolor sit amet, adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet.</p>
+				<h4>(H4) Lorem ipsum dolor sit amet</h4>
+				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+			</aside> <!-- end of #sidebar -->
+		</div> <!-- end of .wrapper -->
+	</div> <!-- end of #main-container -->
 	
-		<footer id="page-footer" class="clearfix">
-			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
-		</footer> <!-- end of #page-footer -->
-
-	</div> <!-- end of #root -->
+	<div id="page-footer-container" class="clearfix">
+		<div class="wrapper">
+			<footer id="page-footer" class="clearfix">
+				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+			</footer> <!-- end of #page-footer -->
+		</div> <!-- end of .wrapper -->
+	</div> <!-- end of #page-footer-container -->
 
 
 
 	<!-- JavaScript at the bottom for fast page loading -->
 
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-	<script>window.jQuery || document.write('<script src="js/libs/jquery-1.8.2.min.js"><\/script>')</script>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="js/libs/jquery-1.8.3.min.js"><\/script>')</script>
 
 	<script>
 		Modernizr.load([

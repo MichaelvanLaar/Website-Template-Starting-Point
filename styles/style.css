@@ -9,15 +9,7 @@
 
    1    COLOR SCHEME
 
-   2    NORMALIZE
-   2.1  HTML5 display definitions
-   2.2  Base
-   2.3  Links
-   2.4  Typography
-   2.5  Lists
-   2.6  Embedded content
-   2.7  Forms
-   2.8  Tables
+   2    WEBFONTS
    
    3    ALERTS AND OVERLAYS
    3.1  Internet Explorer JavaScript warning
@@ -29,7 +21,8 @@
    4.3  Typography, lists, headlines
    4.4  Embedded content
    4.5  Form elements
-   4.6  Layout elements
+   4.6  Main navigation
+   4.7  Layout elements
 
    5    NON-SEMANTIC HELPER CLASSES
    5.1  Hiding content
@@ -41,11 +34,9 @@
    6    MEDIA QUERIES  =>  Important:
                            Break points should always be adjusted to the final
                            layout, not to screen sizes of certain devices.
-   6.1  (480px and above)  Small screen devices, held in landscape mode
-   6.2  (600px and above)  Smaller tablets (like Kindle), held in portrait mode
-   6.3  (768px and above)  Ten-inch tablets (like iPad), held in portrait mode
-   6.4  (1024px and above) Ten-inch tablets (like iPad), held in landscape mode
-   6.5  (1200px and above) Widescreen displays
+   6.1  (570px and above)
+   6.2  (980px and above)
+   6.3  (1200px and above) Widescreen displays
 
    7    PRINT STYLES
    7.1  Hide print specific content from screen
@@ -72,110 +63,10 @@ color (element): #xxxxxx
 
 
 /* =============================================================================
-   2    NORMALIZE
+   2    WEBFONTS
    ========================================================================== */
 
-
-/* =============================================================================
-   2.1  HTML5 display definitions
-   ========================================================================== */
-
-article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block; }
-audio, canvas, video { display: inline-block; *display: inline; *zoom: 1; }
-audio:not([controls]) { display: none; }
-[hidden] { display: none; }
-
-
-/* =============================================================================
-   2.2  Base
-   ========================================================================== */
-
-html { font-size: 100%; overflow-y: scroll; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
-body { margin: 0; font-size: 13px; line-height: 1.5384615384615384615384615384615; }
-body, button, input, select, textarea { font-family: sans-serif; color: #333; }
-::-moz-selection { background: #fe57a1; color: #fff; text-shadow: none; }
-::selection { background: #fe57a1; color: #fff; text-shadow: none; }
-
-
-/* =============================================================================
-   2.3  Links
-   ========================================================================== */
-
-a { color: #00e; }
-a:visited { color: #551a8b; }
-a:hover { color: #06e; }
-a:focus { outline: thin dotted; }
-a:hover, a:active { outline: 0; }
-
-
-/* =============================================================================
-   2.4  Typography
-   ========================================================================== */
-
-abbr[title] { border-bottom: 1px dotted; }
-b, strong { font-weight: bold; }
-blockquote { margin: 1em 40px; }
-dfn { font-style: italic; }
-hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
-ins { background: #ff9; color: #000; text-decoration: none; }
-mark { background: #ff0; color: #000; font-style: italic; font-weight: bold; }
-pre, code, kbd, samp { font-family: monospace, monospace; _font-family: 'courier new', monospace; font-size: 1em; }
-pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; }
-q { quotes: none; }
-q:before, q:after { content: ""; content: none; }
-small { font-size: 85%; }
-sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
-sup { top: -0.5em; }
-sub { bottom: -0.25em; }
-
-
-/* =============================================================================
-   2.5  Lists
-   ========================================================================== */
-
-ul, ol { margin: 1em 0; padding: 0 0 0 2.1538461538461538461538461538462em; } /* 28px / 13px */
-dd { margin: 0 0 0 2.1538461538461538461538461538462em; } /* 28px / 13px */
-nav ul, nav ol { list-style: none; list-style-image: none; margin: 0; padding: 0; }
-
-
-/* =============================================================================
-   2.6  Embedded content
-   ========================================================================== */
-
-img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; }
-svg:not(:root) { overflow: hidden; }
-figure { margin: 0; }
-
-
-/* =============================================================================
-   2.7  Forms
-   ========================================================================== */
-
-form { margin: 0; }
-fieldset { border: 0; margin: 0; padding: 0; }
-label { cursor: pointer; }
-legend { border: 0; *margin-left: -7px; padding: 0; }
-button, input, select, textarea { font-size: 100%; margin: 0; vertical-align: baseline; *vertical-align: middle; }
-button, input { line-height: normal; *overflow: visible; }
-table button, table input { *overflow: auto; }
-button, input[type="button"], input[type="reset"], input[type="submit"] { cursor: pointer; -webkit-appearance: button; }
-input[type="checkbox"], input[type="radio"] { box-sizing: border-box; }
-input[type="search"] { -webkit-appearance: textfield; -moz-box-sizing: content-box; -webkit-box-sizing: content-box; box-sizing: content-box; }
-input[type="search"]::-webkit-search-decoration { -webkit-appearance: none; }
-button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
-textarea { overflow: auto; vertical-align: top; resize: vertical; }
-
-/* Colors for form validity */
-input:valid, textarea:valid {  }
-input:invalid, textarea:invalid { background-color: #f0dddd; }
-
-
-/* =============================================================================
-   2.8  Tables
-   ========================================================================== */
-
-table { border-collapse: collapse; border-spacing: 0; }
-td { vertical-align: top; }
+/* place webfont definitions here */
 
 
 
@@ -236,7 +127,8 @@ td { vertical-align: top; }
 	top: -99999px;
 }
 
-#skiplinks a:focus, #skiplinks a:active {
+#skiplinks a:focus,
+#skiplinks a:active {
 	left: 0;
 	position: static;
 	top: 0;
@@ -253,7 +145,8 @@ td { vertical-align: top; }
 	z-index: 1000;
 }
 
-#skiplinks a:focus, #skiplinks a:active {
+#skiplinks a:focus,
+#skiplinks a:active {
 	background: #333;
 	border-bottom: 1px #000 solid;
 	color: #fff;
@@ -281,6 +174,18 @@ td { vertical-align: top; }
    4.1  Base
    ========================================================================== */
 
+html {
+	overflow-y: scroll;
+}
+
+html,
+button,
+input,
+select,
+textarea {
+	color: #333;
+}
+
 body {
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 13px;
@@ -288,8 +193,8 @@ body {
 }
 
 /* Change the selection background color to fit with the used color scheme */
-::-moz-selection { background: #fe57a1; color: #fff; }
-::selection { background: #fe57a1; color: #fff; }
+::-moz-selection { background: #fe57a1; color: #fff; text-shadow: none; }
+::selection { background: #fe57a1; color: #fff; text-shadow: none; }
 
 
 /* =============================================================================
@@ -297,16 +202,16 @@ body {
    ========================================================================== */
 
 a {
-	color: #00e;
+	color: #0a4baa;
 	text-decoration: none;
 }
 
 a:visited {
-	color: #551a8b;
+	color: #05327d;
 }
 
 a:hover {
-	color: #3c3cee;
+	color: #507dbe;
 }
 
 
@@ -317,6 +222,11 @@ a:hover {
 p, ul, ol {
 	margin-bottom: 1.5384615384615384615384615384615em; /* 20px / 13px */
 	margin-top: 1.5384615384615384615384615384615em; /* 20px / 13px */
+}
+
+ul,
+ol {
+	padding: 0 0 0 2.1538461538461538461538461538462em; /* 28px / 13px */
 }
 
 ul li *, ol li * {
@@ -330,6 +240,15 @@ ul ol,
 ol ul {
 	margin-bottom: 0;
 	margin-top: 0;
+}
+
+nav ul {
+	margin: 0;
+	padding: 0;
+}
+
+dd {
+	margin: 0 0 0 2.1538461538461538461538461538462em; /* 28px / 13px */
 }
 
 blockquote {
@@ -383,6 +302,19 @@ h4 {
 	margin-bottom: 1.3333333333333333333333333333333em; /* 20px / 15px */
 	margin-top: 1.3333333333333333333333333333333em; /* 20px / 15px */
 }
+
+td { vertical-align: top; }
+
+hr {
+	display: block;
+	height: 1px;
+	border: 0;
+	border-top: 1px solid #ccc;
+	margin: 1em 0;
+	padding: 0;
+}
+
+
 
 
 /* =============================================================================
@@ -444,8 +376,6 @@ button {
 	background-image: -ms-linear-gradient(top, #77e, #00e); 
 	background-image: -o-linear-gradient(top, #77e, #00e); 
 	background-image: linear-gradient(top, #77e, #00e);
-	-pie-background: linear-gradient(#77e, #00e);
-	behavior: url('js/libs/pie.htc');
 }
 
 input:focus,
@@ -456,7 +386,6 @@ button:focus {
 	-moz-box-shadow: 1px 1px 2px #3c3cee, -1px 1px 2px #3c3cee, -1px -1px 2px #3c3cee, 1px -1px 2px #3c3cee;
 	box-shadow: 1px 1px 2px #3c3cee, -1px 1px 2px #3c3cee, -1px -1px 2px #3c3cee, 1px -1px 2px #3c3cee;
 	outline: 0;
-	behavior: url('js/libs/pie.htc');
 }
 
 input[type="submit"]:focus,
@@ -481,8 +410,6 @@ button:active {
 	background-image: -ms-linear-gradient(top, #00e, #77e); 
 	background-image: -o-linear-gradient(top, #00e, #77e); 
 	background-image: linear-gradient(top, #00e, #77e);
-	-pie-background: linear-gradient(#00e, #77e);
-	behavior: url('js/libs/pie.htc');
 }
 
 ::-webkit-input-placeholder,
@@ -491,43 +418,82 @@ button:active {
 	color: #aaa;
 }
 
+textarea {
+	resize: vertical;
+}
+
+fieldset {
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+
+/* Colors for form validity */
+input:valid, textarea:valid {  }
+input:invalid, textarea:invalid { background-color: #f0dddd; }
+
 
 /* =============================================================================
-   4.6  Layout elements
+   4.6  Main navigation
    ========================================================================== */
 
-#root {
+#main-navigation {
+	background: #8cbe0a;
+	margin: 0;
+	padding-bottom: 0 !important;
+	padding-left: 1.5384615384615384615384615384615em; /* 20px / 13px */
+	padding-right: 1.5384615384615384615384615384615em; /* 20px / 13px */
+}
+
+.js #main-navigation-list {
+	display: none;
+	visibility: hidden;
+}
+
+.js .selectnav {
+	display: block;
+	font-size: 1.1538461538461538461538461538462em; /* 15px / 13px */
+	margin: 0.66666666666666666666666666666667em 0; /* 10px / 15px */
+	visibility: visible;
+	width: 100%;
+}
+
+
+/* =============================================================================
+   4.7  Layout elements
+   ========================================================================== */
+
+.wrapper {
 	margin: 0 auto;	
 	max-width: 570px;
 	position: relative;
 	width: 100%;
 }
    
-#page-header {
-	background: #febe7e;
-	padding-bottom: 0 !important;
+#page-header-container {
+	background: #ffd2aa;
 }
 
-#main-navigation {
-	background: #8698bf;
-	margin: 0;
+#page-header {
 	padding-bottom: 0 !important;
 }
 
 #main {
-	background: #c1eaff;
+	background: #fff5aa;
 	clear: both;
 	padding: 0 1.5384615384615384615384615384615em; /* 20px / 13px */
 }
 
 #sidebar {
-	background: #ddffa6;
+	background: #dcdcdc;
 	padding: 0 1.5384615384615384615384615384615em; /* 20px / 13px */
 }
 
+#page-footer-container {
+	background: #91afd7;
+}
+
 #page-footer {
-	background: #ff8acd;
-	clear: both;	
 	padding: 0 1.5384615384615384615384615384615em; /* 20px / 13px */
 }
 
@@ -544,8 +510,8 @@ button:active {
    ========================================================================== */
 
 /* For image replacement */
-.ir { display: block; border: 0; text-indent: -999em; overflow: hidden; background-color: transparent; background-repeat: no-repeat; text-align: left; direction: ltr; }
-.ir br { display: none; }
+.ir { background-color: transparent; border: 0; overflow: hidden; *text-indent: -9999px; }
+.ir:before { content: ""; display: block; height: 150%; width: 0; }
 
 /* Hide from both screenreaders and browsers: h5bp.com/u */
 .hidden { display: none !important; visibility: hidden; }
@@ -575,9 +541,9 @@ button:active {
    5.3  Clearfix
    ========================================================================== */
 
-.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:before, .clearfix:after { content: " "; display: table; }
 .clearfix:after { clear: both; }
-.clearfix { zoom: 1; }
+.clearfix { *zoom: 1; }
 
 
 /* =============================================================================
@@ -610,101 +576,127 @@ button:active {
 
 
 /* =============================================================================
-   6.1  (480px and above) Small screen devices, held in landscape mode
+   6.1  (570px and above)
    ========================================================================== */
 
-@media only screen and (min-width: 480px) {
+@media only screen and (min-width: 570px) {
 
-	/* ==== 6.1.1  Base ===================================================== */
+	/* ==== Main navigation ================================================= */
 
-	/* Style definitions go here */
-	
-	/* ==== 6.1.2  Links ==================================================== */
+	.js .selectnav {
+		display: none;
+		visibility: hidden;
+	}
 
-	/* Style definitions go here */
+	.js #main-navigation-list {
+		display: block;
+		visibility: visible;
+	}
 
-	/* ==== 6.1.3  Typography, lists, headlines ============================= */
+	/* 1st level (horizontal) and overall menu styles */
+	#main-navigation-list {
+		position: relative;
+	}
+	#main-navigation-list li {
+		display: inline;
+		float: left;
+		font-size: 1.1538461538461538461538461538462em; /* 15px / 13px */
+		line-height: 1.3333333333333333333333333333333; /* 20px / 15px */
+		position: relative;
+	}
+	#main-navigation-list .parent,
+	#main-navigation-list .current {
+		background: #b4dc5a;
+	}
 
-	/* Style definitions go here */
-	
-	/* ==== 6.1.4  Layout elements ========================================== */
+	#main-navigation-list li a {
+		color: #fff5aa;
+		display:inline-block;
+		padding: 0.66666666666666666666666666666667em; /* 10px / 15px */
+		-webkit-transition: color 0.2s linear, background 0.2s linear;
+		-moz-transition: color 0.2s linear, background 0.2s linear;
+		-o-transition: color 0.2s linear, background 0.2s linear;
+		transition: color 0.2s linear, background 0.2s linear;
+	}
+	#main-navigation-list li a:hover,
+	#main-navigation-list li:hover > a {
+		background: #dcf0a0;
+		color: #507dbe;
+	}
+	#main-navigation-list li a:visited {
+		color: #fff5aa;
+	}
+	#main-navigation-list > .has_children > a:after {
+		content: "▼";
+		font-size: 80%;
+		margin-left: 0.33333333333333333333333333333333em; /* 5px / 15px */
+	}
 
-	/* Style definitions go here */
-	
+	/* 2nd level (dropdown) */
+	#main-navigation-list li:hover > ul {
+		/* nice fade effect */
+			opacity: 1;
+		/* display submenus on hover */
+			clip: auto;
+			height: auto;
+			margin: 0;
+			overflow: visible;
+			width: 12em; /* adjust this to the desired submenu width   |   180px / 15px */
+	}
+	#main-navigation-list ul {
+		/* nice fade effect */
+			opacity: 0;
+			-webkit-transition: opacity 0.2s linear;
+			-moz-transition: opacity 0.2s linear;
+			-o-transition: opacity 0.2s linear;
+			transition: opacity 0.2s linear;
+		/* hide submenus only visually, but still make them available for screenreaders */
+			border: 0;
+			clip: rect(0 0 0 0);
+			height: 1px;
+			margin: -1px;
+			overflow: hidden;
+			width: 1px;
+		/* visual styling */
+			background: #8cbe0a;
+			position: absolute;
+			z-index: 9999;
+			-webkit-box-shadow: 0 2px 5px -1px rgba(0, 0, 0, 0.5);
+			box-shadow: 0 2px 5px -1px rgba(0, 0, 0, 0.5);
+	}
+	#main-navigation-list ul li {
+		clear: both;
+		width: 100%;
+		font-size: 1em;
+	}
+	#main-navigation-list ul li a {
+		padding-right: 1.3333333333333333333333333333333em; /* 20px / 15px */
+		width: 10em; /* submenu width minus left and right padding */
+	}
+	#main-navigation-list ul > .has_children > a:after {
+		content: "►";
+		font-size: 80%;
+		position: absolute;
+		top: 1em; /* 15px / 15px */
+		right: 0.33333333333333333333333333333333em; /* 5px / 15px */
+	}
+
+	/* 3rd level (flyout) */
+	#main-navigation-list ul ul {
+		top: 0;
+		left: 12em; /* must fit the dropdown menu width */
+	}
+
 }
 
 
 /* =============================================================================
-   6.2  (600px and above) Smaller tablets (like Kindle), held in portrait mode
-   ========================================================================== */
-
-@media only screen and (min-width: 600px) {
-
-	/* ==== 6.2.1  Base ===================================================== */
-
-	/* Style definitions go here */
-	
-	/* ==== 6.2.2  Links ==================================================== */
-
-	/* Style definitions go here */
-
-	/* ==== 6.2.3  Typography, lists, headlines ============================= */
-
-	/* Style definitions go here */
-	
-	/* ==== 6.2.4  Layout elements ========================================== */
-
-	/* Style definitions go here */
-	
-}
-
-
-/* =============================================================================
-   6.3  (768px and above) Ten-inch tablets (like iPad), held in portrait mode
-   ========================================================================== */
-
-@media only screen and (min-width: 768px) {
-
-	/* ==== 6.3.1  Base ===================================================== */
-
-	/* Style definitions go here */
-	
-	/* ==== 6.3.2  Links ==================================================== */
-
-	/* Style definitions go here */
-
-	/* ==== 6.3.3  Typography, lists, headlines ============================= */
-
-	/* Style definitions go here */
-	
-	/* ==== 6.3.4  Layout elements ========================================== */
-
-	/* Style definitions go here */
-
-}
-
-
-/* =============================================================================
-   6.4  (1024px and above) Ten-inch tablets (like iPad), held in landscape mode
+   6.2  (980px and above)
    ========================================================================== */
 
 @media only screen and (min-width: 980px) {
 
-	/* ==== 6.4.1  Base ===================================================== */
-
-	/* Style definitions go here */
-	
-	/* ==== 6.4.2  Links ==================================================== */
-
-	/* Style definitions go here */
-
-	/* ==== 6.4.3  Typography, lists, headlines ============================= */
-
-	/* Style definitions go here */
-	
-	/* ==== 6.4.4  Layout elements ========================================== */
-
-	#root {
+	.wrapper {
 		max-width: 73.846153846153846153846153846154em; /* 960px / 13px */
 		width: 73.846153846153846153846153846154em; /* 960px / 13px */
 	}
@@ -725,26 +717,12 @@ button:active {
 
 
 /* =============================================================================
-   6.5  (1200px and above) Widescreen displays
+   6.3  (1200px and above) Widescreen displays
    ========================================================================== */
 
 @media only screen and (min-width: 1200px) {
 
-	/* ==== 6.5.1  Base ===================================================== */
-
 	body { font-size: 16px;	}
-	
-	/* ==== 6.5.2  Links ==================================================== */
-
-	/* Style definitions go here */
-
-	/* ==== 6.5.3  Typography, lists, headlines ============================= */
-
-	/* Style definitions go here */
-	
-	/* ==== 6.5.4  Layout elements ========================================== */
-
-	/* Style definitions go here */
 
 }
 
@@ -775,7 +753,7 @@ button:active {
 
 	/* ==== 7.2.1  Base ===================================================== */
 
-	* { background: transparent !important; color: black !important; text-shadow: none !important; filter:none !important; -ms-filter: none !important; }
+	* { background: transparent !important; color: #000 !important; box-shadow: none !important; text-shadow: none !important; }
 	@page { margin: 2cm; }
 	body { font-size: 12pt; }
 
@@ -795,6 +773,7 @@ button:active {
 	p, h2, h3, h4, h5, h6 { orphans: 3; widows: 3; }
 	h2, h3, h4, h5, h6 { page-break-after: avoid; }
 	h1 { margin-left: 0; margin-right: 0; }
+	
 
 	.print-links-footer h3 { /* equals normal h4 style */
 		font-size: 1.1538461538461538461538461538462em;
