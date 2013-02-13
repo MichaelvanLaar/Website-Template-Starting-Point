@@ -637,7 +637,6 @@ input:invalid, textarea:invalid { background-color: #f0dddd; }
 		/* nice fade effect */
 			opacity: 1;
 		/* display submenus on hover */
-			clip: auto;
 			height: auto;
 			margin: 0;
 			overflow: visible;
@@ -652,7 +651,6 @@ input:invalid, textarea:invalid { background-color: #f0dddd; }
 			transition: opacity 0.2s linear;
 		/* hide submenus only visually, but still make them available for screenreaders */
 			border: 0;
-			clip: rect(0 0 0 0);
 			height: 1px;
 			margin: -1px;
 			overflow: hidden;
