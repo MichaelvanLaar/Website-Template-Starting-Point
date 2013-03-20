@@ -622,7 +622,7 @@ input:invalid, textarea:invalid { background-color: #f0dddd; }
 	}
 	#main-navigation-list li a:hover,
 	.no-js #main-navigation-list li:hover > a,
-	.js #main-navigation-list li.active > a {
+	.js #main-navigation-list li.show-submenu > a {
 		background: #dcf0a0;
 		color: #507dbe;
 	}
@@ -637,7 +637,7 @@ input:invalid, textarea:invalid { background-color: #f0dddd; }
 
 	/* 2nd level (dropdown) */
 	.no-js #main-navigation-list li:hover > ul,
-	.js #main-navigation-list li.active > ul {
+	.js #main-navigation-list li.show-submenu > ul {
 		/* nice fade effect */
 			opacity: 1;
 		/* display submenus on hover */
