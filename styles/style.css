@@ -608,7 +608,6 @@ input:invalid, textarea:invalid { background-color: #f0dddd; }
 	#main-navigation-list .current {
 		background: #b4dc5a;
 	}
-
 	#main-navigation-list li a {
 		color: #fff5aa;
 		display:inline-block;
@@ -618,13 +617,17 @@ input:invalid, textarea:invalid { background-color: #f0dddd; }
 		-o-transition: color 0.2s linear, background 0.2s linear;
 		transition: color 0.2s linear, background 0.2s linear;
 	}
+	#main-navigation-list li a:visited {
+		color: #fff5aa;
+	}
 	#main-navigation-list li a:hover,
-	#main-navigation-list li:hover > a {
+	.no-js #main-navigation-list li:hover > a,
+	.js #main-navigation-list li.active > a {
 		background: #dcf0a0;
 		color: #507dbe;
 	}
-	#main-navigation-list li a:visited {
-		color: #fff5aa;
+	.js #main-navigation-list .has_children > a {
+		cursor: pointer;
 	}
 	#main-navigation-list > .has_children > a:after {
 		content: "▼";
@@ -633,7 +636,8 @@ input:invalid, textarea:invalid { background-color: #f0dddd; }
 	}
 
 	/* 2nd level (dropdown) */
-	#main-navigation-list li:hover > ul {
+	.no-js #main-navigation-list li:hover > ul,
+	.js #main-navigation-list li.active > ul {
 		/* nice fade effect */
 			opacity: 1;
 		/* display submenus on hover */
@@ -683,6 +687,12 @@ input:invalid, textarea:invalid { background-color: #f0dddd; }
 	#main-navigation-list ul ul {
 		top: 0;
 		left: 12em; /* must fit the dropdown menu width */
+	}
+
+	/* hide deeper levels */
+	#main-navigation-list ul ul ul {
+		display: none;
+		visibility: hidden;
 	}
 
 }
