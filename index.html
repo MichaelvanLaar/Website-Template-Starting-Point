@@ -8,6 +8,8 @@
 
 <head>
 
+    <a href=""
+
 	<meta charset="utf-8" />
 
 	<title>Basic Template</title>
@@ -32,15 +34,14 @@
 	<meta name="msapplication-TileImage" content="apple-touch-icon-144x144-precomposed.png">
 	<meta name="msapplication-TileColor" content="#05327d">
 
-	<!-- Webfont Load Enhancer
-	     If you don’t use webfonts you can remove the following script element. -->
-	<script src="js/libs/webfontloadenhancer-1.2.min.js"></script>
-
 	<link rel="stylesheet" href="styles/normalize.min.css" />
 	<link rel="stylesheet" href="styles/style.css" />
 
 	<script src="js/libs/modernizr-2.6.2.custom.min.js"></script>
 	<script>Modernizr.load({ test: Modernizr.mq('(min-width: 0px)'), nope: 'js/libs/respond.custom.min.js' });</script>
+	<!-- If you don’t use webfonts, executing the fontsmooting test is not nevessary.
+	     In this case you don’t have to load modernizr-fontsmoothing-test.min.js. -->
+	<script src="js/libs/modernizr-fontsmoothing-test.min.js"></script>
 
 	<!-- Facebook Open Graph Data -->
 	<meta property="og:title" content="" />
