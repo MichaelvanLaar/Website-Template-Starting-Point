@@ -9,7 +9,6 @@ jQuery Scripts
 
 1. Menu (dropdown menu functionality and SelectNav.js initialisation)
 2. Sisyphus initialisation
-3. enquire.js listener setup (should be the last call in this script file)
 
 */
 
@@ -72,10 +71,3 @@ $(document).ready(function(){
 		$('form').sisyphus();
 	}
 });
-
-
-/* =============================================================================
-   3. enquire.js listener setup (should be the last call in this script file)
-   ========================================================================== */
-
-enquire.listen();
