@@ -1,0 +1,1153 @@
+/*☺
+[Project name]
+*/
+
+
+/* =============================================================================
+   TABLE OF CONTENTS
+   =============================================================================
+
+   1    COLOR SCHEME
+
+   2    WEBFONTS
+
+   3    ALERTS AND OVERLAYS
+   3.1  Internet Explorer JavaScript warning
+   3.2  Skiplinks
+
+   4    PRIMARY STYLES
+   4.1  Base
+   4.2  Links
+   4.3  Typography, lists, headlines
+   4.4  Embedded content
+   4.5  Form elements
+   4.6  Main navigation
+   4.7  Layout elements
+
+   5    NON-SEMANTIC HELPER CLASSES
+   5.1  Hiding content
+   5.2  Alignments
+   5.3  Clearfix
+   5.4  Misc little helpers
+   5.5  Remove telephone number styling inserted by the Skype browser plug-in
+
+   6    MEDIA QUERIES  =>  Important:
+                           Break points should always be adjusted to the final
+                           layout, not to screen sizes of certain devices.
+   6.1  670px and above (website width: 650px)
+   6.2  1020px and above (website width: 1000px)
+   6.3  1238px and above (website width: 1125px)
+   6.4  1625px and above (website width: 1250px)
+   6.5  1950px and above (website width: 1500px)
+
+   7    PRINT STYLES
+   7.1  Hide print specific content from screen
+   7.2  Print specific styles
+
+*/
+
+
+
+
+/* =============================================================================
+   1    COLOR SCHEME
+   ========================================================================== */
+
+/*
+color (element): #xxxxxx
+color (element): #xxxxxx
+color (element): #xxxxxx
+color (element): #xxxxxx
+color (element): #xxxxxx
+*/
+
+
+
+
+/* =============================================================================
+   2    WEBFONTS
+   ========================================================================== */
+
+/* place webfont definitions here */
+
+
+
+
+/* =============================================================================
+   3    ALERTS AND OVERLAYS
+   ========================================================================== */
+
+
+/* =============================================================================
+   3.1  Internet Explorer warnings
+   ========================================================================== */
+
+.warning-shader {
+	position: fixed;
+	z-index: 1000;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0.7;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+	    filter: alpha(opacity=70);
+	background: #000;
+}
+
+.lt-ie7 .warning-shader {
+	position: absolute;
+	height: 10000px;
+}
+
+.ie-warning {
+	position: fixed;
+	z-index: 1001;
+	top: 50%;
+	left: 50%;
+	display: block;
+	width: 810px;
+	height: 430px;
+	margin-top: -220px;
+	margin-left: -410px;
+	border: 5px solid #ed7f00;
+}
+
+.lt-ie7 .ie-warning {
+	position: absolute;
+}
+
+
+/* =============================================================================
+   3.2  Skiplinks
+   ========================================================================== */
+
+#skiplinks a {
+	position: absolute;
+	top: -99999px;
+	left: -99999px;
+}
+
+#skiplinks a:focus,
+#skiplinks a:active {
+	position: static;
+	top: 0;
+	left: 0;
+}
+
+#skiplinks {
+	position: absolute;
+	z-index: 1000;
+	top: 0;
+	left: -99999px;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+#skiplinks a:focus,
+#skiplinks a:active {
+	position: absolute;
+	left: 99999px;
+	width: 100%;
+	padding: 10px 0;
+	text-align: center;
+	text-decoration: none;
+	color: #fff;
+	border-bottom: 1px #000 solid;
+	outline: 0 none;
+	background: #333;
+}
+
+
+
+
+/* =============================================================================
+   4    PRIMARY STYLES
+   ========================================================================== */
+
+/* These styles are for small screen devices, held in portrait mode. (320px)
+   They will be altered to suit different screen resolutions (see below). */
+
+
+/* =============================================================================
+   4.1  Base
+   ========================================================================== */
+
+html {
+	font-size: 16px;
+	line-height: 1.5625; /* 25px / 16px */
+	overflow-y: scroll;
+}
+
+html,
+button,
+input,
+select,
+textarea {
+	color: #333;
+}
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Change the selection background color to fit with the used color scheme */
+::-moz-selection {
+	color: #fff;
+	background: #91afd7;
+	text-shadow: none;
+}
+::selection {
+	color: #fff;
+	background: #91afd7;
+	text-shadow: none;
+}
+
+hr {
+	display: block;
+	height: 1px;
+	margin: 1.5625rem 0; /* 25px / 16px */
+	padding: 0;
+	border: 0;
+	border-top: 1px solid #bebebe;
+}
+
+
+/* =============================================================================
+   4.2  Links
+   ========================================================================== */
+
+a {
+	text-decoration: none;
+	color: #0a4baa;
+}
+
+a:visited {
+	color: #05327d;
+}
+
+a:hover {
+	color: #507dbe;
+}
+
+
+/* =============================================================================
+   4.3  Typography, lists, headlines
+   ========================================================================== */
+
+p,
+ul,
+ol {
+	margin-top: 1.5625rem; /* 25px / 16px */
+	margin-bottom: 1.5625rem; /* 25px / 16px */
+}
+
+ul,
+ol {
+	padding: 0 0 0 2.1875em; /* 35px / 16px */
+}
+
+ul li *,
+ol li * {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+ul ul,
+ol ol,
+ul ol,
+ol ul {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+nav ul {
+	margin: 0;
+	padding: 0;
+}
+
+dd {
+	margin: 0 0 0 2.1875em; /* 35px / 16px */
+}
+
+blockquote {
+	font-style: italic;
+	margin: 1.5625rem 2.1875em; /* 25px / 16px   and   35px / 16px */
+}
+
+blockquote p {
+	font-style: italic;
+}
+
+cite {
+	font-style: normal;
+}
+
+pre,
+code,
+code var {
+	font-family: "Lucida Console", "Courier New", Courier, monospace;
+}
+
+abbr {
+	cursor: help;
+}
+
+del {
+	text-decoration: line-through;
+}
+
+h1 {
+	font-size: 2.625rem; /* 42px / 16px */
+	line-height: 1.1904761904761904761904761904762; /* 50px / 42px */
+	margin-top: 1.5625rem; /* 25px / 16px */
+	margin-bottom: 1.5625rem; /* 25px / 16px */
+}
+
+h2 {
+	font-size: 1.5625rem; /* 25px / 16px */
+	line-height: 1; /* 25px / 25px */
+	margin-top: 1.5625rem; /* 25px / 16px */
+	margin-bottom: 1.5625rem; /* 25px / 16px */
+}
+
+h3 {
+	font-size: 1.25rem; /* 20px / 16px */
+	line-height: 1.25; /* 25px / 20px */
+	margin-top: 3.125rem; /* 50px / 16px */
+	margin-bottom: 1.5625rem; /* 25px / 16px */
+}
+
+h4 {
+	font-size: 1rem; /* 16px / 16px */
+	line-height: 1.5625; /* 16px / 16px */
+	margin-top: 3.125rem; /* 50px / 16px */
+	margin-bottom: 1.5625rem; /* 25px / 16px */
+}
+
+td {
+	vertical-align: top;
+}
+
+
+
+
+/* =============================================================================
+   4.4  Embedded content
+   ========================================================================== */
+
+audio,
+canvas,
+img,
+video {
+	vertical-align: middle;
+}
+
+embed,
+img,
+object,
+video {
+	max-width: 100%;
+}
+
+img {
+	height: auto;
+}
+
+
+/* =============================================================================
+   4.5  Form elements
+   ========================================================================== */
+
+input[type="text"],
+input[type="password"],
+input[type="search"],
+input[type="email"],
+textarea,
+select {
+	font-family: Arial, Helvetica, sans-serif;
+	color: #333;
+	border: 1px solid #5a5a5a;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="search"],
+input[type="email"],
+textarea {
+	padding: 0.1875rem; /* 3px / 16px */
+}
+
+select {
+	padding: 0.125rem; /* 2px / 16px */
+}
+
+input[type="submit"],
+input[type="button"],
+input[type="reset"],
+button {
+	font-family: Arial, Helvetica, sans-serif;
+	padding: 0.1875rem 0.5625rem; /* 3px / 16px   and   9px / 16px */
+	color: #fff;
+	border: 1px solid #5a5a5a;
+	-webkit-border-radius: 0.3125rem; /* 5px / 16px */
+	   -moz-border-radius: 0.3125rem; /* 5px / 16px */
+	        border-radius: 0.3125rem; /* 5px / 16px */
+	background-color: #5a5a5a;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#bebebe), to(#5a5a5a));
+	background-image: -webkit-linear-gradient(top, #bebebe, #5a5a5a);
+	background-image:    -moz-linear-gradient(top, #bebebe, #5a5a5a);
+	background-image:     -ms-linear-gradient(top, #bebebe, #5a5a5a);
+	background-image:      -o-linear-gradient(top, #bebebe, #5a5a5a);
+	background-image:         linear-gradient(top, #bebebe, #5a5a5a);
+	-webkit-background-clip: padding-box;
+	   -moz-background-clip: padding;
+	        background-clip: padding-box;
+}
+
+input:focus,
+textarea:focus,
+select:focus,
+button:focus {
+	outline: 0;
+	-webkit-box-shadow: 1px 1px 3px #91afd7, -1px 1px 3px #91afd7, -1px -1px 3px #91afd7, 1px -1px 3px #91afd7;
+	   -moz-box-shadow: 1px 1px 3px #91afd7, -1px 1px 3px #91afd7, -1px -1px 3px #91afd7, 1px -1px 3px #91afd7;
+	        box-shadow: 1px 1px 3px #91afd7, -1px 1px 3px #91afd7, -1px -1px 3px #91afd7, 1px -1px 3px #91afd7;
+}
+
+input[type="submit"]:active,
+input[type="button"]:active,
+input[type="reset"]:active,
+button:active {
+	background-color: #bebebe;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#5a5a5a), to(#bebebe));
+	background-image: -webkit-linear-gradient(top, #5a5a5a, #bebebe);
+	background-image:    -moz-linear-gradient(top, #5a5a5a, #bebebe);
+	background-image:     -ms-linear-gradient(top, #5a5a5a, #bebebe);
+	background-image:      -o-linear-gradient(top, #5a5a5a, #bebebe);
+	background-image:         linear-gradient(top, #5a5a5a, #bebebe);
+	-webkit-box-shadow: 1px 1px 3px #91afd7, -1px 1px 3px #91afd7, -1px -1px 3px #91afd7, 1px -1px 3px #91afd7;
+	   -moz-box-shadow: 1px 1px 3px #91afd7, -1px 1px 3px #91afd7, -1px -1px 3px #91afd7, 1px -1px 3px #91afd7;
+	        box-shadow: 1px 1px 3px #91afd7, -1px 1px 3px #91afd7, -1px -1px 3px #91afd7, 1px -1px 3px #91afd7;
+}
+
+.placeholder {
+	color: #aaa;
+}
+
+::-webkit-input-placeholder {
+	color: #aaa;
+}
+
+:-moz-placeholder {
+	color: #aaa;
+}
+
+::-moz-placeholder {
+	color: #aaa;
+}
+
+:-ms-input-placeholder {
+	color: #aaa;
+}
+
+textarea {
+	resize: vertical;
+}
+
+fieldset {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+/* Colors for form validity */
+input:invalid,
+textarea:invalid {
+	background-color: #f0dddd;
+}
+
+
+/* =============================================================================
+   4.6  Main navigation
+   ========================================================================== */
+
+#main-navigation-container {
+	background-color: #dcdcdc;
+}
+
+#main-navigation-logo {
+	position: absolute;
+	top: 0;
+	left: 10px;
+	display: none;
+	width: 2.5rem;
+	margin-right: 0.625rem; /* 10px / 16px */
+}
+
+#main-navigation {
+	margin: 0;
+	padding-bottom: 0 !important;
+}
+
+.no-js #main-navigation-toggle {
+	display: none;
+	visibility: hidden;
+}
+
+.js #main-navigation-toggle {
+	font-size: 1.25rem; /* 20px / 16px */
+	line-height: 1.25; /* 25px / 20px */
+	position: relative;
+	display: block;
+	padding: 0.625rem; /* 10px / 16px */
+	-webkit-transition: all 0.2s linear;
+	   -moz-transition: all 0.2s linear;
+	     -o-transition: all 0.2s linear;
+	        transition: all 0.2s linear;
+	color: #000;
+	background-color: #dcdcdc;
+}
+
+.js #main-navigation-list {
+	position: absolute;
+	z-index: 9999;
+	overflow: hidden;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	-webkit-transition: opacity 0.2s linear;
+	   -moz-transition: opacity 0.2s linear;
+	     -o-transition: opacity 0.2s linear;
+	        transition: opacity 0.2s linear;
+	opacity: 0;
+	-webkit-box-shadow: 0 2px 5px -1px rgba(0, 0, 0, 0.5);
+	        box-shadow: 0 2px 5px -1px rgba(0, 0, 0, 0.5);
+}
+
+.js .show-submenu + #main-navigation-list {
+	left: 0;
+	overflow-x: visible;
+	overflow-y: auto;
+	width: 100%;
+	height: auto;
+	margin: 0;
+	opacity: 1;
+}
+
+/* 1st level and overall menu styles */
+
+#main-navigation-list li {
+	font-size: 1.25rem; /* 20px / 16px */
+	line-height: 1.25; /* 25px / 20px */
+	position: relative;
+	position: relative;
+	right: 0;
+	left: 0;
+	background-color: #dcdcdc;
+}
+
+#main-navigation-list a {
+	position: relative;
+	display: block;
+	padding: 0.625rem; /* 10px / 16px */
+	-webkit-transition: all 0.2s linear;
+	   -moz-transition: all 0.2s linear;
+	     -o-transition: all 0.2s linear;
+	        transition: all 0.2s linear;
+	color: #000;
+}
+
+#main-navigation-list li a:visited {
+	color: #000;
+}
+
+.js #main-navigation-list .parent,
+#main-navigation-list .current {
+	background: #bebebe;
+}
+
+#main-navigation-toggle:hover,
+#main-navigation-list li a:hover,
+.js #main-navigation-list li.show-submenu > a {
+	color: #f0f0f0;
+	background: #8c8c8c;
+}
+
+#main-navigation-toggle,
+.js #main-navigation-list .has_children > a {
+	cursor: pointer;
+}
+
+.js #main-navigation-toggle:after,
+.js #main-navigation-list .has_children > a:after {
+	font-size: 80%;
+	margin-left: 0.3125rem; /* 5px / 16px */
+	content: "▼";
+}
+
+/* 2nd level */
+
+#main-navigation-list ul a {
+	display: block;
+	position: relative;
+	right: 0;
+	left: 0;
+	padding-left: 2.1875em;
+}
+
+/* 3rd level */
+
+#main-navigation-list ul ul a {
+	padding-left: 4.375em;
+}
+
+/* Accordion functionality */
+
+.js #main-navigation-list ul,
+.js #main-navigation-list ul ul {
+	overflow: hidden;
+	height: 0;
+	-webkit-transition: opacity 0.2s linear;
+	   -moz-transition: opacity 0.2s linear;
+	     -o-transition: opacity 0.2s linear;
+	        transition: opacity 0.2s linear;
+	opacity: 0;
+}
+
+#main-navigation-list .show-submenu > ul,
+#main-navigation-list .show-submenu .show-submenu > ul {
+	overflow-x: visible;
+	overflow-y: auto;
+	height: auto;
+	opacity: 1;
+}
+
+
+/* =============================================================================
+   4.7  Layout elements
+   ========================================================================== */
+
+.wrapper {
+	position: relative;
+	width: 100%;
+	max-width: 650px;
+	margin: 0 auto;
+}
+
+#page-header {
+	margin-right: 10px;
+	margin-left: 10px;
+}
+
+#main {
+	clear: both;
+	margin-right: 10px;
+	margin-left: 10px;
+	padding-top: 1.5625rem; /* 25px / 16px */
+	padding-bottom: 1.5625rem; /* 25px / 16px */
+}
+
+#sidebar {
+	margin-right: 10px;
+	margin-left: 10px;
+	padding-top: 1.5625rem; /* 25px / 16px */
+	padding-bottom: 1.5625rem; /* 25px / 16px */
+	border-top: 1px solid #bebebe;
+}
+
+#page-footer-container {
+	background: #5a5a5a;
+}
+
+#page-footer {
+	font-size: 0.8125rem; /* 13px / 16px */
+	margin-right: 10px;
+	margin-left: 10px;
+	color: #fff;
+}
+
+
+
+
+/* =============================================================================
+   5    NON-SEMANTIC HELPER CLASSES
+   ========================================================================== */
+
+
+/* =============================================================================
+   5.1  Hiding content
+   ========================================================================== */
+
+/* For image replacement */
+.ir {
+	overflow: hidden;
+	border: 0;
+	background-color: transparent;
+	*text-indent: -9999px;
+}
+.ir:before {
+	display: block;
+	width: 0;
+	height: 150%;
+	content: "";
+}
+
+/* Hide from both screenreaders and browsers: h5bp.com/u */
+.hidden {
+	display: none !important;
+	visibility: hidden;
+}
+
+/* Hide only visually, but have it available for screenreaders: h5bp.com/v */
+.visuallyhidden {
+	position: absolute;
+	overflow: hidden;
+	clip: rect(0 0 0 0);
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+	border: 0;
+}
+
+/* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: h5bp.com/p */
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+	position: static;
+	overflow: visible;
+	clip: auto;
+	width: auto;
+	height: auto;
+	margin: 0;
+}
+
+/* Hide visually and from screenreaders, but maintain layout */
+.invisible {
+	visibility: hidden;
+}
+
+
+/* =============================================================================
+   5.2  Alignments
+   ========================================================================== */
+
+.left {
+	text-align: left;
+}
+
+.center {
+	text-align: center;
+}
+
+.right {
+	text-align: right;
+}
+
+.float-left {
+	float: left;
+	margin: 0 1.5625rem 1.5625rem 0; /* 25px / 16px */
+}
+
+.float-right {
+	float: right;
+	margin: 0 0 1.5625rem 1.5625rem; /* 25px / 16px */
+}
+
+
+/* =============================================================================
+   5.3  Clearfix
+   ========================================================================== */
+
+.clearfix:before,
+.clearfix:after {
+	display: table;
+	content: " ";
+}
+
+.clearfix:after {
+	clear: both;
+}
+
+.clearfix {
+	*zoom: 1;
+}
+
+
+/* =============================================================================
+   5.4  Misc little helpers
+   ========================================================================== */
+
+/* typically used with a <span> element */
+.nobr {
+	white-space: nowrap;
+}
+
+
+/* =============================================================================
+   5.5  Remove telephone number styling inserted by the Skype browser plug-in
+   ========================================================================== */
+
+.js body span.skype_pnh_container {
+	display: none !important;
+	visibility: hidden !important;
+}
+
+.js body span[class^="skype_pnh_print_container"] {
+	display: inline !important;
+}
+
+
+
+
+/* =============================================================================
+   6    MEDIA QUERIES
+   ========================================================================== */
+
+
+/* =============================================================================
+   6.1  670px and above (website width: 650px)
+   ========================================================================== */
+
+@media only screen and (min-width: 670px) {
+
+	/* Place rules here */
+
+}
+
+
+/* =============================================================================
+   6.2  1020px and above (website width: 1000px)
+
+        Layout based on 3 columns:
+        | 10px |    300px    | 50px |    300px    | 50px |    300px    | 10px |
+   ========================================================================== */
+
+@media only screen and (min-width: 1020px) {
+
+	/* ==== Main navigation ================================================= */
+
+	.js #main-navigation-toggle {
+		display: none;
+		visibility: hidden;
+	}
+
+	.js #main-navigation-list {
+		position: relative;
+		overflow: visible;
+		width: 100%;
+		height: auto;
+		margin: 0;
+		opacity: 1;
+		-webkit-box-shadow: none;
+		        box-shadow: none;
+	}
+
+	/* 1st level (horizontal) and overall menu styles */
+	#main-navigation-list {
+		position: relative;
+	}
+
+	#main-navigation-list li {
+		display: inline;
+		float: left;
+	}
+
+	#main-navigation-list .parent {
+		background: #bebebe;
+	}
+
+	.no-js #main-navigation-list li:hover > a {
+		color: #f0f0f0;
+		background: #8c8c8c;
+	}
+
+	.no-js #main-navigation-list > .has_children > a:after {
+		font-size: 80%;
+		margin-left: 0.3125rem; /* 5px / 16px */
+		content: "▼";
+	}
+
+	/* 2nd level (dropdown) */
+
+	.js #main-navigation-list ul {
+		display: block;
+	}
+
+	.no-js #main-navigation-list li:hover > ul,
+	.js #main-navigation-list li.show-submenu > ul {
+		overflow: visible;
+		width: 13rem; /* adjust this to the desired submenu width   |   208px / 16px */
+		height: auto;
+		margin: 0;
+		opacity: 1;
+	}
+
+	#main-navigation-list ul {
+		position: absolute;
+		z-index: 9999;
+		overflow: hidden;
+		width: 1px;
+		height: 1px;
+		margin: -1px;
+		-webkit-transition: opacity 0.2s linear;
+		   -moz-transition: opacity 0.2s linear;
+		     -o-transition: opacity 0.2s linear;
+		        transition: opacity 0.2s linear;
+		opacity: 0;
+		border: 0;
+		background: #dcdcdc;
+		-webkit-box-shadow: 0 2px 5px -1px rgba(0, 0, 0, 0.5);
+		        box-shadow: 0 2px 5px -1px rgba(0, 0, 0, 0.5);
+	}
+
+	#main-navigation-list ul li {
+		clear: both;
+		width: 100%;
+	}
+
+	#main-navigation-list ul li a {
+		width: 10.0625rem; /* submenu width minus left and right padding */
+		padding: 0.625rem 2.3125rem 0.625rem 0.625rem; /* 10px / 16px   11px / 16px */
+	}
+
+	#main-navigation-list ul > .has_children > a:after,
+	.js #main-navigation-list ul > .has_children > a:after {
+		font-size: 80%;
+		position: absolute;
+		top: 0.8125rem; /* 13px / 16px */
+		right: 0.625rem; /* 10px / 16px */
+		content: "►";
+	}
+
+	/* 3rd level (flyout) */
+
+	#main-navigation-list ul ul {
+		top: 0;
+		left: 13rem; /* must fit the dropdown menu width */
+	}
+
+	#main-navigation-list ul ul li a {
+		width: 11.75rem;
+		padding-right: 0.625rem;
+	}
+
+	/* hide deeper levels */
+
+	#main-navigation-list ul ul ul {
+		display: none;
+		visibility: hidden;
+	}
+
+	/* ==== Layout elements ================================================= */
+
+	.wrapper {
+		width: 62.5rem; /* 1000px / 16px */
+		max-width: 62.5rem; /* 1000px / 16px */
+		padding: 0;
+	}
+
+	#page-header {
+		margin-right: 0;
+		margin-left: 0;
+	}
+
+	#main-navigation-logo {
+		left: 0;
+	}
+
+	#main {
+		display: inline;
+		float: left;
+		width: 40.625rem; /* 650px / 16px */
+		margin-right: 0;
+		margin-left: 0;
+	}
+
+	#sidebar {
+		display: inline;
+		float: right;
+		width: 18.75rem; /* 300px / 16px */
+		border-top: none;
+		margin-right: 0;
+		margin-left: 0;
+	}
+
+	#page-footer {
+		margin-right: 0;
+		margin-left: 0;
+	}
+
+}
+
+
+/* =============================================================================
+   6.3  1238px and above (website width: 1125px)
+
+        Layout based on 3 columns:
+        | 56.25px | 337.5px | 56.25px | 337.5px | 56.25px | 337.5px | 56.25px |
+   ========================================================================== */
+
+@media only screen and (min-width: 1238px) {
+
+	html {
+		font-size: 18px;
+	}
+
+}
+
+
+/* =============================================================================
+   6.4  1625px and above (website width: 1250px)
+
+        Layout based on 3 columns:
+        | 62.5px |   375px   | 62.5px |   375px   | 62.5px |   375px   | 62.5px |
+   ========================================================================== */
+
+@media only screen and (min-width: 1625px) {
+
+	html {
+		font-size: 20px;
+	}
+
+}
+
+
+/* =============================================================================
+   6.5  1950px and above (website width: 1500px)
+
+        Layout based on 3 columns:
+        | 75px |    450px    | 75px |    450px    | 75px |    450px    | 75px |
+   ========================================================================== */
+
+@media only screen and (min-width: 1950px) {
+
+	html {
+		font-size: 24px;
+	}
+
+}
+
+
+
+
+/* =============================================================================
+   7    PRINT STYLES
+   ========================================================================== */
+
+
+/* =============================================================================
+   7.1  Hide print specific content from screen
+   ========================================================================== */
+
+@media screen {
+
+	.print-only {
+		display: none;
+		visibility: hidden;
+	}
+
+}
+
+
+/* =============================================================================
+   7.2  Print specific styles
+   ========================================================================== */
+
+@media print {
+
+	/* ==== 7.2.1  Base ===================================================== */
+
+	* {
+		color: #000 !important;
+		background: transparent !important;
+		box-shadow: none !important;
+		text-shadow: none !important;
+	}
+
+	@page {
+		margin: 2cm;
+	}
+
+	html {
+		font-size: 12pt;
+	}
+
+	/* ==== 7.2.2  Links ==================================================== */
+
+	a,
+	a:visited {
+		text-decoration: underline;
+	}
+
+	.print-links-footer {
+		padding: 0 1.5384615384615384615384615384615em;
+		border: 1pt solid #000;
+		page-break-inside: avoid;
+	}
+
+	/* ==== 7.2.3  Typography, lists, headlines ============================= */
+
+	abbr[title]:after {
+		content: " (" attr(title) ")";
+	}
+
+	p,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		orphans: 3;
+		widows: 3;
+	}
+
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		page-break-after: avoid;
+	}
+
+	h1 {
+		margin-right: 0;
+		margin-left: 0;
+	}
+
+	.print-links-footer h3 {
+		/* equals normal h4 style */
+		font-size: 1.1538461538461538461538461538462em;
+		line-height: 1.3333333333333333333333333333333;
+		margin-top: 1.3333333333333333333333333333333em;
+		margin-bottom: 1.3333333333333333333333333333333em;
+	}
+
+	/* ==== 7.2.4  Tables =================================================== */
+
+	thead {
+		display: table-header-group;
+	}
+
+	tr,
+	img {
+		page-break-inside: avoid;
+	}
+
+	/* ==== 7.2.5  Layout elements ========================================== */
+
+	#main-navigation,
+	#sidebar,
+	#page-footer {
+		display: none;
+	}
+
+	#main {
+		padding: 0;
+	}
+
+}
