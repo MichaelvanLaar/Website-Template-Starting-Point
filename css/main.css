@@ -571,8 +571,6 @@ textarea:invalid {
 	background: #bebebe;
 }
 
-#main-navigation-toggle:hover,
-#main-navigation-list li a:hover,
 .js #main-navigation-list li.show-submenu > a {
 	color: #f0f0f0;
 	background: #8c8c8c;
@@ -606,6 +604,13 @@ textarea:invalid {
 	padding-left: 4.375em;
 }
 
+/* hide deeper levels */
+
+#main-navigation-list ul ul ul {
+	display: none;
+	visibility: hidden;
+}
+
 /* Accordion functionality */
 
 .js #main-navigation-list ul,
@@ -635,7 +640,7 @@ textarea:invalid {
 .wrapper {
 	position: relative;
 	width: 100%;
-	max-width: 650px;
+	max-width: 670px;
 	margin: 0 auto;
 }
 
@@ -787,6 +792,11 @@ textarea:invalid {
 	white-space: nowrap;
 }
 
+/* ensurure correct display of fullwidth images which are inserted through the <picture> element */
+.fullwidth-image {
+	width: 100%;
+}
+
 
 /* =============================================================================
    5.5  Remove telephone number styling inserted by the Skype browser plug-in
@@ -861,6 +871,7 @@ textarea:invalid {
 		background: #bebebe;
 	}
 
+	#main-navigation-list li a:hover,
 	.no-js #main-navigation-list li:hover > a {
 		color: #f0f0f0;
 		background: #8c8c8c;
@@ -934,13 +945,6 @@ textarea:invalid {
 	#main-navigation-list ul ul li a {
 		width: 11.75rem;
 		padding-right: 0.625rem;
-	}
-
-	/* hide deeper levels */
-
-	#main-navigation-list ul ul ul {
-		display: none;
-		visibility: hidden;
 	}
 
 	/* ==== Layout elements ================================================= */

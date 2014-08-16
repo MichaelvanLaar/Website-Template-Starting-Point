@@ -72,7 +72,7 @@ $(document).ready(function() {
 // accordion menu for smaller screen sizes
 enquire.register('screen and (max-width: 1019px)', {
 	match: function() {
-		mvl_main_navigation_list.css('max-height', $(window).height() - $(mvl_accordion_toggle).outerHeight() * 2); // max height for dropped down menu
+		mvl_main_navigation_list.css('max-height', $(window).height() - $(mvl_accordion_toggle).outerHeight()); // max height for dropped down menu
 		mvl_main_navigation_container.bind('clickoutside', function() {
 			mvl_accordion_toggle.removeClass('show-submenu'); // hide accordion menus when the user clicks anywhere outside the menu area
 			mvl_dropdown_toggles_li.removeClass('show-submenu'); // hide all dropdown menus when the user clicks anywhere outside the menu area

@@ -31,6 +31,7 @@
 		<link rel="stylesheet" href="css/normalize.css" />
 		<link rel="stylesheet" href="css/main.css" />
 		<script src="js/vendor/modernizr-2.8.3.custom.min.js"></script>
+		<script src="js/vendor/picturefill.min.js" async></script>
 		<script>Modernizr.load({ test: Modernizr.mq('(min-width: 0px)'), nope: 'js/vendor/respond.custom.min.js' });</script>
 
 		<!-- Facebook Open Graph Data -->
@@ -74,7 +75,7 @@
 
 		<div id="main-navigation-container" class="clearfix">
 			<div class="wrapper">
-				<a href="#"><img src="images/navigation-bar-logo.png" width="50" height="50" alt="place logo here" id="main-navigation-logo" /></a>
+				<a href="#"><img src="images/navigation-bar-logo.png" width="50" height="50" alt="place logo here" id="main-navigation-logo"></a>
 				<nav id="main-navigation" class="clearfix">
 					<div id="main-navigation-toggle">Navigation</div>
 					<ul id="main-navigation-list">
@@ -201,7 +202,16 @@
 				<div id="main" role="main" class="clearfix">
 					<h2>(H2) Lorem ipsum dolor sit amet</h2>
 					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore <a href="/test.html">magna aliquam</a> erat volutpat. Ut wisi enim ad minim veniam, quis <a href="https://www.google.com/">nostrud exerci</a> tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
-					<p><img src="images/goethe.jpg" width="975" height="750" alt="Johann Wolfgang von Goethe" /></p>
+					<p>
+						<picture>
+							<!--[if IE 9]><video style="display: none;"><![endif]-->
+							<source media="(max-width: 320px)" srcset="images/goethe-300.jpg 1x, images/goethe-300-2x.jpg 2x">
+							<source media="(max-width: 1237px)" srcset="images/goethe-650.jpg 1x, images/goethe-650-2x.jpg 2x">
+							<source media="(min-width: 1238px)" srcset="images/goethe-975.jpg 1x, images/goethe-975-2x.jpg 2x">
+							<!--[if IE 9]></video><![endif]-->
+							<img src="images/goethe-650.jpg" srcset="images/goethe-650-2x.jpg 2x" width="650" height="500" alt="Johann Wolfgang von Goethe" class="fullwidth-image">
+						</picture>
+					</p>
 					<h3>(H3) Lorem ipsum dolor sit amet</h3>
 					<blockquote cite="">
 						<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
@@ -248,10 +258,6 @@
 		<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
 		<script>
 			Modernizr.load([
-				{
-					test: window.matchMedia,
-					nope: 'js/vendor/matchMedia.min.js'
-				},
 				{
 					test: Modernizr.cssremunit,
 					nope: 'js/vendor/rem.min.js'

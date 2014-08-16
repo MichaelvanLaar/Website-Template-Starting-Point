@@ -1,6 +1,9 @@
-# Michael van Laar’s Website Template Starting Point 3.0
+# Michael van Laar’s Website Template Starting Point 3.1.0
 
-published: 2014-08-14
+published: 2014-08-16
+
+**See a demo: <http://dev.michaelvanlaar.de/wtsp/>**  
+(It’s only one page, so don’t expect something fancy.)
 
 ## Some of the features
 
@@ -40,9 +43,10 @@ published: 2014-08-14
 * [jKit 1.2.16](https://github.com/FrediBach/jQuery-jKit/)
 * [ScrollToFixed](https://github.com/bigspotteddog/ScrollToFixed)
 
-###Polyfills
+### Polyfills
 
 * [Respond.js v1.1.0](https://github.com/scottjehl/Respond)
-* [matchMedia()](https://github.com/paulirish/matchMedia.js/)
+* [Picturefill 2.1.0](https://github.com/scottjehl/picturefill)
+* [matchMedia()](https://github.com/paulirish/matchMedia.js/) (included in Picturefill)
 * [REM unit 1.3.2](https://github.com/chuckcarpenter/REM-unit-polyfill)
 * [selectivizr 1.0.2](http://selectivizr.com/)
