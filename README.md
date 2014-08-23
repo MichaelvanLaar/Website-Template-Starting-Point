@@ -1,6 +1,6 @@
-# Michael van Laar’s Website Template Starting Point 3.1.0
+# Michael van Laar’s Website Template Starting Point 3.1.1
 
-published: 2014-08-16
+published: 2014-08-23
 
 **See a demo: <http://dev.michaelvanlaar.de/wtsp/>**  
 (It’s only one page, so don’t expect something fancy.)
