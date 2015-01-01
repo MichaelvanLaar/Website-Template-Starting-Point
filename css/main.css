@@ -376,21 +376,29 @@ img {
    4.5  Form elements
    ========================================================================== */
 
-input[type="text"],
+input[type="date"],
+input[type="email"],
+input[type="number"],
 input[type="password"],
 input[type="search"],
-input[type="email"],
-textarea,
-select {
+input[type="tel"],
+input[type="text"],
+input[type="url"],
+select,
+textarea {
 	font-family: Arial, Helvetica, sans-serif;
 	color: #333;
 	border: 1px solid #5a5a5a;
 }
 
-input[type="text"],
+input[type="date"],
+input[type="email"],
+input[type="number"],
 input[type="password"],
 input[type="search"],
-input[type="email"],
+input[type="tel"],
+input[type="text"],
+input[type="url"],
 textarea {
 	padding: 0.1875rem; /* 3px / 16px */
 }
@@ -399,10 +407,10 @@ select {
 	padding: 0.125rem; /* 2px / 16px */
 }
 
-input[type="submit"],
+button,
 input[type="button"],
 input[type="reset"],
-button {
+input[type="submit"] {
 	font-family: Arial, Helvetica, sans-serif;
 	padding: 0.1875rem 0.5625rem; /* 3px / 16px   and   9px / 16px */
 	color: #fff;
@@ -422,20 +430,20 @@ button {
 	        background-clip: padding-box;
 }
 
+button:focus,
 input:focus,
-textarea:focus,
 select:focus,
-button:focus {
+textarea:focus {
 	outline: 0;
 	-webkit-box-shadow: 1px 1px 3px #91afd7, -1px 1px 3px #91afd7, -1px -1px 3px #91afd7, 1px -1px 3px #91afd7;
 	   -moz-box-shadow: 1px 1px 3px #91afd7, -1px 1px 3px #91afd7, -1px -1px 3px #91afd7, 1px -1px 3px #91afd7;
 	        box-shadow: 1px 1px 3px #91afd7, -1px 1px 3px #91afd7, -1px -1px 3px #91afd7, 1px -1px 3px #91afd7;
 }
 
-input[type="submit"]:active,
+button:active,
 input[type="button"]:active,
 input[type="reset"]:active,
-button:active {
+input[type="submit"]:active {
 	background-color: #bebebe;
 	background-image: -webkit-gradient(linear, left top, left bottom, from(#5a5a5a), to(#bebebe));
 	background-image: -webkit-linear-gradient(top, #5a5a5a, #bebebe);
