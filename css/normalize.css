@@ -188,7 +188,6 @@ dfn {
  */
 
 hr {
-    -moz-box-sizing: content-box;
     box-sizing: content-box;
     height: 0;
 }
@@ -443,7 +442,7 @@ input[type="reset"],
 input[type="submit"] {
     -webkit-appearance: button; /* 2 */
     cursor: pointer; /* 3 */
-    *overflow: visible;  /* 4 */
+    *overflow: visible; /* 4 */
 }
 
 /**
@@ -472,15 +471,12 @@ input[type="radio"] {
 
 /**
  * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
- * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
- *    (include `-moz` to future-proof).
+ * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome.
  */
 
 input[type="search"] {
-    -webkit-appearance: textfield; /* 1 */
-    -moz-box-sizing: content-box;
-    -webkit-box-sizing: content-box; /* 2 */
-    box-sizing: content-box;
+    -webkit-appearance: textfield; /* 1 */ 
+    box-sizing: content-box; /* 2 */
 }
 
 /**

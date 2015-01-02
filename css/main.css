@@ -182,18 +182,14 @@ html {
 	line-height: 1.5625; /* 25px / 16px */
 	overflow-y: scroll;
 	/* Apply a natural box layout model to all elements */
-	-webkit-box-sizing: border-box;
-	   -moz-box-sizing: border-box;
-	        box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 /* Allow components to change to other box-sizing models if necessary */
 *,
 *:before,
 *:after {
-	-webkit-box-sizing: inherit;
-	   -moz-box-sizing: inherit;
-	        box-sizing: inherit;
+	box-sizing: inherit;
 }
 
 html,
@@ -415,19 +411,10 @@ input[type="submit"] {
 	padding: 0.1875rem 0.5625rem; /* 3px / 16px   and   9px / 16px */
 	color: #fff;
 	border: 1px solid #5a5a5a;
-	-webkit-border-radius: 0.3125rem; /* 5px / 16px */
-	   -moz-border-radius: 0.3125rem; /* 5px / 16px */
-	        border-radius: 0.3125rem; /* 5px / 16px */
+	border-radius: 0.3125rem; /* 5px / 16px */
 	background-color: #5a5a5a;
-	background-image: -webkit-gradient(linear, left top, left bottom, from(#bebebe), to(#5a5a5a));
-	background-image: -webkit-linear-gradient(top, #bebebe, #5a5a5a);
-	background-image:    -moz-linear-gradient(top, #bebebe, #5a5a5a);
-	background-image:     -ms-linear-gradient(top, #bebebe, #5a5a5a);
-	background-image:      -o-linear-gradient(top, #bebebe, #5a5a5a);
-	background-image:         linear-gradient(top, #bebebe, #5a5a5a);
-	-webkit-background-clip: padding-box;
-	   -moz-background-clip: padding;
-	        background-clip: padding-box;
+	background-image: linear-gradient(to bottom, #bebebe, #5a5a5a);
+	background-clip: padding-box;
 }
 
 button:focus,
@@ -435,9 +422,7 @@ input:focus,
 select:focus,
 textarea:focus {
 	outline: 0;
-	-webkit-box-shadow: 1px 1px 3px #91afd7, -1px 1px 3px #91afd7, -1px -1px 3px #91afd7, 1px -1px 3px #91afd7;
-	   -moz-box-shadow: 1px 1px 3px #91afd7, -1px 1px 3px #91afd7, -1px -1px 3px #91afd7, 1px -1px 3px #91afd7;
-	        box-shadow: 1px 1px 3px #91afd7, -1px 1px 3px #91afd7, -1px -1px 3px #91afd7, 1px -1px 3px #91afd7;
+	box-shadow: 1px 1px 3px #91afd7, -1px 1px 3px #91afd7, -1px -1px 3px #91afd7, 1px -1px 3px #91afd7;
 }
 
 button:active,
@@ -445,15 +430,8 @@ input[type="button"]:active,
 input[type="reset"]:active,
 input[type="submit"]:active {
 	background-color: #bebebe;
-	background-image: -webkit-gradient(linear, left top, left bottom, from(#5a5a5a), to(#bebebe));
-	background-image: -webkit-linear-gradient(top, #5a5a5a, #bebebe);
-	background-image:    -moz-linear-gradient(top, #5a5a5a, #bebebe);
-	background-image:     -ms-linear-gradient(top, #5a5a5a, #bebebe);
-	background-image:      -o-linear-gradient(top, #5a5a5a, #bebebe);
-	background-image:         linear-gradient(top, #5a5a5a, #bebebe);
-	-webkit-box-shadow: 1px 1px 3px #91afd7, -1px 1px 3px #91afd7, -1px -1px 3px #91afd7, 1px -1px 3px #91afd7;
-	   -moz-box-shadow: 1px 1px 3px #91afd7, -1px 1px 3px #91afd7, -1px -1px 3px #91afd7, 1px -1px 3px #91afd7;
-	        box-shadow: 1px 1px 3px #91afd7, -1px 1px 3px #91afd7, -1px -1px 3px #91afd7, 1px -1px 3px #91afd7;
+	background-image: linear-gradient(to bottom, #5a5a5a, #bebebe);
+	box-shadow: 1px 1px 3px #91afd7, -1px 1px 3px #91afd7, -1px -1px 3px #91afd7, 1px -1px 3px #91afd7;
 }
 
 .placeholder {
@@ -526,10 +504,7 @@ textarea:invalid {
 	position: relative;
 	display: block;
 	padding: 0.625rem; /* 10px / 16px */
-	-webkit-transition: all 0.2s linear;
-	   -moz-transition: all 0.2s linear;
-	     -o-transition: all 0.2s linear;
-	        transition: all 0.2s linear;
+	transition: all 0.2s linear;
 	color: #000;
 	background-color: #dcdcdc;
 }
@@ -541,13 +516,9 @@ textarea:invalid {
 	width: 1px;
 	height: 1px;
 	margin: -1px;
-	-webkit-transition: opacity 0.2s linear;
-	   -moz-transition: opacity 0.2s linear;
-	     -o-transition: opacity 0.2s linear;
-	        transition: opacity 0.2s linear;
+	transition: opacity 0.2s linear;
 	opacity: 0;
-	-webkit-box-shadow: 0 2px 5px -1px rgba(0, 0, 0, 0.5);
-	        box-shadow: 0 2px 5px -1px rgba(0, 0, 0, 0.5);
+	box-shadow: 0 2px 5px -1px rgba(0, 0, 0, 0.5);
 }
 
 .js .show-submenu + #main-navigation-list {
@@ -575,10 +546,7 @@ textarea:invalid {
 	position: relative;
 	display: block;
 	padding: 0.625rem; /* 10px / 16px */
-	-webkit-transition: all 0.2s linear;
-	   -moz-transition: all 0.2s linear;
-	     -o-transition: all 0.2s linear;
-	        transition: all 0.2s linear;
+	transition: all 0.2s linear;
 	color: #000;
 }
 
@@ -637,10 +605,7 @@ textarea:invalid {
 .js #main-navigation-list ul ul {
 	overflow: hidden;
 	height: 0;
-	-webkit-transition: opacity 0.2s linear;
-	   -moz-transition: opacity 0.2s linear;
-	     -o-transition: opacity 0.2s linear;
-	        transition: opacity 0.2s linear;
+	transition: opacity 0.2s linear;
 	opacity: 0;
 }
 
@@ -873,8 +838,7 @@ textarea:invalid {
 		height: auto;
 		margin: 0;
 		opacity: 1;
-		-webkit-box-shadow: none;
-		        box-shadow: none;
+		box-shadow: none;
 	}
 
 	/* 1st level (horizontal) and overall menu styles */
@@ -925,15 +889,11 @@ textarea:invalid {
 		width: 1px;
 		height: 1px;
 		margin: -1px;
-		-webkit-transition: opacity 0.2s linear;
-		   -moz-transition: opacity 0.2s linear;
-		     -o-transition: opacity 0.2s linear;
-		        transition: opacity 0.2s linear;
+		transition: opacity 0.2s linear;
 		opacity: 0;
 		border: 0;
 		background: #dcdcdc;
-		-webkit-box-shadow: 0 2px 5px -1px rgba(0, 0, 0, 0.5);
-		        box-shadow: 0 2px 5px -1px rgba(0, 0, 0, 0.5);
+		box-shadow: 0 2px 5px -1px rgba(0, 0, 0, 0.5);
 	}
 
 	#main-navigation-list ul li {
