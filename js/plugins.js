@@ -37,7 +37,7 @@ jQuery Plugins:
 5.  jQuery outside events 1.1
 6.  jquery.animate-enhanced plugin 1.10
 7.  jKit 1.2.16
-8.  ScrollToFixed
+8.  ScrollToFixed 1.0.6
 
 Non-jQuery libs:
 9.  Type Rendering Mix 1.1.0
@@ -7925,7 +7925,7 @@ $(document).ready(function() {
 
 
 /* =============================================================================
-   8.  ScrollToFixed
+   8.  ScrollToFixed 1.0.6
 	   https://github.com/bigspotteddog/ScrollToFixed
    ========================================================================== */
 
@@ -8071,12 +8071,12 @@ $(document).ready(function() {
 					'bottom' : base.options.bottom == -1?'':base.options.bottom,
 					'margin-left' : '0px'
 				}
-				if (!base.options.dontSetWidth){ cssOptions['width']=target.width(); };
+				if (!base.options.dontSetWidth){ cssOptions['width']=target.css('width'); };
 
 				target.css(cssOptions);
-
+				
 				target.addClass(base.options.baseClassName);
-
+				
 				if (base.options.className) {
 					target.addClass(base.options.className);
 				}
@@ -8102,7 +8102,7 @@ $(document).ready(function() {
 			  'margin-left' : '0px',
 			  'bottom' : ''
 			}
-			if (!base.options.dontSetWidth){ cssOptions['width']=target.width(); };
+			if (!base.options.dontSetWidth){ cssOptions['width']=target.css('width'); };
 
 			target.css(cssOptions);
 

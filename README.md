@@ -1,6 +1,6 @@
-# Michael van Laar’s Website Template Starting Point 3.1.4
+﻿# Michael van Laar’s Website Template Starting Point 3.1.5
 
-published: 2015-01-02
+published: 2015-01-13
 
 **See a demo: <http://dev.michaelvanlaar.de/wtsp/>**  
 (It’s only one page, so don’t expect something fancy.)
@@ -14,7 +14,7 @@ published: 2015-01-02
   * Implemented as accordion menu for smaller screens
   * Implemented as dropdown menu for bigger screens
   * Submenus appear on click/tab to avoid :hover problem on touchscreens
-  * Fully usable fallback layout for btoowsers with no JavaScript activated
+  * Fully usable fallback layout for browsers with no JavaScript activated
 * Layout can be scaled (e.g. to better fill high resolution screens) simply by adjusting the base font size.
 * Skiplink focus fix
 * Remove telephone number styling inserted by the Skype browser plug-in.
@@ -41,7 +41,7 @@ published: 2015-01-02
 * [jQuery outside events 1.1](http://benalman.com/projects/jquery-outside-events-plugin/)
 * [jquery.animate-enhanced plugin 1.10](https://github.com/benbarnett/jQuery-Animate-Enhanced)
 * [jKit 1.2.16](https://github.com/FrediBach/jQuery-jKit/)
-* [ScrollToFixed](https://github.com/bigspotteddog/ScrollToFixed)
+* [ScrollToFixed 1.0.6](https://github.com/bigspotteddog/ScrollToFixed)
 
 ### Polyfills
 
