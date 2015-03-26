@@ -1,84 +1,88 @@
-﻿<!DOCTYPE html>
-<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
-<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"><![endif]-->
-<!--[if IE 8]><html class="no-js lt-ie9"><![endif]-->
-<!--[if gt IE 8]><!--><html class="no-js"><!--<![endif]-->
+<!doctype html>
+<html class="no-js" lang="en">
 	<head>
-		<meta charset="utf-8"/>
-		<title>Basic Template</title>
-		<meta name="description" content=""/>
+		<meta charset="utf-8">
+		<title>[Insert page title]</title>
+		<meta name="description" content="[Insert page description]">
 
-		<meta name="HandheldFriendly" content="True"/>
-		<meta name="MobileOptimized" content="320"/>
-		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
-		<!--[if IEMobile]><meta http-equiv="cleartype" content="on"/><![endif]-->
+		<meta name="HandheldFriendly" content="True">
+		<meta name="MobileOptimized" content="320">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<!--[if IEMobile]><meta http-equiv="cleartype" content="on"><![endif]-->
 
-		<link rel="icon" href="favicon.ico" sizes="16x16 24x24 32x32 48x48 64x64" type="image/vnd.microsoft.icon"/>
-		<link rel="apple-touch-icon-precomposed" sizes="152x152" href="favicon-152.png"/>
-		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="favicon-144.png"/>
-		<link rel="apple-touch-icon-precomposed" sizes="120x120" href="favicon-120.png"/>
-		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="favicon-114.png"/>
-		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="favicon-72.png"/>
-		<link rel="apple-touch-icon-precomposed" href="favicon-57.png"/>
-		<link rel="icon" href="favicon-228.png" sizes="228x228"/>
-		<link rel="icon" href="favicon-195.png" sizes="195x195"/>
-		<link rel="icon" href="favicon-128.png" sizes="128x128"/>
-		<link rel="icon" href="favicon-96.png" sizes="96x96"/>
-		<link rel="icon" href="favicon-32.png" sizes="32x32"/>
-		<meta name="msapplication-TileColor" content="#001e50"/>
-		<meta name="msapplication-TileImage" content="favicon-144.png"/>
+		<link rel="icon" href="favicon.ico" sizes="16x16 24x24 32x32 48x48 64x64" type="image/vnd.microsoft.icon">
+		<link rel="apple-touch-icon-precomposed" sizes="152x152" href="favicon-152.png">
+		<link rel="apple-touch-icon-precomposed" sizes="120x120" href="favicon-120.png">
+		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="favicon-72.png">
+		<link rel="apple-touch-icon-precomposed" href="favicon-57.png">
+		<meta name="msapplication-TileColor" content="#001e50">
+		<meta name="msapplication-TileImage" content="favicon-144.png">
 
-		<link rel="stylesheet" href="css/normalize.css" />
-		<link rel="stylesheet" href="css/main.css" />
+		<!-- Include respimage only if the browser doesn’t support responsive images -->
+		<script>
+			function loadJS(u){
+				var r = document.getElementsByTagName('script')[ 0 ], s = document.createElement('script');
+				s.src = u;
+				r.parentNode.insertBefore( s, r );
+			}
+			if(!window.HTMLPictureElement){
+				document.createElement('picture');
+				loadJS('js/vendor/respimage.min.js');
+			}
+		</script>
+
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/main.css">
+
+		<script src="js/vendor/lazysizes-plus-plugins.min.js" async=""></script>
 		<script src="js/vendor/modernizr-2.8.3.custom.min.js"></script>
-		<script src="js/vendor/picturefill.min.js" async></script>
-		<script>Modernizr.load({ test: Modernizr.mq('(min-width: 0px)'), nope: 'js/vendor/respond.custom.min.js' });</script>
+		<script>Modernizr.load({ test: Modernizr.mq('(min-width: 0px)'), nope: 'js/vendor/respond.min.js' });</script>
 
 		<!-- Facebook Open Graph Data -->
-		<meta property="og:title" content="" />
-		<meta property="og:description" content="" />
-		<meta property="og:image" content="" />
+		<meta property="og:title" content="[Insert page title]" />
+		<meta property="og:description" content="[Insert page description]" />
+		<meta property="og:image" content="[Insert image URL]" />
 		<meta property="og:type" content="article" />
-		<meta property="og:locale" content="de_DE" />
+		<meta property="og:locale" content="en_US" />
 
 		<!-- ATTENTION: Use the canonical link only if you really (really, really!) know what you do.
 		     If you don’t know what a canonical link is, you must remove the following link element. -->
-		<link rel="canonical" href="" />
+		<link rel="canonical" href="[Insert canonical URL]" />
 
 		<!-- TO DO: Remove the following link element if your website doesn’t offer RSS feeds. -->
-		<link rel="alternate" type="application/rss+xml" title="RSS" href="" />
+		<link rel="alternate" type="application/rss+xml" title="RSS" href="[Insert RSS URL]" />
 	</head>
 	<body>
 		<!--[if lte IE 7]>
 			<div class="warning-shader"></div>
-			<iframe src="ie-warnings/old-ie-warning.html" class="ie-warning" marginheight="0" marginwidth="0" frameborder="0"></iframe>
+			<iframe src="ie-warnings/old-ie-warning-en.html" class="ie-warning" marginheight="0" marginwidth="0" frameborder="0"></iframe>
 		<![endif]-->
 		<!--[if IE 8 ]>
 			<noscript>
 				<div class="warning-shader"></div>
-				<iframe src="ie-warnings/ie-js-warning.html" class="ie-warning" marginheight="0" marginwidth="0" frameborder="0"></iframe>
+				<iframe src="ie-warnings/ie-js-warning-en.html" class="ie-warning" marginheight="0" marginwidth="0" frameborder="0"></iframe>
 			</noscript>
 		<![endif]-->
 
-		<ul id="skiplinks">
-			<li><a href="#main-navigation">Direkt zur Navigation springen (Enter drücken)</a></li>
-			<li><a href="#main">Direkt zum Hauptinhalt springen (Enter drücken)</a></li>
+		<ul class="skiplinks">
+			<li><a href="#main-navigation">Jump to navigation (press enter)</a></li>
+			<li><a href="#main">Jump to main content (press enter)</a></li>
 		</ul> <!-- end of #skiplinks -->
 
-		<div id="page-header-container" class="clearfix">
+		<div class="page-header-container clearfix">
 			<div class="wrapper">
-				<header id="page-header" role="banner" class="clearfix">
+				<header role="banner" class="page-header clearfix">
 					<h1>(H1) Lorem ipsum dolor sit amet</h1>
-				</header> <!-- end of #page-header -->
+				</header> <!-- end of .page-header -->
 			</div> <!-- end of .wrapper -->
-		</div> <!-- end of #page-header-container -->
+		</div> <!-- end of .page-header-container -->
 
-		<div id="main-navigation-container" class="clearfix">
+		<div class="main-navigation-container clearfix">
 			<div class="wrapper">
-				<a href="#"><img src="images/navigation-bar-logo.png" width="50" height="50" alt="place logo here" id="main-navigation-logo"></a>
-				<nav id="main-navigation" class="clearfix">
-					<div id="main-navigation-toggle">Navigation</div>
-					<ul id="main-navigation-list">
+				<a href="#"><img src="images/navigation-bar-logo.png" width="50" height="50" alt="place logo here" class="main-navigation-logo"></a>
+				<nav id="main-navigation" class="main-navigation clearfix">
+					<div class="main-navigation-toggle">Navigation</div>
+					<ul class="main-navigation-list">
 						<li class="has_children">
 							<a href="#1">Menu item 1</a>
 							<ul>
@@ -192,24 +196,26 @@
 									</ul>
 								</li>
 							</ul>
-						</li>					</ul> <!-- end of #main-navigation-list -->
-				</nav> <!-- end of #main-navigation -->
+						</li>
+					</ul> <!-- end of .main-navigation-list -->
+				</nav> <!-- end of .main-navigation -->
 			</div> <!-- end of .wrapper -->
-		</div> <!-- end of #main-navigation-container -->
+		</div> <!-- end of .main-navigation-container -->
 
-		<div id="main-container" class="clearfix">
+		<div class="main-container clearfix">
 			<div class="wrapper">
-				<div id="main" role="main" class="clearfix">
+				<div id="main" role="main" class="main clearfix">
 					<h2>(H2) Lorem ipsum dolor sit amet</h2>
 					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore <a href="/test.html">magna aliquam</a> erat volutpat. Ut wisi enim ad minim veniam, quis <a href="https://www.google.com/">nostrud exerci</a> tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
 					<p>
 						<picture>
 							<!--[if IE 9]><video style="display: none;"><![endif]-->
-							<source media="(max-width: 320px)" srcset="images/goethe-300.jpg 1x, images/goethe-300-2x.jpg 2x">
-							<source media="(max-width: 1237px)" srcset="images/goethe-650.jpg 1x, images/goethe-650-2x.jpg 2x">
-							<source media="(min-width: 1238px)" srcset="images/goethe-975.jpg 1x, images/goethe-975-2x.jpg 2x">
+							<source media="(max-width: 345px)" data-srcset="images/325x217.png 1x, images/650x434.png 2x">
+							<source media="(max-width: 508px)" data-srcset="images/488x325.png 1x, images/975x650.png 2x">
+							<source media="(max-width: 1237px)" data-srcset="images/650x434.png 1x, images/1300x868.png 2x">
+							<source media="(min-width: 1238px)" data-srcset="images/975x650.png 1x, images/1950x1300.png 2x">
 							<!--[if IE 9]></video><![endif]-->
-							<img src="images/goethe-650.jpg" srcset="images/goethe-650-2x.jpg 2x" width="650" height="500" alt="Johann Wolfgang von Goethe" class="fullwidth-image">
+							<img src="images/325x217.png" data-srcset="images/650x434.png 2x" width="650" height="434" alt="Test image" class="fullwidth-image lazyload">
 						</picture>
 					</p>
 					<h3>(H3) Lorem ipsum dolor sit amet</h3>
@@ -229,9 +235,9 @@
 						<li>consectetuer adipiscing elit</li>
 						<li>sed diam nonummy</li>
 					</ol>
-				</div> <!-- end of #main -->
+				</div> <!-- end of .main -->
 
-				<aside id="sidebar" class="clearfix">
+				<aside class="sidebar clearfix">
 					<h2>(H2) Lorem ipsum dolor sit amet</h2>
 					<p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
 					<form>
@@ -242,20 +248,20 @@
 					<p>Lorem ipsum dolor sit amet, adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet.</p>
 					<h4>(H4) Lorem ipsum dolor sit amet</h4>
 					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-				</aside> <!-- end of #sidebar -->
+				</aside> <!-- end of .sidebar -->
 			</div> <!-- end of .wrapper -->
-		</div> <!-- end of #main-container -->
+		</div> <!-- end of .main-container -->
 
-		<div id="page-footer-container" class="clearfix">
+		<div class="page-footer-container clearfix">
 			<div class="wrapper">
-				<footer id="page-footer" role="contentinfo" class="clearfix">
+				<footer role="contentinfo" class="page-footer clearfix">
 					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
-				</footer> <!-- end of #page-footer -->
+				</footer> <!-- end of .page-footer -->
 			</div> <!-- end of .wrapper -->
-		</div> <!-- end of #page-footer-container -->
+		</div> <!-- end of .page-footer-container -->
 
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-		<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
 		<script>
 			Modernizr.load([
 				{
