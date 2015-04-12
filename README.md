@@ -11,8 +11,8 @@ Version 3.3.1 was published on April 12, 2015.
 
 ----
 *Please note that the files `css/normalize.css` and `css/main.css` as well as `js/plugins.js` and `js/main.js` should be minified before they are used as part of a live website – either using a [build](https://www.npmjs.com/package/grunt-contrib-cssmin) [process](https://www.npmjs.com/package/grunt-contrib-uglify), a [minify extension for your editor](https://packagecontrol.io/packages/Minify) or a [CMS module](http://modules.processwire.com/modules/all-in-one-minify/).*
-
 ----
+
 ## Some of the features
 
 * Adaptive layout
@@ -29,12 +29,10 @@ Version 3.3.1 was published on April 12, 2015.
 * URLs of links appear as footnotes in print layout.
 * Cookie information banner
 
-----
 ## Based on
 
 * [HTML5 Boilerplate 5.0.0](http://html5boilerplate.com/)
 
-----
 ## Used frameworks and libraries
 
 ### CSS
@@ -63,8 +61,8 @@ Version 3.3.1 was published on April 12, 2015.
 * [REM unit 1.3.2](https://github.com/chuckcarpenter/REM-unit-polyfill)
 * [selectivizr 1.0.2](http://selectivizr.com/)
 
-----
-## Code conventions
+## Code conventions and tools
 
 * [CSS Guidelines by Harry Roberts 2.2.3](http://cssguidelin.es/)
 * [CSScomb 3.0.0](http://csscomb.com/)
+* [EditorConfig](http://editorconfig.org/)
