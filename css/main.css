@@ -483,7 +483,7 @@ h1 {
 h2 {
     font-size: 1.5625rem; /* 25px / 16px */
     line-height: 1; /* 25px / 25px */
-    margin-top: 1.5625rem; /* 25px / 16px */
+    margin-top: 3.125rem; /* 50px / 16px */
     margin-bottom: 1.5625rem; /* 25px / 16px */
 }
 
@@ -961,6 +961,10 @@ textarea:invalid {
     padding-top: 1.5625rem; /* 25px / 16px */
     padding-bottom: 1.5625rem; /* 25px / 16px */
     border-top: 1px solid #bebebe;
+}
+
+.page-sidebar > h2:first-child {
+    margin-top: 1.5625rem; /* 25px / 16px */
 }
 
 

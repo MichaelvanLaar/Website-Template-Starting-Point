@@ -1,13 +1,21 @@
-# Michael van Laar’s Website Template Starting Point 3.2.0
+# Michael van Laar’s Website Template Starting Point 3.3.1
 
-published: 2015-03-26
+CSS frameworks are not everybody’s cup of tea. Some web designers rather like to write their own code because they don’t want to bow to external specifications. They want to have full control over architectural principles as well as coding and naming conventions – instead of overwriting predefined default styles over and over to achieve the desired result.
+
+If you are one of these web designers, this starting point for building websites resp. CMS templates is for you. It is based on the renowned HTML5 Boilerplate, enhanced and extended with lots of stuff which proved to be useful in many website projects over the last years. It was created as design agnostic as possible, featuring an adaptive layout with a mobile first approach.
 
 **See a demo: <http://dev.michaelvanlaar.de/wtsp/>**  
 (It’s only one page, so don’t expect something fancy.)
 
+Version 3.3.1 was published on April 12, 2015.
+
+----
+*Please note that the files `css/normalize.css` and `css/main.css` as well as `js/plugins.js` and `js/main.js` should be minified before they are used as part of a live website – either using a [build](https://www.npmjs.com/package/grunt-contrib-cssmin) [process](https://www.npmjs.com/package/grunt-contrib-uglify), a [minify extension for your editor](https://packagecontrol.io/packages/Minify) or a [CMS module](http://modules.processwire.com/modules/all-in-one-minify/).*
+
+----
 ## Some of the features
 
-* Adaptive design
+* Adaptive layout
 * Mobile first approach
 * As design agnostic as possible
 * Preconfigured three level menu as main navigation
@@ -21,10 +29,12 @@ published: 2015-03-26
 * URLs of links appear as footnotes in print layout.
 * Cookie information banner
 
+----
 ## Based on
 
 * [HTML5 Boilerplate 5.0.0](http://html5boilerplate.com/)
 
+----
 ## Used frameworks and libraries
 
 ### CSS
@@ -53,6 +63,7 @@ published: 2015-03-26
 * [REM unit 1.3.2](https://github.com/chuckcarpenter/REM-unit-polyfill)
 * [selectivizr 1.0.2](http://selectivizr.com/)
 
+----
 ## Code conventions
 
 * [CSS Guidelines by Harry Roberts 2.2.3](http://cssguidelin.es/)
