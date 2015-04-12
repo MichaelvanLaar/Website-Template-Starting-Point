@@ -1,375 +1,528 @@
-/*☺
-[Project name]
-*/
+/*
+ * ==========================================================================
+ * Individual styles for [project name]
+ * ==========================================================================
+ *
+ *
+ * CONTENTS
+ * ==========================================================================
+ *
+ * COLORS
+ *
+ * WEB FONTS
+ *
+ * OVERLAYS
+ * IE warnings
+ * Skiplinks
+ * Cookie information banner
+ *
+ * PRIMARY STYLES
+ * Base
+ * Links
+ * Typography, lists, headlines
+ * Embedded content
+ * Form elements
+ *
+ * LAYOUT
+ * Header
+ * Navigation
+ * Main content area
+ * Sidebar
+ * Footer
+ *
+ * HELPERS
+ * Hiding content
+ * Clearfix
+ * Miscellaneous little helpers
+ *
+ * MEDIA QUERIES
+ *  670px and above (website width: 650px)
+ * 1020px and above (website width: 1000px)
+ * 1238px and above (website width: 1125px)
+ * 1625px and above (website width: 1250px)
+ * 1950px and above (website width: 1500px)
+ *
+ * PRINT STYLES
+ * Base
+ * Links
+ * Typography, lists, headlines
+ * Layout
+ */
 
 
-/* =============================================================================
-   TABLE OF CONTENTS
-   =============================================================================
-
-   1    COLOR SCHEME
-
-   2    WEBFONTS
-
-   3    ALERTS AND OVERLAYS
-   3.1  Internet Explorer JavaScript warning
-   3.2  Skiplinks
-   3.3  Cookie information banner
-
-   4    PRIMARY STYLES
-   4.1  Base
-   4.2  Links
-   4.3  Typography, lists, headlines
-   4.4  Embedded content
-   4.5  Form elements
-   4.6  Main navigation
-   4.7  Layout elements
-
-   5    NON-SEMANTIC HELPER CLASSES
-   5.1  Hiding content
-   5.2  Alignments
-   5.3  Clearfix
-   5.4  Misc little helpers
-   5.5  Remove telephone number styling inserted by the Skype browser plug-in
-
-   6    MEDIA QUERIES  =>  Important:
-                           Break points should always be adjusted to the final
-                           layout, not to screen sizes of certain devices.
-   6.1  670px and above (website width: 650px)
-   6.2  1020px and above (website width: 1000px)
-   6.3  1238px and above (website width: 1125px)
-   6.4  1625px and above (website width: 1250px)
-   6.5  1950px and above (website width: 1500px)
-
-   7    PRINT STYLES
-   7.1  Hide print specific content from screen
-   7.2  Print specific styles
-
-*/
 
 
 
+/* ==========================================================================
+   #COLORS
+   ==========================================================================
 
-/* =============================================================================
-   1    COLOR SCHEME
+     .oooooo.     .oooooo.   ooooo          .oooooo.   ooooooooo.    .oooooo..o
+    d8P'  `Y8b   d8P'  `Y8b  `888'         d8P'  `Y8b  `888   `Y88. d8P'    `Y8
+   888          888      888  888         888      888  888   .d88' Y88bo.
+   888          888      888  888         888      888  888ooo88P'   `"Y8888o.
+   888          888      888  888         888      888  888`88b.         `"Y88b
+   `88b    ooo  `88b    d88'  888       o `88b    d88'  888  `88b.  oo     .d8P
+    `Y8bood8P'   `Y8bood8P'  o888ooooood8  `Y8bood8P'  o888o  o888o 8""88888P'
+
+
    ========================================================================== */
+
 
 /*
-color (element): #xxxxxx
-color (element): #xxxxxx
-color (element): #xxxxxx
-color (element): #xxxxxx
-color (element): #xxxxxx
-*/
+ * color (element): #xxxxxx
+ * color (element): #xxxxxx
+ * color (element): #xxxxxx
+ * color (element): #xxxxxx
+ * color (element): #xxxxxx
+ */
 
 
 
 
-/* =============================================================================
-   2    WEBFONTS
+
+/* ==========================================================================
+   #WEBFONTS
+   ==========================================================================
+
+   oooooo   oooooo     oooo oooooooooooo oooooooooo.  oooooooooooo   .oooooo.   ooooo      ooo ooooooooooooo  .oooooo..o
+    `888.    `888.     .8'  `888'     `8 `888'   `Y8b `888'     `8  d8P'  `Y8b  `888b.     `8' 8'   888   `8 d8P'    `Y8
+     `888.   .8888.   .8'    888          888     888  888         888      888  8 `88b.    8       888      Y88bo.
+      `888  .8'`888. .8'     888oooo8     888oooo888'  888oooo8    888      888  8   `88b.  8       888       `"Y8888o.
+       `888.8'  `888.8'      888    "     888    `88b  888    "    888      888  8     `88b.8       888           `"Y88b
+        `888'    `888'       888       o  888    .88P  888         `88b    d88'  8       `888       888      oo     .d8P
+         `8'      `8'       o888ooooood8 o888bood8P'  o888o         `Y8bood8P'  o8o        `8      o888o     8""88888P'
+
+
    ========================================================================== */
+
 
 /* place webfont definitions here */
 
 
 
 
-/* =============================================================================
-   3    ALERTS AND OVERLAYS
+
+/* ==========================================================================
+   #OVERLAYS
+   ==========================================================================
+
+     .oooooo.   oooooo     oooo oooooooooooo ooooooooo.   ooooo              .o.       oooooo   oooo  .oooooo..o
+    d8P'  `Y8b   `888.     .8'  `888'     `8 `888   `Y88. `888'             .888.       `888.   .8'  d8P'    `Y8
+   888      888   `888.   .8'    888          888   .d88'  888             .8"888.       `888. .8'   Y88bo.
+   888      888    `888. .8'     888oooo8     888ooo88P'   888            .8' `888.       `888.8'     `"Y8888o.
+   888      888     `888.8'      888    "     888`88b.     888           .88ooo8888.       `888'          `"Y88b
+   `88b    d88'      `888'       888       o  888  `88b.   888       o  .8'     `888.       888      oo     .d8P
+    `Y8bood8P'        `8'       o888ooooood8 o888o  o888o o888ooooood8 o88o     o8888o     o888o     8""88888P'
+
+
    ========================================================================== */
 
 
-/* =============================================================================
-   3.1  Internet Explorer warnings
+
+
+
+/* #IE warnings
+
+   ooooo oooooooooooo                                                       o8o
+   `888' `888'     `8                                                       `"'
+    888   888              oooo oooo    ooo  .oooo.   oooo d8b ooo. .oo.   oooo  ooo. .oo.    .oooooooo  .oooo.o
+    888   888oooo8          `88. `88.  .8'  `P  )88b  `888""8P `888P"Y88b  `888  `888P"Y88b  888' `88b  d88(  "8
+    888   888    "           `88..]88..8'    .oP"888   888      888   888   888   888   888  888   888  `"Y88b.
+    888   888       o         `888'`888'    d8(  888   888      888   888   888   888   888  `88bod8P'  o.  )88b
+   o888o o888ooooood8          `8'  `8'     `Y888""8o d888b    o888o o888o o888o o888o o888o `8oooooo.  8""888P'
+                                                                                             d"     YD
+                                                                                             "Y88888P'
    ========================================================================== */
 
-.warning-shader {
-	position: fixed;
-	z-index: 1000;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	opacity: 0.7;
-	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
-	    filter: alpha(opacity=70);
-	background: #000;
+
+.ie-warning__shader {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.7;
+    background: #000;
+
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+        filter: alpha(opacity=70);
 }
 
-.ie-warning {
-	position: fixed;
-	z-index: 1001;
-	top: 50%;
-	left: 50%;
-	display: block;
-	width: 810px;
-	height: 430px;
-	margin-top: -220px;
-	margin-left: -410px;
-	border: 5px solid #ed7f00;
+.ie-warning__message {
+    position: fixed;
+    z-index: 1001;
+    top: 50%;
+    left: 50%;
+    display: block;
+    width: 810px;
+    height: 430px;
+    margin-top: -220px;
+    margin-left: -410px;
+    border: 5px solid #ed7f00;
 }
 
 
-/* =============================================================================
-   3.2  Skiplinks
+
+
+
+/* #Skiplinks
+
+    .oooooo..o oooo         o8o             oooo   o8o              oooo
+   d8P'    `Y8 `888         `"'             `888   `"'              `888
+   Y88bo.       888  oooo  oooo  oo.ooooo.   888  oooo  ooo. .oo.    888  oooo   .oooo.o
+    `"Y8888o.   888 .8P'   `888   888' `88b  888  `888  `888P"Y88b   888 .8P'   d88(  "8
+        `"Y88b  888888.     888   888   888  888   888   888   888   888888.    `"Y88b.
+   oo     .d8P  888 `88b.   888   888   888  888   888   888   888   888 `88b.  o.  )88b
+   8""88888P'  o888o o888o o888o  888bod8P' o888o o888o o888o o888o o888o o888o 8""888P'
+                                  888
+                                 o888o
    ========================================================================== */
 
-.skiplinks a {
-	position: absolute;
-	top: -99999px;
-	left: -99999px;
-}
-
-.skiplinks a:focus,
-.skiplinks a:active {
-	position: static;
-	top: 0;
-	left: 0;
-}
 
 .skiplinks {
-	position: absolute;
-	z-index: 1000;
-	top: 0;
-	left: -99999px;
-	width: 100%;
-	margin: 0;
-	padding: 0;
-	list-style-type: none;
+    position: absolute;
+    z-index: 1000;
+    top: 0;
+    left: -99999px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
 }
 
-.skiplinks a:focus,
-.skiplinks a:active {
-	position: absolute;
-	left: 99999px;
-	width: 100%;
-	padding: 10px 0;
-	text-align: center;
-	text-decoration: none;
-	color: #fff;
-	border-bottom: 1px #000 solid;
-	outline: 0 none;
-	background: #333;
-}
+    .skiplinks__link {
+        position: absolute;
+        top: -99999px;
+        left: -99999px;
+    }
+
+    .skiplinks__link:focus,
+    .skiplinks__link:active {
+        position: absolute;
+        top: 0;
+        left: 99999px;
+        width: 100%;
+        padding: 10px 0;
+        text-align: center;
+        text-decoration: none;
+        color: #fff;
+        border-bottom: 1px #000 solid;
+        outline: 0 none;
+        background: #333;
+    }
 
 
-/* =============================================================================
-   3.3  Cookie information banner
+
+
+
+/* #Cookie info banner
+
+     .oooooo.                       oooo         o8o                  o8o               .o88o.                 .o8
+    d8P'  `Y8b                      `888         `"'                  `"'               888 `"                "888
+   888           .ooooo.   .ooooo.   888  oooo  oooo   .ooooo.       oooo  ooo. .oo.   o888oo   .ooooo.        888oooo.   .oooo.   ooo. .oo.   ooo. .oo.    .ooooo.  oooo d8b
+   888          d88' `88b d88' `88b  888 .8P'   `888  d88' `88b      `888  `888P"Y88b   888    d88' `88b       d88' `88b `P  )88b  `888P"Y88b  `888P"Y88b  d88' `88b `888""8P
+   888          888   888 888   888  888888.     888  888ooo888       888   888   888   888    888   888       888   888  .oP"888   888   888   888   888  888ooo888  888
+   `88b    ooo  888   888 888   888  888 `88b.   888  888    .o       888   888   888   888    888   888       888   888 d8(  888   888   888   888   888  888    .o  888
+    `Y8bood8P'  `Y8bod8P' `Y8bod8P' o888o o888o o888o `Y8bod8P'      o888o o888o o888o o888o   `Y8bod8P'       `Y8bod8P' `Y888""8o o888o o888o o888o o888o `Y8bod8P' d888b
+
+
    ========================================================================== */
 
-.cookie-information-banner-container {
-	position: fixed;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	background-color: #dcdcdc;
-	width: 100%;
+
+.cookie-info-banner {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #dcdcdc;
+    width: 100%;
 }
 
-.cookie-information-banner {
-	margin-right: 10px;
-	margin-left: 10px;
-}
+    .cookie-info-banner__box {
+        margin-right: 10px;
+        margin-left: 10px;
+    }
 
-.cookie-information {
-	font-size: 13px;
-	line-height: 21px;
-	margin-top: 6px;
-	margin-bottom: 6px;
-	padding-right: 25px;
-}
+        .cookie-info-banner__message {
+            font-size: 13px;
+            line-height: 21px;
+            margin-top: 6px;
+            margin-bottom: 6px;
+            padding-right: 25px;
+        }
 
-.cookie-information-banner-close {
-	line-height: 1;
-}
-
-
+        .cookie-info-banner__close-button {
+            line-height: 1;
+        }
 
 
-/* =============================================================================
-   4    PRIMARY STYLES
+
+
+
+/* ==========================================================================
+   #PRIMARY STYLES
+   ==========================================================================
+
+   ooooooooo.   ooooooooo.   ooooo ooo        ooooo       .o.       ooooooooo.   oooooo   oooo       .oooooo..o ooooooooooooo oooooo   oooo ooooo        oooooooooooo  .oooooo..o
+   `888   `Y88. `888   `Y88. `888' `88.       .888'      .888.      `888   `Y88.  `888.   .8'       d8P'    `Y8 8'   888   `8  `888.   .8'  `888'        `888'     `8 d8P'    `Y8
+    888   .d88'  888   .d88'  888   888b     d'888      .8"888.      888   .d88'   `888. .8'        Y88bo.           888        `888. .8'    888          888         Y88bo.
+    888ooo88P'   888ooo88P'   888   8 Y88. .P  888     .8' `888.     888ooo88P'     `888.8'          `"Y8888o.       888         `888.8'     888          888oooo8     `"Y8888o.
+    888          888`88b.     888   8  `888'   888    .88ooo8888.    888`88b.        `888'               `"Y88b      888          `888'      888          888    "         `"Y88b
+    888          888  `88b.   888   8    Y     888   .8'     `888.   888  `88b.       888           oo     .d8P      888           888       888       o  888       o oo     .d8P
+   o888o        o888o  o888o o888o o8o        o888o o88o     o8888o o888o  o888o     o888o          8""88888P'      o888o         o888o     o888ooooood8 o888ooooood8 8""88888P'
+
+
    ========================================================================== */
 
-/* These styles are for small screen devices, held in portrait mode. (320px)
-   They will be altered to suit different screen resolutions (see below). */
+/*
+ * These styles are for small screen devices, held in portrait mode. (320px)
+ * They will be altered to suit different screen resolutions (see below).
+ */
 
 
-/* =============================================================================
-   4.1  Base
+
+
+
+/* #Base
+
+   oooooooooo.
+   `888'   `Y8b
+    888     888  .oooo.    .oooo.o  .ooooo.
+    888oooo888' `P  )88b  d88(  "8 d88' `88b
+    888    `88b  .oP"888  `"Y88b.  888ooo888
+    888    .88P d8(  888  o.  )88b 888    .o
+   o888bood8P'  `Y888""8o 8""888P' `Y8bod8P'
+
+
    ========================================================================== */
+
 
 html {
-	font-size: 16px;
-	line-height: 1.5625; /* 25px / 16px */
-	overflow-y: scroll;
-	box-sizing: border-box;
+    font-size: 16px;
+    line-height: 1.5625; /* 25px / 16px */
+    overflow-y: scroll;
+    box-sizing: border-box;
 }
+
+
 
 /* Allow components to change to other box-sizing models if necessary */
 *,
 *:before,
 *:after {
-	box-sizing: inherit;
+    box-sizing: inherit;
 }
+
 
 html,
 button,
 input,
 select,
 textarea {
-	color: #333;
+    color: #333;
 }
 
+
 body {
-	font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
+
 
 /* Change the selection background color to fit with the used color scheme */
 ::-moz-selection {
-	color: #fff;
-	background: #91afd7;
-	text-shadow: none;
+    color: #fff;
+    background: #91afd7;
+    text-shadow: none;
 }
+
 ::selection {
-	color: #fff;
-	background: #91afd7;
-	text-shadow: none;
+    color: #fff;
+    background: #91afd7;
+    text-shadow: none;
 }
+
 
 hr {
-	display: block;
-	height: 1px;
-	margin: 1.5625rem 0; /* 25px / 16px */
-	padding: 0;
-	border: 0;
-	border-top: 1px solid #bebebe;
+    display: block;
+    height: 1px;
+    margin: 1.5625rem 0; /* 25px / 16px */
+    padding: 0;
+    border: 0;
+    border-top: 1px solid #bebebe;
 }
 
 
-/* =============================================================================
-   4.2  Links
+
+
+
+/* #Links
+
+   ooooo         o8o              oooo
+   `888'         `"'              `888
+    888         oooo  ooo. .oo.    888  oooo   .oooo.o
+    888         `888  `888P"Y88b   888 .8P'   d88(  "8
+    888          888   888   888   888888.    `"Y88b.
+    888       o  888   888   888   888 `88b.  o.  )88b
+   o888ooooood8 o888o o888o o888o o888o o888o 8""888P'
+
+
    ========================================================================== */
 
+
 a {
-	text-decoration: none;
-	color: #0a4baa;
+    text-decoration: none;
+    color: #0a4baa;
 }
 
 a:visited {
-	color: #05327d;
+    color: #05327d;
 }
 
 a:hover {
-	color: #507dbe;
+    color: #507dbe;
 }
 
 
-/* =============================================================================
-   4.3  Typography, lists, headlines
+
+
+
+/* #Typography, lists, headlines
+
+   ooooooooooooo                                                                           oooo                             oooo   o8o               .                     oooo                                  .o8  oooo   o8o
+   8'   888   `8                                                                           `888                             `888   `"'             .o8                     `888                                 "888  `888   `"'
+        888      oooo    ooo oo.ooooo.   .ooooo.   .oooooooo oooo d8b  .oooo.   oo.ooooo.   888 .oo.   oooo    ooo           888  oooo   .oooo.o .o888oo  .oooo.o           888 .oo.    .ooooo.   .oooo.    .oooo888   888  oooo  ooo. .oo.    .ooooo.   .oooo.o
+        888       `88.  .8'   888' `88b d88' `88b 888' `88b  `888""8P `P  )88b   888' `88b  888P"Y88b   `88.  .8'            888  `888  d88(  "8   888   d88(  "8           888P"Y88b  d88' `88b `P  )88b  d88' `888   888  `888  `888P"Y88b  d88' `88b d88(  "8
+        888        `88..8'    888   888 888   888 888   888   888      .oP"888   888   888  888   888    `88..8'             888   888  `"Y88b.    888   `"Y88b.            888   888  888ooo888  .oP"888  888   888   888   888   888   888  888ooo888 `"Y88b.
+        888         `888'     888   888 888   888 `88bod8P'   888     d8(  888   888   888  888   888     `888'    .o.       888   888  o.  )88b   888 . o.  )88b .o.       888   888  888    .o d8(  888  888   888   888   888   888   888  888    .o o.  )88b
+       o888o         .8'      888bod8P' `Y8bod8P' `8oooooo.  d888b    `Y888""8o  888bod8P' o888o o888o     .8'     Y8P      o888o o888o 8""888P'   "888" 8""888P' Y8P      o888o o888o `Y8bod8P' `Y888""8o `Y8bod88P" o888o o888o o888o o888o `Y8bod8P' 8""888P'
+                 .o..P'       888                 d"     YD                      888                   .o..P'       '                                              '
+                 `Y8P'       o888o                "Y88888P'                     o888o                  `Y8P'
    ========================================================================== */
+
 
 p,
 ul,
 ol {
-	margin-top: 1.5625rem; /* 25px / 16px */
-	margin-bottom: 1.5625rem; /* 25px / 16px */
+    margin-top: 1.5625rem; /* 25px / 16px */
+    margin-bottom: 1.5625rem; /* 25px / 16px */
 }
+
 
 ul,
 ol {
-	padding: 0 0 0 2.1875em; /* 35px / 16px */
+    padding: 0 0 0 2.1875em; /* 35px / 16px */
 }
 
-ul li *,
-ol li * {
-	margin-top: 0;
-	margin-bottom: 0;
-}
+    ul li *,
+    ol li * {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
 
-ul ul,
-ol ol,
-ul ol,
-ol ul {
-	margin-top: 0;
-	margin-bottom: 0;
-}
+    ul ul,
+    ol ol,
+    ul ol,
+    ol ul {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
 
 nav ul {
-	margin: 0;
-	padding: 0;
+    margin: 0;
+    padding: 0;
 }
+
 
 dd {
-	margin: 0 0 0 2.1875em; /* 35px / 16px */
+    margin: 0 0 0 2.1875em; /* 35px / 16px */
 }
+
 
 blockquote {
-	font-style: italic;
-	margin: 1.5625rem 2.1875em; /* 25px / 16px   and   35px / 16px */
+    font-style: italic;
+    margin: 1.5625rem 2.1875em; /* 25px / 16px   and   35px / 16px */
 }
 
-blockquote p {
-	font-style: italic;
-}
+    blockquote p {
+        font-style: italic;
+    }
 
 cite {
-	font-style: normal;
+    font-style: normal;
 }
+
 
 pre,
 code,
 code var {
-	font-family: "Lucida Console", "Courier New", Courier, monospace;
+    font-family: "Lucida Console", "Courier New", Courier, monospace;
 }
+
 
 abbr {
-	cursor: help;
+    cursor: help;
 }
+
 
 del {
-	text-decoration: line-through;
+    text-decoration: line-through;
 }
 
+
 h1 {
-	font-size: 2.625rem; /* 42px / 16px */
-	line-height: 1.1904761904761904761904761904762; /* 50px / 42px */
-	margin-top: 1.5625rem; /* 25px / 16px */
-	margin-bottom: 1.5625rem; /* 25px / 16px */
+    font-size: 2.625rem; /* 42px / 16px */
+    line-height: 1.1904761904761904761904761904762; /* 50px / 42px */
+    margin-top: 1.5625rem; /* 25px / 16px */
+    margin-bottom: 1.5625rem; /* 25px / 16px */
 }
 
 h2 {
-	font-size: 1.5625rem; /* 25px / 16px */
-	line-height: 1; /* 25px / 25px */
-	margin-top: 1.5625rem; /* 25px / 16px */
-	margin-bottom: 1.5625rem; /* 25px / 16px */
+    font-size: 1.5625rem; /* 25px / 16px */
+    line-height: 1; /* 25px / 25px */
+    margin-top: 1.5625rem; /* 25px / 16px */
+    margin-bottom: 1.5625rem; /* 25px / 16px */
 }
 
 h3 {
-	font-size: 1.25rem; /* 20px / 16px */
-	line-height: 1.25; /* 25px / 20px */
-	margin-top: 3.125rem; /* 50px / 16px */
-	margin-bottom: 1.5625rem; /* 25px / 16px */
+    font-size: 1.25rem; /* 20px / 16px */
+    line-height: 1.25; /* 25px / 20px */
+    margin-top: 3.125rem; /* 50px / 16px */
+    margin-bottom: 1.5625rem; /* 25px / 16px */
 }
 
 h4 {
-	font-size: 1rem; /* 16px / 16px */
-	line-height: 1.5625; /* 16px / 16px */
-	margin-top: 3.125rem; /* 50px / 16px */
-	margin-bottom: 1.5625rem; /* 25px / 16px */
+    font-size: 1rem; /* 16px / 16px */
+    line-height: 1.5625; /* 16px / 16px */
+    margin-top: 3.125rem; /* 50px / 16px */
+    margin-bottom: 1.5625rem; /* 25px / 16px */
 }
+
 
 td {
-	vertical-align: top;
+    vertical-align: top;
 }
 
 
 
 
-/* =============================================================================
-   4.4  Embedded content
+
+/* #Embedded content
+
+   oooooooooooo                    .o8                       .o8        .o8                  .o8                                           .                             .
+   `888'     `8                   "888                      "888       "888                 "888                                         .o8                           .o8
+    888         ooo. .oo.  .oo.    888oooo.   .ooooo.   .oooo888   .oooo888   .ooooo.   .oooo888        .ooooo.   .ooooo.  ooo. .oo.   .o888oo  .ooooo.  ooo. .oo.   .o888oo
+    888oooo8    `888P"Y88bP"Y88b   d88' `88b d88' `88b d88' `888  d88' `888  d88' `88b d88' `888       d88' `"Y8 d88' `88b `888P"Y88b    888   d88' `88b `888P"Y88b    888
+    888    "     888   888   888   888   888 888ooo888 888   888  888   888  888ooo888 888   888       888       888   888  888   888    888   888ooo888  888   888    888
+    888       o  888   888   888   888   888 888    .o 888   888  888   888  888    .o 888   888       888   .o8 888   888  888   888    888 . 888    .o  888   888    888 .
+   o888ooooood8 o888o o888o o888o  `Y8bod8P' `Y8bod8P' `Y8bod88P" `Y8bod88P" `Y8bod8P' `Y8bod88P"      `Y8bod8P' `Y8bod8P' o888o o888o   "888" `Y8bod8P' o888o o888o   "888"
+
+
    ========================================================================== */
+
 
 audio,
 canvas,
@@ -377,24 +530,37 @@ iframe,
 img,
 svg,
 video {
-	vertical-align: middle;
+    vertical-align: middle;
 }
 
 embed,
 img,
 object,
 video {
-	max-width: 100%;
+    max-width: 100%;
 }
 
 img {
-	height: auto;
+    height: auto;
 }
 
 
-/* =============================================================================
-   4.5  Form elements
+
+
+
+/* #Form elements
+
+   oooooooooooo                                                     oooo                                                        .
+   `888'     `8                                                     `888                                                      .o8
+    888          .ooooo.  oooo d8b ooo. .oo.  .oo.         .ooooo.   888   .ooooo.  ooo. .oo.  .oo.    .ooooo.  ooo. .oo.   .o888oo  .oooo.o
+    888oooo8    d88' `88b `888""8P `888P"Y88bP"Y88b       d88' `88b  888  d88' `88b `888P"Y88bP"Y88b  d88' `88b `888P"Y88b    888   d88(  "8
+    888    "    888   888  888      888   888   888       888ooo888  888  888ooo888  888   888   888  888ooo888  888   888    888   `"Y88b.
+    888         888   888  888      888   888   888       888    .o  888  888    .o  888   888   888  888    .o  888   888    888 . o.  )88b
+   o888o        `Y8bod8P' d888b    o888o o888o o888o      `Y8bod8P' o888o `Y8bod8P' o888o o888o o888o `Y8bod8P' o888o o888o   "888" 8""888P'
+
+
    ========================================================================== */
+
 
 input[type="date"],
 input[type="email"],
@@ -406,9 +572,9 @@ input[type="text"],
 input[type="url"],
 select,
 textarea {
-	font-family: Arial, Helvetica, sans-serif;
-	color: #333;
-	border: 1px solid #5a5a5a;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
+    border: 1px solid #5a5a5a;
 }
 
 input[type="date"],
@@ -420,763 +586,1154 @@ input[type="tel"],
 input[type="text"],
 input[type="url"],
 textarea {
-	padding: 0.1875rem; /* 3px / 16px */
+    padding: 0.1875rem; /* 3px / 16px */
+}
+
+textarea {
+    resize: vertical;
 }
 
 select {
-	padding: 0.125rem; /* 2px / 16px */
+    padding: 0.125rem; /* 2px / 16px */
 }
+
+
+.placeholder {
+    color: #aaa;
+}
+
+::-webkit-input-placeholder {
+    color: #aaa;
+}
+
+:-moz-placeholder {
+    color: #aaa;
+}
+
+::-moz-placeholder {
+    color: #aaa;
+}
+
+:-ms-input-placeholder {
+    color: #aaa;
+}
+
 
 button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-	font-family: Arial, Helvetica, sans-serif;
-	padding: 0.1875rem 0.5625rem; /* 3px / 16px   and   9px / 16px */
-	color: #fff;
-	border: 1px solid #5a5a5a;
-	background-color: #5a5a5a;
-	background-image: linear-gradient(to bottom, #bebebe, #5a5a5a);
-	background-clip: padding-box;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0.1875rem 0.5625rem; /* 3px / 16px   and   9px / 16px */
+    color: #fff;
+    border: 1px solid #5a5a5a;
+    background-color: #5a5a5a;
+    background-image: linear-gradient(to bottom, #bebebe, #5a5a5a);
+    background-clip: padding-box;
 }
 
 button:focus,
 input:focus,
 select:focus,
 textarea:focus {
-	outline: 0;
-	box-shadow: 1px 1px 3px #91afd7, -1px 1px 3px #91afd7, -1px -1px 3px #91afd7, 1px -1px 3px #91afd7;
+    outline: 0;
+    box-shadow: 1px 1px 3px #91afd7, -1px 1px 3px #91afd7, -1px -1px 3px #91afd7, 1px -1px 3px #91afd7;
 }
 
 button:active,
 input[type="button"]:active,
 input[type="reset"]:active,
 input[type="submit"]:active {
-	background-color: #bebebe;
-	background-image: linear-gradient(to bottom, #5a5a5a, #bebebe);
-	box-shadow: 1px 1px 3px #91afd7, -1px 1px 3px #91afd7, -1px -1px 3px #91afd7, 1px -1px 3px #91afd7;
+    background-color: #bebebe;
+    background-image: linear-gradient(to bottom, #5a5a5a, #bebebe);
+    box-shadow: 1px 1px 3px #91afd7, -1px 1px 3px #91afd7, -1px -1px 3px #91afd7, 1px -1px 3px #91afd7;
 }
 
-.placeholder {
-	color: #aaa;
-}
-
-::-webkit-input-placeholder {
-	color: #aaa;
-}
-
-:-moz-placeholder {
-	color: #aaa;
-}
-
-::-moz-placeholder {
-	color: #aaa;
-}
-
-:-ms-input-placeholder {
-	color: #aaa;
-}
-
-textarea {
-	resize: vertical;
-}
 
 fieldset {
-	margin: 0;
-	padding: 0;
-	border: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
 }
 
-/* Colors for form validity */
+
 input:invalid,
 textarea:invalid {
-	background-color: #f0dddd;
+    background-color: #f0dddd;
 }
 
 
-/* =============================================================================
-   4.6  Main navigation
+
+
+
+/* ==========================================================================
+   #LAYOUT
+   ==========================================================================
+
+   ooooo              .o.       oooooo   oooo   .oooooo.   ooooo     ooo ooooooooooooo
+   `888'             .888.       `888.   .8'   d8P'  `Y8b  `888'     `8' 8'   888   `8
+    888             .8"888.       `888. .8'   888      888  888       8       888
+    888            .8' `888.       `888.8'    888      888  888       8       888
+    888           .88ooo8888.       `888'     888      888  888       8       888
+    888       o  .8'     `888.       888      `88b    d88'  `88.    .8'       888
+   o888ooooood8 o88o     o8888o     o888o      `Y8bood8P'     `YbodP'        o888o
+
    ========================================================================== */
 
-.main-navigation-container {
-	background-color: #dcdcdc;
-	width: 100%;
-}
-
-.main-navigation-logo {
-	position: absolute;
-	top: 0;
-	left: 10px;
-	display: block;
-	width: 2.5rem; /* 40px / 16px */
-	margin-right: 0.625rem; /* 10px / 16px */
-	transition: all 0.15s linear;
-	opacity: 0;
-}
-
-.scroll-to-fixed-fixed .main-navigation-logo {
-	transition: all 0.15s linear 0.15s;
-	opacity: 1;
-}
-
-.main-navigation {
-	margin: 0;
-	padding-bottom: 0 !important;
-}
-
-.no-js .main-navigation-toggle {
-	display: none;
-	visibility: hidden;
-}
-
-.js .main-navigation-toggle {
-	font-size: 1.25rem; /* 20px / 16px */
-	line-height: 1.25; /* 25px / 20px */
-	position: relative;
-	display: block;
-	padding: 0.625rem; /* 10px / 16px */
-	transition: all 0.2s linear;
-	color: #000;
-	background-color: #dcdcdc;
-}
-
-.js .scroll-to-fixed-fixed .main-navigation-toggle {
-	margin-left: 3.5rem; /* 56px / 16px */
-	transition: all 0.15s linear;
-}
-
-.js .main-navigation-list {
-	position: absolute;
-	z-index: 9999;
-	overflow: hidden;
-	width: 1px;
-	height: 1px;
-	margin: -1px;
-	transition: opacity 0.2s linear;
-	opacity: 0;
-	box-shadow: 0 2px 5px -1px rgba(0, 0, 0, 0.5);
-}
-
-.js .show-submenu + .main-navigation-list {
-	left: 0;
-	overflow-x: visible;
-	overflow-y: auto;
-	width: 100%;
-	height: auto;
-	margin: 0;
-	opacity: 1;
-}
-
-/* 1st level and overall menu styles */
-
-.main-navigation-list li {
-	font-size: 1.25rem; /* 20px / 16px */
-	line-height: 1.25; /* 25px / 20px */
-	position: relative;
-	right: 0;
-	left: 0;
-	background-color: #dcdcdc;
-}
-
-.main-navigation-list a {
-	position: relative;
-	display: block;
-	padding: 0.625rem; /* 10px / 16px */
-	transition: all 0.2s linear;
-	color: #000;
-}
-
-.main-navigation-list li a:visited {
-	color: #000;
-}
-
-.js .main-navigation-list .parent,
-.main-navigation-list .current {
-	background: #bebebe;
-}
-
-.js .main-navigation-list li.show-submenu > a {
-	color: #f0f0f0;
-	background: #8c8c8c;
-}
-
-.main-navigation-toggle,
-.js .main-navigation-list .has_children > a {
-	cursor: pointer;
-}
-
-.js .main-navigation-toggle:after,
-.js .main-navigation-list .has_children > a:after {
-	font-size: 80%;
-	margin-left: 0.3125rem; /* 5px / 16px */
-	content: "▼";
-}
-
-/* 2nd level */
-
-.main-navigation-list ul a {
-	display: block;
-	position: relative;
-	right: 0;
-	left: 0;
-	padding-left: 2.1875em;
-}
-
-/* 3rd level */
-
-.main-navigation-list ul ul a {
-	padding-left: 4.375em;
-}
-
-/* hide deeper levels */
-
-.main-navigation-list ul ul ul {
-	display: none;
-	visibility: hidden;
-}
-
-/* Accordion functionality */
-
-.js .main-navigation-list ul,
-.js .main-navigation-list ul ul {
-	overflow: hidden;
-	height: 0;
-	transition: opacity 0.2s linear;
-	opacity: 0;
-}
-
-.main-navigation-list .show-submenu > ul,
-.main-navigation-list .show-submenu .show-submenu > ul {
-	overflow-x: visible;
-	overflow-y: auto;
-	height: auto;
-	opacity: 1;
-}
 
 
-/* =============================================================================
-   4.7  Layout elements
-   ========================================================================== */
+
 
 .wrapper {
-	position: relative;
-	width: 100%;
-	max-width: 670px;
-	margin: 0 auto;
+    position: relative;
+    width: 100%;
+    max-width: 670px;
+    margin: 0 auto;
 }
 
-.page-header {
-	margin-right: 10px;
-	margin-left: 10px;
+
+
+
+
+/* #Header
+
+   ooooo   ooooo                           .o8
+   `888'   `888'                          "888
+    888     888   .ooooo.   .oooo.    .oooo888   .ooooo.  oooo d8b
+    888ooooo888  d88' `88b `P  )88b  d88' `888  d88' `88b `888""8P
+    888     888  888ooo888  .oP"888  888   888  888ooo888  888
+    888     888  888    .o d8(  888  888   888  888    .o  888
+   o888o   o888o `Y8bod8P' `Y888""8o `Y8bod88P" `Y8bod8P' d888b
+
+
+   ========================================================================== */
+
+
+.page-header__box {
+    margin-right: 10px;
+    margin-left: 10px;
 }
 
-.main {
-	clear: both;
-	margin-right: 10px;
-	margin-left: 10px;
-	padding-top: 1.5625rem; /* 25px / 16px */
-	padding-bottom: 1.5625rem; /* 25px / 16px */
+
+.site-title {
+    font-size: 3.125rem; /* 50px / 16px */
+    line-height: 1; /* 50px / 50px */
+    margin-top: 1.5625rem; /* 25px / 16px */
+    margin-bottom: 1.5625rem; /* 25px / 16px */
 }
 
-.sidebar {
-	margin-right: 10px;
-	margin-left: 10px;
-	padding-top: 1.5625rem; /* 25px / 16px */
-	padding-bottom: 1.5625rem; /* 25px / 16px */
-	border-top: 1px solid #bebebe;
+
+
+
+
+/* #Navigation
+
+   ooooo      ooo                        o8o                           .    o8o
+   `888b.     `8'                        `"'                         .o8    `"'
+    8 `88b.    8   .oooo.   oooo    ooo oooo   .oooooooo  .oooo.   .o888oo oooo   .ooooo.  ooo. .oo.
+    8   `88b.  8  `P  )88b   `88.  .8'  `888  888' `88b  `P  )88b    888   `888  d88' `88b `888P"Y88b
+    8     `88b.8   .oP"888    `88..8'    888  888   888   .oP"888    888    888  888   888  888   888
+    8       `888  d8(  888     `888'     888  `88bod8P'  d8(  888    888 .  888  888   888  888   888
+   o8o        `8  `Y888""8o     `8'     o888o `8oooooo.  `Y888""8o   "888" o888o `Y8bod8P' o888o o888o
+                                              d"     YD
+                                              "Y88888P'
+   ========================================================================== */
+
+
+/*
+ * PLEASE NOTE: Classes and styling of the main navigation don’t follow BEM-like
+ * naming conventions – with intent to be easily applicable to almost any
+ * HTML code produced by a CMS.
+ */
+
+
+.main-navigation {
+    background-color: #dcdcdc;
+    width: 100%;
 }
 
-.page-footer-container {
-	background: #5a5a5a;
+
+    .main-navigation__logo {
+        position: absolute;
+        top: 0;
+        left: 10px;
+        display: block;
+        width: 2.5rem; /* 40px / 16px */
+        margin-right: 0.625rem; /* 10px / 16px */
+        transition: all 0.15s linear;
+        opacity: 0;
+    }
+
+    .scroll-to-fixed-fixed .main-navigation__logo {
+        transition: all 0.15s linear 0.15s;
+        opacity: 1;
+    }
+
+
+    .main-navigation__box {
+        margin: 0;
+        padding-bottom: 0 !important;
+    }
+
+
+        .no-js .main-navigation__toggle {
+            display: none;
+            visibility: hidden;
+        }
+
+        .js .main-navigation__toggle {
+            font-size: 1.25rem; /* 20px / 16px */
+            line-height: 1.25; /* 25px / 20px */
+            position: relative;
+            display: block;
+            padding: 0.625rem; /* 10px / 16px */
+            transition: all 0.2s linear;
+            color: #000;
+            background-color: #dcdcdc;
+        }
+
+        .js .scroll-to-fixed-fixed .main-navigation__toggle {
+            margin-left: 3.5rem; /* 56px / 16px */
+            transition: all 0.15s linear;
+        }
+
+
+        .js .main-navigation__list {
+            position: absolute;
+            z-index: 9999;
+            overflow: hidden;
+            width: 1px;
+            height: 1px;
+            margin: -1px;
+            transition: opacity 0.2s linear;
+            opacity: 0;
+            box-shadow: 0 2px 5px -1px rgba(0, 0, 0, 0.5);
+        }
+
+        .js .show-submenu + .main-navigation__list {
+            left: 0;
+            overflow-x: visible;
+            overflow-y: auto;
+            width: 100%;
+            height: auto;
+            margin: 0;
+            opacity: 1;
+        }
+
+
+            /* 1st level and overall menu styles */
+
+            .main-navigation__list li {
+                font-size: 1.25rem; /* 20px / 16px */
+                line-height: 1.25; /* 25px / 20px */
+                position: relative;
+                right: 0;
+                left: 0;
+                background-color: #dcdcdc;
+            }
+
+            .main-navigation__list a {
+                position: relative;
+                display: block;
+                padding: 0.625rem; /* 10px / 16px */
+                transition: all 0.2s linear;
+                color: #000;
+            }
+
+            .main-navigation__list li a:visited {
+                color: #000;
+            }
+
+            .js .main-navigation__list .parent,
+            .main-navigation__list .current {
+                background: #bebebe;
+            }
+
+            .js .main-navigation__list li.show-submenu > a {
+                color: #f0f0f0;
+                background: #8c8c8c;
+            }
+
+            .main-navigation__toggle,
+            .js .main-navigation__list .has_children > a {
+                cursor: pointer;
+            }
+
+            .js .main-navigation__toggle:after,
+            .js .main-navigation__list .has_children > a:after {
+                font-size: 80%;
+                margin-left: 0.3125rem; /* 5px / 16px */
+                content: "▼";
+            }
+
+
+            /* 2nd level */
+
+            .main-navigation__list ul a {
+                display: block;
+                position: relative;
+                right: 0;
+                left: 0;
+                padding-left: 2.1875em;
+            }
+
+
+            /* 3rd level */
+
+            .main-navigation__list ul ul a {
+                padding-left: 4.375em;
+            }
+
+
+            /* hide deeper levels */
+
+            .main-navigation__list ul ul ul {
+                display: none;
+                visibility: hidden;
+            }
+
+
+            /* Accordion functionality */
+
+            .js .main-navigation__list ul,
+            .js .main-navigation__list ul ul {
+                overflow: hidden;
+                height: 0;
+                transition: opacity 0.2s linear;
+                opacity: 0;
+            }
+
+            .main-navigation__list .show-submenu > ul,
+            .main-navigation__list .show-submenu .show-submenu > ul {
+                overflow-x: visible;
+                overflow-y: auto;
+                height: auto;
+                opacity: 1;
+            }
+
+
+
+
+
+/* #Main content area
+
+   ooo        ooooo            o8o                                                       .                             .
+   `88.       .888'            `"'                                                     .o8                           .o8
+    888b     d'888   .oooo.   oooo  ooo. .oo.         .ooooo.   .ooooo.  ooo. .oo.   .o888oo  .ooooo.  ooo. .oo.   .o888oo       .oooo.   oooo d8b  .ooooo.   .oooo.
+    8 Y88. .P  888  `P  )88b  `888  `888P"Y88b       d88' `"Y8 d88' `88b `888P"Y88b    888   d88' `88b `888P"Y88b    888        `P  )88b  `888""8P d88' `88b `P  )88b
+    8  `888'   888   .oP"888   888   888   888       888       888   888  888   888    888   888ooo888  888   888    888         .oP"888   888     888ooo888  .oP"888
+    8    Y     888  d8(  888   888   888   888       888   .o8 888   888  888   888    888 . 888    .o  888   888    888 .      d8(  888   888     888    .o d8(  888
+   o8o        o888o `Y888""8o o888o o888o o888o      `Y8bod8P' `Y8bod8P' o888o o888o   "888" `Y8bod8P' o888o o888o   "888"      `Y888""8o d888b    `Y8bod8P' `Y888""8o
+
+
+   ========================================================================== */
+
+
+.page-main-content {
+    clear: both;
+    margin-right: 10px;
+    margin-left: 10px;
+    padding-top: 1.5625rem; /* 25px / 16px */
+    padding-bottom: 1.5625rem; /* 25px / 16px */
 }
+
+
+
+
+
+/* #Sidebar
+
+    .oooooo..o  o8o        .o8             .o8
+   d8P'    `Y8  `"'       "888            "888
+   Y88bo.      oooo   .oooo888   .ooooo.   888oooo.   .oooo.   oooo d8b
+    `"Y8888o.  `888  d88' `888  d88' `88b  d88' `88b `P  )88b  `888""8P
+        `"Y88b  888  888   888  888ooo888  888   888  .oP"888   888
+   oo     .d8P  888  888   888  888    .o  888   888 d8(  888   888
+   8""88888P'  o888o `Y8bod88P" `Y8bod8P'  `Y8bod8P' `Y888""8o d888b
+
+
+   ========================================================================== */
+
+
+.page-sidebar {
+    margin-right: 10px;
+    margin-left: 10px;
+    padding-top: 1.5625rem; /* 25px / 16px */
+    padding-bottom: 1.5625rem; /* 25px / 16px */
+    border-top: 1px solid #bebebe;
+}
+
+
+
+
+
+/* #Footer
+
+   oooooooooooo                         .
+   `888'     `8                       .o8
+    888          .ooooo.   .ooooo.  .o888oo  .ooooo.  oooo d8b
+    888oooo8    d88' `88b d88' `88b   888   d88' `88b `888""8P
+    888    "    888   888 888   888   888   888ooo888  888
+    888         888   888 888   888   888 . 888    .o  888
+   o888o        `Y8bod8P' `Y8bod8P'   "888" `Y8bod8P' d888b
+
+
+   ========================================================================== */
+
 
 .page-footer {
-	font-size: 0.8125rem; /* 13px / 16px */
-	margin-right: 10px;
-	margin-left: 10px;
-	color: #fff;
+    background: #5a5a5a;
 }
 
+    .page-footer__box {
+        font-size: 0.8125rem; /* 13px / 16px */
+        margin-right: 10px;
+        margin-left: 10px;
+        color: #fff;
+    }
 
 
 
-/* =============================================================================
-   5    NON-SEMANTIC HELPER CLASSES
+
+
+/* ==========================================================================
+   #HELPERS
+   ==========================================================================
+
+   ooooo   ooooo oooooooooooo ooooo        ooooooooo.   oooooooooooo ooooooooo.    .oooooo..o
+   `888'   `888' `888'     `8 `888'        `888   `Y88. `888'     `8 `888   `Y88. d8P'    `Y8
+    888     888   888          888          888   .d88'  888          888   .d88' Y88bo.
+    888ooooo888   888oooo8     888          888ooo88P'   888oooo8     888ooo88P'   `"Y8888o.
+    888     888   888    "     888          888          888    "     888`88b.         `"Y88b
+    888     888   888       o  888       o  888          888       o  888  `88b.  oo     .d8P
+   o888o   o888o o888ooooood8 o888ooooood8 o888o        o888ooooood8 o888o  o888o 8""88888P'
+
+
    ========================================================================== */
 
 
-/* =============================================================================
-   5.1  Hiding content
+
+
+/* #Hiding content
+
+   ooooo   ooooo  o8o        .o8   o8o                                                                  .                             .
+   `888'   `888'  `"'       "888   `"'                                                                .o8                           .o8
+    888     888  oooo   .oooo888  oooo  ooo. .oo.    .oooooooo       .ooooo.   .ooooo.  ooo. .oo.   .o888oo  .ooooo.  ooo. .oo.   .o888oo
+    888ooooo888  `888  d88' `888  `888  `888P"Y88b  888' `88b       d88' `"Y8 d88' `88b `888P"Y88b    888   d88' `88b `888P"Y88b    888
+    888     888   888  888   888   888   888   888  888   888       888       888   888  888   888    888   888ooo888  888   888    888
+    888     888   888  888   888   888   888   888  `88bod8P'       888   .o8 888   888  888   888    888 . 888    .o  888   888    888 .
+   o888o   o888o o888o `Y8bod88P" o888o o888o o888o `8oooooo.       `Y8bod8P' `Y8bod8P' o888o o888o   "888" `Y8bod8P' o888o o888o   "888"
+                                                    d"     YD
+                                                    "Y88888P'
    ========================================================================== */
+
 
 /* For image replacement */
 .ir {
-	overflow: hidden;
-	border: 0;
-	background-color: transparent;
-	*text-indent: -9999px;
+    overflow: hidden;
+    border: 0;
+    background-color: transparent;
+    *text-indent: -9999px;
 }
-.ir:before {
-	display: block;
-	width: 0;
-	height: 150%;
-	content: "";
-}
+
+    .ir:before {
+        display: block;
+        width: 0;
+        height: 150%;
+        content: "";
+    }
+
 
 /* Hide from both screenreaders and browsers: h5bp.com/u */
 .hidden {
-	display: none !important;
-	visibility: hidden;
+    display: none !important;
+    visibility: hidden;
 }
+
 
 /* Hide only visually, but have it available for screenreaders: h5bp.com/v */
 .visuallyhidden {
-	position: absolute;
-	overflow: hidden;
-	clip: rect(0 0 0 0);
-	width: 1px;
-	height: 1px;
-	margin: -1px;
-	padding: 0;
-	border: 0;
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
 }
 
-/* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: h5bp.com/p */
-.visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus {
-	position: static;
-	overflow: visible;
-	clip: auto;
-	width: auto;
-	height: auto;
-	margin: 0;
-}
+    /* Extends the .visuallyhidden class to allow the element to be focusable
+       when navigated to via the keyboard: h5bp.com/p */
+    .visuallyhidden.focusable:active,
+    .visuallyhidden.focusable:focus {
+        position: static;
+        overflow: visible;
+        clip: auto;
+        width: auto;
+        height: auto;
+        margin: 0;
+    }
+
 
 /* Hide visually and from screenreaders, but maintain layout */
 .invisible {
-	visibility: hidden;
+    visibility: hidden;
 }
 
 
-/* =============================================================================
-   5.2  Alignments
+
+
+
+/* #Clearfix
+
+     .oooooo.   oooo                                .o88o.  o8o
+    d8P'  `Y8b  `888                                888 `"  `"'
+   888           888   .ooooo.   .oooo.   oooo d8b o888oo  oooo  oooo    ooo
+   888           888  d88' `88b `P  )88b  `888""8P  888    `888   `88b..8P'
+   888           888  888ooo888  .oP"888   888      888     888     Y888'
+   `88b    ooo   888  888    .o d8(  888   888      888     888   .o8"'88b
+    `Y8bood8P'  o888o `Y8bod8P' `Y888""8o d888b    o888o   o888o o88'   888o
+
+
    ========================================================================== */
 
-.left {
-	text-align: left;
-}
-
-.center {
-	text-align: center;
-}
-
-.right {
-	text-align: right;
-}
-
-.float-left {
-	float: left;
-	margin: 0 1.5625rem 1.5625rem 0; /* 25px / 16px */
-}
-
-.float-right {
-	float: right;
-	margin: 0 0 1.5625rem 1.5625rem; /* 25px / 16px */
-}
-
-
-/* =============================================================================
-   5.3  Clearfix
-   ========================================================================== */
 
 .clearfix:before,
 .clearfix:after {
-	display: table;
-	content: " ";
+    display: table;
+    content: " ";
 }
 
 .clearfix:after {
-	clear: both;
+    clear: both;
 }
 
 
-/* =============================================================================
-   5.4  Misc little helpers
+
+
+
+/* #Miscellaneous little helpers
+
+   ooo        ooooo  o8o                               oooo  oooo                                                                      oooo   o8o      .       .   oooo                 oooo                  oooo
+   `88.       .888'  `"'                               `888  `888                                                                      `888   `"'    .o8     .o8   `888                 `888                  `888
+    888b     d'888  oooo   .oooo.o  .ooooo.   .ooooo.   888   888   .oooo.   ooo. .oo.    .ooooo.   .ooooo.  oooo  oooo   .oooo.o       888  oooo  .o888oo .o888oo  888   .ooooo.        888 .oo.    .ooooo.   888  oo.ooooo.   .ooooo.  oooo d8b  .oooo.o
+    8 Y88. .P  888  `888  d88(  "8 d88' `"Y8 d88' `88b  888   888  `P  )88b  `888P"Y88b  d88' `88b d88' `88b `888  `888  d88(  "8       888  `888    888     888    888  d88' `88b       888P"Y88b  d88' `88b  888   888' `88b d88' `88b `888""8P d88(  "8
+    8  `888'   888   888  `"Y88b.  888       888ooo888  888   888   .oP"888   888   888  888ooo888 888   888  888   888  `"Y88b.        888   888    888     888    888  888ooo888       888   888  888ooo888  888   888   888 888ooo888  888     `"Y88b.
+    8    Y     888   888  o.  )88b 888   .o8 888    .o  888   888  d8(  888   888   888  888    .o 888   888  888   888  o.  )88b       888   888    888 .   888 .  888  888    .o       888   888  888    .o  888   888   888 888    .o  888     o.  )88b
+   o8o        o888o o888o 8""888P' `Y8bod8P' `Y8bod8P' o888o o888o `Y888""8o o888o o888o `Y8bod8P' `Y8bod8P'  `V88V"V8P' 8""888P'      o888o o888o   "888"   "888" o888o `Y8bod8P'      o888o o888o `Y8bod8P' o888o  888bod8P' `Y8bod8P' d888b    8""888P'
+                                                                                                                                                                                                                     888
+                                                                                                                                                                                                                    o888o
    ========================================================================== */
+
 
 /* typically used with a <span> element */
 .nobr {
-	white-space: nowrap;
-}
-
-/* ensurure correct display of fullwidth images which are inserted through the <picture> element */
-.fullwidth-image {
-	width: 100%;
+    white-space: nowrap;
 }
 
 
-/* =============================================================================
-   5.5  Remove telephone number styling inserted by the Skype browser plug-in
-   ========================================================================== */
+/* typically used to ensurure correct display of fullwidth images which are
+   inserted through the <picture> element */
+.fullwidth {
+    width: 100%;
+}
+
+
+/* Remove telephone number styling inserted by the Skype browser plug-in */
 
 .js body span.skype_pnh_container {
-	display: none !important;
-	visibility: hidden !important;
+    display: none !important;
+    visibility: hidden !important;
 }
 
 .js body span[class^="skype_pnh_print_container"] {
-	display: inline !important;
+    display: inline !important;
 }
 
 
 
 
-/* =============================================================================
-   6    MEDIA QUERIES
+
+/* ==========================================================================
+   #MEDIA QUERIES
+   ==========================================================================
+
+   ooo        ooooo oooooooooooo oooooooooo.   ooooo       .o.              .oooooo.      ooooo     ooo oooooooooooo ooooooooo.   ooooo oooooooooooo  .oooooo..o
+   `88.       .888' `888'     `8 `888'   `Y8b  `888'      .888.            d8P'  `Y8b     `888'     `8' `888'     `8 `888   `Y88. `888' `888'     `8 d8P'    `Y8
+    888b     d'888   888          888      888  888      .8"888.          888      888     888       8   888          888   .d88'  888   888         Y88bo.
+    8 Y88. .P  888   888oooo8     888      888  888     .8' `888.         888      888     888       8   888oooo8     888ooo88P'   888   888oooo8     `"Y8888o.
+    8  `888'   888   888    "     888      888  888    .88ooo8888.        888      888     888       8   888    "     888`88b.     888   888    "         `"Y88b
+    8    Y     888   888       o  888     d88'  888   .8'     `888.       `88b    d88b     `88.    .8'   888       o  888  `88b.   888   888       o oo     .d8P
+   o8o        o888o o888ooooood8 o888bood8P'   o888o o88o     o8888o       `Y8bood8P'Ybd'    `YbodP'    o888ooooood8 o888o  o888o o888o o888ooooood8 8""88888P'
+
+
    ========================================================================== */
 
 
-/* =============================================================================
-   6.1  670px and above (website width: 650px)
+
+
+
+/* #670px and above (website width: 650px)
+
+       .ooo    ooooooooo   .oooo.                                                           .o8                  .o8
+     .88'     d"""""""8'  d8P'`Y8b                                                         "888                 "888
+    d88'            .8'  888    888 oo.ooooo.  oooo    ooo       .oooo.   ooo. .oo.    .oooo888        .oooo.    888oooo.   .ooooo.  oooo    ooo  .ooooo.
+   d888P"Ybo.      .8'   888    888  888' `88b  `88b..8P'       `P  )88b  `888P"Y88b  d88' `888       `P  )88b   d88' `88b d88' `88b  `88.  .8'  d88' `88b
+   Y88[   ]88     .8'    888    888  888   888    Y888'          .oP"888   888   888  888   888        .oP"888   888   888 888   888   `88..8'   888ooo888
+   `Y88   88P    .8'     `88b  d88'  888   888  .o8"'88b        d8(  888   888   888  888   888       d8(  888   888   888 888   888    `888'    888    .o
+    `88bod8'    .8'       `Y8bd8P'   888bod8P' o88'   888o      `Y888""8o o888o o888o `Y8bod88P"      `Y888""8o  `Y8bod8P' `Y8bod8P'     `8'     `Y8bod8P'
+                                     888
+                                    o888o
    ========================================================================== */
+
 
 @media only screen and (min-width: 670px) {
 
-	/* Place rules here */
+
+    /* Place rules here */
+
 
 }
 
 
-/* =============================================================================
-   6.2  1020px and above (website width: 1000px)
 
-        Layout based on 3 columns:
-        | 10px |    300px    | 50px |    300px    | 50px |    300px    | 10px |
+
+
+/* #1020px and above (website width: 1000px)
+
+     .o    .oooo.     .oooo.     .oooo.                                                           .o8                  .o8
+   o888   d8P'`Y8b  .dP""Y88b   d8P'`Y8b                                                         "888                 "888
+    888  888    888       ]8P' 888    888 oo.ooooo.  oooo    ooo       .oooo.   ooo. .oo.    .oooo888        .oooo.    888oooo.   .ooooo.  oooo    ooo  .ooooo.
+    888  888    888     .d8P'  888    888  888' `88b  `88b..8P'       `P  )88b  `888P"Y88b  d88' `888       `P  )88b   d88' `88b d88' `88b  `88.  .8'  d88' `88b
+    888  888    888   .dP'     888    888  888   888    Y888'          .oP"888   888   888  888   888        .oP"888   888   888 888   888   `88..8'   888ooo888
+    888  `88b  d88' .oP     .o `88b  d88'  888   888  .o8"'88b        d8(  888   888   888  888   888       d8(  888   888   888 888   888    `888'    888    .o
+   o888o  `Y8bd8P'  8888888888  `Y8bd8P'   888bod8P' o88'   888o      `Y888""8o o888o o888o `Y8bod88P"      `Y888""8o  `Y8bod8P' `Y8bod8P'     `8'     `Y8bod8P'
+                                           888
+                                          o888o
    ========================================================================== */
+
+
+/*
+ * Layout based on 3 columns:
+ * | 10px |     300px     | 50px |     300px     | 50px |     300px     | 10px |
+ */
+
 
 @media only screen and (min-width: 1020px) {
 
-	.cookie-information-banner {
-		margin-right: 0;
-		margin-left: 0;
-	}
 
-	/* ==== Main navigation ================================================= */
 
-	.js .main-navigation-toggle {
-		display: none;
-		visibility: hidden;
-	}
 
-	.js .main-navigation-list {
-		position: relative;
-		overflow: visible;
-		width: 100%;
-		height: auto;
-		margin: 0;
-		transition: all 0.15s linear;
-		opacity: 1;
-		box-shadow: none;
-	}
 
-	.scroll-to-fixed-fixed .main-navigation-list {
-		margin-left: 3.5rem; /* 56px / 16px */
-		transition: all 0.15s linear;
-	}
+    /* Cookie information banner
+       ====================================================================== */
 
-	/* 1st level (horizontal) and overall menu styles */
-	.main-navigation-list {
-		position: relative;
-	}
 
-	.main-navigation-list li {
-		display: inline;
-		float: left;
-	}
+    .cookie-info-banner__box {
+        margin-right: 0;
+        margin-left: 0;
+    }
 
-	.main-navigation-list .parent {
-		background: #bebebe;
-	}
 
-	.main-navigation-list li a:hover,
-	.no-js .main-navigation-list li:hover > a {
-		color: #f0f0f0;
-		background: #8c8c8c;
-	}
 
-	.no-js .main-navigation-list > .has_children > a:after {
-		font-size: 80%;
-		margin-left: 0.3125rem; /* 5px / 16px */
-		content: "▼";
-	}
 
-	/* 2nd level (dropdown) */
 
-	.js .main-navigation-list ul {
-		display: block;
-	}
+    /* Layout
+       ====================================================================== */
 
-	.no-js .main-navigation-list li:hover > ul,
-	.js .main-navigation-list li.show-submenu > ul {
-		overflow: visible;
-		width: 13rem; /* adjust this to the desired submenu width   |   208px / 16px */
-		height: auto;
-		margin: 0;
-		opacity: 1;
-	}
 
-	.main-navigation-list ul {
-		position: absolute;
-		z-index: 9999;
-		overflow: hidden;
-		width: 1px;
-		height: 1px;
-		margin: -1px;
-		transition: opacity 0.2s linear;
-		opacity: 0;
-		border: 0;
-		background: #dcdcdc;
-		box-shadow: 0 2px 5px -1px rgba(0, 0, 0, 0.5);
-	}
+    .wrapper {
+        width: 62.5rem; /* 1000px / 16px */
+        max-width: 62.5rem; /* 1000px / 16px */
+        padding: 0;
+    }
 
-	.main-navigation-list ul li {
-		clear: both;
-		width: 100%;
-	}
 
-	.main-navigation-list ul li a {
-		padding: 0.625rem 2.3125rem 0.625rem 0.625rem; /* 10px / 16px   11px / 16px */
-	}
 
-	.main-navigation-list ul > .has_children > a:after,
-	.js .main-navigation-list ul > .has_children > a:after {
-		font-size: 80%;
-		position: absolute;
-		top: 0.8125rem; /* 13px / 16px */
-		right: 0.625rem; /* 10px / 16px */
-		content: "►";
-	}
 
-	/* 3rd level (flyout) */
 
-	.main-navigation-list ul ul {
-		top: 0;
-		left: 13rem; /* must fit the dropdown menu width */
-	}
+    /* Header
+       ====================================================================== */
 
-	.main-navigation-list ul ul li a {
-		padding-right: 0.625rem;
-	}
 
-	/* ==== Layout elements ================================================= */
+    .page-header__box {
+        margin-right: 0;
+        margin-left: 0;
+    }
 
-	.wrapper {
-		width: 62.5rem; /* 1000px / 16px */
-		max-width: 62.5rem; /* 1000px / 16px */
-		padding: 0;
-	}
 
-	.page-header {
-		margin-right: 0;
-		margin-left: 0;
-	}
 
-	.main-navigation-logo {
-		left: 0;
-	}
 
-	.main {
-		display: inline;
-		float: left;
-		width: 40.625rem; /* 650px / 16px */
-		margin-right: 0;
-		margin-left: 0;
-	}
 
-	.sidebar {
-		display: inline;
-		float: right;
-		width: 18.75rem; /* 300px / 16px */
-		border-top: none;
-		margin-right: 0;
-		margin-left: 0;
-	}
+    /* Navigation
+       ====================================================================== */
 
-	.page-footer {
-		margin-right: 0;
-		margin-left: 0;
-	}
+
+    .main-navigation__logo {
+        left: 0;
+    }
+
+
+    .js .main-navigation__toggle {
+        display: none;
+        visibility: hidden;
+    }
+
+
+    .main-navigation__list {
+        position: relative;
+    }
+
+    .js .main-navigation__list {
+        position: relative;
+        overflow: visible;
+        width: 100%;
+        height: auto;
+        margin: 0;
+        transition: all 0.15s linear;
+        opacity: 1;
+        box-shadow: none;
+    }
+
+    .scroll-to-fixed-fixed .main-navigation__list {
+        margin-left: 3.5rem; /* 56px / 16px */
+        transition: all 0.15s linear;
+    }
+
+
+        /* 1st level (horizontal) and overall menu styles */
+
+        .main-navigation__list li {
+            display: inline;
+            float: left;
+        }
+
+        .main-navigation__list .parent {
+            background: #bebebe;
+        }
+
+        .main-navigation__list li a:hover,
+        .no-js .main-navigation__list li:hover > a {
+            color: #f0f0f0;
+            background: #8c8c8c;
+        }
+
+        .no-js .main-navigation__list > .has_children > a:after {
+            font-size: 80%;
+            margin-left: 0.3125rem; /* 5px / 16px */
+            content: "▼";
+        }
+
+
+        /* 2nd level (dropdown) */
+
+        .js .main-navigation__list ul {
+            display: block;
+        }
+
+        .no-js .main-navigation__list li:hover > ul,
+        .js .main-navigation__list li.show-submenu > ul {
+            overflow: visible;
+            width: 13rem; /* adjust this to the desired submenu width   |   208px / 16px */
+            height: auto;
+            margin: 0;
+            opacity: 1;
+        }
+
+        .main-navigation__list ul {
+            position: absolute;
+            z-index: 9999;
+            overflow: hidden;
+            width: 1px;
+            height: 1px;
+            margin: -1px;
+            transition: opacity 0.2s linear;
+            opacity: 0;
+            border: 0;
+            background: #dcdcdc;
+            box-shadow: 0 2px 5px -1px rgba(0, 0, 0, 0.5);
+        }
+
+        .main-navigation__list ul li {
+            clear: both;
+            width: 100%;
+        }
+
+        .main-navigation__list ul li a {
+            padding: 0.625rem 2.3125rem 0.625rem 0.625rem; /* 10px / 16px   11px / 16px */
+        }
+
+        .main-navigation__list ul > .has_children > a:after,
+        .js .main-navigation__list ul > .has_children > a:after {
+            font-size: 80%;
+            position: absolute;
+            top: 0.8125rem; /* 13px / 16px */
+            right: 0.625rem; /* 10px / 16px */
+            content: "►";
+        }
+
+
+        /* 3rd level (flyout) */
+
+        .main-navigation__list ul ul {
+            top: 0;
+            left: 13rem; /* must fit the dropdown menu width */
+        }
+
+        .main-navigation__list ul ul li a {
+            padding-right: 0.625rem;
+        }
+
+
+
+
+
+    /* Main content area
+       ====================================================================== */
+
+
+    .page-main-content {
+        display: inline;
+        float: left;
+        width: 40.625rem; /* 650px / 16px */
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+
+
+
+
+    /* Sidebar
+       ====================================================================== */
+
+
+    .page-sidebar {
+        display: inline;
+        float: right;
+        width: 18.75rem; /* 300px / 16px */
+        margin-right: 0;
+        margin-left: 0;
+        border-top: none;
+    }
+
+
+
+
+
+    /* Footer
+       ====================================================================== */
+
+
+    .page-footer__box {
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+
+
+
 
 }
 
 
-/* =============================================================================
-   6.3  1238px and above (website width: 1125px)
 
-        Layout based on 3 columns:
-        | 56.25px | 337.5px | 56.25px | 337.5px | 56.25px | 337.5px | 56.25px |
+
+
+/* #1238px and above (website width: 1125px)
+
+     .o    .oooo.     .oooo.    .ooooo.                                                           .o8                  .o8
+   o888  .dP""Y88b  .dP""Y88b  d88'   `8.                                                        "888                 "888
+    888        ]8P'       ]8P' Y88..  .8' oo.ooooo.  oooo    ooo       .oooo.   ooo. .oo.    .oooo888        .oooo.    888oooo.   .ooooo.  oooo    ooo  .ooooo.
+    888      .d8P'      <88b.   `88888b.   888' `88b  `88b..8P'       `P  )88b  `888P"Y88b  d88' `888       `P  )88b   d88' `88b d88' `88b  `88.  .8'  d88' `88b
+    888    .dP'          `88b. .8'  ``88b  888   888    Y888'          .oP"888   888   888  888   888        .oP"888   888   888 888   888   `88..8'   888ooo888
+    888  .oP     .o o.   .88P  `8.   .88P  888   888  .o8"'88b        d8(  888   888   888  888   888       d8(  888   888   888 888   888    `888'    888    .o
+   o888o 8888888888 `8bd88P'    `boood8'   888bod8P' o88'   888o      `Y888""8o o888o o888o `Y8bod88P"      `Y888""8o  `Y8bod8P' `Y8bod8P'     `8'     `Y8bod8P'
+                                           888
+                                          o888o
    ========================================================================== */
+
+
+/*
+ * Layout based on 3 columns:
+ * | 56.25px |  337.5px  | 56.25px |  337.5px  | 56.25px |  337.5px  | 56.25px |
+ */
+
 
 @media only screen and (min-width: 1238px) {
 
-	html {
-		font-size: 18px;
-	}
+
+    html {
+        font-size: 18px;
+    }
+
 
 }
 
 
-/* =============================================================================
-   6.4  1625px and above (website width: 1250px)
 
-        Layout based on 3 columns:
-        | 62.5px |   375px   | 62.5px |   375px   | 62.5px |   375px   | 62.5px |
+
+
+/* #1625px and above (website width: 1250px)
+
+     .o      .ooo     .oooo.     oooooooo                                                         .o8                  .o8
+   o888    .88'     .dP""Y88b   dP"""""""                                                        "888                 "888
+    888   d88'            ]8P' d88888b.   oo.ooooo.  oooo    ooo       .oooo.   ooo. .oo.    .oooo888        .oooo.    888oooo.   .ooooo.  oooo    ooo  .ooooo.
+    888  d888P"Ybo.     .d8P'      `Y88b   888' `88b  `88b..8P'       `P  )88b  `888P"Y88b  d88' `888       `P  )88b   d88' `88b d88' `88b  `88.  .8'  d88' `88b
+    888  Y88[   ]88   .dP'           ]88   888   888    Y888'          .oP"888   888   888  888   888        .oP"888   888   888 888   888   `88..8'   888ooo888
+    888  `Y88   88P .oP     .o o.   .88P   888   888  .o8"'88b        d8(  888   888   888  888   888       d8(  888   888   888 888   888    `888'    888    .o
+   o888o  `88bod8'  8888888888 `8bd88P'    888bod8P' o88'   888o      `Y888""8o o888o o888o `Y8bod88P"      `Y888""8o  `Y8bod8P' `Y8bod8P'     `8'     `Y8bod8P'
+                                           888
+                                          o888o
    ========================================================================== */
+
+
+/*
+ * Layout based on 3 columns:
+ * | 62.5px |    375px    | 62.5px |    375px    | 62.5px |    375px    | 62.5px |
+ */
+
 
 @media only screen and (min-width: 1625px) {
 
-	html {
-		font-size: 20px;
-	}
+
+    html {
+        font-size: 20px;
+    }
+
 
 }
 
 
-/* =============================================================================
-   6.5  1950px and above (website width: 1500px)
 
-        Layout based on 3 columns:
-        | 75px |    450px    | 75px |    450px    | 75px |    450px    | 75px |
+
+
+/* #1950px and above (website width: 1500px)
+
+     .o   .ooooo.     oooooooo   .oooo.                                                           .o8                  .o8
+   o888  888' `Y88.  dP"""""""  d8P'`Y8b                                                         "888                 "888
+    888  888    888 d88888b.   888    888 oo.ooooo.  oooo    ooo       .oooo.   ooo. .oo.    .oooo888        .oooo.    888oooo.   .ooooo.  oooo    ooo  .ooooo.
+    888   `Vbood888     `Y88b  888    888  888' `88b  `88b..8P'       `P  )88b  `888P"Y88b  d88' `888       `P  )88b   d88' `88b d88' `88b  `88.  .8'  d88' `88b
+    888        888'       ]88  888    888  888   888    Y888'          .oP"888   888   888  888   888        .oP"888   888   888 888   888   `88..8'   888ooo888
+    888      .88P'  o.   .88P  `88b  d88'  888   888  .o8"'88b        d8(  888   888   888  888   888       d8(  888   888   888 888   888    `888'    888    .o
+   o888o   .oP'     `8bd88P'    `Y8bd8P'   888bod8P' o88'   888o      `Y888""8o o888o o888o `Y8bod88P"      `Y888""8o  `Y8bod8P' `Y8bod8P'     `8'     `Y8bod8P'
+                                           888
+                                          o888o
    ========================================================================== */
+
+
+/*
+ * Layout based on 3 columns:
+ * | 75px |     450px     | 75px |     450px     | 75px |     450px     | 75px |
+ */
+
 
 @media only screen and (min-width: 1950px) {
 
-	html {
-		font-size: 24px;
-	}
+
+    html {
+        font-size: 24px;
+    }
+
 
 }
 
 
 
 
-/* =============================================================================
-   7    PRINT STYLES
+/* ==========================================================================
+   #PRINT STYLES
+   ==========================================================================
+
+   ooooooooo.   ooooooooo.   ooooo ooooo      ooo ooooooooooooo       .oooooo..o ooooooooooooo oooooo   oooo ooooo        oooooooooooo  .oooooo..o
+   `888   `Y88. `888   `Y88. `888' `888b.     `8' 8'   888   `8      d8P'    `Y8 8'   888   `8  `888.   .8'  `888'        `888'     `8 d8P'    `Y8
+    888   .d88'  888   .d88'  888   8 `88b.    8       888           Y88bo.           888        `888. .8'    888          888         Y88bo.
+    888ooo88P'   888ooo88P'   888   8   `88b.  8       888            `"Y8888o.       888         `888.8'     888          888oooo8     `"Y8888o.
+    888          888`88b.     888   8     `88b.8       888                `"Y88b      888          `888'      888          888    "         `"Y88b
+    888          888  `88b.   888   8       `888       888           oo     .d8P      888           888       888       o  888       o oo     .d8P
+   o888o        o888o  o888o o888o o8o        `8      o888o          8""88888P'      o888o         o888o     o888ooooood8 o888ooooood8 8""88888P'
+
+
    ========================================================================== */
 
 
-/* =============================================================================
-   7.1  Hide print specific content from screen
-   ========================================================================== */
+
+
 
 @media screen {
 
-	.print-only {
-		display: none;
-		visibility: hidden;
-	}
+    .print-only {
+        display: none;
+        visibility: hidden;
+    }
 
 }
 
 
-/* =============================================================================
-   7.2  Print specific styles
-   ========================================================================== */
-
 @media print {
 
-	/* ==== 7.2.1  Base ===================================================== */
 
-	*,
-	*:before,
-	*:after {
-		color: #000 !important;
-		background: transparent !important;
-		box-shadow: none !important;
-		text-shadow: none !important;
-	}
 
-	@page {
-		margin: 2cm;
-	}
 
-	html {
-		font-size: 12pt;
-	}
 
-	/* ==== 7.2.2  Links ==================================================== */
+    /* Base
 
-	a,
-	a:visited {
-		text-decoration: underline;
-	}
+       oooooooooo.
+       `888'   `Y8b
+        888     888  .oooo.    .oooo.o  .ooooo.
+        888oooo888' `P  )88b  d88(  "8 d88' `88b
+        888    `88b  .oP"888  `"Y88b.  888ooo888
+        888    .88P d8(  888  o.  )88b 888    .o
+       o888bood8P'  `Y888""8o 8""888P' `Y8bod8P'
 
-	.print-links-footer {
-		padding: 0 1.5384615384615384615384615384615em;
-		border: 1pt solid #000;
-		page-break-inside: avoid;
-	}
 
-	/* ==== 7.2.3  Typography, lists, headlines ============================= */
+       ====================================================================== */
 
-	abbr[title]:after {
-		content: " (" attr(title) ")";
-	}
 
-	p {
-		orphans: 3;
-		widows: 3;
-	}
+    *,
+    *:before,
+    *:after {
+        color: #000 !important;
+        background: transparent !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
 
-	h1,
-	h2,
-	h3,
-	h4,
-	h5,
-	h6 {
-		page-break-after: avoid;
-		page-break-inside: avoid;
-	}
 
-	h1 {
-		margin-right: 0;
-		margin-left: 0;
-	}
+    @page {
+        margin: 2cm;
+    }
 
-	.print-links-footer h3 {
-		/* equals normal h4 style */
-		font-size: 1.1538461538461538461538461538462em;
-		line-height: 1.3333333333333333333333333333333;
-		margin-top: 1.3333333333333333333333333333333em;
-		margin-bottom: 1.3333333333333333333333333333333em;
-	}
 
-	pre,
-	blockquote {
-		page-break-inside: avoid;
-	}
+    html {
+        font-size: 12pt;
+    }
 
-	/* ==== 7.2.4  Tables =================================================== */
 
-	thead {
-		display: table-header-group;
-	}
 
-	tr,
-	img {
-		page-break-inside: avoid;
-	}
 
-	/* ==== 7.2.5  Layout elements ========================================== */
 
-	.main-navigation,
-	.sidebar,
-	.page-footer {
-		display: none;
-	}
+    /* Links
 
-	.main {
-		padding: 0;
-	}
+       ooooo         o8o              oooo
+       `888'         `"'              `888
+        888         oooo  ooo. .oo.    888  oooo   .oooo.o
+        888         `888  `888P"Y88b   888 .8P'   d88(  "8
+        888          888   888   888   888888.    `"Y88b.
+        888       o  888   888   888   888 `88b.  o.  )88b
+       o888ooooood8 o888o o888o o888o o888o o888o 8""888P'
+
+
+       ====================================================================== */
+
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+
+    .print-links-footer {
+        padding: 0 1.5384615384615384615384615384615em;
+        border: 1pt solid #000;
+        page-break-inside: avoid;
+    }
+
+        .print-links-footer h3 {
+            font-size: 1.1538461538461538461538461538462em;
+            line-height: 1.3333333333333333333333333333333;
+            margin-top: 1.3333333333333333333333333333333em;
+            margin-bottom: 1.3333333333333333333333333333333em;
+        }
+
+
+
+
+
+    /* Typography, lists, headlines
+
+       ooooooooooooo                                                                           oooo                             oooo   o8o               .                     oooo                                  .o8  oooo   o8o
+       8'   888   `8                                                                           `888                             `888   `"'             .o8                     `888                                 "888  `888   `"'
+            888      oooo    ooo oo.ooooo.   .ooooo.   .oooooooo oooo d8b  .oooo.   oo.ooooo.   888 .oo.   oooo    ooo           888  oooo   .oooo.o .o888oo  .oooo.o           888 .oo.    .ooooo.   .oooo.    .oooo888   888  oooo  ooo. .oo.    .ooooo.   .oooo.o
+            888       `88.  .8'   888' `88b d88' `88b 888' `88b  `888""8P `P  )88b   888' `88b  888P"Y88b   `88.  .8'            888  `888  d88(  "8   888   d88(  "8           888P"Y88b  d88' `88b `P  )88b  d88' `888   888  `888  `888P"Y88b  d88' `88b d88(  "8
+            888        `88..8'    888   888 888   888 888   888   888      .oP"888   888   888  888   888    `88..8'             888   888  `"Y88b.    888   `"Y88b.            888   888  888ooo888  .oP"888  888   888   888   888   888   888  888ooo888 `"Y88b.
+            888         `888'     888   888 888   888 `88bod8P'   888     d8(  888   888   888  888   888     `888'    .o.       888   888  o.  )88b   888 . o.  )88b .o.       888   888  888    .o d8(  888  888   888   888   888   888   888  888    .o o.  )88b
+           o888o         .8'      888bod8P' `Y8bod8P' `8oooooo.  d888b    `Y888""8o  888bod8P' o888o o888o     .8'     Y8P      o888o o888o 8""888P'   "888" 8""888P' Y8P      o888o o888o `Y8bod8P' `Y888""8o `Y8bod88P" o888o o888o o888o o888o `Y8bod8P' 8""888P'
+                     .o..P'       888                 d"     YD                      888                   .o..P'       '                                              '
+                     `Y8P'       o888o                "Y88888P'                     o888o                  `Y8P'
+       ====================================================================== */
+
+
+    p {
+        orphans: 3;
+        widows: 3;
+    }
+
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        page-break-after: avoid;
+        page-break-inside: avoid;
+    }
+
+
+    pre,
+    blockquote {
+        page-break-inside: avoid;
+    }
+
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+
+    thead {
+        display: table-header-group;
+    }
+
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+
+
+
+
+    /* Layout
+
+       ooooo                                                        .
+       `888'                                                      .o8
+        888          .oooo.   oooo    ooo  .ooooo.  oooo  oooo  .o888oo
+        888         `P  )88b   `88.  .8'  d88' `88b `888  `888    888
+        888          .oP"888    `88..8'   888   888  888   888    888
+        888       o d8(  888     `888'    888   888  888   888    888 .
+       o888ooooood8 `Y888""8o     .8'     `Y8bod8P'  `V88V"V8P'   "888"
+                              .o..P'
+                              `Y8P'
+       ====================================================================== */
+
+
+    .main-navigation,
+    .page-sidebar,
+    .page-footer__box {
+        display: none;
+    }
+
+
+    .page-main-content {
+        padding: 0;
+    }
+
+
+
+
 
 }
