@@ -10,7 +10,9 @@ If you are one of these web designers, this starting point for building websites
 Version 3.3.1 was published on April 12, 2015.
 
 ----
+
 *Please note that the files `css/normalize.css` and `css/main.css` as well as `js/plugins.js` and `js/main.js` should be minified before they are used as part of a live website – either using a [build](https://www.npmjs.com/package/grunt-contrib-cssmin) [process](https://www.npmjs.com/package/grunt-contrib-uglify), a [minify extension for your editor](https://packagecontrol.io/packages/Minify) or a [CMS module](http://modules.processwire.com/modules/all-in-one-minify/).*
+
 ----
 
 ## Some of the features
