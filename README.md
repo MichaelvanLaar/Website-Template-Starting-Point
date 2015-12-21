@@ -7,7 +7,7 @@ If you are one of these web designers, this starting point for building websites
 **See a demo: <http://dev.michaelvanlaar.de/wtsp/>**  
 (It’s only one page, so don’t expect something fancy.)
 
-Version 3.3.3 was published on December 21, 2015.
+Version 3.3.4 was published on December 21, 2015.
 
 ----
 
