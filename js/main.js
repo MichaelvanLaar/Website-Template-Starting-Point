@@ -151,6 +151,7 @@ $(document).ready(function() {
         $('.cookie-info-banner').hide();
         $.cookie('mvl_cookiePermission', 'ok', { expires: 3650, path: '/' });
     });
+
 });
 
 $(window).resize(function() {

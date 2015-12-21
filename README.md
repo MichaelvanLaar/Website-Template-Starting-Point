@@ -1,4 +1,4 @@
-# Michael van Laar’s Website Template Starting Point 3.3.3
+# Michael van Laar’s Website Template Starting Point 3.3.4
 
 CSS frameworks are not everybody’s cup of tea. Some web designers rather like to write their own code because they don’t want to bow to external specifications. They want to have full control over architectural principles as well as coding and naming conventions – instead of overwriting predefined default styles over and over to achieve the desired result.
 
@@ -7,7 +7,7 @@ If you are one of these web designers, this starting point for building websites
 **See a demo: <http://dev.michaelvanlaar.de/wtsp/>**  
 (It’s only one page, so don’t expect something fancy.)
 
-Version 3.3.3 was published on August 12, 2015.
+Version 3.3.3 was published on December 21, 2015.
 
 ----
 
@@ -26,6 +26,7 @@ Version 3.3.3 was published on August 12, 2015.
   * Submenus appear on click/tab to avoid :hover problem on touchscreens
   * Fully usable fallback layout for browsers with no JavaScript activated
 * Layout can be scaled (e.g. to better fill high resolution screens) simply by adjusting the base font size.
+* Additional scrolling if URI contains a fragment identifier, so that the fixed navigation bar doesn’t overlay targeted content
 * Skiplink focus fix
 * Remove telephone number styling inserted by the Skype browser plug-in.
 * URLs of links appear as footnotes in print layout.
