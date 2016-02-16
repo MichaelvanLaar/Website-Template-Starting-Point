@@ -10,7 +10,6 @@
  * JQUERY PLUGINS
  * Skiplink Focus Fix
  * Printed Footer Links
- * Additional scrolling if URI contains a fragment identifier
  * jQuery Cookie Plugin 1.4.1
  * jQuery Placeholder Enhanced 1.6.9
  * Sisyphus 1.1.107
@@ -134,58 +133,6 @@ $(document).ready(function() {
         // append the heading and <ol> to the target
         $('.main-container').append(footnotesWrapper);
     }
-});
-
-
-
-
-
-/* ==========================================================================
-   Additional scrolling if URI contains a fragment identifier - jQuery Plugin
-   ========================================================================== */
-
-
-/*
- * Configuration:
- * Enter the desired additional scroll height, e.g. the height of the fixed
- * header, including a unit – the same way you define it in CSS.
- */
-var mvl_additional_scroll_offset = '3.5rem';
-
-
-$(document).ready(function() {
-
-    var mvl_hash = window.location.hash;
-
-    var mvl_additional_scroll = function() {
-        var mvl_additional_scroll_helper_id = mvl_hash.slice(1) + '-helper';
-        $(mvl_hash).prepend('<div style="position: relative; height: 0;"><div id="' + mvl_additional_scroll_helper_id + '" style="position: absolute; width: 100%; height: 1px; top: -' + mvl_additional_scroll_offset + '; visibility: hidden; z-index: -999;"></div></div>');
-        $('body, html').scrollTop($('#' + mvl_additional_scroll_helper_id).offset().top);
-    }
-
-    // Execute mvl_additional_scroll as soon as the default scroll action (to the
-    // element which is called by the URI hash value) is finished
-    var mvl_additional_scroll_timer = function() {
-        var mvl_default_scroll_position__end = $('#' + mvl_hash.slice(1)).offset().top;
-        var mvl_default_scroll_position__current = (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
-        if ((mvl_default_scroll_position__end - mvl_default_scroll_position__current) < 2) {
-            mvl_additional_scroll();
-        } else {
-            window.setTimeout(mvl_additional_scroll_timer, 50);
-        }
-    };
-
-    // Additional scrolling on initial page load
-    if (window.location.hash) {
-        mvl_additional_scroll_timer();
-    }
-
-    // Additional scrolling for links to IDs on the same page
-    $('a[href^="#"][href!="#"]').click(function(event){
-        mvl_hash = $(this).attr('href');
-        mvl_additional_scroll_timer();
-    });
-
 });
 
 
