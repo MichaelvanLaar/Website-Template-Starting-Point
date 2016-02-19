@@ -38,14 +38,15 @@ Version 3.3.5 was published on February 16, 2016.
 
 ## Used frameworks and libraries
 
-### CSS
+### CSS / Sass
 
-* [normalize.css v3.0.2](http://necolas.github.io/normalize.css/)
+* [normalize.scss 4.0.3](https://github.com/JohnAlbin/normalize-scss)
+* [support-for 1.0.3](https://github.com/JohnAlbin/support-for)
 
 ### JavaScript
 
 * [Modernizr 2.8.3](http://modernizr.com/)
-* [Type Rendering Mix 1.1.0](https://github.com/bramstein/trmix/)
+* [Type Rendering Mix 1.1.0](https://github.com/bramstein/trmix)
 * [enquire.js 2.1.1](https://github.com/WickyNilliams/enquire.js)
 * [jQuery 1.11.2](http://jquery.com/)
 * [jQuery Cookie Plugin 1.4.1](https://github.com/carhartl/jquery-cookie)
@@ -54,12 +55,12 @@ Version 3.3.5 was published on February 16, 2016.
 * [jQuery outside events 1.1](http://benalman.com/projects/jquery-outside-events-plugin/)
 * [jquery.animate-enhanced plugin 1.10](https://github.com/benbarnett/jQuery-Animate-Enhanced)
 * [ScrollToFixed 1.0.6](https://github.com/bigspotteddog/ScrollToFixed)
-* [lazysizes 1.0.0-RC2](https://github.com/aFarkas/lazysizes/)
+* [lazysizes 1.0.0-RC2](https://github.com/aFarkas/lazysizes)
 
 ### Polyfills
 
 * [Respond.js v1.4.2](https://github.com/scottjehl/Respond)
-* [matchMedia()](https://github.com/paulirish/matchMedia.js/) (included in Respond.js)
+* [matchMedia()](https://github.com/paulirish/matchMedia.js) (included in Respond.js)
 * [respimage 1.3.0](https://github.com/aFarkas/respimage)
 * [REM unit 1.3.2](https://github.com/chuckcarpenter/REM-unit-polyfill)
 * [selectivizr 1.0.2](http://selectivizr.com/)
