@@ -1,0 +1,37 @@
+////
+/// Individual mixins
+////
+
+
+/// Responsive manager
+/// @access public
+/// @author Hugo Giraudel
+/// @param {String} $breakpoint - Breakpoint
+/// @requires $breakpoints
+/// @example scss - Input (SCSS)
+///   $breakpoints: (
+///     'medium': (min-width: 800px),
+///     'large': (min-width: 1000px),
+///   );
+///
+///   @include respond-to('medium') {
+///       /* media query specific CSS rules */
+///   }
+/// @example css - Output (CSS)
+///   @media only screen and (min-width: 800px) {
+///       /* media query specific CSS rules */
+///   }
+@mixin respond-to($breakpoint) {
+    $raw-query: map-get($breakpoints, $breakpoint);
+
+    @if $raw-query {
+        $query: if(type-of($raw-query) == 'string', unquote($raw-query), inspect($raw-query));
+
+        @media only screen and #{$query} {
+            @content;
+        }
+    } @else {
+        @error 'No value found for `#{$breakpoint}`. '
+            + 'Please make sure it is defined in `$breakpoints` map.';
+    }
+}
