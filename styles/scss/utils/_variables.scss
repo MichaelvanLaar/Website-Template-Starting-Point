@@ -1,11 +1,14 @@
-////
-/// Site-wide Sass variables
-////
+// -----------------------------------------------------------------------------
+// General variables
+// -----------------------------------------------------------------------------
+
+
+
 
 
 /// Define browser support, used to configure normalize.scss
 /// @access public
-/// @type map
+/// @type Map
 $support-for: (
     '*': -4,
     ie:  10,
@@ -14,8 +17,9 @@ $support-for: (
 
 /// Define named breakpoints for media queries
 /// @access public
-/// @type map
-$breakpoints: (
+/// @group media queries
+/// @type Map
+$mvl-breakpoints: (
     'medium': (min-width: 800px),
     'large': (min-width: 1000px),
     'huge': (min-width: 1200px),

@@ -1,12 +1,15 @@
 @charset 'utf-8';
 
 
-@import 'utils/variables';
-@import 'utils/functions';
-@import 'utils/mixins';
+@import 'utils/variables-vl-color-scheme';         // Color scheme “van Laar”
+@import 'utils/variables-colors';                  // Project colors
+@import 'utils/variables';                         // General variables
+@import 'utils/functions';                         // General functions
+@import 'utils/mixins';                            // General mixins
 // @import 'utils/placeholders';
 
-@import 'base/apply-normalize';
+@import 'base/fonts';                              // @font-face declarations
+@import 'base/apply-normalize';                    // Application of normalize.scss
 // @import 'base/typography';
 
 // @import 'layout/navigation';
@@ -16,6 +19,9 @@
 // @import 'layout/sidebar';
 // @import 'layout/forms';
 
+@import 'components/overlays-ie-warnings';         // Overlays: IE warnings
+@import 'components/overlays-skiplinks';           // Overlays: Skiplinks
+@import 'components/overlays-cookie-info-banner';  // Overlay: Cookie info banner
 // @import 'components/buttons';
 // @import 'components/carousel';
 // @import 'components/cover';

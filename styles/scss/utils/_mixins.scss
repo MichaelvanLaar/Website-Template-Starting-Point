@@ -1,28 +1,32 @@
-////
-/// Individual mixins
-////
+// -----------------------------------------------------------------------------
+// General mixins
+// -----------------------------------------------------------------------------
+
+
+
 
 
 /// Responsive manager
-/// @access public
 /// @author Hugo Giraudel
+/// @access public
+/// @group media queries
 /// @param {String} $breakpoint - Breakpoint
-/// @requires $breakpoints
+/// @requires $mvl-breakpoints
 /// @example scss - Input (SCSS)
-///   $breakpoints: (
+///   $mvl-breakpoints: (
 ///     'medium': (min-width: 800px),
 ///     'large': (min-width: 1000px),
 ///   );
 ///
-///   @include respond-to('medium') {
+///   @include mvl-respond-to('medium') {
 ///       /* media query specific CSS rules */
 ///   }
 /// @example css - Output (CSS)
 ///   @media only screen and (min-width: 800px) {
 ///       /* media query specific CSS rules */
 ///   }
-@mixin respond-to($breakpoint) {
-    $raw-query: map-get($breakpoints, $breakpoint);
+@mixin mvl-respond-to($breakpoint) {
+    $raw-query: map-get($mvl-breakpoints, $breakpoint);
 
     @if $raw-query {
         $query: if(type-of($raw-query) == 'string', unquote($raw-query), inspect($raw-query));
@@ -32,6 +36,25 @@
         }
     } @else {
         @error 'No value found for `#{$breakpoint}`. '
-            + 'Please make sure it is defined in `$breakpoints` map.';
+            + 'Please make sure it is defined in `$mvl-breakpoints` map.';
+    }
+}
+
+
+
+
+
+/// Helper to clear inner floats
+/// @author Nicolas Gallagher
+/// @link http://nicolasgallagher.com/micro-clearfix-hack/ Micro Clearfix
+@mixin mvl-clearfix {
+    &::before,
+    &::after {
+        display: table;
+        content: '';
+    }
+
+    &::after {
+        clear: both;
     }
 }

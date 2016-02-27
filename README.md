@@ -1,4 +1,4 @@
-# Website Template Starting Point 3.3.5
+# Website Template Starting Point 3.4dev
 
 CSS frameworks are not everybody’s cup of tea. Some web designers rather like to write their own code because they don’t want to bow to external specifications. They want to have full control over architectural principles as well as coding and naming conventions – instead of overwriting predefined default styles over and over to achieve the desired result.
 
@@ -6,8 +6,6 @@ If you are one of these web designers, this starting point for building websites
 
 **See a demo: <http://dev.michaelvanlaar.de/wtsp/>**  
 (It’s only one page, so don’t expect something fancy.)
-
-Version 3.3.5 was published on February 16, 2016.
 
 ----
 
@@ -68,5 +66,6 @@ Version 3.3.5 was published on February 16, 2016.
 ## Code conventions and tools
 
 * [CSS Guidelines by Harry Roberts 2.2.3](http://cssguidelin.es/)
+* [Sass Guidelines by Hugo Giraudel 1.2](http://sass-guidelin.es/)
 * [CSScomb 3.0.0](http://csscomb.com/)
 * [EditorConfig](http://editorconfig.org/)
