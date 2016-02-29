@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"mvl-base",
+				"mvl-base-line-height"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
 				"scr",
 				"scrollTop〔function〕"
 			],
@@ -93,22 +101,27 @@
 	},
 	"file_history":
 	[
-		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/components/_overlays-cookie-info-banner.scss",
-		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/utils/_variables-colors.scss",
-		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/components/_overlays-ie-warnings.scss",
-		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/components/_overlays-skiplinks.scss",
-		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/.scss-lint.yml",
+		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/css/main.css",
+		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/base/_typography.scss",
+		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/main.scss",
+		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/utils/_variables.scss",
+		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/base/_base.scss",
 		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/utils/_functions.scss",
+		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/utils/_mixins.scss",
+		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/vendor/normalize/_vertical-rhythm.scss",
+		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/utils/_variables-colors.scss",
+		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/components/_overlays-skiplinks.scss",
+		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/components/_overlays-cookie-info-banner.scss",
+		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/base/_apply-normalize.scss",
+		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/utils/_variables-vl-color-scheme.scss",
+		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/components/_overlays-ie-warnings.scss",
+		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/.scss-lint.yml",
 		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/utils/_variables-vl-colors.scss",
 		"/C/Users/micha/AppData/Roaming/Sublime Text 3/Packages/User/CSScomb.sublime-settings",
 		"/C/Users/micha/AppData/Roaming/Sublime Text 3/Packages/CSScomb/CSScomb.sublime-settings",
-		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/base/_apply-normalize.scss",
 		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/base/_fonts.scss",
 		"/C/Users/micha/AppData/Roaming/Sublime Text 3/Packages/User/SideBarEnhancements/Open With/Side Bar.sublime-menu",
 		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/utils/_variables-mvl-colors.scss",
-		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/main.scss",
-		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/utils/_variables.scss",
-		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/utils/_mixins.scss",
 		"/C/Users/micha/AppData/Roaming/Sublime Text 3/Packages/User/SublimeLinter.sublime-settings",
 		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/.scss-lint.yml",
 		"/C/Users/micha/AppData/Roaming/Sublime Text 3/Packages/User/Autoprefixer.sublime-settings",
@@ -123,7 +136,6 @@
 		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/index.html",
 		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/README.md",
 		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/.gitignore",
-		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/css/main.css",
 		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/normalize.scss",
 		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/css/normalize.css",
 		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/css/normalize.css.map",
@@ -133,7 +145,6 @@
 		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/css/mvl-normalize.css",
 		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/vendor/normalize/_import-now.scss",
 		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/vendor/_normalize.scss",
-		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/vendor/normalize/_vertical-rhythm.scss",
 		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/css/normalize.css",
 		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/scss/main.scss",
 		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/css/main.css",
@@ -187,6 +198,11 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"h1",
+			"px",
+			"hr ",
+			"hr",
+			"html",
 			"[\\-|_]",
 			"\\-",
 			"/// @group van laar color scheme",

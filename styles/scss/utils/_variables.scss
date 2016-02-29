@@ -24,3 +24,36 @@ $mvl-breakpoints: (
     'large': (min-width: 1000px),
     'huge': (min-width: 1200px),
 );
+
+
+
+
+
+// -----------------------------------------------------------------------------
+// Fonts
+// -----------------------------------------------------------------------------
+
+
+/// Font size for basic copy text
+/// @access public
+/// @group typography
+/// @type number
+$mvl-base-font-size: 16px;
+
+/// Line height for basic copy text
+/// @access public
+/// @group typography
+/// @type number
+$mvl-base-line-height: 25px;
+
+/// Regular font family
+/// @access public
+/// @group typography
+/// @type list
+$mvl-text-font-stack: 'Arial', 'Helvetica', sans-serif !default;
+
+/// Code (monospace) font family
+/// @access public
+/// @group typography
+/// @type list
+$mvl-code-font-stack: 'Lucida Console', 'Courier New', 'Courier', monospace !default;

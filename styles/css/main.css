@@ -1,7 +1,3 @@
-.top {
-  width: 100%;
-}
-
 /*! normalize-scss | MIT/GPLv2 License | bit.ly/normalize-scss */
 /**
      * 1. Set default font family to sans-serif.
@@ -399,6 +395,180 @@ th {
   padding: 0;
 }
 
+html {
+  font-size: 16px;
+  line-height: 1.5625;
+  overflow-y: scroll;
+  box-sizing: border-box;
+}
+
+/* Allow components to change to other box-sizing models if necessary */
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html,
+button,
+input,
+select,
+textarea {
+  color: #333333;
+}
+
+body {
+  font-family: "Arial", "Helvetica", sans-serif;
+}
+
+/* Change the selection background color to fit with the used color scheme */
+::-moz-selection {
+  color: white;
+  background: #507dbe;
+  text-shadow: none;
+}
+::selection {
+  color: white;
+  background: #507dbe;
+  text-shadow: none;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  margin: 1.5625rem 0;
+  padding: 0;
+  border: 0;
+  border-top: 1px solid gainsboro;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+embed,
+img,
+object,
+video {
+  max-width: 100%;
+}
+
+img {
+  height: auto;
+}
+
+p,
+ul,
+ol {
+  margin-top: 1.5625rem;
+  margin-bottom: 1.5625rem;
+}
+
+ul,
+ol {
+  padding: 0 0 0 2.1875rem;
+}
+
+ul li *,
+ol li * {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ul ul,
+ol ol,
+ul ol,
+ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+}
+
+dd {
+  margin: 0 0 0 2.1875rem;
+}
+
+blockquote {
+  font-style: italic;
+  margin: 1.5625rem 2.1875rem;
+}
+
+blockquote p {
+  font-style: italic;
+}
+
+cite {
+  font-style: normal;
+}
+
+pre,
+code,
+code var {
+  font-family: "Lucida Console", "Courier New", "Courier", monospace;
+}
+
+abbr {
+  cursor: help;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+h1 {
+  font-size: 3rem;
+  line-height: 1.04167;
+  margin-top: 1.5625rem;
+  margin-bottom: 1.5625rem;
+}
+
+h2 {
+  font-size: 2.0625rem;
+  line-height: 1.51515;
+  margin-top: 3.125rem;
+  margin-bottom: 1.5625rem;
+}
+
+h3 {
+  font-size: 1.4375rem;
+  line-height: 1.08696;
+  margin-top: 3.125rem;
+  margin-bottom: 1.5625rem;
+}
+
+h4 {
+  font-size: 1rem;
+  line-height: 1.5625;
+  margin-top: 3.125rem;
+  margin-bottom: 1.5625rem;
+}
+
+td {
+  vertical-align: top;
+}
+
+a {
+  text-decoration: none;
+  color: #0a4baa;
+}
+
+a:visited {
+  color: #05327d;
+}
+
+a:hover {
+  color: #507dbe;
+}
+
 .ie-warning__shader {
   position: fixed;
   z-index: 1000;
@@ -438,14 +608,13 @@ th {
   list-style-type: none;
 }
 
-__link {
+.skiplinks__link {
   position: absolute;
   top: -99999px;
   left: -99999px;
 }
 
-__link:focus,
-__link:active {
+.skiplinks__link:focus, .skiplinks__link:active {
   position: absolute;
   top: 0;
   left: 99999px;
@@ -464,16 +633,16 @@ __link:active {
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: #dcdcdc;
+  background-color: gainsboro;
   width: 100%;
 }
 
-__box {
+.cookie-info-banner__box {
   margin-right: 10px;
   margin-left: 10px;
 }
 
-__message {
+.cookie-info-banner__message {
   font-size: 13px;
   line-height: 21px;
   margin-top: 6px;
@@ -481,7 +650,7 @@ __message {
   padding-right: 25px;
 }
 
-__close-button {
+.cookie-info-banner__close-button {
   line-height: 1;
 }
 

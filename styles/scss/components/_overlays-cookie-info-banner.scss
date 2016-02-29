@@ -11,9 +11,8 @@
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: #dcdcdc;
+    background-color: $mvl-color-brand-2-lighter;
     width: 100%;
-}
 
     &__box {
         margin-right: 10px;
@@ -31,3 +30,4 @@
         &__close-button {
             line-height: 1;
         }
+}

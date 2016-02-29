@@ -6,11 +6,11 @@
 @import 'utils/variables';                         // General variables
 @import 'utils/functions';                         // General functions
 @import 'utils/mixins';                            // General mixins
-// @import 'utils/placeholders';
 
 @import 'base/fonts';                              // @font-face declarations
 @import 'base/apply-normalize';                    // Application of normalize.scss
-// @import 'base/typography';
+@import 'base/base';                               // Base styles
+@import 'base/typography';                         // Basic typography
 
 // @import 'layout/navigation';
 // @import 'layout/grid';

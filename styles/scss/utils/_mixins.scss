@@ -47,6 +47,7 @@
 /// Helper to clear inner floats
 /// @author Nicolas Gallagher
 /// @link http://nicolasgallagher.com/micro-clearfix-hack/ Micro Clearfix
+/// @access public
 @mixin mvl-clearfix {
     &::before,
     &::after {
@@ -57,4 +58,30 @@
     &::after {
         clear: both;
     }
+}
+
+
+
+
+
+/// Converts font size (input in px) to rem and outputs it.
+/// Also outputs corresponding (i. e. a multiple of $mvl-base-line-height) line-height.
+/// @access public
+/// @group typography
+/// @param {Number} $font-size - font size in px
+/// @requires $mvl-base-font-size
+/// @requires $mvl-base-line-height
+/// @example scss - Input (SCSS)
+///     @include mvl-font-size-line-height(20px);
+/// @example css - Output (CSS)
+///     font-size: 1.1875rem;
+///     line-height: 1.31579;
+@mixin mvl-font-size-line-height($font-size) {
+    @if unit($font-size) != 'px' {
+        @error "mvl-font-size-line-height only supports px inputs.";
+    }
+    $lines: ceil($font-size / $mvl-base-line-height);
+
+    font-size: #{($font-size / $mvl-base-font-size)}rem;
+    line-height: (($lines * $mvl-base-line-height) / $font-size);
 }
