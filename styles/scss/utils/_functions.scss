@@ -47,7 +47,7 @@
 /// @access public
 /// @param {Number} $number - Number to remove unit from
 /// @return {Number} - Unitless number
-@function strip-unit($number) {
+@function mvl-strip-unit($number) {
     @if type-of($number) == 'number' and not unitless($number) {
         @return $number / ($number * 0 + 1);
     }
@@ -79,6 +79,6 @@
     @if unit($value) != 'rem' {
         @error "mvl-rem-to-px only supports rem inputs.";
     }
-    $unitless-value: strip-unit($value);
+    $unitless-value: mvl-strip-unit($value);
     @return ($unitless-value * $mvl-base-font-size);
 }

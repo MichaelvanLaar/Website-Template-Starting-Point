@@ -569,6 +569,103 @@ a:hover {
   color: #507dbe;
 }
 
+input[type="date"],
+input[type="email"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="url"],
+select,
+textarea {
+  font-family: "Arial", "Helvetica", sans-serif;
+  color: #333333;
+  border: 1px solid #8c8c8c;
+}
+
+input[type="date"],
+input[type="email"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="url"],
+textarea {
+  padding: 0.1875rem;
+}
+
+textarea {
+  resize: vertical;
+}
+
+select {
+  padding: 0.125rem;
+}
+
+.placeholder {
+  color: #8c8c8c;
+}
+
+::-webkit-input-placeholder {
+  color: #8c8c8c;
+}
+
+:-moz-placeholder {
+  color: #8c8c8c;
+}
+
+::-moz-placeholder {
+  color: #8c8c8c;
+}
+
+:-ms-input-placeholder {
+  color: #8c8c8c;
+}
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 0.1875rem 0.5625rem;
+  /* 3px / 16px   and   9px / 16px */
+  color: white;
+  border: 1px solid #8c8c8c;
+  background-color: #8c8c8c;
+  background-image: linear-gradient(to bottom, #bebebe, #8c8c8c);
+  background-clip: padding-box;
+}
+
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 0;
+  box-shadow: 1px 1px 3px #507dbe, -1px 1px 3px #507dbe, -1px -1px 3px #507dbe, 1px -1px 3px #507dbe;
+}
+
+button:active,
+input[type="button"]:active,
+input[type="reset"]:active,
+input[type="submit"]:active {
+  background-color: #bebebe;
+  background-image: linear-gradient(to bottom, #8c8c8c, #bebebe);
+  box-shadow: 1px 1px 3px #507dbe, -1px 1px 3px #507dbe, -1px -1px 3px #507dbe, 1px -1px 3px #507dbe;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+input:invalid,
+textarea:invalid {
+  background-color: #ffaaaa;
+}
+
 .ie-warning__shader {
   position: fixed;
   z-index: 1000;

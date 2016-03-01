@@ -29,6 +29,12 @@ $mvl-color-black: rgb(0, 0, 0) !default;
 /// @type Color
 $mvl-color-text-default: rgb(51, 51, 51) !default;
 
+/// HEX: #ffaaaa
+/// @access public
+/// @group colors
+/// @type Color
+$mvl-color-validation-error: rgb(255, 170, 170) !default;
+
 
 
 
@@ -55,6 +61,7 @@ $mvl-color-brand-1-lighter: $mvl-vl-blue-4 !default;
 /// @group colors
 /// @type Color
 $mvl-color-brand-1-darker: $mvl-vl-blue-2 !default;
+
 
 /// Secondary brand color
 /// @access public
