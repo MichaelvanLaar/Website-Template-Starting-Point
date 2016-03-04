@@ -35,6 +35,12 @@ $mvl-color-text-default: rgb(51, 51, 51) !default;
 /// @type Color
 $mvl-color-validation-error: rgb(255, 170, 170) !default;
 
+/// Half transparent black for drop shadows
+/// @access public
+/// @group colors
+/// @type Color
+$mvl-color-drop-shadow: rgba(0, 0, 0, 0.5) !default;
+
 
 
 

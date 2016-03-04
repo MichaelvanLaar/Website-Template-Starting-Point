@@ -3,7 +3,7 @@
 
 @import 'utils/variables-vl-color-scheme';         // Color scheme “van Laar”
 @import 'utils/variables-colors';                  // Project colors
-@import 'utils/variables';                         // General variables
+@import 'utils/variables-general';                 // General variables
 @import 'utils/functions';                         // General functions
 @import 'utils/mixins';                            // General mixins
 
@@ -13,11 +13,13 @@
 @import 'base/typography';                         // Basic typography
 @import 'base/form-elements';                      // Form elements
 
-// @import 'layout/navigation';
-// @import 'layout/grid';
-// @import 'layout/header';
-// @import 'layout/footer';
-// @import 'layout/sidebar';
+@import 'layout/layout-general';                   // General layout
+@import 'layout/navigation';                       // Main navigation
+@import 'layout/header';                           // Page header
+@import 'layout/main-container';                   // Main container
+@import 'layout/main-content';                     // Main content area
+@import 'layout/sidebar';                          // Sidebar
+@import 'layout/footer';                           // Page footer
 // @import 'layout/forms';
 
 @import 'components/overlays-ie-warnings';         // Overlays: IE warnings

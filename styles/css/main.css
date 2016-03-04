@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize-scss | MIT/GPLv2 License | bit.ly/normalize-scss */
 /**
      * 1. Set default font family to sans-serif.
@@ -666,6 +667,373 @@ textarea:invalid {
   background-color: #ffaaaa;
 }
 
+.wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 592px;
+  margin: 0 auto;
+}
+
+@media only screen and (min-width: 968px) {
+  .wrapper {
+    width: 55rem;
+    max-width: 55rem;
+  }
+}
+
+@media only screen and (min-width: 1165px) {
+  html {
+    font-size: 17px;
+  }
+}
+
+@media only screen and (min-width: 1270px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (min-width: 1375px) {
+  html {
+    font-size: 19px;
+  }
+}
+
+@media only screen and (min-width: 1480px) {
+  html {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (min-width: 1585px) {
+  html {
+    font-size: 21px;
+  }
+}
+
+@media only screen and (min-width: 1690px) {
+  html {
+    font-size: 22px;
+  }
+}
+
+@media only screen and (min-width: 1795px) {
+  html {
+    font-size: 23px;
+  }
+}
+
+@media only screen and (min-width: 1900px) {
+  html {
+    font-size: 24px;
+  }
+}
+
+/*
+ * PLEASE NOTE: Classes and styling of the main navigation don’t follow BEM-like
+ * naming conventions – with intent to be easily applicable to almost any
+ * HTML code produced by a CMS.
+ */
+.main-navigation {
+  background-color: gainsboro;
+  width: 100%;
+  /* 1st level and overall menu styles */
+  /* 2nd level */
+  /* 3rd level */
+  /* hide deeper levels */
+  /* Accordion functionality */
+}
+
+.main-navigation::before, .main-navigation::after {
+  display: table;
+  content: '';
+}
+
+.main-navigation::after {
+  clear: both;
+}
+
+.main-navigation__logo {
+  position: absolute;
+  top: 0;
+  left: 16px;
+  display: block;
+  width: 2.5rem;
+  margin-right: 0.625rem;
+  transition: all 0.15s linear;
+  opacity: 0;
+}
+
+.scroll-to-fixed-fixed .main-navigation__logo {
+  transition: all 0.15s linear 0.15s;
+  opacity: 1;
+}
+
+.main-navigation__box {
+  margin: 0;
+  padding-bottom: 0 !important;
+}
+
+.main-navigation__box::before, .main-navigation__box::after {
+  display: table;
+  content: '';
+}
+
+.main-navigation__box::after {
+  clear: both;
+}
+
+.no-js .main-navigation__toggle {
+  display: none;
+  visibility: hidden;
+}
+
+.js .main-navigation__toggle {
+  font-size: 1.25rem;
+  line-height: 1.25;
+  position: relative;
+  display: block;
+  padding: 0.625rem;
+  transition: all 0.2s linear;
+  color: black;
+  background-color: gainsboro;
+}
+
+.js .scroll-to-fixed-fixed .main-navigation__toggle {
+  margin-left: 3.75rem;
+  transition: all 0.15s linear;
+}
+
+.js .main-navigation__list {
+  position: absolute;
+  z-index: 9999;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  transition: opacity 0.2s linear;
+  opacity: 0;
+  box-shadow: 0 2px 5px -1px rgba(0, 0, 0, 0.5);
+}
+
+.js .show-submenu + .main-navigation__list {
+  left: 0;
+  overflow-x: visible;
+  overflow-y: auto;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  opacity: 1;
+}
+
+.main-navigation__list li {
+  font-size: 1.25rem;
+  line-height: 1.25;
+  position: relative;
+  right: 0;
+  left: 0;
+  background-color: gainsboro;
+}
+
+.main-navigation__list a {
+  position: relative;
+  display: block;
+  padding: 0.625rem;
+  transition: all 0.2s linear;
+  color: black;
+}
+
+.main-navigation__list li a:visited {
+  color: black;
+}
+
+.js .main-navigation__list .parent,
+.main-navigation__list .current {
+  background: #bebebe;
+}
+
+.js .main-navigation__list li.show-submenu > a {
+  color: white;
+  background: #8c8c8c;
+}
+
+.main-navigation__toggle,
+.js .main-navigation__list .has_children > a {
+  cursor: pointer;
+}
+
+.js .main-navigation__toggle:after,
+.js .main-navigation__list .has_children > a:after {
+  font-size: 80%;
+  margin-left: 0.3125rem;
+  content: '▼';
+}
+
+.main-navigation__list ul a {
+  display: block;
+  position: relative;
+  right: 0;
+  left: 0;
+  padding-left: 1.5625rem;
+}
+
+.main-navigation__list ul ul a {
+  padding-left: 3.125rem;
+}
+
+.main-navigation__list ul ul ul {
+  display: none;
+  visibility: hidden;
+}
+
+.js .main-navigation__list ul,
+.js .main-navigation__list ul ul {
+  overflow: hidden;
+  height: 0;
+  transition: opacity 0.2s linear;
+  opacity: 0;
+}
+
+.main-navigation__list .show-submenu > ul,
+.main-navigation__list .show-submenu .show-submenu > ul {
+  overflow-x: visible;
+  overflow-y: auto;
+  height: auto;
+  opacity: 1;
+}
+
+.page-header::before, .page-header::after {
+  display: table;
+  content: '';
+}
+
+.page-header::after {
+  clear: both;
+}
+
+.page-header__box {
+  margin-right: 1rem;
+  margin-left: 1rem;
+}
+
+.page-header__box::before, .page-header__box::after {
+  display: table;
+  content: '';
+}
+
+.page-header__box::after {
+  clear: both;
+}
+
+.site-title {
+  font-size: 3rem;
+  line-height: 1.04167;
+  margin-top: 1.5625rem;
+  margin-bottom: 1.5625rem;
+}
+
+.main-container::before, .main-container::after {
+  display: table;
+  content: '';
+}
+
+.main-container::after {
+  clear: both;
+}
+
+@media only screen and (min-width: 968px) {
+  .main-container {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+.page-main-content {
+  clear: both;
+  margin-right: 1rem;
+  margin-left: 1rem;
+  padding-top: 1.5625rem;
+  padding-bottom: 1.5625rem;
+}
+
+.page-main-content::before, .page-main-content::after {
+  display: table;
+  content: '';
+}
+
+.page-main-content::after {
+  clear: both;
+}
+
+@media only screen and (min-width: 968px) {
+  .page-main-content {
+    width: 35rem;
+  }
+}
+
+.page-sidebar {
+  margin-right: 1rem;
+  margin-left: 1rem;
+  padding-top: 1.5625rem;
+  padding-bottom: 1.5625rem;
+  border-top: 1px solid #bebebe;
+}
+
+.page-sidebar::before, .page-sidebar::after {
+  display: table;
+  content: '';
+}
+
+.page-sidebar::after {
+  clear: both;
+}
+
+@media only screen and (min-width: 968px) {
+  .page-sidebar {
+    width: 12.5rem;
+  }
+}
+
+.page-sidebar > h2:first-child {
+  margin-top: 1.5625rem;
+}
+
+.page-footer {
+  background: #333333;
+}
+
+.page-footer::before, .page-footer::after {
+  display: table;
+  content: '';
+}
+
+.page-footer::after {
+  clear: both;
+}
+
+.page-footer__box {
+  font-size: 0.8125rem;
+  margin-right: 1rem;
+  margin-left: 1rem;
+  color: white;
+}
+
+.page-footer__box::before, .page-footer__box::after {
+  display: table;
+  content: '';
+}
+
+.page-footer__box::after {
+  clear: both;
+}
+
 .ie-warning__shader {
   position: fixed;
   z-index: 1000;
@@ -735,8 +1103,8 @@ textarea:invalid {
 }
 
 .cookie-info-banner__box {
-  margin-right: 10px;
-  margin-left: 10px;
+  margin-right: 1rem;
+  margin-left: 1rem;
 }
 
 .cookie-info-banner__message {

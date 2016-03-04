@@ -1,0 +1,87 @@
+// -----------------------------------------------------------------------------
+// General variables
+// -----------------------------------------------------------------------------
+
+
+
+
+
+/// Define browser support, used to configure normalize.scss
+/// @access public
+/// @type Map
+$support-for: (
+    '*': -4,
+    ie:  10,
+);
+
+
+
+
+
+// -----------------------------------------------------------------------------
+// Layout and media queries
+// -----------------------------------------------------------------------------
+
+
+/// Named breakpoints for media queries
+/// @access public
+/// @group layout
+/// @type Map
+$mvl-breakpoints: (
+    'main-content-width': (min-width: 592px),
+    'full-width': (min-width: 968px),
+    'full-width-scale-1': (min-width: 1165px), // base font size: 17px
+    'full-width-scale-2': (min-width: 1270px), // base font size: 18px
+    'full-width-scale-3': (min-width: 1375px), // base font size: 19px
+    'full-width-scale-4': (min-width: 1480px), // base font size: 20px
+    'full-width-scale-5': (min-width: 1585px), // base font size: 21px
+    'full-width-scale-6': (min-width: 1690px), // base font size: 22px
+    'full-width-scale-7': (min-width: 1795px), // base font size: 23px
+    'full-width-scale-8': (min-width: 1900px), // base font size: 24px
+);
+
+
+/// Width (in px) of one column of the 12-column layout grid
+/// @access public
+/// @group layout
+/// @type Number
+$mvl-column-width: 56px;
+
+/// Width (in px) of the gutter between columns of the 12-column layout grid
+/// @access public
+/// @group layout
+/// @type Number
+$mvl-gutter-width: 16px;
+
+
+
+
+
+// -----------------------------------------------------------------------------
+// Fonts
+// -----------------------------------------------------------------------------
+
+
+/// Font size (in px) for basic copy text
+/// @access public
+/// @group typography
+/// @type number
+$mvl-base-font-size: 16px;
+
+/// Line height (in px) for basic copy text
+/// @access public
+/// @group typography
+/// @type number
+$mvl-base-line-height: 25px;
+
+/// Regular font family
+/// @access public
+/// @group typography
+/// @type list
+$mvl-text-font-stack: 'Arial', 'Helvetica', sans-serif !default;
+
+/// Code (monospace) font family
+/// @access public
+/// @group typography
+/// @type list
+$mvl-code-font-stack: 'Lucida Console', 'Courier New', 'Courier', monospace !default;

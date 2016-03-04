@@ -1,0 +1,83 @@
+// -----------------------------------------------------------------------------
+// General layout
+// -----------------------------------------------------------------------------
+
+
+
+
+
+.wrapper {
+    position: relative;
+    width: 100%;
+    max-width: (($mvl-column-width * 8) + ($mvl-gutter-width * 9));
+    margin: 0 auto;
+
+    @include mvl-respond-to('full-width') {
+        width: mvl-px-to-rem(($mvl-column-width * 12) + ($mvl-gutter-width * 13));
+        max-width: mvl-px-to-rem(($mvl-column-width * 12) + ($mvl-gutter-width * 13));
+    }
+}
+
+
+
+
+
+// -----------------------------------------------------------------------------
+// Upscaling
+// -----------------------------------------------------------------------------
+
+
+@include mvl-respond-to('full-width-scale-1') {
+    html {
+        font-size: ($mvl-base-font-size + 1px);
+    }
+}
+
+
+@include mvl-respond-to('full-width-scale-2') {
+    html {
+        font-size: ($mvl-base-font-size + 2px);
+    }
+}
+
+
+@include mvl-respond-to('full-width-scale-3') {
+    html {
+        font-size: ($mvl-base-font-size + 3px);
+    }
+}
+
+
+@include mvl-respond-to('full-width-scale-4') {
+    html {
+        font-size: ($mvl-base-font-size + 4px);
+    }
+}
+
+
+@include mvl-respond-to('full-width-scale-5') {
+    html {
+        font-size: ($mvl-base-font-size + 5px);
+    }
+}
+
+
+@include mvl-respond-to('full-width-scale-6') {
+    html {
+        font-size: ($mvl-base-font-size + 6px);
+    }
+}
+
+
+@include mvl-respond-to('full-width-scale-7') {
+    html {
+        font-size: ($mvl-base-font-size + 7px);
+    }
+}
+
+
+@include mvl-respond-to('full-width-scale-8') {
+    html {
+        font-size: ($mvl-base-font-size + 8px);
+    }
+}

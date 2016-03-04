@@ -15,8 +15,8 @@
     width: 100%;
 
     &__box {
-        margin-right: 10px;
-        margin-left: 10px;
+        margin-right: mvl-px-to-rem($mvl-gutter-width);
+        margin-left: mvl-px-to-rem($mvl-gutter-width);
     }
 
         &__message {
