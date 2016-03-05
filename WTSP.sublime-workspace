@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"mvl-",
+				"mvl-px-to-rem"
+			],
+			[
+				"mvl",
+				"mvl-px-to-rem"
+			],
+			[
 				"mvl-base",
 				"mvl-base-line-height"
 			],
@@ -101,30 +109,32 @@
 	},
 	"file_history":
 	[
-		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/layout/_layout-general.scss",
-		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/css/main.css",
+		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/base/_typography.scss",
+		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/layout/_print.scss",
 		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/layout/_sidebar.scss",
-		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/layout/_main-content.scss",
-		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/layout/_main-container.scss",
+		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/js/plugins.js",
 		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/main.scss",
-		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/components/_overlays-skiplinks.scss",
-		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/utils/_variables-general.scss",
-		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/layout/_navigation.scss",
+		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/layout/_layout-general.scss",
+		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/layout/_main-container.scss",
+		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/css/main.css",
+		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/utils/_mixins.scss",
+		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/index.html",
 		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/css/old_main.css",
+		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/layout/_main-content.scss",
+		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/layout/_footer.scss",
+		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/layout/_navigation.scss",
+		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/base/_base.scss",
+		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/utils/_variables-colors.scss",
+		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/utils/_functions.scss",
+		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/utils/_variables-general.scss",
+		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/utils/_variables-vl-color-scheme.scss",
+		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/components/_overlays-skiplinks.scss",
 		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/components/_overlays-cookie-info-banner.scss",
 		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/layout/_header.scss",
-		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/layout/_footer.scss",
-		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/index.html",
-		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/utils/_variables-colors.scss",
-		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/utils/_variables-vl-color-scheme.scss",
 		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/layout/_page-header.scss",
-		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/utils/_mixins.scss",
 		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/base/_form-elements.scss",
-		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/base/_typography.scss",
 		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/base/_font-elements.scss",
 		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/utils/_variables.scss",
-		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/base/_base.scss",
-		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/utils/_functions.scss",
 		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/vendor/normalize/_vertical-rhythm.scss",
 		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/base/_apply-normalize.scss",
 		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/components/_overlays-ie-warnings.scss",
@@ -140,7 +150,6 @@
 		"/C/Users/micha/AppData/Roaming/Sublime Text 3/Packages/User/Autoprefixer.sublime-settings",
 		"/C/Users/micha/AppData/Roaming/Sublime Text 3/Packages/SublimeLinter/SublimeLinter.sublime-settings",
 		"/C/Users/micha/Desktop/Prepos license key",
-		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/js/plugins.js",
 		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/js/main.js",
 		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/.editorconfig",
 		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/robots.txt",
@@ -199,9 +208,10 @@
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 101.0,
 		"where_history":
 		[
+			"C:\\Users\\micha\\Documents\\GitHub\\Website-Template-Starting-Point\\styles\\scss"
 		]
 	},
 	"find_state":
@@ -209,6 +219,15 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			".print-links-footer",
+			"$mvl-base-font-size",
+			"clip",
+			"ir",
+			":before",
+			":after",
+			"padding-richt",
+			"208",
+			"scroll-t",
 			"clearf",
 			"em",
 			"rgba(0, 0, 0, 0.5)",
@@ -263,6 +282,9 @@
 		"regex": false,
 		"replace_history":
 		[
+			"$mvl-base-font-size-screen",
+			"::before",
+			"::after",
 			"$mvl-color-drop-shadow",
 			"$mvl-color-black",
 			"$mvl-color-brand-2-lighter",
@@ -374,7 +396,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 223.0,
+	"side_bar_width": 246.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

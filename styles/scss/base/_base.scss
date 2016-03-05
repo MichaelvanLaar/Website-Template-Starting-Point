@@ -7,17 +7,21 @@
 
 
 html {
-    font-size: $mvl-base-font-size;
-    line-height: ($mvl-base-line-height / $mvl-base-font-size);
+    font-size: $mvl-base-font-size-screen;
+    line-height: ($mvl-base-line-height / $mvl-base-font-size-screen);
     overflow-y: scroll;
     box-sizing: border-box;
+
+    @media print {
+        font-size: $mvl-base-font-size-print;
+    }
 }
 
 
 /* Allow components to change to other box-sizing models if necessary */
 *,
-*:before,
-*:after {
+*::before,
+*::after {
     box-sizing: inherit;
 }
 

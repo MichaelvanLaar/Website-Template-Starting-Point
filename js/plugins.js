@@ -102,7 +102,7 @@ $(document).ready(function() {
             css: {
                 clear: 'both'
             }
-        }).addClass('print-links-footer print-only');
+        }).addClass('print-links-footer  print-only');
         var footnotesLabel = $('<h3></h3>', {
             text: 'Links:'
         }).appendTo(footnotesWrapper);

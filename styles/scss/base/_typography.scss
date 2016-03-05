@@ -11,31 +11,33 @@ ul,
 ol {
     margin-top: mvl-px-to-rem($mvl-base-line-height);
     margin-bottom: mvl-px-to-rem($mvl-base-line-height);
+
+    @media print {
+        orphans: 3;
+        widows: 3;
+    }
 }
 
 
 ul,
 ol {
     padding: 0 0 0 mvl-px-to-rem(35px);
-}
 
-    ul li *,
-    ol li * {
+    li * {
         margin-top: 0;
         margin-bottom: 0;
     }
 
-    ul ul,
-    ol ol,
-    ul ol,
-    ol ul {
+    ul,
+    ol {
         margin-top: 0;
         margin-bottom: 0;
     }
 
-nav ul {
-    margin: 0;
-    padding: 0;
+    nav & {
+        margin: 0;
+        padding: 0;
+    }
 }
 
 
@@ -47,11 +49,11 @@ dd {
 blockquote {
     font-style: italic;
     margin: mvl-px-to-rem($mvl-base-line-height) mvl-px-to-rem(35px);
-}
 
-    blockquote p {
+    p {
         font-style: italic;
     }
+}
 
 cite {
     font-style: normal;
@@ -80,27 +82,47 @@ h1 {
 
     margin-top: mvl-px-to-rem($mvl-base-line-height);
     margin-bottom: mvl-px-to-rem($mvl-base-line-height);
+
+    @media print {
+        page-break-after: avoid;
+        page-break-inside: avoid;
+    }
 }
 
 h2 {
-    @include mvl-font-size-line-height(33px);
-
-    margin-top: mvl-px-to-rem($mvl-base-line-height * 2);
-    margin-bottom: mvl-px-to-rem($mvl-base-line-height);
-}
-
-h3 {
     @include mvl-font-size-line-height(23px);
 
     margin-top: mvl-px-to-rem($mvl-base-line-height * 2);
     margin-bottom: mvl-px-to-rem($mvl-base-line-height);
+
+    @media print {
+        page-break-after: avoid;
+        page-break-inside: avoid;
+    }
 }
 
-h4 {
-    @include mvl-font-size-line-height($mvl-base-font-size);
+h3 {
+    @include mvl-font-size-line-height(19px);
 
     margin-top: mvl-px-to-rem($mvl-base-line-height * 2);
     margin-bottom: mvl-px-to-rem($mvl-base-line-height);
+
+    @media print {
+        page-break-after: avoid;
+        page-break-inside: avoid;
+    }
+}
+
+h4 {
+    @include mvl-font-size-line-height($mvl-base-font-size-screen);
+
+    margin-top: mvl-px-to-rem($mvl-base-line-height * 2);
+    margin-bottom: mvl-px-to-rem($mvl-base-line-height);
+
+    @media print {
+        page-break-after: avoid;
+        page-break-inside: avoid;
+    }
 }
 
 
@@ -120,10 +142,18 @@ td {
 a {
     text-decoration: none;
     color: $mvl-color-brand-1;
+
+    @media print {
+        text-decoration: underline;
+    }
 }
 
 a:visited {
     color: $mvl-color-brand-1-darker;
+
+    @media print {
+        text-decoration: underline;
+    }
 }
 
 a:hover {

@@ -18,4 +18,8 @@
     @include mvl-respond-to('full-width') {
         width: mvl-px-to-rem(($mvl-column-width * 8) + ($mvl-gutter-width * 7));
     }
+
+    @media print {
+        padding: 0;
+    }
 }

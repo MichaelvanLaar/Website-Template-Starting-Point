@@ -45,6 +45,7 @@
 
 /// Remove the unit of a length
 /// @access public
+/// @group helpers
 /// @param {Number} $number - Number to remove unit from
 /// @return {Number} - Unitless number
 @function mvl-strip-unit($number) {
@@ -57,28 +58,30 @@
 
 /// Convert px to rem
 /// @access public
+/// @group helpers
 /// @param {Number} $value - Number (with unit px) to convert to rem
-/// @param {Number} $mvl-base-font-size - Base font size of the document (16px default)
-/// @requires $mvl-base-font-size
+/// @param {Number} $mvl-base-font-size-screen - Base font size of the document (16px default)
+/// @requires $mvl-base-font-size-screen
 /// @return {Number} - Number converted to rem
-@function mvl-px-to-rem($value, $mvl-base-font-size: 16px) {
+@function mvl-px-to-rem($value, $mvl-base-font-size-screen: 16px) {
     @if unit($value) != 'px' {
         @error "mvl-px-to-rem only supports px inputs.";
     }
-    @return #{($value / $mvl-base-font-size)}rem;
+    @return #{($value / $mvl-base-font-size-screen)}rem;
 }
 
 
 /// Convert rem to px
 /// @access public
+/// @group helpers
 /// @param {Number} $value - Number (with unit rem) to convert to px
-/// @param {Number} $mvl-base-font-size - Base font size of the document (16px default)
-/// @requires $mvl-base-font-size
+/// @param {Number} $mvl-base-font-size-screen - Base font size of the document (16px default)
+/// @requires $mvl-base-font-size-screen
 /// @return {Number} - Number converted to px
-@function mvl-rem-to-px($value, $mvl-base-font-size: 16px) {
+@function mvl-rem-to-px($value, $mvl-base-font-size-screen: 16px) {
     @if unit($value) != 'rem' {
         @error "mvl-rem-to-px only supports rem inputs.";
     }
     $unitless-value: mvl-strip-unit($value);
-    @return ($unitless-value * $mvl-base-font-size);
+    @return ($unitless-value * $mvl-base-font-size-screen);
 }

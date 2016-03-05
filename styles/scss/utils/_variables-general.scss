@@ -29,7 +29,7 @@ $support-for: (
 /// @type Map
 $mvl-breakpoints: (
     'main-content-width': (min-width: 592px),
-    'full-width': (min-width: 968px),
+    'full-width': (min-width: 1020px),
     'full-width-scale-1': (min-width: 1165px), // base font size: 17px
     'full-width-scale-2': (min-width: 1270px), // base font size: 18px
     'full-width-scale-3': (min-width: 1375px), // base font size: 19px
@@ -62,11 +62,17 @@ $mvl-gutter-width: 16px;
 // -----------------------------------------------------------------------------
 
 
-/// Font size (in px) for basic copy text
+/// Font size (in px) for basic copy text on screen
 /// @access public
 /// @group typography
 /// @type number
-$mvl-base-font-size: 16px;
+$mvl-base-font-size-screen: 16px;
+
+/// Font size (in pt) for basic copy text on printouts
+/// @access public
+/// @group typography
+/// @type number
+$mvl-base-font-size-print: 12pt;
 
 /// Line height (in px) for basic copy text
 /// @access public

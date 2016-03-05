@@ -8,10 +8,4 @@
 
 .main-container {
     @include mvl-clearfix;
-
-    @include mvl-respond-to('full-width') {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
 }

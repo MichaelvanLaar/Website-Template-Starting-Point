@@ -16,11 +16,11 @@
 @import 'layout/layout-general';                   // General layout
 @import 'layout/navigation';                       // Main navigation
 @import 'layout/header';                           // Page header
-@import 'layout/main-container';                   // Main container
 @import 'layout/main-content';                     // Main content area
 @import 'layout/sidebar';                          // Sidebar
 @import 'layout/footer';                           // Page footer
 // @import 'layout/forms';
+@import 'layout/print';                            // Print styles
 
 @import 'components/overlays-ie-warnings';         // Overlays: IE warnings
 @import 'components/overlays-skiplinks';           // Overlays: Skiplinks
