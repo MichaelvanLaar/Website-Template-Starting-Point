@@ -542,8 +542,8 @@ del {
 }
 
 h1 {
-  font-size: 3rem;
-  line-height: 1.04167;
+  font-size: 2.875rem;
+  line-height: 1.08696;
   margin-top: 1.5625rem;
   margin-bottom: 1.5625rem;
 }
@@ -569,21 +569,10 @@ h2 {
   }
 }
 
-h3 {
-  font-size: 1.1875rem;
-  line-height: 1.31579;
-  margin-top: 3.125rem;
-  margin-bottom: 1.5625rem;
-}
-
-@media print {
-  h3 {
-    page-break-after: avoid;
-    page-break-inside: avoid;
-  }
-}
-
-h4 {
+h3,
+h4,
+h5,
+h6 {
   font-size: 1rem;
   line-height: 1.5625;
   margin-top: 3.125rem;
@@ -591,7 +580,10 @@ h4 {
 }
 
 @media print {
-  h4 {
+  h3,
+  h4,
+  h5,
+  h6 {
     page-break-after: avoid;
     page-break-inside: avoid;
   }
@@ -816,6 +808,8 @@ textarea:invalid {
 .main-navigation {
   background-color: gainsboro;
   width: 100%;
+  padding-left: 16px;
+  padding-right: 16px;
   /* 1st level and overall menu styles */
   /* 2nd level */
   /* 3rd level */
@@ -872,7 +866,7 @@ textarea:invalid {
   line-height: 1.25;
   position: relative;
   display: block;
-  padding: 0.625rem;
+  padding: 0.625rem 1rem;
   transition: all 0.2s linear;
   color: black;
   background-color: gainsboro;
@@ -917,7 +911,7 @@ textarea:invalid {
 .main-navigation__list a {
   position: relative;
   display: block;
-  padding: 0.625rem;
+  padding: 0.625rem 1rem;
   transition: all 0.2s linear;
   color: black;
 }
@@ -953,11 +947,11 @@ textarea:invalid {
   position: relative;
   right: 0;
   left: 0;
-  padding-left: 1.5625rem;
+  padding-left: 2.5625rem;
 }
 
 .main-navigation__list ul ul a {
-  padding-left: 3.125rem;
+  padding-left: 4.125rem;
 }
 
 .main-navigation__list ul ul ul {
@@ -988,7 +982,7 @@ textarea:invalid {
     /* 3rd level (flyout) */
   }
   .main-navigation__logo {
-    left: 0;
+    left: 1rem;
   }
   .js .main-navigation__toggle {
     display: none;
@@ -1008,7 +1002,7 @@ textarea:invalid {
     box-shadow: none;
   }
   .scroll-to-fixed-fixed .main-navigation__list {
-    margin-left: 3.75rem;
+    margin-left: 4.5rem;
     transition: all 0.15s linear;
   }
   .main-navigation__list li {
@@ -1057,8 +1051,7 @@ textarea:invalid {
     width: 100%;
   }
   .main-navigation__list ul li a {
-    padding: 0.625rem 2.3125rem 0.625rem 0.625rem;
-    /* 10px / 16px   11px / 16px */
+    padding: 0.625rem 2.3125rem 0.625rem 1rem;
   }
   .main-navigation__list ul > .has_children > a::after,
   .js .main-navigation__list ul > .has_children > a::after {

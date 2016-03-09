@@ -13,7 +13,7 @@
  */
 
 
-/// Width (in px) of the dropdown menu
+/// Width (in px) of dropdown menus, used in the full-width view
 /// @access public
 /// @group layout
 /// @type Number
@@ -25,6 +25,8 @@ $mvl-dropdown-menu-width: 200px;
 
     background-color: $mvl-color-brand-2-lighter;
     width: 100%;
+    padding-left: $mvl-gutter-width;
+    padding-right: $mvl-gutter-width;
 
 
     &__logo {
@@ -63,7 +65,7 @@ $mvl-dropdown-menu-width: 200px;
 
                 position: relative;
                 display: block;
-                padding: mvl-px-to-rem(10px);
+                padding: mvl-px-to-rem(10px) mvl-px-to-rem($mvl-gutter-width);
                 transition: all 0.2s linear;
                 color: $mvl-color-black;
                 background-color: $mvl-color-brand-2-lighter;
@@ -115,7 +117,7 @@ $mvl-dropdown-menu-width: 200px;
             &__list a {
                 position: relative;
                 display: block;
-                padding: mvl-px-to-rem(10px);
+                padding: mvl-px-to-rem(10px) mvl-px-to-rem($mvl-gutter-width);
                 transition: all 0.2s linear;
                 color: $mvl-color-black;
             }
@@ -154,14 +156,14 @@ $mvl-dropdown-menu-width: 200px;
                 position: relative;
                 right: 0;
                 left: 0;
-                padding-left: mvl-px-to-rem($mvl-base-line-height);
+                padding-left: mvl-px-to-rem($mvl-gutter-width + $mvl-base-line-height);
             }
 
 
             /* 3rd level */
 
             &__list ul ul a {
-                padding-left: mvl-px-to-rem($mvl-base-line-height * 2);
+                padding-left: mvl-px-to-rem($mvl-gutter-width + ($mvl-base-line-height * 2));
             }
 
 
@@ -194,7 +196,7 @@ $mvl-dropdown-menu-width: 200px;
 
     @include mvl-respond-to('full-width') {
         &__logo {
-            left: 0;
+            left: mvl-px-to-rem($mvl-gutter-width);
         }
 
 
@@ -219,7 +221,7 @@ $mvl-dropdown-menu-width: 200px;
             }
 
             .scroll-to-fixed-fixed & {
-                margin-left: mvl-px-to-rem(60px);
+                margin-left: mvl-px-to-rem(72px);
                 transition: all 0.15s linear;
             }
         }
@@ -284,7 +286,7 @@ $mvl-dropdown-menu-width: 200px;
             }
 
             &__list ul li a {
-                padding: 0.625rem 2.3125rem 0.625rem 0.625rem; /* 10px / 16px   11px / 16px */
+                padding: mvl-px-to-rem(10px) mvl-px-to-rem(37px) mvl-px-to-rem(10px) mvl-px-to-rem($mvl-gutter-width);
             }
 
             &__list ul > .has_children > a::after,

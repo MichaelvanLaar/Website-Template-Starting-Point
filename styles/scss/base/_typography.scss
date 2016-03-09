@@ -78,7 +78,7 @@ del {
 
 
 h1 {
-    @include mvl-font-size-line-height(48px);
+    @include mvl-font-size-line-height(46px);
 
     margin-top: mvl-px-to-rem($mvl-base-line-height);
     margin-bottom: mvl-px-to-rem($mvl-base-line-height);
@@ -101,19 +101,10 @@ h2 {
     }
 }
 
-h3 {
-    @include mvl-font-size-line-height(19px);
-
-    margin-top: mvl-px-to-rem($mvl-base-line-height * 2);
-    margin-bottom: mvl-px-to-rem($mvl-base-line-height);
-
-    @media print {
-        page-break-after: avoid;
-        page-break-inside: avoid;
-    }
-}
-
-h4 {
+h3,
+h4,
+h5,
+h6 {
     @include mvl-font-size-line-height($mvl-base-font-size-screen);
 
     margin-top: mvl-px-to-rem($mvl-base-line-height * 2);

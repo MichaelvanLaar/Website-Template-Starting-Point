@@ -9,7 +9,7 @@ If you are one of these web designers, this starting point for building websites
 
 ----
 
-*Please note that the files `css/normalize.css` and `css/main.css` as well as `js/plugins.js` and `js/main.js` should be minified before they are used as part of a live website – either using a [build](https://www.npmjs.com/package/grunt-contrib-cssmin) [process](https://www.npmjs.com/package/grunt-contrib-uglify), a [minify extension for your editor](https://packagecontrol.io/packages/Minify) or a [CMS module](http://modules.processwire.com/modules/all-in-one-minify/).*
+*Please note that the files `css/main.css` as well as `js/plugins.js` and `js/main.js` should be minified before they are used as part of a live website – either using a [build](https://www.npmjs.com/package/grunt-contrib-cssmin) [process](https://www.npmjs.com/package/grunt-contrib-uglify), a [minify extension for your editor](https://packagecontrol.io/packages/Minify) or a [CMS module](http://modules.processwire.com/modules/all-in-one-minify/).*
 
 ----
 
@@ -24,7 +24,6 @@ If you are one of these web designers, this starting point for building websites
   * Submenus appear on click/tab to avoid :hover problem on touchscreens
   * Fully usable fallback layout for browsers with no JavaScript activated
 * Layout can be scaled (e.g. to better fill high resolution screens) simply by adjusting the base font size.
-* Additional scrolling if URI contains a fragment identifier, so that the fixed navigation bar doesn’t overlay targeted content
 * Skiplink focus fix
 * Remove telephone number styling inserted by the Skype browser plug-in.
 * URLs of links appear as footnotes in print layout.
@@ -46,7 +45,7 @@ If you are one of these web designers, this starting point for building websites
 * [Modernizr 2.8.3](http://modernizr.com/)
 * [Type Rendering Mix 1.1.0](https://github.com/bramstein/trmix)
 * [enquire.js 2.1.1](https://github.com/WickyNilliams/enquire.js)
-* [jQuery 1.11.2](http://jquery.com/)
+* [jQuery 1.12.0](http://jquery.com/)
 * [jQuery Cookie Plugin 1.4.1](https://github.com/carhartl/jquery-cookie)
 * [jQuery Placeholder Enhanced 1.6.9](https://github.com/dciccale/placeholder-enhanced)
 * [Sisyphus 1.1.107](https://github.com/simsalabim/sisyphus)
