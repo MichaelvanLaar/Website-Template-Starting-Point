@@ -1,0 +1,317 @@
+// -----------------------------------------------------------------------------
+// Navigation
+// -----------------------------------------------------------------------------
+
+
+
+
+
+/*
+ * PLEASE NOTE: Classes and styling of the main navigation don’t follow BEM-like
+ * naming conventions – with intent to be easily applicable to almost any
+ * HTML code produced by a CMS.
+ */
+
+
+/// Width (in px) of dropdown menus, used in the full-width view
+/// @access public
+/// @group layout
+/// @type Number
+$mvl-dropdown-menu-width: 200px;
+
+
+.main-navigation {
+    @include mvl-clearfix;
+
+    background-color: $mvl-color-brand-2-lighter;
+    width: 100%;
+    padding-left: $mvl-gutter-width;
+    padding-right: $mvl-gutter-width;
+
+
+    &__logo {
+        position: absolute;
+        top: 0;
+        left: $mvl-gutter-width;
+        display: block;
+        width: mvl-px-to-rem(40px);
+        margin-right: mvl-px-to-rem(10px);
+        transition: all 0.15s linear;
+        opacity: 0;
+
+        .scroll-to-fixed-fixed & {
+            transition: all 0.15s linear 0.15s;
+            opacity: 1;
+        }
+    }
+
+
+    &__box {
+        @include mvl-clearfix;
+
+        margin: 0;
+        padding-bottom: 0 !important;
+    }
+
+
+        &__toggle {
+            .no-js & {
+                display: none;
+                visibility: hidden;
+            }
+
+            .js & {
+                @include mvl-font-size-line-height(20px);
+
+                position: relative;
+                display: block;
+                padding: mvl-px-to-rem(10px) mvl-px-to-rem($mvl-gutter-width);
+                transition: all 0.2s linear;
+                color: $mvl-color-black;
+                background-color: $mvl-color-brand-2-lighter;
+            }
+
+            .js .scroll-to-fixed-fixed & {
+                margin-left: mvl-px-to-rem(60px);
+                transition: all 0.15s linear;
+            }
+        }
+
+
+        &__list {
+            .js & {
+                position: absolute;
+                z-index: 9999;
+                overflow: hidden;
+                width: 1px;
+                height: 1px;
+                margin: -1px;
+                transition: opacity 0.2s linear;
+                opacity: 0;
+                box-shadow: 0 2px 5px -1px $mvl-color-drop-shadow;
+            }
+
+            .js .show-submenu + & {
+                left: 0;
+                overflow-x: visible;
+                overflow-y: auto;
+                width: 100%;
+                height: auto;
+                margin: 0;
+                opacity: 1;
+            }
+        }
+
+
+            /* 1st level and overall menu styles */
+
+            &__list li {
+                @include mvl-font-size-line-height(20px);
+
+                position: relative;
+                right: 0;
+                left: 0;
+                background-color: $mvl-color-brand-2-lighter;
+            }
+
+            &__list a {
+                position: relative;
+                display: block;
+                padding: mvl-px-to-rem(10px) mvl-px-to-rem($mvl-gutter-width);
+                transition: all 0.2s linear;
+                color: $mvl-color-black;
+            }
+
+            &__list li a:visited {
+                color: $mvl-color-black;
+            }
+
+            .js &__list .parent,
+            &__list .current {
+                background: $mvl-color-brand-2;
+            }
+
+            .js &__list li.show-submenu > a {
+                color: $mvl-color-white;
+                background: $mvl-color-brand-2-darker;
+            }
+
+            &__toggle,
+            .js &__list .has_children > a {
+                cursor: pointer;
+            }
+
+            .js &__toggle::after,
+            .js &__list .has_children > a::after {
+                font-size: 80%;
+                margin-left: mvl-px-to-rem(5px);
+                content: '▼';
+            }
+
+
+            /* 2nd level */
+
+            &__list ul a {
+                display: block;
+                position: relative;
+                right: 0;
+                left: 0;
+                padding-left: mvl-px-to-rem($mvl-gutter-width + $mvl-base-line-height);
+            }
+
+
+            /* 3rd level */
+
+            &__list ul ul a {
+                padding-left: mvl-px-to-rem($mvl-gutter-width + ($mvl-base-line-height * 2));
+            }
+
+
+            /* hide deeper levels */
+
+            &__list ul ul ul {
+                display: none;
+                visibility: hidden;
+            }
+
+
+            /* Accordion functionality */
+
+            .js &__list ul,
+            .js &__list ul ul {
+                overflow: hidden;
+                height: 0;
+                transition: opacity 0.2s linear;
+                opacity: 0;
+            }
+
+            &__list .show-submenu > ul,
+            &__list .show-submenu .show-submenu > ul {
+                overflow-x: visible;
+                overflow-y: auto;
+                height: auto;
+                opacity: 1;
+            }
+
+
+    @include mvl-respond-to('full-width') {
+        &__logo {
+            left: mvl-px-to-rem($mvl-gutter-width);
+        }
+
+
+        .js &__toggle {
+            display: none;
+            visibility: hidden;
+        }
+
+
+        &__list {
+            position: relative;
+
+            .js & {
+                position: relative;
+                overflow: visible;
+                width: 100%;
+                height: auto;
+                margin: 0;
+                transition: all 0.15s linear;
+                opacity: 1;
+                box-shadow: none;
+            }
+
+            .scroll-to-fixed-fixed & {
+                margin-left: mvl-px-to-rem(72px);
+                transition: all 0.15s linear;
+            }
+        }
+
+
+            /* 1st level (horizontal) and overall menu styles */
+
+            &__list li {
+                display: inline;
+                float: left;
+            }
+
+            &__list .parent {
+                background: $mvl-color-brand-2;
+            }
+
+            &__list li a:hover,
+            .no-js &__list li:hover > a {
+                color: $mvl-color-white;
+                background: $mvl-color-brand-2-darker;
+            }
+
+            .no-js 6__list > .has_children > a::after {
+                font-size: 80%;
+                margin-left: mvl-px-to-rem(5px);
+                content: "▼";
+            }
+
+
+            /* 2nd level (dropdown) */
+
+            .js &__list ul {
+                display: block;
+            }
+
+            .no-js &__list li:hover > ul,
+            .js &__list li.show-submenu > ul {
+                overflow: visible;
+                width: mvl-px-to-rem($mvl-dropdown-menu-width);
+                height: auto;
+                margin: 0;
+                opacity: 1;
+            }
+
+            &__list ul {
+                position: absolute;
+                z-index: 9999;
+                overflow: hidden;
+                width: 1px;
+                height: 1px;
+                margin: -1px;
+                transition: opacity 0.2s linear;
+                opacity: 0;
+                border: 0;
+                background: $mvl-color-brand-2-lighter;
+                box-shadow: 0 2px 5px -1px $mvl-color-drop-shadow;
+            }
+
+            &__list ul li {
+                clear: both;
+                width: 100%;
+            }
+
+            &__list ul li a {
+                padding: mvl-px-to-rem(10px) mvl-px-to-rem(37px) mvl-px-to-rem(10px) mvl-px-to-rem($mvl-gutter-width);
+            }
+
+            &__list ul > .has_children > a::after,
+            .js &__list ul > .has_children > a::after {
+                font-size: 80%;
+                position: absolute;
+                top: mvl-px-to-rem(13px);
+                right: mvl-px-to-rem(10px);
+                content: "►";
+            }
+
+
+            /* 3rd level (flyout) */
+
+            &__list ul ul {
+                top: 0;
+                left: mvl-px-to-rem($mvl-dropdown-menu-width);
+            }
+
+            &__list ul ul li a {
+                padding-right: mvl-px-to-rem(10px);
+            }
+    }
+
+    @media print {
+        display: none;
+    }
+}

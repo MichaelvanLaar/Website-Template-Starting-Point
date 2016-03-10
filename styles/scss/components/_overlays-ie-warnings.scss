@@ -1,0 +1,36 @@
+// -----------------------------------------------------------------------------
+// Overlays: IE warnings
+// -----------------------------------------------------------------------------
+
+
+
+
+
+.ie-warning__shader {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.7;
+    background: #000;
+
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+        filter: alpha(opacity=70);
+}
+
+.ie-warning__message {
+    position: fixed;
+    z-index: 1001;
+    top: 50%;
+    left: 50%;
+    display: block;
+    width: 810px;
+    height: 430px;
+    margin-top: -220px;
+    margin-left: -410px;
+    border: 5px solid #ed7f00;
+}

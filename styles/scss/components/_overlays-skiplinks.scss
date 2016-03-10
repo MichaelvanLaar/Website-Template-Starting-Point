@@ -1,0 +1,39 @@
+// -----------------------------------------------------------------------------
+// Overlays: Skiplinks
+// -----------------------------------------------------------------------------
+
+
+
+
+
+.skiplinks {
+    position: absolute;
+    z-index: 1000;
+    top: 0;
+    left: -99999px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+    &__link {
+        position: absolute;
+        top: -99999px;
+        left: -99999px;
+    }
+
+    &__link:focus,
+    &__link:active {
+        position: absolute;
+        top: 0;
+        left: 99999px;
+        width: 100%;
+        padding: 10px 0;
+        text-align: center;
+        text-decoration: none;
+        color: $mvl-color-white;
+        border-bottom: 1px $mvl-color-black solid;
+        outline: 0 none;
+        background: $mvl-color-text-default;
+    }
+}

@@ -1,0 +1,405 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"mvl-",
+				"mvl-px-to-rem"
+			],
+			[
+				"mvl",
+				"mvl-px-to-rem"
+			],
+			[
+				"mvl-base",
+				"mvl-base-line-height"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"scr",
+				"scrollTop〔function〕"
+			],
+			[
+				"back",
+				"background-clip"
+			]
+		]
+	},
+	"build_system": "Packages/SASS Build/SASS.sublime-build",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/SASS Build/SASS - Compressed.sublime-build",
+					""
+				],
+				[
+					"Packages/SASS Build/SASS.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/SASS Build/SASS.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 375.0,
+		"last_filter": "pack",
+		"selected_items":
+		[
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"package",
+				"Package Control: Remove Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"PACK",
+				"Package Control: Install Package"
+			],
+			[
+				"lint",
+				"SublimeLinter: Lint This View"
+			],
+			[
+				"auto",
+				"Autoprefix CSS"
+			],
+			[
+				"pac",
+				"Package Control: Satisfy Dependencies"
+			],
+			[
+				"html",
+				"Set Syntax: HTML"
+			]
+		],
+		"width": 514.0
+	},
+	"console":
+	{
+		"height": 169.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/README.md",
+		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/utils/_variables-general.scss",
+		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/index.html",
+		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/utils/_variables-vl-color-scheme.scss",
+		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/layout/_navigation.scss",
+		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/base/_base.scss",
+		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/base/_typography.scss",
+		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/layout/_print.scss",
+		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/layout/_sidebar.scss",
+		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/js/plugins.js",
+		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/main.scss",
+		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/layout/_layout-general.scss",
+		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/layout/_main-container.scss",
+		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/css/main.css",
+		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/utils/_mixins.scss",
+		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/css/old_main.css",
+		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/layout/_main-content.scss",
+		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/layout/_footer.scss",
+		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/utils/_variables-colors.scss",
+		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/utils/_functions.scss",
+		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/components/_overlays-skiplinks.scss",
+		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/components/_overlays-cookie-info-banner.scss",
+		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/layout/_header.scss",
+		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/layout/_page-header.scss",
+		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/base/_form-elements.scss",
+		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/base/_font-elements.scss",
+		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/utils/_variables.scss",
+		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/vendor/normalize/_vertical-rhythm.scss",
+		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/base/_apply-normalize.scss",
+		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/components/_overlays-ie-warnings.scss",
+		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/.scss-lint.yml",
+		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/utils/_variables-vl-colors.scss",
+		"/C/Users/micha/AppData/Roaming/Sublime Text 3/Packages/User/CSScomb.sublime-settings",
+		"/C/Users/micha/AppData/Roaming/Sublime Text 3/Packages/CSScomb/CSScomb.sublime-settings",
+		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/base/_fonts.scss",
+		"/C/Users/micha/AppData/Roaming/Sublime Text 3/Packages/User/SideBarEnhancements/Open With/Side Bar.sublime-menu",
+		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/utils/_variables-mvl-colors.scss",
+		"/C/Users/micha/AppData/Roaming/Sublime Text 3/Packages/User/SublimeLinter.sublime-settings",
+		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/.scss-lint.yml",
+		"/C/Users/micha/AppData/Roaming/Sublime Text 3/Packages/User/Autoprefixer.sublime-settings",
+		"/C/Users/micha/AppData/Roaming/Sublime Text 3/Packages/SublimeLinter/SublimeLinter.sublime-settings",
+		"/C/Users/micha/Desktop/Prepos license key",
+		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/js/main.js",
+		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/.editorconfig",
+		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/robots.txt",
+		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/.htaccess",
+		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/.gitignore",
+		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/normalize.scss",
+		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/css/normalize.css",
+		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/css/normalize.css.map",
+		"/C/Users/micha/Desktop/grid-test/main.css",
+		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/vendor/normalize/_normalize-mixin.scss",
+		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/vendor/normalize/_variables.scss",
+		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/css/mvl-normalize.css",
+		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/vendor/normalize/_import-now.scss",
+		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/vendor/_normalize.scss",
+		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/css/normalize.css",
+		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/scss/main.scss",
+		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/css/main.css",
+		"/C/Users/micha/AppData/Roaming/Sublime Text 3/Installed Packages/SASS Build.sublime-package",
+		"/C/Users/micha/Documents/GitHub/Add-Offset-to-Anchor-Scroll/add-offset-to-anchor-scroll.js",
+		"/C/Users/micha/AppData/Local/Temp/scp17613/var/www/virtual/earlgrey/dev.michaelvanlaar.de/wtsp/index-1.html",
+		"/C/Users/micha/AppData/Roaming/Sublime Text 3/Packages/Autoprefixer/Autoprefixer.sublime-settings",
+		"/C/Users/micha/Desktop/test.css",
+		"/C/Users/micha/AppData/Local/Temp/scp01800/var/www/virtual/earlgrey/dev.michaelvanlaar.de/wtsp/js/main-new.js",
+		"/C/Users/micha/AppData/Local/Temp/scp58597/var/www/virtual/earlgrey/dev.michaelvanlaar.de/wtsp/js/main.js",
+		"/C/Users/micha/Documents/GitHub/Add-Offset-to-Anchor-Scroll/add-offset-to-anchor-scroll-new.js",
+		"/C/Users/micha/Documents/GitHub/PW-TextformatterThinspacePlus/TextformatterThinspacePlus.module",
+		"/C/Users/micha/AppData/Local/Temp/scp35691/var/www/virtual/earlgrey/digitalardor.com/site/assets/logs/errors.txt",
+		"/C/Users/micha/AppData/Local/Temp/scp53853/var/www/virtual/earlgrey/digitalardor.com/site/assets/logs/errors.txt",
+		"/C/Users/micha/AppData/Local/Temp/scp44436/var/www/virtual/earlgrey/digitalardor.com/index.php",
+		"/C/Users/micha/AppData/Local/Temp/scp26761/var/www/virtual/earlgrey/digitalardor.com/.htaccess",
+		"/C/Users/micha/AppData/Local/Temp/scp45762/var/www/virtual/earlgrey/digitalardor.com/htaccess-3.0.2.txt",
+		"/C/Users/micha/AppData/Local/Temp/scp44869/var/www/virtual/earlgrey/digitalardor.com/index-3.0.2.php",
+		"/C/Users/micha/AppData/Local/Temp/scp39372/var/www/virtual/earlgrey/digitalardor.com/site/templates/category.php",
+		"/C/Users/micha/AppData/Local/Temp/scp08408/var/www/virtual/earlgrey/dev.michaelvanlaar.de/wtsp/index.html",
+		"/C/Users/micha/Dropbox/Michael/Projekte/Karibikparty 2015/Verschieben.html",
+		"/C/Users/micha/Desktop/text2.txt",
+		"/C/Users/micha/Dropbox/Michael/Ablage/Grafik/Karibikparty 2015/Einladung.html",
+		"/C/Users/micha/Dropbox/Michael/Ablage/Grafik/Christmas Dinner 2014/Einladung.html",
+		"/C/Users/micha/Dropbox/Michael/Projekte/Digital Ardor/Digital Ardor HTML-Dummy/article.html",
+		"/C/Users/micha/Desktop/plus.min.svg",
+		"/C/Users/micha/Desktop/twitter.svg",
+		"/C/Users/micha/Desktop/icon.svg",
+		"/C/Users/micha/Desktop/googleplus-rot.min.svg",
+		"/C/Users/micha/Desktop/googleplus-grau.min.svg",
+		"/C/Users/micha/AppData/Local/Temp/scp20963/var/www/virtual/earlgrey/digitalardor.com/site/templates/article.php",
+		"/C/Users/micha/Desktop/googleplus-rot.svg",
+		"/C/Users/micha/Desktop/googleplus-grau.svg",
+		"/C/Users/micha/Documents/GitHub/PW-TextformatterThinspacePlus/readme.md",
+		"/C/Users/micha/AppData/Local/Temp/scp19813/var/www/virtual/earlgrey/digitalardor.com/site/templates/article.php",
+		"/C/Users/micha/AppData/Local/Temp/scp14898/var/www/virtual/earlgrey/digitalardor.com/.htaccess"
+	],
+	"find":
+	{
+		"height": 39.0
+	},
+	"find_in_files":
+	{
+		"height": 101.0,
+		"where_history":
+		[
+			"C:\\Users\\micha\\Documents\\GitHub\\Website-Template-Starting-Point\\styles\\scss"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"<h4",
+			".print-links-footer",
+			"$mvl-base-font-size",
+			"clip",
+			"ir",
+			":before",
+			":after",
+			"padding-richt",
+			"208",
+			"scroll-t",
+			"clearf",
+			"em",
+			"rgba(0, 0, 0, 0.5)",
+			"#000",
+			"#dcdcdc",
+			"#91afd7",
+			"h1",
+			"px",
+			"hr ",
+			"hr",
+			"html",
+			"[\\-|_]",
+			"\\-",
+			"/// @group van laar color scheme",
+			"/// @group colors",
+			"$mvl-color-",
+			"clearf",
+			"clear",
+			"$breakpoints",
+			"$breakpoint",
+			"utf",
+			"blubber",
+			"html5",
+			"normalize-include",
+			"support",
+			"\"css/",
+			"additio",
+			"$",
+			"aotas_hash.slice(1)",
+			"additional_scroll_",
+			"mvl_",
+			"Additional scrolling",
+			"sisyphus",
+			"Sisyphus",
+			"ScrollToFixed",
+			"js-scroll-helper",
+			"mvl_additional_scroll_helper",
+			"mvl_timer",
+			"	",
+			"$window",
+			"https",
+			"content:",
+			"\"//",
+			" -> Rückmeldung",
+			"plus",
+			"<?php php",
+			"	"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": true,
+		"regex": false,
+		"replace_history":
+		[
+			"$mvl-base-font-size-screen",
+			"::before",
+			"::after",
+			"$mvl-color-drop-shadow",
+			"$mvl-color-black",
+			"$mvl-color-brand-2-lighter",
+			"$mvl-color-brand-1-lighter",
+			"[\\-_]",
+			"[\\-|_]",
+			"/// @group color scheme \"van laar\"",
+			"/// @group van Laar color scheme",
+			"$mvl-",
+			"$mvl-color-vl-",
+			"$mvl-breakpoints",
+			"$mvl-breakpoint",
+			"\"styles/css/",
+			"",
+			"aotas_",
+			"mvl_additional_scroll_timer",
+			" ",
+			"$mvl_window",
+			"",
+			"<?php",
+			" – "
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"incremental_find":
+	{
+		"height": 29.0
+	},
+	"input":
+	{
+		"height": 39.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 138.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.sftp":
+	{
+		"height": 138.0
+	},
+	"pinned_build_system": "",
+	"replace":
+	{
+		"height": 70.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 246.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

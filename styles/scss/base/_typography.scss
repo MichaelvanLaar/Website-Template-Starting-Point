@@ -1,0 +1,152 @@
+// -----------------------------------------------------------------------------
+// Basic typography
+// -----------------------------------------------------------------------------
+
+
+
+
+
+p,
+ul,
+ol {
+    margin-top: mvl-px-to-rem($mvl-base-line-height);
+    margin-bottom: mvl-px-to-rem($mvl-base-line-height);
+
+    @media print {
+        orphans: 3;
+        widows: 3;
+    }
+}
+
+
+ul,
+ol {
+    padding: 0 0 0 mvl-px-to-rem(35px);
+
+    li * {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    ul,
+    ol {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    nav & {
+        margin: 0;
+        padding: 0;
+    }
+}
+
+
+dd {
+    margin: 0 0 0 mvl-px-to-rem(35px);
+}
+
+
+blockquote {
+    font-style: italic;
+    margin: mvl-px-to-rem($mvl-base-line-height) mvl-px-to-rem(35px);
+
+    p {
+        font-style: italic;
+    }
+}
+
+cite {
+    font-style: normal;
+}
+
+
+pre,
+code,
+code var {
+    font-family: $mvl-code-font-stack;
+}
+
+
+abbr {
+    cursor: help;
+}
+
+
+del {
+    text-decoration: line-through;
+}
+
+
+h1 {
+    @include mvl-font-size-line-height(46px);
+
+    margin-top: mvl-px-to-rem($mvl-base-line-height);
+    margin-bottom: mvl-px-to-rem($mvl-base-line-height);
+
+    @media print {
+        page-break-after: avoid;
+        page-break-inside: avoid;
+    }
+}
+
+h2 {
+    @include mvl-font-size-line-height(23px);
+
+    margin-top: mvl-px-to-rem($mvl-base-line-height * 2);
+    margin-bottom: mvl-px-to-rem($mvl-base-line-height);
+
+    @media print {
+        page-break-after: avoid;
+        page-break-inside: avoid;
+    }
+}
+
+h3,
+h4,
+h5,
+h6 {
+    @include mvl-font-size-line-height($mvl-base-font-size-screen);
+
+    margin-top: mvl-px-to-rem($mvl-base-line-height * 2);
+    margin-bottom: mvl-px-to-rem($mvl-base-line-height);
+
+    @media print {
+        page-break-after: avoid;
+        page-break-inside: avoid;
+    }
+}
+
+
+td {
+    vertical-align: top;
+}
+
+
+
+
+
+// -----------------------------------------------------------------------------
+// Basic typography
+// -----------------------------------------------------------------------------
+
+
+a {
+    text-decoration: none;
+    color: $mvl-color-brand-1;
+
+    @media print {
+        text-decoration: underline;
+    }
+}
+
+a:visited {
+    color: $mvl-color-brand-1-darker;
+
+    @media print {
+        text-decoration: underline;
+    }
+}
+
+a:hover {
+    color: $mvl-color-brand-1-lighter;
+}
