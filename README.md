@@ -1,4 +1,4 @@
-# Website Template Starting Point 3.4dev
+# Website Template Starting Point 3.4.0
 
 CSS frameworks are not everybody’s cup of tea. Some web designers rather like to write their own code because they don’t want to bow to external specifications. They want to have full control over architectural principles as well as coding and naming conventions – instead of overwriting predefined default styles over and over to achieve the desired result.
 
@@ -9,7 +9,11 @@ If you are one of these web designers, this starting point for building websites
 
 ----
 
-*Please note that the files `css/main.css` as well as `js/plugins.js` and `js/main.js` should be minified before they are used as part of a live website – either using a [build](https://www.npmjs.com/package/grunt-contrib-cssmin) [process](https://www.npmjs.com/package/grunt-contrib-uglify), a [minify extension for your editor](https://packagecontrol.io/packages/Minify) or a [CMS module](http://modules.processwire.com/modules/all-in-one-minify/).*
+*Please note that the files `styles/css/main.css` as well as `js/plugins.js` and `js/main.js` should be minified before they are used as part of a live website – either using a [build](https://www.npmjs.com/package/grunt-contrib-cssmin) [process](https://www.npmjs.com/package/grunt-contrib-uglify), a [minify extension for your editor](https://packagecontrol.io/packages/Minify) or a [CMS module](http://modules.processwire.com/modules/all-in-one-minify/). To minify `styles/css/main.css` you can also use the output style “compressed” when compiling the Sass files.*
+
+----
+
+*You can read the documentation of the used Sass variables, mixins and functions by opening `styles/sassdoc/index.html` in your browser.*
 
 ----
 
@@ -37,6 +41,7 @@ If you are one of these web designers, this starting point for building websites
 
 ### CSS / Sass
 
+* [Sass 3.4.20](http://sass-lang.com/)
 * [normalize.scss 4.0.3](https://github.com/JohnAlbin/normalize-scss)
 * [support-for 1.0.3](https://github.com/JohnAlbin/support-for)
 
@@ -66,5 +71,6 @@ If you are one of these web designers, this starting point for building websites
 
 * [CSS Guidelines by Harry Roberts 2.2.3](http://cssguidelin.es/)
 * [Sass Guidelines by Hugo Giraudel 1.2](http://sass-guidelin.es/)
+* [SassDoc 2.0](http://sassdoc.com/)
 * [CSScomb 3.0.0](http://csscomb.com/)
 * [EditorConfig](http://editorconfig.org/)
