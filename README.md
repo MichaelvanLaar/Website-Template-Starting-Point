@@ -1,4 +1,4 @@
-# Website Template Starting Point 3.4.0
+# Website Template Starting Point 3.4.1
 
 CSS frameworks are not everybody’s cup of tea. Some web designers rather like to write their own code because they don’t want to bow to external specifications. They want to have full control over architectural principles as well as coding and naming conventions – instead of overwriting predefined default styles over and over to achieve the desired result.
 
@@ -33,44 +33,43 @@ If you are one of these web designers, this starting point for building websites
 * URLs of links appear as footnotes in print layout.
 * Cookie information banner
 
+## Browser compatibility
+
+The Website Template Starting Point supports all modern browsers as well as Internet Explorer 10 and above. Please note that Internet Explorer 9 and below are no longer supported due to their lack of important features and their low market share.
+
 ## Based on
 
-* [HTML5 Boilerplate 5.0.0](http://html5boilerplate.com/)
+* [HTML5 Boilerplate 5.3.0](http://html5boilerplate.com/)
 
 ## Used frameworks and libraries
 
 ### CSS / Sass
 
-* [Sass 3.4.20](http://sass-lang.com/)
 * [normalize.scss 4.0.3](https://github.com/JohnAlbin/normalize-scss)
 * [support-for 1.0.3](https://github.com/JohnAlbin/support-for)
 
 ### JavaScript
 
-* [Modernizr 2.8.3](http://modernizr.com/)
-* [Type Rendering Mix 1.1.0](https://github.com/bramstein/trmix)
-* [enquire.js 2.1.1](https://github.com/WickyNilliams/enquire.js)
-* [jQuery 1.12.0](http://jquery.com/)
-* [jQuery Cookie Plugin 1.4.1](https://github.com/carhartl/jquery-cookie)
-* [jQuery Placeholder Enhanced 1.6.9](https://github.com/dciccale/placeholder-enhanced)
-* [Sisyphus 1.1.107](https://github.com/simsalabim/sisyphus)
-* [jQuery outside events 1.1](http://benalman.com/projects/jquery-outside-events-plugin/)
-* [jquery.animate-enhanced plugin 1.10](https://github.com/benbarnett/jQuery-Animate-Enhanced)
-* [ScrollToFixed 1.0.6](https://github.com/bigspotteddog/ScrollToFixed)
-* [lazysizes 1.0.0-RC2](https://github.com/aFarkas/lazysizes)
-
-### Polyfills
-
-* [Respond.js v1.4.2](https://github.com/scottjehl/Respond)
-* [matchMedia()](https://github.com/paulirish/matchMedia.js) (included in Respond.js)
 * [respimage 1.3.0](https://github.com/aFarkas/respimage)
-* [REM unit 1.3.2](https://github.com/chuckcarpenter/REM-unit-polyfill)
-* [selectivizr 1.0.2](http://selectivizr.com/)
+* [lazysizes 1.0.0-RC2](https://github.com/aFarkas/lazysizes)
+* [enquire.js 2.1.2](https://github.com/WickyNilliams/enquire.js)
+* [JavaScript Cookie 2.1.0](https://github.com/js-cookie/js-cookie)
+* [jQuery 2.2.1](http://jquery.com/)
+* [jQuery Placeholder Enhanced 1.6.9](https://github.com/dciccale/placeholder-enhanced)
+* [Sisyphus 1.1.2](https://github.com/simsalabim/sisyphus)
+* [jQuery outside events 1.1](https://github.com/cowboy/jquery-outside-events)
+* [ScrollToFixed 1.0.6](https://github.com/bigspotteddog/ScrollToFixed)
 
-## Code conventions and tools
+## Used Tools
+
+* [Sass 3.4.20](http://sass-lang.com/)
+* [Autoprefixer](https://github.com/postcss/autoprefixer)
+* [CSScomb 3.0.0](http://csscomb.com/)
+* [SassDoc 2.0](http://sassdoc.com/)
+* [EditorConfig](http://editorconfig.org/)
+* [RealFaviconGenerator](http://realfavicongenerator.net/)
+
+## Code conventions
 
 * [CSS Guidelines by Harry Roberts 2.2.3](http://cssguidelin.es/)
 * [Sass Guidelines by Hugo Giraudel 1.2](http://sass-guidelin.es/)
-* [SassDoc 2.0](http://sassdoc.com/)
-* [CSScomb 3.0.0](http://csscomb.com/)
-* [EditorConfig](http://editorconfig.org/)

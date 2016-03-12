@@ -7,18 +7,30 @@
         <title>[Insert page title]</title>
         <meta name="description" content="[Insert page description]">
 
-        <meta name="HandheldFriendly" content="True">
-        <meta name="MobileOptimized" content="320">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
         <!--[if IEMobile]><meta http-equiv="cleartype" content="on"><![endif]-->
 
-        <link rel="icon" href="favicon.ico" sizes="16x16 24x24 32x32 48x48 64x64" type="image/vnd.microsoft.icon">
-        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="favicon-152.png">
-        <link rel="apple-touch-icon-precomposed" sizes="120x120" href="favicon-120.png">
-        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="favicon-72.png">
-        <link rel="apple-touch-icon-precomposed" href="favicon-57.png">
-        <meta name="msapplication-TileColor" content="#001e50">
-        <meta name="msapplication-TileImage" content="favicon-144.png">
+        <link rel="apple-touch-icon" sizes="57x57" href="apple-touch-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="apple-touch-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="apple-touch-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="apple-touch-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="apple-touch-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="apple-touch-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon-180x180.png">
+        <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
+        <link rel="icon" type="image/png" href="android-chrome-192x192.png" sizes="192x192">
+        <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96">
+        <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16">
+        <link rel="manifest" href="manifest.json">
+        <link rel="mask-icon" href="safari-pinned-tab.svg" color="#05327d">
+        <meta name="msapplication-TileColor" content="#05327d">
+        <meta name="msapplication-TileImage" content="mstile-144x144.png">
+        <meta name="theme-color" content="#05327d">
+
+        <!-- Change “no-js” class in <html> to “js” if JavaScript is enabled -->
+        <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
 
         <!-- Include respimage only if the browser doesn’t support responsive images -->
         <script>
@@ -36,8 +48,6 @@
         <link rel="stylesheet" href="styles/css/main.css">
 
         <script src="js/vendor/lazysizes-plus-plugins.min.js" async=""></script>
-        <script src="js/vendor/modernizr-2.8.3.custom.min.js"></script>
-        <script>Modernizr.load({ test: Modernizr.mq('(min-width: 0px)'), nope: 'js/vendor/respond.min.js' });</script>
 
         <!-- Open Graph Data -->
         <meta property="og:title" content="[Insert page title, max. 90 characters]" />
@@ -69,15 +79,9 @@
 
     <body>
 
-        <!--[if lte IE 7]>
+        <!--[if lte IE 9]>
             <div class="ie-warning__shader"></div>
-            <iframe src="ie-warnings/old-ie-warning-en.html" class="ie-warning__message" marginheight="0" marginwidth="0" frameborder="0"></iframe>
-        <![endif]-->
-        <!--[if IE 8 ]>
-            <noscript>
-                <div class="ie-warning__shader"></div>
-                <iframe src="ie-warnings/ie-js-warning-en.html" class="ie-warning__message" marginheight="0" marginwidth="0" frameborder="0"></iframe>
-            </noscript>
+            <iframe src="ie-warning/old-ie-warning-en.html" class="ie-warning__message" marginheight="0" marginwidth="0" frameborder="0"></iframe>
         <![endif]-->
 
         <ul class="skiplinks">
@@ -103,7 +107,7 @@
 
         <div class="main-navigation  js-main-navigation">
             <div class="wrapper">
-                <a href="#"><img src="images/wtsp-logo.png" width="50" height="50" alt="WTSP" class="main-navigation__logo"></a>
+                <a href="#"><img src="images/wtsp-logo.png" width="60" height="60" alt="WTSP" class="main-navigation__logo"></a>
                 <nav id="main-navigation" class="main-navigation__box  js-main-navigation__box">
                     <div class="main-navigation__toggle  js-main-navigation__toggle">Navigation</div>
                     <!-- PLEASE NOTE: Classes and styling of the main navigation don’t follow
@@ -284,21 +288,10 @@
 
 
 
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
-        <script>
-            Modernizr.load([
-                {
-                    test: Modernizr.cssremunit,
-                    nope: 'js/vendor/rem.min.js'
-                },
-                'js/plugins.js',
-                'js/main.js'
-            ]);
-        </script>
-        <!--[if (gte IE 6)&(lte IE 8)]>
-            <script src="js/vendor/selectivizr.min.js"></script>
-        <![endif]-->
+        <script src="http://code.jquery.com/jquery-2.2.1.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-2.2.1.min.js"><\/script>')</script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
 
     </body>
 </html>

@@ -53,9 +53,13 @@
 	"command_palette":
 	{
 		"height": 375.0,
-		"last_filter": "pack",
+		"last_filter": "html",
 		"selected_items":
 		[
+			[
+				"html",
+				"Set Syntax: HTML"
+			],
 			[
 				"pack",
 				"Package Control: Install Package"
@@ -83,10 +87,6 @@
 			[
 				"pac",
 				"Package Control: Satisfy Dependencies"
-			],
-			[
-				"html",
-				"Set Syntax: HTML"
 			]
 		],
 		"width": 514.0
@@ -109,16 +109,26 @@
 	},
 	"file_history":
 	[
-		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/README.md",
-		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/utils/_variables-general.scss",
 		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/index.html",
+		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/README.md",
+		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/js/plugins.js",
+		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/js/main.js",
+		"/C/Users/micha/Desktop/sisyphus.js",
+		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/base/_form-elements.scss",
+		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/base/_typography.scss",
+		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/base/_base.scss",
+		"/C/Users/micha/Desktop/js.cookie.js",
+		"/C/Users/micha/Desktop/wtsp-logo.svg",
+		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/ie-warning/old-ie-warning-en.html",
+		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/ie-warning/old-ie-warning-de.html",
+		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/ie-warning/ie-js-warning-en.html",
+		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/js/vendor/respond.min.js",
+		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/index2.html",
+		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/utils/_variables-general.scss",
 		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/utils/_variables-vl-color-scheme.scss",
 		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/layout/_navigation.scss",
-		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/base/_base.scss",
-		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/base/_typography.scss",
 		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/layout/_print.scss",
 		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/layout/_sidebar.scss",
-		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/js/plugins.js",
 		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/main.scss",
 		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/layout/_layout-general.scss",
 		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/layout/_main-container.scss",
@@ -133,7 +143,6 @@
 		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/components/_overlays-cookie-info-banner.scss",
 		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/layout/_header.scss",
 		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/layout/_page-header.scss",
-		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/base/_form-elements.scss",
 		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/base/_font-elements.scss",
 		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/utils/_variables.scss",
 		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/vendor/normalize/_vertical-rhythm.scss",
@@ -151,7 +160,6 @@
 		"/C/Users/micha/AppData/Roaming/Sublime Text 3/Packages/User/Autoprefixer.sublime-settings",
 		"/C/Users/micha/AppData/Roaming/Sublime Text 3/Packages/SublimeLinter/SublimeLinter.sublime-settings",
 		"/C/Users/micha/Desktop/Prepos license key",
-		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/js/main.js",
 		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/.editorconfig",
 		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/robots.txt",
 		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/.htaccess",
@@ -211,6 +219,8 @@
 		"height": 101.0,
 		"where_history":
 		[
+			"C:\\Users\\micha\\Documents\\GitHub\\Website-Template-Starting-Point\\styles\\scss",
+			"C:\\Users\\micha\\Documents\\GitHub\\Website-Template-Starting-Point",
 			"C:\\Users\\micha\\Documents\\GitHub\\Website-Template-Starting-Point\\styles\\scss"
 		]
 	},
@@ -219,6 +229,11 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"skiplinkselector",
+			"/* ==========================================================================\n",
+			"svg",
+			".no-",
+			"Modernizr",
 			"<h4",
 			".print-links-footer",
 			"$mvl-base-font-size",
