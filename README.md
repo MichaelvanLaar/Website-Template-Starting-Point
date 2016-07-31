@@ -1,4 +1,4 @@
-# Website Template Starting Point 3.4.1
+# Website Template Starting Point 3.4.2
 
 CSS frameworks are not everybody’s cup of tea. Some web designers rather like to write their own code because they don’t want to bow to external specifications. They want to have full control over architectural principles as well as coding and naming conventions – instead of overwriting predefined default styles over and over to achieve the desired result.
 
@@ -6,10 +6,6 @@ If you are one of these web designers, this starting point for building websites
 
 **See a demo: <http://dev.michaelvanlaar.de/wtsp/>**  
 (It’s only one page, so don’t expect something fancy.)
-
-----
-
-*Please note that the files `styles/css/main.css` as well as `js/plugins.js` and `js/main.js` should be minified before they are used as part of a live website – either using a [build](https://www.npmjs.com/package/grunt-contrib-cssmin) [process](https://www.npmjs.com/package/grunt-contrib-uglify), a [minify extension for your editor](https://packagecontrol.io/packages/Minify) or a [CMS module](http://modules.processwire.com/modules/all-in-one-minify/). To minify `styles/css/main.css` you can also use the output style “compressed” when compiling the Sass files.*
 
 ----
 

@@ -69,6 +69,10 @@ code var {
 
 abbr {
     cursor: help;
+
+    &[title] {
+        text-decoration: none;
+    }
 }
 
 

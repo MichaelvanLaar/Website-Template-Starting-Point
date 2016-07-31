@@ -60,10 +60,9 @@
 /// @access public
 /// @group helpers
 /// @param {Number} $value - Number (with unit px) to convert to rem
-/// @param {Number} $mvl-base-font-size-screen - Base font size of the document (16px default)
 /// @requires $mvl-base-font-size-screen
 /// @return {Number} - Number converted to rem
-@function mvl-px-to-rem($value, $mvl-base-font-size-screen: 16px) {
+@function mvl-px-to-rem($value) {
     @if unit($value) != 'px' {
         @error "mvl-px-to-rem only supports px inputs.";
     }
@@ -75,10 +74,9 @@
 /// @access public
 /// @group helpers
 /// @param {Number} $value - Number (with unit rem) to convert to px
-/// @param {Number} $mvl-base-font-size-screen - Base font size of the document (16px default)
 /// @requires $mvl-base-font-size-screen
 /// @return {Number} - Number converted to px
-@function mvl-rem-to-px($value, $mvl-base-font-size-screen: 16px) {
+@function mvl-rem-to-px($value) {
     @if unit($value) != 'rem' {
         @error "mvl-rem-to-px only supports rem inputs.";
     }
