@@ -109,15 +109,17 @@
 	},
 	"file_history":
 	[
+		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/base/_form-elements.scss",
 		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/base/_base.scss",
+		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/base/_typography.scss",
+		"/C/Users/micha/Dropbox/Michael/MvL-EXASOL-Austausch/Marketo/new-marketo-templates/styles/scss/base/_typography.scss",
+		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/utils/_functions.scss",
 		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/utils/_variables-general.scss",
 		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/index.html",
 		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/README.md",
 		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/js/plugins.js",
 		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/js/main.js",
 		"/C/Users/micha/Desktop/sisyphus.js",
-		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/base/_form-elements.scss",
-		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/base/_typography.scss",
 		"/C/Users/micha/Desktop/js.cookie.js",
 		"/C/Users/micha/Desktop/wtsp-logo.svg",
 		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/ie-warning/old-ie-warning-en.html",
@@ -138,7 +140,6 @@
 		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/layout/_main-content.scss",
 		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/layout/_footer.scss",
 		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/utils/_variables-colors.scss",
-		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/utils/_functions.scss",
 		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/components/_overlays-skiplinks.scss",
 		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/components/_overlays-cookie-info-banner.scss",
 		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/layout/_header.scss",
@@ -229,6 +230,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"range",
+			"abbr",
 			"skiplinkselector",
 			"/* ==========================================================================\n",
 			"svg",
