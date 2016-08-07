@@ -46,7 +46,7 @@ $mvl-color-drop-shadow: rgba(0, 0, 0, 0.5) !default;
 
 
 // -----------------------------------------------------------------------------
-// Brand colors
+// Brand color 1 - Blue
 // -----------------------------------------------------------------------------
 
 
@@ -56,17 +56,41 @@ $mvl-color-drop-shadow: rgba(0, 0, 0, 0.5) !default;
 /// @type Color
 $mvl-color-brand-1: $mvl-vl-blue-3 !default;
 
+
 /// Main brand color, lighter
 /// @access public
 /// @group colors
 /// @type Color
 $mvl-color-brand-1-lighter: $mvl-vl-blue-4 !default;
 
+/// Main brand color, lightest
+/// @access public
+/// @group colors
+/// @type Color
+$mvl-color-brand-1-lighter: $mvl-vl-blue-5 !default;
+
+
 /// Main brand color, darker
 /// @access public
 /// @group colors
 /// @type Color
 $mvl-color-brand-1-darker: $mvl-vl-blue-2 !default;
+
+/// Main brand color, darkest
+/// @access public
+/// @group colors
+/// @type Color
+$mvl-color-brand-1-darker: $mvl-vl-blue-1 !default;
+
+
+
+
+
+// -----------------------------------------------------------------------------
+// Brand color 2 - Gray
+// -----------------------------------------------------------------------------
+
+
 
 
 /// Secondary brand color
@@ -75,14 +99,28 @@ $mvl-color-brand-1-darker: $mvl-vl-blue-2 !default;
 /// @type Color
 $mvl-color-brand-2: $mvl-vl-gray-3 !default;
 
+
 /// Secondary brand color, lighter
 /// @access public
 /// @group colors
 /// @type Color
 $mvl-color-brand-2-lighter: $mvl-vl-gray-4 !default;
 
+/// Secondary brand color, lightest
+/// @access public
+/// @group colors
+/// @type Color
+$mvl-color-brand-2-lighter: $mvl-vl-gray-5 !default;
+
+
 /// Secondary brand color, darker
 /// @access public
 /// @group colors
 /// @type Color
 $mvl-color-brand-2-darker: $mvl-vl-gray-2 !default;
+
+/// Secondary brand color, darkeszt
+/// @access public
+/// @group colors
+/// @type Color
+$mvl-color-brand-2-darker: $mvl-vl-gray-1 !default;

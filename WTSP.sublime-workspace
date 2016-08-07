@@ -109,9 +109,11 @@
 	},
 	"file_history":
 	[
+		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/main.scss",
+		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/utils/_variables-colors.scss",
+		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/base/_typography.scss",
 		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/base/_form-elements.scss",
 		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/base/_base.scss",
-		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/base/_typography.scss",
 		"/C/Users/micha/Dropbox/Michael/MvL-EXASOL-Austausch/Marketo/new-marketo-templates/styles/scss/base/_typography.scss",
 		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/utils/_functions.scss",
 		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/utils/_variables-general.scss",
@@ -131,7 +133,6 @@
 		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/layout/_navigation.scss",
 		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/layout/_print.scss",
 		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/layout/_sidebar.scss",
-		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/main.scss",
 		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/layout/_layout-general.scss",
 		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/layout/_main-container.scss",
 		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/css/main.css",
@@ -139,7 +140,6 @@
 		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/css/old_main.css",
 		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/layout/_main-content.scss",
 		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/layout/_footer.scss",
-		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/utils/_variables-colors.scss",
 		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/components/_overlays-skiplinks.scss",
 		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/components/_overlays-cookie-info-banner.scss",
 		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/layout/_header.scss",
