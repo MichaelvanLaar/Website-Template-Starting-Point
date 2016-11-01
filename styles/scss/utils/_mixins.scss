@@ -123,31 +123,31 @@
 
 
 /// Hide content only visually, but have it available for screenreaders
-/// @author Jonathan Snook
+/// @author Hugo Giraudel
 /// @link http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
 /// @group helpers
+/// @param {String} $focusable - use the string “focusable” to allow the element to be focusable when navigated to via the keyboard
 /// @access public
-@mixin mvl-visually-hidden {
-    position: absolute;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    clip-path: inset(0 0 0 0);
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    padding: 0;
-    border: 0;
+@mixin mvl-visually-hidden($focusable: null) {
+    position: absolute !important;
+    overflow: hidden !important;
+    clip: rect(1px, 1px, 1px, 1px) !important;
+    clip-path: inset(50%) !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    white-space: nowrap !important;
+    border: 0 !important;
 
-    // Extends mixin to allow the element to be focusable when navigated to via
-    // the keyboard: https://www.drupal.org/node/897638
-    &.focusable:active,
-    &.focusable:focus {
-        position: static;
-        overflow: visible;
-        clip: auto;
-        clip-path: none;
-        width: auto;
-        height: auto;
-        margin: 0;
+    @if $focusable == 'focusable' {
+        &:active,
+        &:focus {
+            overflow: visible !important;
+            clip: auto !important;
+            clip-path: none !important;
+            width: auto !important;
+            height: auto !important;
+            white-space: normal !important;
+        }
     }
 }
