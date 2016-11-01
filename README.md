@@ -1,4 +1,4 @@
-# Website Template Starting Point 3.4.3
+# Website Template Starting Point 3.4.4
 
 CSS frameworks are not everybody’s cup of tea. Some web designers rather like to write their own code because they don’t want to bow to external specifications. They want to have full control over architectural principles as well as coding and naming conventions – instead of overwriting predefined default styles over and over to achieve the desired result.
 
