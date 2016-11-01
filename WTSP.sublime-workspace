@@ -52,8 +52,8 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 375.0,
-		"last_filter": "html",
+		"height": 112.0,
+		"last_filter": "",
 		"selected_items":
 		[
 			[
@@ -96,6 +96,7 @@
 		"height": 169.0,
 		"history":
 		[
+			"import urllib.request,os,hashlib; h = 'df21e130d211cfc94d9b0905775a7c0f' + '1e3d39e33b79698005270310898eea76'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
 		]
 	},
 	"distraction_free":
@@ -109,13 +110,14 @@
 	},
 	"file_history":
 	[
+		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/base/_apply-normalize.scss",
+		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/utils/_functions.scss",
 		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/main.scss",
 		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/utils/_variables-colors.scss",
 		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/base/_typography.scss",
 		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/base/_form-elements.scss",
 		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/base/_base.scss",
 		"/C/Users/micha/Dropbox/Michael/MvL-EXASOL-Austausch/Marketo/new-marketo-templates/styles/scss/base/_typography.scss",
-		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/utils/_functions.scss",
 		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/utils/_variables-general.scss",
 		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/index.html",
 		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/README.md",
@@ -147,7 +149,6 @@
 		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/base/_font-elements.scss",
 		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/utils/_variables.scss",
 		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/vendor/normalize/_vertical-rhythm.scss",
-		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/base/_apply-normalize.scss",
 		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/components/_overlays-ie-warnings.scss",
 		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/.scss-lint.yml",
 		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/utils/_variables-vl-colors.scss",
@@ -285,7 +286,7 @@
 			"js-scroll-helper",
 			"mvl_additional_scroll_helper",
 			"mvl_timer",
-			"	",
+			"\t",
 			"$window",
 			"https",
 			"content:",
@@ -293,7 +294,7 @@
 			" -> Rückmeldung",
 			"plus",
 			"<?php php",
-			"	"
+			"\t"
 		],
 		"highlight": true,
 		"in_selection": false,
