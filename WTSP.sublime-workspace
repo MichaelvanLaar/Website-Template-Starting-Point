@@ -110,6 +110,12 @@
 	},
 	"file_history":
 	[
+		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/LICENSE.txt",
+		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/index.html",
+		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/css/main.css",
+		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/utils/_mixins.scss",
+		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/components/_overlays-skiplinks.scss",
+		"/C/Users/micha/AppData/Roaming/Sublime Text 3/Packages/User/CSScomb.sublime-settings",
 		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/base/_apply-normalize.scss",
 		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/utils/_functions.scss",
 		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/main.scss",
@@ -119,7 +125,6 @@
 		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/base/_base.scss",
 		"/C/Users/micha/Dropbox/Michael/MvL-EXASOL-Austausch/Marketo/new-marketo-templates/styles/scss/base/_typography.scss",
 		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/utils/_variables-general.scss",
-		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/index.html",
 		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/README.md",
 		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/js/plugins.js",
 		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/js/main.js",
@@ -137,12 +142,9 @@
 		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/layout/_sidebar.scss",
 		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/layout/_layout-general.scss",
 		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/layout/_main-container.scss",
-		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/css/main.css",
-		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/utils/_mixins.scss",
 		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/css/old_main.css",
 		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/layout/_main-content.scss",
 		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/layout/_footer.scss",
-		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/components/_overlays-skiplinks.scss",
 		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/components/_overlays-cookie-info-banner.scss",
 		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/layout/_header.scss",
 		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/layout/_page-header.scss",
@@ -152,7 +154,6 @@
 		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/components/_overlays-ie-warnings.scss",
 		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/.scss-lint.yml",
 		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/utils/_variables-vl-colors.scss",
-		"/C/Users/micha/AppData/Roaming/Sublime Text 3/Packages/User/CSScomb.sublime-settings",
 		"/C/Users/micha/AppData/Roaming/Sublime Text 3/Packages/CSScomb/CSScomb.sublime-settings",
 		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/base/_fonts.scss",
 		"/C/Users/micha/AppData/Roaming/Sublime Text 3/Packages/User/SideBarEnhancements/Open With/Side Bar.sublime-menu",
@@ -214,13 +215,14 @@
 	],
 	"find":
 	{
-		"height": 39.0
+		"height": 48.0
 	},
 	"find_in_files":
 	{
-		"height": 101.0,
+		"height": 130.0,
 		"where_history":
 		[
+			"<project>",
 			"C:\\Users\\micha\\Documents\\GitHub\\Website-Template-Starting-Point\\styles\\scss",
 			"C:\\Users\\micha\\Documents\\GitHub\\Website-Template-Starting-Point",
 			"C:\\Users\\micha\\Documents\\GitHub\\Website-Template-Starting-Point\\styles\\scss"
@@ -231,6 +233,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"license",
+			"focusable",
+			"clip",
 			"range",
 			"abbr",
 			"skiplinkselector",
