@@ -8,6 +8,7 @@
  * ==========================================================================
  *
  * Cache some repetedly used elements
+ * Ajax for SVG incons and inject them onto the page
  * Menu (accordion menu or dropdown menu, according to screen size)
  * ScrollToFixed application
  * Cookie information banner
@@ -29,6 +30,26 @@ var mvl_main_navigation__list   = $('.js-main-navigation__list');
 var mvl_dropdown_toggles        = mvl_main_navigation__list.find('.has_children');
 var mvl_dropdown_toggles__a     = mvl_dropdown_toggles.children('a');
 var mvl_page_footer             = $('.js-page-footer');
+
+
+
+
+
+/* ==========================================================================
+   Ajax for SVG incons and inject them onto the page
+   https://css-tricks.com/ajaxing-svg-sprite/
+   ========================================================================== */
+
+
+$(document).ready(function() {
+    // TO DO: Change icon.svg’s path to a root-relative link, depending on your
+    //        server’s directory structure.
+    $.get("images/icons.svg", function(data) {
+      var mvl_div = document.createElement('div');
+      mvl_div.innerHTML = new XMLSerializer().serializeToString(data.documentElement);
+      document.body.insertBefore(mvl_div, document.body.childNodes[0]);
+    });
+});
 
 
 

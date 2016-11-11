@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"page-h",
+				"page-header__logo"
+			],
+			[
+				"background-c",
+				"background-color"
+			],
+			[
 				"mvl-",
 				"mvl-px-to-rem"
 			],
@@ -110,6 +118,12 @@
 	},
 	"file_history":
 	[
+		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/layout/_header.scss",
+		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/images/icons.svg",
+		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/js/main.js",
+		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/utils/_variables-colors.scss",
+		"/C/Users/micha/AppData/Local/Temp/scp28452/var/www/virtual/earlgrey/dev.michaelvanlaar.com/wtsp-dev/js/main.js",
+		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/README.md",
 		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/LICENSE.txt",
 		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/index.html",
 		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/css/main.css",
@@ -119,15 +133,12 @@
 		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/base/_apply-normalize.scss",
 		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/utils/_functions.scss",
 		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/main.scss",
-		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/utils/_variables-colors.scss",
 		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/base/_typography.scss",
 		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/base/_form-elements.scss",
 		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/base/_base.scss",
 		"/C/Users/micha/Dropbox/Michael/MvL-EXASOL-Austausch/Marketo/new-marketo-templates/styles/scss/base/_typography.scss",
 		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/utils/_variables-general.scss",
-		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/README.md",
 		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/js/plugins.js",
-		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/js/main.js",
 		"/C/Users/micha/Desktop/sisyphus.js",
 		"/C/Users/micha/Desktop/js.cookie.js",
 		"/C/Users/micha/Desktop/wtsp-logo.svg",
@@ -146,7 +157,6 @@
 		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/layout/_main-content.scss",
 		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/layout/_footer.scss",
 		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/components/_overlays-cookie-info-banner.scss",
-		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/layout/_header.scss",
 		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/layout/_page-header.scss",
 		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/base/_font-elements.scss",
 		"/C/Users/micha/Documents/GitHub/Website-Template-Starting-Point/styles/scss/utils/_variables.scss",
