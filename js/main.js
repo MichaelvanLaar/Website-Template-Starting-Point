@@ -12,6 +12,7 @@
  * Menu (accordion menu or dropdown menu, according to screen size)
  * ScrollToFixed application
  * Cookie information banner
+ * Add “rel='noopener'” to all links with “target='_blank'” for more security
  * Sisyphus initialisation
  */
 
@@ -180,6 +181,20 @@ $(window).resize(function() {
         mvl_page_footer__margin_bottom = $('.cookie-info-banner').outerHeight() + 'px';
         mvl_page_footer.css('margin-bottom', mvl_page_footer__margin_bottom);
     }
+});
+
+
+
+
+
+/* ==========================================================================
+   Add “rel='noopener'” to all links with “target='_blank'” for more security
+   https://mathiasbynens.github.io/rel-noopener/ for details
+   ========================================================================== */
+
+
+$(document).ready(function() {
+    $('a[target="_blank"]:not([rel="noopener"])').attr('rel','noopener');
 });
 
 
