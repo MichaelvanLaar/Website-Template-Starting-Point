@@ -1,6 +1,6 @@
-// -----------------------------------------------------------------------------
+//==============================================================================
 // Navigation
-// -----------------------------------------------------------------------------
+//==============================================================================
 
 
 
@@ -13,304 +13,900 @@
  */
 
 
-/// Width (in px) of dropdown menus, used in the full-width view
+
+
+
+//------------------------------------------------------------------------------
+// Configuration: colors
+//------------------------------------------------------------------------------
+
+
+/// Background color of main navigation bar – for (mobile) view without header
 /// @access public
-/// @group layout
+/// @group Main navigation
+/// @type Color
+$mvl-main-navigation__menu-bar-background-color--without-header: $mvl-color__brand-1--darkest;
+
+/// Background hover color of main navigation bar – for (mobile) view without header
+/// @access public
+/// @group Main navigation
+/// @type Color
+$mvl-main-navigation__menu-bar-background-hover-color--without-header: $mvl-color__brand-1--darker;
+
+
+/// Background color of main navigation bar – for (desktop) view with header
+/// @access public
+/// @group Main navigation
+/// @type Color
+$mvl-main-navigation__menu-bar-background-color--with-header: $mvl-color__brand-2--lighter;
+
+/// Background hover color of main navigation bar – for (desktop) view with header
+/// @access public
+/// @group Main navigation
+/// @type Color
+$mvl-main-navigation__menu-bar-background-hover-color--with-header: $mvl-color__brand-2--lightest;
+
+
+/// Background color of 1st fold-out level of main navigation
+/// @access public
+/// @group Main navigation
+/// @type Color
+$mvl-main-navigation__accordion-background-color--level-1: #f00;
+
+/// Background hover color of 1st fold-out level of main navigation
+/// @access public
+/// @group Main navigation
+/// @type Color
+$mvl-main-navigation__accodrion-background-hover-color--level-1: mvl-tint(#f00, 30%);
+
+
+/// Background color of 2nd fold-out level of main navigation
+/// @access public
+/// @group Main navigation
+/// @type Color
+$mvl-main-navigation__accordion-background-color--level-2: #0f0;
+
+/// Background hover color of 2nd fold-out level of main navigation
+/// @access public
+/// @group Main navigation
+/// @type Color
+$mvl-main-navigation__accodrion-background-hover-color--level-2: mvl-tint(#0f0, 50%);
+
+
+/// Background color of 3rd fold-out level of main navigation
+/// @access public
+/// @group Main navigation
+/// @type Color
+$mvl-main-navigation__accordion-background-color--level-3: #00f;
+
+/// Background hover color of 3rd fold-out level of main navigation
+/// @access public
+/// @group Main navigation
+/// @type Color
+$mvl-main-navigation__accodrion-background-hover-color--level-3: mvl-tint(#00f, 50%);
+
+
+/// Background color of 1st dropdown level (= navigation level 2) of main navigation
+/// @access public
+/// @group Main navigation
+/// @type Color
+$mvl-main-navigation__dropdown-background-color--level-2: $mvl-main-navigation__accordion-background-color--level-1;
+
+/// Background hover color of 1st dropdown level (= navigation level 2) of main navigation
+/// @access public
+/// @group Main navigation
+/// @type Color
+$mvl-main-navigation__dropdown-background-hover-color--level-2: $mvl-main-navigation__accodrion-background-hover-color--level-1;
+
+
+/// Background color of 2nd dropdown level (= navigation level 3) of main navigation
+/// @access public
+/// @group Main navigation
+/// @type Color
+$mvl-main-navigation__dropdown-background-color--level-3: $mvl-main-navigation__accordion-background-color--level-2;
+
+/// Background hover color of 2nd dropdown level (= navigation level 3) of main navigation
+/// @access public
+/// @group Main navigation
+/// @type Color
+$mvl-main-navigation__dropdown-background-hover-color--level-3: $mvl-main-navigation__accodrion-background-hover-color--level-2;
+
+
+/// Background color of current menu item (and its parents) of main navigation
+/// @access public
+/// @group Main navigation
+/// @type Color
+$mvl-main-navigation__background-color--current: #0ff;
+
+/// Background hover color of current menu item (and its parents) of main navigation
+/// @access public
+/// @group Main navigation
+/// @type Color
+$mvl-main-navigation__background-hover-color--current: mvl-tint(#0ff, 50%);
+
+
+/// Link color of main navigation – for (mobile) view without header
+/// @access public
+/// @group Main navigation
+/// @type Color
+$mvl-main-navigation__menu-bar-link-color--without-header: $mvl-color__white;
+
+/// Link hover color of main navigation – for (mobile) view without header
+/// @access public
+/// @group Main navigation
+/// @type Color
+$mvl-main-navigation__menu-bar-link-hover-color--without-header: $mvl-color__brand-1--lightest;
+
+
+/// Link color of main navigation –– for (desktop) view with header
+/// @access public
+/// @group Main navigation
+/// @type Color
+$mvl-main-navigation__menu-bar-link-color--with-header: $mvl-color__black;
+
+/// Link hover color of main navigation –– for (desktop) view with header
+/// @access public
+/// @group Main navigation
+/// @type Color
+$mvl-main-navigation__menu-bar-link-hover-color--with-header: mvl-tint($mvl-color__black, 30%);
+
+
+
+
+
+//------------------------------------------------------------------------------
+// Configuration: typography
+//------------------------------------------------------------------------------
+
+
+/// Mobile view: font size of main navigation bar in px
+/// Desktop view: font size of 1st list level of main navigation
+/// @access public
+/// @group Main navigation
 /// @type Number
-$mvl-dropdown-menu-width: 200px;
+$mvl-main-navigation__menu-bar-font-size: 20px;
+
+/// Mobile view: line height of main navigation bar
+/// Desktop view: line height of 1st list level of main navigation
+/// @access public
+/// @group Main navigation
+/// @type Number
+$mvl-main-navigation__menu-bar-line-height: ($mvl-base-line-height / $mvl-main-navigation__menu-bar-font-size);
+
+/// Mobile view: top and bottom padding of main navigation bar
+/// Desktop view: top and bottom padding of 1st list level of main navigation items
+/// @access public
+/// @group Main navigation
+/// @type Number
+$mvl-main-navigation__menu-bar-padding--vertical: ((($mvl-base-line-height * 2) - ($mvl-main-navigation__menu-bar-font-size * $mvl-main-navigation__menu-bar-line-height)) / 2);
+
+
+/// Font size of fold-out resp. dropdown levels of main navigation in px
+/// @access public
+/// @group Main navigation
+/// @type Number
+$mvl-main-navigation__dropdown-font-size: 16px;
+
+/// Font size of fold-out resp. dropdown levels of main navigation
+/// @access public
+/// @group Main navigation
+/// @type Number
+$mvl-main-navigation__dropdown-line-height: ($mvl-base-line-height / $mvl-main-navigation__dropdown-font-size);
+
+/// Top and bottom padding of fold-out resp. dropdown levels of main navigation
+/// @access public
+/// @group Main navigation
+/// @type Number
+$mvl-main-navigation__dropdown-padding--vertical: ((($mvl-base-line-height * 2) - ($mvl-main-navigation__dropdown-font-size * $mvl-main-navigation__dropdown-line-height)) / 2);
+
+
+
+
+
+//------------------------------------------------------------------------------
+// Configuration: (wide) navigation bar logo for smaller screens
+//------------------------------------------------------------------------------
+
+
+/// Original width of (wide) navigation bar logo for smaller screens in px
+/// @access public
+/// @group Main navigation
+/// @type Number
+$mvl-main-navigation__logo-wide-original-width: 506px;
+
+/// Original height of (wide) navigation bar logo for smaller screens in px
+/// @access public
+/// @group Main navigation
+/// @type Number
+$mvl-main-navigation__logo-wide-original-height: 100px;
+
+
+
+
+
+//------------------------------------------------------------------------------
+// Configuration: (narrow) navigation bar logo for bigger screens
+//------------------------------------------------------------------------------
+
+
+/// Original width of (narrow) navigation bar logo for bigger screens in px
+/// @access public
+/// @group Main navigation
+/// @type Number
+$mvl-main-navigation__logo-narrow-original-width: 16px;
+
+/// Original height of (narrow) navigation bar logo for bigger screens in px
+/// @access public
+/// @group Main navigation
+/// @type Number
+$mvl-main-navigation__logo-narrow-original-height: 16px;
+
+
+
+
+
+//------------------------------------------------------------------------------
+// Configuration: navigation bar toggle icon for smaller screens
+//------------------------------------------------------------------------------
+
+
+/// Original width of navigation bar toggle icon for smaller screens in px
+/// @access public
+/// @group Main navigation
+/// @type Number
+$mvl-main-navigation__toggle-icon-original-width: 18px;
+
+/// Original height of navigation bar toggle icon for smaller screens in px
+/// @access public
+/// @group Main navigation
+/// @type Number
+$mvl-main-navigation__toggle-icon-original-height: 12px;
+
+
+
+
+
+//------------------------------------------------------------------------------
+// Configuration: dropdown menu
+//------------------------------------------------------------------------------
+
+
+/// Width (in px) of dropdown menus for bigger screens
+/// @access public
+/// @group Main navigation
+/// @type Number
+$mvl-main-navigation__dropdown-menu-width: 250px;
+
+
+
+
+
+//------------------------------------------------------------------------------
+// Overall menu styling
+//------------------------------------------------------------------------------
+
+
+@mixin mvl-main-navigation__arrow--down {
+    font-size: 80%;
+    margin-left: mvl-px-to-rem(5px);
+    content: '▼';
+}
+
+
+@mixin mvl-main-navigation__arrow--right {
+    font-size: 80%;
+    position: absolute;
+    top: mvl-px-to-rem($mvl-main-navigation__menu-bar-padding--vertical + ($mvl-main-navigation__dropdown-font-size * 0.2));
+    right: mvl-px-to-rem($mvl-gutter-width);
+    content: '►';
+}
 
 
 .main-navigation {
     @include mvl-clearfix;
 
-    background-color: $mvl-color-brand-2-lighter;
     width: 100%;
-    padding-left: $mvl-gutter-width;
-    padding-right: $mvl-gutter-width;
+    background-color: $mvl-main-navigation__menu-bar-background-color--without-header;
+
+    @include mvl-respond-to('main-content-width') {
+        background-color: $mvl-main-navigation__menu-bar-background-color--with-header;
+    }
 
 
-    &__logo {
+    &__list {
+        list-style: none;
+        background-color: $mvl-main-navigation__accordion-background-color--level-1;
+        transition: $mvl-default-transition;
+
+
+        li {
+            font-size: mvl-px-to-rem($mvl-main-navigation__dropdown-font-size);
+            line-height: $mvl-main-navigation__dropdown-line-height;
+        }
+
+
+            a {
+                position: relative;
+                display: block;
+                padding: mvl-px-to-rem($mvl-main-navigation__dropdown-padding--vertical) mvl-px-to-rem($mvl-gutter-width);
+                transition: color $mvl-default-transition__duration $mvl-default-transition__timing-function, background-color $mvl-default-transition__duration $mvl-default-transition__timing-function;
+                color: $mvl-main-navigation__menu-bar-link-color--with-header;
+
+                &:visited {
+                    color: $mvl-main-navigation__menu-bar-link-color--with-header;
+                }
+
+                &:hover,
+                &:focus {
+                    color: $mvl-main-navigation__menu-bar-link-hover-color--with-header;
+                    background-color: $mvl-main-navigation__accodrion-background-hover-color--level-1;
+                }
+            }
+
+            & > li:hover > a {
+                color: $mvl-main-navigation__menu-bar-link-hover-color--with-header;
+                background-color: $mvl-main-navigation__accodrion-background-hover-color--level-1;
+            }
+
+            .current {
+                a {
+                    background-color: $mvl-main-navigation__background-color--current;
+
+                    &:hover,
+                    &:focus {
+                        background-color: $mvl-main-navigation__background-hover-color--current !important;
+                    }
+                }
+
+                &:hover > a {
+                    color: $mvl-main-navigation__menu-bar-link-hover-color--with-header;
+                    background-color: $mvl-main-navigation__background-hover-color--current !important;
+                }
+            }
+
+
+            ul {
+                list-style: none;
+                background-color: $mvl-main-navigation__accordion-background-color--level-2;
+                transition: $mvl-default-transition;
+
+
+                a:hover,
+                a:focus,
+                li:hover > a {
+                    color: $mvl-main-navigation__menu-bar-link-hover-color--with-header;
+                    background-color: $mvl-main-navigation__accodrion-background-hover-color--level-2;
+                }
+
+
+                ul {
+                    background-color: $mvl-main-navigation__accordion-background-color--level-3;
+
+
+                    a:hover,
+                    a:focus {
+                        background-color: $mvl-main-navigation__accodrion-background-hover-color--level-3;
+                    }
+                }
+            }
+    }
+}
+
+
+
+
+
+//------------------------------------------------------------------------------
+// Non-JavaScript menu for smaller screen sizes
+//------------------------------------------------------------------------------
+
+
+.main-navigation {
+    &__helpers {
+        display: none;
+    }
+
+    &__list {
+        ul {
+            a {
+                padding-left: mvl-px-to-rem($mvl-gutter-width * 2);
+            }
+
+            ul a {
+                padding-left: mvl-px-to-rem($mvl-gutter-width * 3);
+            }
+        }
+    }
+}
+
+
+
+
+
+//------------------------------------------------------------------------------
+// JavaScript extensions for smaller screen sizes
+// (accordion menu)
+//------------------------------------------------------------------------------
+
+
+/// Calculated height of navigation bar in px
+/// @access public
+/// @group Main navigation
+/// @type Number
+$mvl-main-navigation__bar-height: ($mvl-main-navigation__menu-bar-font-size * $mvl-main-navigation__menu-bar-line-height) + ($mvl-main-navigation__menu-bar-padding--vertical * 2);
+
+/// Calculated height of (wide) navigation bar logo for smaller screens in px
+/// @access public
+/// @group Main navigation
+/// @type Number
+$mvl-main-navigation__logo-wide-calculated-height: $mvl-main-navigation__bar-height - $mvl-gutter-width;
+
+/// Calculated width of (wide) navigation bar logo for smaller screens in px
+/// @access public
+/// @group Main navigation
+/// @type Number
+$mvl-main-navigation__logo-wide-calculated-width: $mvl-main-navigation__logo-wide-calculated-height * ($mvl-main-navigation__logo-wide-original-width / $mvl-main-navigation__logo-wide-original-height);
+
+/// Calculated height of navigation bar toggle icon for smaller screens in px
+/// @access public
+/// @group Main navigation
+/// @type Number
+$mvl-main-navigation__toggle-icon-calculated-height: mvl-strip-unit(floor(($mvl-main-navigation__bar-height - ($mvl-gutter-width * 2)) / 5)) * 5px;
+
+/// Calculated width of navigation bar toggle icon for smaller screens in px
+/// @access public
+/// @group Main navigation
+/// @type Number
+$mvl-main-navigation__toggle-icon-calculated-width: $mvl-main-navigation__toggle-icon-calculated-height * ($mvl-main-navigation__toggle-icon-original-width / $mvl-main-navigation__toggle-icon-original-height);
+
+
+/* Accordion functionality */
+
+.main-navigation__list {
+    .js & {
         position: absolute;
-        top: 0;
-        left: $mvl-gutter-width;
-        display: block;
-        width: mvl-px-to-rem(40px);
-        margin-right: mvl-px-to-rem(10px);
-        transition: all 0.15s linear;
+        z-index: 9999;
+        top: mvl-px-to-rem($mvl-main-navigation__bar-height);
+        left: 0;
+        overflow: hidden;
+        width: 100%;
+        height: 0;
         opacity: 0;
 
-        .scroll-to-fixed-fixed & {
-            transition: all 0.15s linear 0.15s;
-            opacity: 1;
+        ul {
+            overflow: hidden;
+            height: 0;
+            opacity: 0;
         }
     }
 
-
-    &__box {
-        @include mvl-clearfix;
-
-        margin: 0;
-        padding-bottom: 0 !important;
+    .js .show-submenu + &,
+    .show-submenu > ul {
+        overflow-x: visible;
+        overflow-y: auto;
+        height: auto;
+        opacity: 1;
     }
 
 
-        &__toggle {
-            .no-js & {
-                display: none;
-                visibility: hidden;
-            }
-
-            .js & {
-                @include mvl-font-size-line-height(20px);
-
-                position: relative;
-                display: block;
-                padding: mvl-px-to-rem(10px) mvl-px-to-rem($mvl-gutter-width);
-                transition: all 0.2s linear;
-                color: $mvl-color-black;
-                background-color: $mvl-color-brand-2-lighter;
-            }
-
-            .js .scroll-to-fixed-fixed & {
-                margin-left: mvl-px-to-rem(60px);
-                transition: all 0.15s linear;
-            }
-        }
-
-
-        &__list {
-            .js & {
-                position: absolute;
-                z-index: 9999;
-                overflow: hidden;
-                width: 1px;
-                height: 1px;
-                margin: -1px;
-                transition: opacity 0.2s linear;
-                opacity: 0;
-                box-shadow: 0 2px 5px -1px $mvl-color-drop-shadow;
-            }
-
-            .js .show-submenu + & {
-                left: 0;
-                overflow-x: visible;
-                overflow-y: auto;
-                width: 100%;
-                height: auto;
-                margin: 0;
-                opacity: 1;
-            }
-        }
-
-
-            /* 1st level and overall menu styles */
-
-            &__list li {
-                @include mvl-font-size-line-height(20px);
-
-                position: relative;
-                right: 0;
-                left: 0;
-                background-color: $mvl-color-brand-2-lighter;
-            }
-
-            &__list a {
-                position: relative;
-                display: block;
-                padding: mvl-px-to-rem(10px) mvl-px-to-rem($mvl-gutter-width);
-                transition: all 0.2s linear;
-                color: $mvl-color-black;
-            }
-
-            &__list li a:visited {
-                color: $mvl-color-black;
-            }
-
-            .js &__list .parent,
-            &__list .current {
-                background: $mvl-color-brand-2;
-            }
-
-            .js &__list li.show-submenu > a {
-                color: $mvl-color-white;
-                background: $mvl-color-brand-2-darker;
-            }
-
-            &__toggle,
-            .js &__list .has_children > a {
-                cursor: pointer;
-            }
-
-            .js &__toggle::after,
-            .js &__list .has_children > a::after {
-                font-size: 80%;
-                margin-left: mvl-px-to-rem(5px);
-                content: '▼';
-            }
-
-
-            /* 2nd level */
-
-            &__list ul a {
-                display: block;
-                position: relative;
-                right: 0;
-                left: 0;
-                padding-left: mvl-px-to-rem($mvl-gutter-width + $mvl-base-line-height);
-            }
-
-
-            /* 3rd level */
-
-            &__list ul ul a {
-                padding-left: mvl-px-to-rem($mvl-gutter-width + ($mvl-base-line-height * 2));
-            }
-
-
-            /* hide deeper levels */
-
-            &__list ul ul ul {
-                display: none;
-                visibility: hidden;
-            }
-
-
-            /* Accordion functionality */
-
-            .js &__list ul,
-            .js &__list ul ul {
-                overflow: hidden;
-                height: 0;
-                transition: opacity 0.2s linear;
-                opacity: 0;
-            }
-
-            &__list .show-submenu > ul,
-            &__list .show-submenu .show-submenu > ul {
-                overflow-x: visible;
-                overflow-y: auto;
-                height: auto;
-                opacity: 1;
-            }
-
-
-    @include mvl-respond-to('full-width') {
-        &__logo {
-            left: mvl-px-to-rem($mvl-gutter-width);
-        }
-
-
-        .js &__toggle {
+        ul ul ul {
             display: none;
             visibility: hidden;
         }
+}
 
 
-        &__list {
-            position: relative;
+/* Styling */
 
-            .js & {
-                position: relative;
-                overflow: visible;
-                width: 100%;
-                height: auto;
-                margin: 0;
-                transition: all 0.15s linear;
-                opacity: 1;
-                box-shadow: none;
-            }
+.main-navigation {
+    .js &__helpers {
+        display: block;
+        height: mvl-px-to-rem($mvl-main-navigation__bar-height);
+    }
+
+
+        &__logo-link {
+            display: block;
+            float: left;
+            overflow: hidden;
+            width: 0;
+            transition: opacity $mvl-default-transition__duration $mvl-default-transition__timing-function;
+            opacity: 0;
 
             .scroll-to-fixed-fixed & {
-                margin-left: mvl-px-to-rem(72px);
-                transition: all 0.15s linear;
+                overflow: auto;
+                width: auto;
+                padding: mvl-px-to-rem($mvl-gutter-width / 2) mvl-px-to-rem($mvl-gutter-width);
+                opacity: 1;
             }
         }
 
 
-            /* 1st level (horizontal) and overall menu styles */
-
-            &__list li {
-                display: inline;
-                float: left;
-            }
-
-            &__list .parent {
-                background: $mvl-color-brand-2;
-            }
-
-            &__list li a:hover,
-            .no-js &__list li:hover > a {
-                color: $mvl-color-white;
-                background: $mvl-color-brand-2-darker;
-            }
-
-            .no-js 6__list > .has_children > a::after {
-                font-size: 80%;
-                margin-left: mvl-px-to-rem(5px);
-                content: "▼";
-            }
-
-
-            /* 2nd level (dropdown) */
-
-            .js &__list ul {
+            &__logo--wide {
                 display: block;
+                width: mvl-px-to-rem($mvl-main-navigation__logo-wide-calculated-width);
+                height: mvl-px-to-rem($mvl-main-navigation__logo-wide-calculated-height);
+                transition: fill $mvl-default-transition__duration $mvl-default-transition__timing-function;
+                fill: $mvl-main-navigation__menu-bar-link-color--without-header;
+
+                &:hover,
+                &:focus {
+                    fill: $mvl-main-navigation__menu-bar-link-hover-color--without-header;
+                }
+
+                @include mvl-respond-to('main-content-width') {
+                    fill: $mvl-color__brand-1--darker;
+
+                    &:hover,
+                    &:focus {
+                        fill: $mvl-color__brand-1;
+                    }
+                }
             }
 
-            .no-js &__list li:hover > ul,
-            .js &__list li.show-submenu > ul {
-                overflow: visible;
-                width: mvl-px-to-rem($mvl-dropdown-menu-width);
-                height: auto;
-                margin: 0;
-                opacity: 1;
-            }
-
-            &__list ul {
-                position: absolute;
-                z-index: 9999;
-                overflow: hidden;
-                width: 1px;
-                height: 1px;
-                margin: -1px;
-                transition: opacity 0.2s linear;
-                opacity: 0;
-                border: 0;
-                background: $mvl-color-brand-2-lighter;
-                box-shadow: 0 2px 5px -1px $mvl-color-drop-shadow;
-            }
-
-            &__list ul li {
-                clear: both;
-                width: 100%;
-            }
-
-            &__list ul li a {
-                padding: mvl-px-to-rem(10px) mvl-px-to-rem(37px) mvl-px-to-rem(10px) mvl-px-to-rem($mvl-gutter-width);
-            }
-
-            &__list ul > .has_children > a::after,
-            .js &__list ul > .has_children > a::after {
-                font-size: 80%;
-                position: absolute;
-                top: mvl-px-to-rem(13px);
-                right: mvl-px-to-rem(10px);
-                content: "►";
+            &__logo--narrow {
+                display: none;
             }
 
 
-            /* 3rd level (flyout) */
+        &__toggle {
+            float: right;
+            width: mvl-px-to-rem($mvl-main-navigation__toggle-icon-calculated-width + ($mvl-gutter-width * 2));
+            height: mvl-px-to-rem($mvl-main-navigation__bar-height);
+            padding: mvl-px-to-rem(($mvl-main-navigation__bar-height - $mvl-main-navigation__toggle-icon-calculated-height) / 2) mvl-px-to-rem($mvl-gutter-width);
+            transition: background-color $mvl-default-transition__duration $mvl-default-transition__timing-function;
 
-            &__list ul ul {
-                top: 0;
-                left: mvl-px-to-rem($mvl-dropdown-menu-width);
+            &:hover,
+            &:focus,
+            .show-submenu & {
+                cursor: pointer;
+                background-color: $mvl-main-navigation__menu-bar-background-hover-color--without-header;
             }
 
-            &__list ul ul li a {
-                padding-right: mvl-px-to-rem(10px);
+            @include mvl-respond-to('main-content-width') {
+                &:hover,
+                &:focus,
+                .show-submenu & {
+                    background-color: $mvl-main-navigation__menu-bar-background-hover-color--with-header;
+                }
+            }
+
+
+            &-icon {
+                display: block;
+                width: mvl-px-to-rem($mvl-main-navigation__toggle-icon-calculated-width);
+                height: mvl-px-to-rem($mvl-main-navigation__toggle-icon-calculated-height);
+                transition: fill $mvl-default-transition__duration $mvl-default-transition__timing-function;
+                fill: $mvl-main-navigation__menu-bar-link-color--without-header;
+
+                .main-navigation__toggle:hover &,
+                .main-navigation__toggle:focus &,
+                .show-submenu & {
+                    fill: $mvl-main-navigation__menu-bar-link-hover-color--without-header;
+                }
+
+                @include mvl-respond-to('main-content-width') {
+                    fill: $mvl-main-navigation__menu-bar-link-color--with-header;
+
+                    .main-navigation__toggle:hover &,
+                    .main-navigation__toggle:focus &,
+                    .show-submenu & {
+                        fill: $mvl-main-navigation__menu-bar-link-hover-color--with-header;
+                    }
+                }
+            }
+        }
+
+
+    &__list {
+        .js & {
+            box-shadow: 0 2px 5px -1px $mvl-color__drop-shadow;
+
+            .has-children {
+                & > a {
+                    cursor: pointer;
+
+                    &::after {
+                        @include mvl-main-navigation__arrow--down;
+                    }
+                }
+            }
+
+
+            .parent {
+                & > a {
+                    background-color: $mvl-main-navigation__background-color--current;
+
+                    &:hover,
+                    &:focus {
+                        background-color: $mvl-main-navigation__background-hover-color--current;
+                    }
+                }
+
+                &.show-submenu > a {
+                    background-color: $mvl-main-navigation__background-hover-color--current;
+                }
+            }
+        }
+
+
+        .show-submenu > a {
+            color: $mvl-main-navigation__menu-bar-link-hover-color--with-header;
+            background-color: $mvl-main-navigation__accodrion-background-hover-color--level-1;
+        }
+
+
+        ul .show-submenu > a {
+            background-color: $mvl-main-navigation__accodrion-background-hover-color--level-2;
+        }
+    }
+}
+
+
+
+
+
+//------------------------------------------------------------------------------
+// Overall dropdown menu styling
+//------------------------------------------------------------------------------
+
+
+.main-navigation__list {
+    @include mvl-respond-to('full-width') {
+        display: flex;
+        background-color: $mvl-main-navigation__menu-bar-background-color--with-header;
+
+
+        & > li {
+            font-size: mvl-px-to-rem($mvl-main-navigation__menu-bar-font-size);
+            line-height: $mvl-main-navigation__menu-bar-line-height;
+            flex-grow: 1;
+            text-align: center;
+
+
+            & > a:hover,
+            & > a:focus,
+            &:hover > a,
+            .js &.show-submenu > a {
+                background-color: $mvl-main-navigation__menu-bar-background-hover-color--with-header;
+            }
+        }
+
+
+            & > .has-children > a::after {
+                @include mvl-main-navigation__arrow--down;
+            }
+
+
+        .parent {
+            & > a {
+                background-color: $mvl-main-navigation__background-color--current;
+
+                &:hover,
+                &:focus {
+                    background-color: $mvl-main-navigation__background-hover-color--current;
+                }
+            }
+
+            &:hover > a {
+                background-color: $mvl-main-navigation__background-hover-color--current;
+            }
+        }
+
+
+        ul {
+            box-shadow: 0 2px 5px -1px $mvl-color__drop-shadow;
+
+
+            li {
+                text-align: left;
+                background-color: $mvl-main-navigation__dropdown-background-color--level-2;
+
+
+                a {
+                    padding-left: mvl-px-to-rem($mvl-gutter-width);
+
+                    &:hover,
+                    &:focus {
+                        background-color: $mvl-main-navigation__dropdown-background-hover-color--level-2;
+                    }
+                }
+
+                &:hover > a,
+                .js &.show-submenu > a {
+                    background-color: $mvl-main-navigation__dropdown-background-hover-color--level-2;
+                }
+
+
+                li {
+                    background-color: $mvl-main-navigation__dropdown-background-color--level-3;
+
+                    a:hover,
+                    a:focus {
+                        background-color: $mvl-main-navigation__dropdown-background-hover-color--level-3;
+                    }
+                }
+            }
+
+
+            .has-children > a::after {
+                @include mvl-main-navigation__arrow--right;
+            }
+        }
+    }
+}
+
+
+
+
+
+//------------------------------------------------------------------------------
+// Dropdown menu mixins for bigger screen sizes
+//------------------------------------------------------------------------------
+
+
+@mixin mvl-main-navigation__show-dropdown {
+    z-index: 9999;
+    overflow: visible;
+    opacity: 1;
+}
+
+
+
+//------------------------------------------------------------------------------
+// Non-JavaScript dropdown menu for bigger screen sizes
+//------------------------------------------------------------------------------
+
+
+/* Dropdown functionality */
+
+.main-navigation__list {
+    @include mvl-respond-to('full-width') {
+        ul {
+            position: absolute;
+            z-index: -1;
+            width: mvl-px-to-rem($mvl-main-navigation__dropdown-menu-width);
+            opacity: 0;
+
+
+            li {
+                position: relative;
+            }
+
+
+                ul {
+                    top: 0;
+                    left: mvl-px-to-rem($mvl-main-navigation__dropdown-menu-width);
+                }
+        }
+
+
+        .no-js & li:hover > ul {
+            @include mvl-main-navigation__show-dropdown;
+        }
+    }
+}
+
+
+
+
+
+//------------------------------------------------------------------------------
+// JavaScript extensions for bigger screen sizes
+// (dropdown menu)
+//------------------------------------------------------------------------------
+
+
+/// Calculated height of (narrow) navigation bar logo for smaller screens in px
+/// @access public
+/// @group Main navigation
+/// @type Number
+$mvl-main-navigation__logo-narrow-calculated-height: $mvl-main-navigation__bar-height - $mvl-gutter-width;
+
+/// Calculated width of (narrow) navigation bar logo for smaller screens in px
+/// @access public
+/// @group Main navigation
+/// @type Number
+$mvl-main-navigation__logo-narrow-calculated-width: $mvl-main-navigation__logo-narrow-calculated-height * ($mvl-main-navigation__logo-narrow-original-width / $mvl-main-navigation__logo-narrow-original-height);
+
+
+/* Dropdown functionality */
+
+.main-navigation__list {
+    @include mvl-respond-to('full-width') {
+        .js & {
+            position: static;
+            z-index: auto;
+            overflow-x: visible;
+            overflow-y: auto;
+            height: auto;
+            opacity: 1;
+
+
+            & .show-submenu > ul {
+                @include mvl-main-navigation__show-dropdown;
+            }
+        }
+    }
+}
+
+
+/* Styling */
+
+.main-navigation {
+    @include mvl-respond-to('full-width') {
+        .js &__box {
+            display: flex;
+        }
+
+
+            &__helpers {
+                .js & {
+                    width: 0;
+                    transition: width $mvl-default-transition__duration $mvl-default-transition__timing-function;
+                }
+
+                .scroll-to-fixed-fixed & {
+                    width: mvl-px-to-rem(($mvl-gutter-width * 2) + $mvl-main-navigation__logo-narrow-calculated-width);
+                }
+            }
+
+
+                .js &__logo--wide {
+                    display: none;
+                }
+
+
+                &__logo--narrow {
+                    .js & {
+                        display: block;
+                        width: mvl-px-to-rem($mvl-main-navigation__logo-narrow-calculated-width);
+                        height: mvl-px-to-rem($mvl-main-navigation__logo-narrow-calculated-height);
+                        transition: fill $mvl-default-transition__duration $mvl-default-transition__timing-function, opacity $mvl-default-transition__duration $mvl-default-transition__timing-function 0s;
+                        color: $mvl-color__white;
+                        fill: $mvl-color__brand-1--darker;
+                        opacity: 0;
+                    }
+
+                    a:hover & {
+                        fill: $mvl-color__brand-1;
+                    }
+
+                    .scroll-to-fixed-fixed & {
+                        opacity: 1;
+                        transition: fill $mvl-default-transition__duration $mvl-default-transition__timing-function, opacity $mvl-default-transition__duration $mvl-default-transition__timing-function 0.2s;
+                    }
+                }
+
+
+                .js &__toggle {
+                    display: none;
+                    visibility: hidden;
+                }
+
+
+            .js &__list {
+                flex-grow: 1;
+                box-shadow: none;
+
+
+                ul .has-children > a::after {
+                    @include mvl-main-navigation__arrow--right;
+                }
             }
     }
+}
 
+
+
+
+
+//------------------------------------------------------------------------------
+// Print styles
+//------------------------------------------------------------------------------
+
+
+.main-navigation {
     @media print {
         display: none;
     }

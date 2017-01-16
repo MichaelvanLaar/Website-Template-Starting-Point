@@ -1,6 +1,6 @@
-// -----------------------------------------------------------------------------
+//==============================================================================
 // Page header
-// -----------------------------------------------------------------------------
+//==============================================================================
 
 
 
@@ -9,7 +9,15 @@
 .page-header {
     @include mvl-clearfix;
 
-    background-color: $mvl-color-brand-1-darkest;
+    background-color: $mvl-color__brand-1--darkest;
+
+    .js & {
+        display: none;
+
+        @include mvl-respond-to('main-content-width') {
+            display: block;
+        }
+    }
 
 
     &__box {
@@ -40,12 +48,12 @@
                 left: 0;
                 width: 100%;
                 height: 100%;
-                fill: $mvl-color-white;
-                transition: all 0.15s linear;
+                transition: fill $mvl-default-transition__duration $mvl-default-transition__timing-function;
+                fill: $mvl-color__white;
 
                 &:hover,
                 &:focus {
-                    fill: $mvl-color-brand-1-lightest;
+                    fill: $mvl-color__brand-1--lightest;
                 }
             }
 }

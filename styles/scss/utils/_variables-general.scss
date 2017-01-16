@@ -1,6 +1,6 @@
-// -----------------------------------------------------------------------------
+//==============================================================================
 // General variables
-// -----------------------------------------------------------------------------
+//==============================================================================
 
 
 
@@ -18,14 +18,14 @@ $support-for: (
 
 
 
-// -----------------------------------------------------------------------------
+//------------------------------------------------------------------------------
 // Layout and media queries
-// -----------------------------------------------------------------------------
+//------------------------------------------------------------------------------
 
 
 /// Named breakpoints for media queries
 /// @access public
-/// @group layout
+/// @group Layout
 /// @type Map
 $mvl-breakpoints: (
     'main-content-width': (min-width: 592px),
@@ -43,13 +43,13 @@ $mvl-breakpoints: (
 
 /// Width (in px) of one column of the 12-column layout grid
 /// @access public
-/// @group layout
+/// @group Layout
 /// @type Number
 $mvl-column-width: 56px;
 
 /// Width (in px) of the gutter between columns of the 12-column layout grid
 /// @access public
-/// @group layout
+/// @group Layout
 /// @type Number
 $mvl-gutter-width: 16px;
 
@@ -57,37 +57,68 @@ $mvl-gutter-width: 16px;
 
 
 
-// -----------------------------------------------------------------------------
+//------------------------------------------------------------------------------
 // Fonts
-// -----------------------------------------------------------------------------
+//------------------------------------------------------------------------------
 
 
 /// Font size (in px) for basic copy text on screen
 /// @access public
-/// @group typography
+/// @group Typography
 /// @type number
-$mvl-base-font-size-screen: 16px;
+$mvl-base-font-size--screen: 16px;
 
 /// Font size (in pt) for basic copy text on printouts
 /// @access public
-/// @group typography
+/// @group Typography
 /// @type number
-$mvl-base-font-size-print: 12pt;
+$mvl-base-font-size--print: 12pt;
+
 
 /// Line height (in px) for basic copy text
 /// @access public
-/// @group typography
+/// @group Typography
 /// @type number
 $mvl-base-line-height: 25px;
 
+
 /// Regular font family
 /// @access public
-/// @group typography
+/// @group Typography
 /// @type list
-$mvl-text-font-stack: 'Arial', 'Helvetica', sans-serif !default;
+$mvl-font-stack--text: 'Arial', 'Helvetica', sans-serif !default;
 
 /// Code (monospace) font family
 /// @access public
-/// @group typography
+/// @group Typography
 /// @type list
-$mvl-code-font-stack: 'Lucida Console', 'Courier New', 'Courier', monospace !default;
+$mvl-font-stack--code: 'Lucida Console', 'Courier New', 'Courier', monospace !default;
+
+
+
+
+
+//------------------------------------------------------------------------------
+// Transitions
+//------------------------------------------------------------------------------
+
+
+/// Default transition duration
+/// @access public
+/// @group Typography
+/// @type number
+$mvl-default-transition__duration: 0.2s;
+
+
+/// Default transition timing function
+/// @access public
+/// @group Typography
+/// @type number
+$mvl-default-transition__timing-function: ease-out;
+
+
+/// Default transition (all properties)
+/// @access public
+/// @group Typography
+/// @type number
+$mvl-default-transition: all $mvl-default-transition__duration $mvl-default-transition__timing-function;

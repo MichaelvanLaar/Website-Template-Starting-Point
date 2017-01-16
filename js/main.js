@@ -8,7 +8,7 @@
  * ==========================================================================
  *
  * Cache some repetedly used elements
- * Ajax for SVG incons and inject them onto the page
+ * Ajax for the SVG icons sprite
  * Menu (accordion menu or dropdown menu, according to screen size)
  * ScrollToFixed application
  * Cookie information banner
@@ -23,33 +23,33 @@
    Cache some repeatedly used elements
    ========================================================================== */
 
-var mvl_main_navigation         = $('.js-main-navigation');
-var mvl_main_navigation__box    = $('.js-main-navigation__box');
-var mvl_main_navigation__toggle = $('.js-main-navigation__toggle');
-var mvl_main_navigation__list   = $('.js-main-navigation__list');
-var mvl_dropdown_toggles        = mvl_main_navigation__list.find('.has_children');
-var mvl_dropdown_toggles__a     = mvl_dropdown_toggles.children('a');
-var mvl_page_footer             = $('.js-page-footer');
+var mvl_main_navigation          = $('.js-main-navigation');
+var mvl_main_navigation__box     = $('.js-main-navigation__box');
+var mvl_main_navigation__helpers = $('.js-main-navigation__helpers');
+var mvl_main_navigation__toggle  = $('.js-main-navigation__toggle');
+var mvl_main_navigation__list    = $('.js-main-navigation__list');
+var mvl_dropdown_toggles         = mvl_main_navigation__list.find('.has-children');
+var mvl_dropdown_toggles__a      = mvl_dropdown_toggles.children('a');
+var mvl_page_footer              = $('.js-page-footer');
 
 
 
 
 
 /* ==========================================================================
-   Ajax for SVG incons and inject them onto the page
+   Ajax for the SVG icons sprite
    https://css-tricks.com/ajaxing-svg-sprite/
    ========================================================================== */
 
 
-$(document).ready(function() {
-    // TO DO: Change icon.svg’s path to a root-relative link, depending on your
-    //        server’s directory structure.
-    $.get("images/icons.svg", function(data) {
-      var mvl_div = document.createElement('div');
-      mvl_div.innerHTML = new XMLSerializer().serializeToString(data.documentElement);
-      document.body.insertBefore(mvl_div, document.body.childNodes[0]);
-    });
-});
+var ajax = new XMLHttpRequest();
+ajax.open("GET", "images/icons.svg", true);
+ajax.send();
+ajax.onload = function(e) {
+  var div = document.createElement("div");
+  div.innerHTML = ajax.responseText;
+  document.body.insertBefore(div, document.body.childNodes[0]);
+}
 
 
 
@@ -68,19 +68,19 @@ $(document).ready(function() {
         $(this).attr('data-target', mvl_dropdown_toggle__href).removeAttr('href');
     });
 
-    // add functionality to "Navigtion" button which reveals the accordion menu
+    // add functionality to toggle icon which reveals the accordion menu
     mvl_main_navigation__toggle.click(function() {
-        mvl_main_navigation__toggle.toggleClass('show-submenu');
+        mvl_main_navigation__helpers.toggleClass('show-submenu');
         mvl_dropdown_toggles.removeClass('show-submenu'); // hide all "inner" accordion submenus
     });
 
     // accordion resp. dropdown functionality
     mvl_dropdown_toggles__a.click(function() {
-        var mvl_dropdown_toggle = $(this).parent('li'); // the <li class="has_children"> which is a direct parent of the clicked <a href="…">
+        var mvl_dropdown_toggle = $(this).parent('li'); // the <li class="has-children"> which is a direct parent of the clicked <a href="…">
         mvl_dropdown_toggle.toggleClass('show-submenu'); // show resp. hide clicked dropdown menu
         mvl_dropdown_toggle
                 .siblings('.show-submenu')
-                .removeClass('show-submenu'); // hide all dropdown menus below all siblings of the <li class="has_children"> which is a direct parent of the clicked <a href="…">
+                .removeClass('show-submenu'); // hide all dropdown menus below all siblings of the <li class="has-children"> which is a direct parent of the clicked <a href="…">
         mvl_dropdown_toggle
                 .find('.show-submenu')
                 .removeClass('show-submenu'); // hide all dropdown menus below clicked <a href="…">
@@ -91,9 +91,9 @@ $(document).ready(function() {
 // accordion menu for smaller screen sizes
 enquire.register('screen and (max-width: 1019px)', {
     match: function() {
-        mvl_main_navigation__list.css('max-height', $(window).height() - $(mvl_main_navigation__toggle).outerHeight()); // max height for dropped down menu
+        mvl_main_navigation__list.css('max-height', $(window).height() - $(mvl_main_navigation__helpers).outerHeight()); // max height for dropped down menu
         mvl_main_navigation.bind('clickoutside', function() {
-            mvl_main_navigation__toggle.removeClass('show-submenu'); // hide accordion menus when the user clicks anywhere outside the menu area
+            mvl_main_navigation__helpers.removeClass('show-submenu'); // hide accordion menus when the user clicks anywhere outside the menu area
             mvl_dropdown_toggles.removeClass('show-submenu'); // hide all dropdown menus when the user clicks anywhere outside the menu area
         });
     },

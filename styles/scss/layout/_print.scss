@@ -1,6 +1,6 @@
-// -----------------------------------------------------------------------------
+//==============================================================================
 // Print styles
-// -----------------------------------------------------------------------------
+//==============================================================================
 
 
 
@@ -16,7 +16,7 @@
 
 .print-links-footer {
     padding: 0 1.25rem;
-    border: 1pt solid $mvl-color-black;
+    border: 1pt solid $mvl-color__black;
     page-break-inside: avoid;
 
     h3 {
@@ -34,7 +34,7 @@
     *,
     *::before,
     *::after {
-        color: $mvl-color-black !important;
+        color: $mvl-color__black !important;
         background: transparent !important;
         box-shadow: none !important;
         text-shadow: none !important;

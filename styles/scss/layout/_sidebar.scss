@@ -1,6 +1,6 @@
-// -----------------------------------------------------------------------------
+//==============================================================================
 // Sidebar
-// -----------------------------------------------------------------------------
+//==============================================================================
 
 
 
@@ -13,7 +13,7 @@
     margin-left: mvl-px-to-rem($mvl-gutter-width);
     padding-top: mvl-px-to-rem($mvl-base-line-height);
     padding-bottom: mvl-px-to-rem($mvl-base-line-height);
-    border-top: 1px solid $mvl-color-brand-2;
+    border-top: 1px solid $mvl-color__brand-2;
 
     @include mvl-respond-to('full-width') {
         width: mvl-px-to-rem(($mvl-column-width * 3) + ($mvl-gutter-width * 2));
