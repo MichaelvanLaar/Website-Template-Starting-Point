@@ -26,6 +26,11 @@
 ///       /* media query specific CSS rules */
 ///   }
 @mixin mvl-respond-to($breakpoint) {
+    $mvl-breakpoints: (
+        'main-content-width': (min-width: 592px),
+        'full-width': (min-width: 1020px),
+    ) !default;
+
     $raw-query: map-get($mvl-breakpoints, $breakpoint);
 
     @if $raw-query {
@@ -60,6 +65,9 @@
     @if unit($font-size) != 'px' {
         @error "mvl-font-size-line-height only supports px inputs.";
     }
+
+    $mvl-base-font-size--screen: 16px !default;
+    $mvl-base-line-height: 25px !default;
     $lines: ceil($font-size / $mvl-base-line-height);
 
     font-size: #{($font-size / $mvl-base-font-size--screen)}rem;

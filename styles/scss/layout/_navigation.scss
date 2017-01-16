@@ -51,78 +51,78 @@ $mvl-main-navigation__menu-bar-background-hover-color--with-header: $mvl-color__
 /// @access public
 /// @group Main navigation
 /// @type Color
-$mvl-main-navigation__accordion-background-color--level-1: #f00;
+$mvl-main-navigation__accordion-background-color--level-1: $mvl-color__brand-2;
 
 /// Background hover color of 1st fold-out level of main navigation
 /// @access public
 /// @group Main navigation
 /// @type Color
-$mvl-main-navigation__accodrion-background-hover-color--level-1: mvl-tint(#f00, 30%);
+$mvl-main-navigation__accodrion-background-hover-color--level-1: mix($mvl-color__brand-2, $mvl-color__brand-2--lighter, 50%);
 
 
 /// Background color of 2nd fold-out level of main navigation
 /// @access public
 /// @group Main navigation
 /// @type Color
-$mvl-main-navigation__accordion-background-color--level-2: #0f0;
+$mvl-main-navigation__accordion-background-color--level-2: $mvl-color__brand-2--lighter;
 
 /// Background hover color of 2nd fold-out level of main navigation
 /// @access public
 /// @group Main navigation
 /// @type Color
-$mvl-main-navigation__accodrion-background-hover-color--level-2: mvl-tint(#0f0, 50%);
+$mvl-main-navigation__accodrion-background-hover-color--level-2: mix($mvl-color__brand-2--lighter, $mvl-color__brand-2--lightest, 50%);
 
 
 /// Background color of 3rd fold-out level of main navigation
 /// @access public
 /// @group Main navigation
 /// @type Color
-$mvl-main-navigation__accordion-background-color--level-3: #00f;
+$mvl-main-navigation__accordion-background-color--level-3: $mvl-color__brand-2--lightest;
 
 /// Background hover color of 3rd fold-out level of main navigation
 /// @access public
 /// @group Main navigation
 /// @type Color
-$mvl-main-navigation__accodrion-background-hover-color--level-3: mvl-tint(#00f, 50%);
+$mvl-main-navigation__accodrion-background-hover-color--level-3: mix($mvl-color__brand-2--lightest, $mvl-color__white, 50%);
 
 
 /// Background color of 1st dropdown level (= navigation level 2) of main navigation
 /// @access public
 /// @group Main navigation
 /// @type Color
-$mvl-main-navigation__dropdown-background-color--level-2: $mvl-main-navigation__accordion-background-color--level-1;
+$mvl-main-navigation__dropdown-background-color--level-2: $mvl-main-navigation__menu-bar-background-hover-color--with-header;
 
 /// Background hover color of 1st dropdown level (= navigation level 2) of main navigation
 /// @access public
 /// @group Main navigation
 /// @type Color
-$mvl-main-navigation__dropdown-background-hover-color--level-2: $mvl-main-navigation__accodrion-background-hover-color--level-1;
+$mvl-main-navigation__dropdown-background-hover-color--level-2: mix($mvl-main-navigation__menu-bar-background-hover-color--with-header, $mvl-color__white, 50%);
 
 
 /// Background color of 2nd dropdown level (= navigation level 3) of main navigation
 /// @access public
 /// @group Main navigation
 /// @type Color
-$mvl-main-navigation__dropdown-background-color--level-3: $mvl-main-navigation__accordion-background-color--level-2;
+$mvl-main-navigation__dropdown-background-color--level-3: $mvl-main-navigation__dropdown-background-color--level-2;
 
 /// Background hover color of 2nd dropdown level (= navigation level 3) of main navigation
 /// @access public
 /// @group Main navigation
 /// @type Color
-$mvl-main-navigation__dropdown-background-hover-color--level-3: $mvl-main-navigation__accodrion-background-hover-color--level-2;
+$mvl-main-navigation__dropdown-background-hover-color--level-3: $mvl-main-navigation__dropdown-background-hover-color--level-2;
 
 
 /// Background color of current menu item (and its parents) of main navigation
 /// @access public
 /// @group Main navigation
 /// @type Color
-$mvl-main-navigation__background-color--current: #0ff;
+$mvl-main-navigation__background-color--current: $mvl-color__brand-1--lighter;
 
 /// Background hover color of current menu item (and its parents) of main navigation
 /// @access public
 /// @group Main navigation
 /// @type Color
-$mvl-main-navigation__background-hover-color--current: mvl-tint(#0ff, 50%);
+$mvl-main-navigation__background-hover-color--current: $mvl-color__brand-1--lightest;
 
 
 /// Link color of main navigation – for (mobile) view without header
@@ -874,7 +874,7 @@ $mvl-main-navigation__logo-narrow-calculated-width: $mvl-main-navigation__logo-n
 
                     .scroll-to-fixed-fixed & {
                         opacity: 1;
-                        transition: fill $mvl-default-transition__duration $mvl-default-transition__timing-function, opacity $mvl-default-transition__duration $mvl-default-transition__timing-function 0.2s;
+                        transition: fill $mvl-default-transition__duration $mvl-default-transition__timing-function, opacity $mvl-default-transition__duration $mvl-default-transition__timing-function $mvl-default-transition__duration;
                     }
                 }
 
