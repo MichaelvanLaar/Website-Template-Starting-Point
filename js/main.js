@@ -13,7 +13,6 @@
  * ScrollToFixed application
  * Cookie information banner
  * Add “rel='noopener'” to all links with “target='_blank'” for more security
- * Sisyphus initialisation
  */
 
 
@@ -195,19 +194,4 @@ $(window).resize(function() {
 
 $(document).ready(function() {
     $('a[target="_blank"]:not([rel="noopener"])').attr('rel','noopener');
-});
-
-
-
-
-
-/* ==========================================================================
-   Sisyphus initialisation
-   ========================================================================== */
-
-
-$(document).ready(function() {
-    if ($('form').length > 0) {
-        $('form').sisyphus();
-    }
 });
