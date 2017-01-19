@@ -1,28 +1,28 @@
-// -----------------------------------------------------------------------------
+//==============================================================================
 // Base styles
-// -----------------------------------------------------------------------------
+//==============================================================================
 
 
 
 
 
 html {
-    font-size: $mvl-base-font-size-screen;
-    line-height: ($mvl-base-line-height / $mvl-base-font-size-screen);
+    font-size: $mvl-base-font-size--screen;
+    line-height: ($mvl-base-line-height / $mvl-base-font-size--screen);
     overflow-y: scroll;
     box-sizing: border-box;
 
     @media print {
-        font-size: $mvl-base-font-size-print;
+        font-size: $mvl-base-font-size--print;
     }
 }
 
 
-/* Allow components to change to other box-sizing models if necessary */
 *,
 *::before,
 *::after {
-    box-sizing: inherit;
+    box-sizing: inherit; // Allow components to change to other box-sizing models if necessary
+    //transition: $mvl-default-transition;
 }
 
 
@@ -31,19 +31,19 @@ button,
 input,
 select,
 textarea {
-    color: $mvl-color-text-default;
+    color: $mvl-color__default-text;
 }
 
 
 body {
-    font-family: $mvl-text-font-stack;
+    font-family: $mvl-font-stack--text;
 }
 
 
-/* Change the selection background color to fit with the used color scheme */
+// Change the selection background color to fit with the used color scheme
 ::selection {
-    color: $mvl-color-white;
-    background: $mvl-color-brand-1-lighter;
+    color: $mvl-color__white;
+    background: $mvl-color__brand-1--lighter;
     text-shadow: none;
 }
 
@@ -54,7 +54,7 @@ hr {
     margin: mvl-px-to-rem($mvl-base-line-height) 0;
     padding: 0;
     border: 0;
-    border-top: 1px solid $mvl-color-brand-2-lighter;
+    border-top: 1px solid $mvl-color__brand-2--lighter;
 }
 
 

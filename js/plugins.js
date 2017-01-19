@@ -10,13 +10,11 @@
  * JQUERY PLUGINS
  * Skiplink Focus Fix
  * Printed Footer Links
- * jQuery Placeholder Enhanced 1.6.9
- * Sisyphus 1.1.2
  * jQuery outside events 1.1
  * ScrollToFixed 1.0.6
  *
  * NON-JQUERY LIBS
- * JavaScript Cookie 2.1.0
+ * JavaScript Cookie 2.1.3
  * enquire.js 2.1.2
  */
 
@@ -138,897 +136,9 @@ $(document).ready(function() {
 
 
 /* ==========================================================================
-   jQuery Placeholder Enhanced 1.6.9 - jQuery Plugin
-   https://github.com/dciccale/placeholder-enhanced
-   ========================================================================== */
-
-(function($, doc) {
-
-    var PLUGIN_NAME = 'placeholderEnhanced';
-
-    // Check for support
-    var HAS_NATIVE_SUPPORT = 'placeholder' in doc.createElement('input') &&
-        'placeholder' in doc.createElement('textarea');
-
-    // Event namespaces
-    var EVENT = {
-        FOCUS: 'focus.placeholder',
-        BLUR: 'blur.placeholder'
-    };
-
-    /*
-     * Define defaults here as some options are needed before initialization
-     * it also merges with an options object when you call the plugin
-     */
-    var DEFAULTS = {
-        cssClass: 'placeholder',
-
-        /*
-         * Normalize behaviour & style across browsers
-         * (remove placeholder on focus, show on blur)
-         * if false, each browser wil handle behaviour & style natively
-         * i.e. in case of Chrome placeholder is still visible on focus
-         */
-        normalize: true
-    };
-
-    // Save original jQuery .val() function
-    var $val = $.fn.val;
-
-    // Checks if the node is valid to use with the fixed jQuery .val() function
-    var isValidNode = function(el) {
-        return ($.nodeName(el, 'input') || $.nodeName(el, 'textarea'));
-    };
-
-    // Copy attributes from a DOM node to a plain object to use later
-    var copyAttrs = function(el) {
-        var exclude = ['placeholder', 'name', 'id'];
-        var attrs = {};
-        var attr;
-
-        for (var i = 0, l = el.attributes.length; i < l; i++) {
-            attr = el.attributes[i];
-            if (attr.specified && $.inArray(attr.name, exclude) < 0) {
-                attrs[attr.name] = attr.value;
-            }
-        }
-
-        return attrs;
-    };
-
-    // Shows specified password input
-    var showInput = function($input) {
-        $input.css({
-            position: '',
-            left: ''
-        });
-    };
-
-    // Hides specified password input
-    var hideInput = function($input) {
-        $input.css({
-            position: 'absolute',
-            left: '-9999em'
-        });
-    };
-
-    // Don't do anything if there is native placeholder support and normalize mode is off by default
-    if (HAS_NATIVE_SUPPORT && !DEFAULTS.normalize) {
-        return;
-    }
-
-    /*
-     * Handle the use of jQuery .val(), if placeholder is not supported, the .val() function
-     * returns the placeholder value, wrap the val function to fix this, also useful when
-     * using .serialize() or any other jQuery method that uses .val()
-     */
-
-    // Fix .val() function for unsupported browsers
-    if (!HAS_NATIVE_SUPPORT) {
-        $.fn.val = function() {
-            var args = arguments;
-            var el = this[0];
-            var placeholderTxt;
-
-            if (!el) {
-                return;
-            }
-
-            // Handle .val()
-            if (!args.length) {
-                placeholderTxt = $(el).attr('placeholder');
-
-                // Handle get if the node has a placeholder
-                if (placeholderTxt && isValidNode(el)) {
-                    return (el.value === placeholderTxt ? '' : el.value);
-
-                    // No placeholder, call native
-                } else {
-                    return $val.apply(this, args);
-                }
-            }
-
-            // Handle .val(...)
-            return this.each(function(i, el) {
-                var $el = $(el);
-                var settings = $.data(el, PLUGIN_NAME);
-                var placeholderTxt = $el.attr('placeholder');
-
-                if (settings && placeholderTxt && isValidNode(el)) {
-
-                    // Handle .val(''), .val(null), .val(undefined)
-                    if (!args[0] && el.value !== placeholderTxt) {
-                        el.value = $el.addClass(settings.cssClass).attr('placeholder');
-
-                        // Handle .val('value')
-                    } else if (args[0]) {
-                        if ($el.hasClass(settings.cssClass)) {
-                            $el.removeClass(settings.cssClass);
-                        }
-                        $val.apply($el, args);
-                    }
-
-                } else {
-                    $val.apply($el, args);
-                }
-            });
-        };
-
-        // Fix .val() function for modern browsers when normalize mode is on
-    } else if (HAS_NATIVE_SUPPORT && DEFAULTS.normalize) {
-        $.fn.val = function() {
-            var args = arguments;
-            var el = this[0];
-
-            if (!el) {
-                return;
-            }
-
-            // Handle .val()
-            if (!args.length) {
-                return $val.apply(this, args);
-            }
-
-            // Handle .val(...)
-            return this.each(function(i, el) {
-                var $el = $(el);
-                var settings = $.data(el, PLUGIN_NAME);
-                var placeholderTxt = el._placeholder;
-
-                if (settings && placeholderTxt && isValidNode(el)) {
-
-                    // Handle .val(''), .val(null), .val(undefined)
-                    if (!args[0] && el.value !== placeholderTxt) {
-
-                        // Restore the placeholder
-                        $el.addClass(settings.cssClass).attr('placeholder', placeholderTxt);
-
-                        // Handle .val('value')
-                    } else if (args[0]) {
-                        if ($el.hasClass(settings.cssClass)) {
-                            $el.removeClass(settings.cssClass);
-                        }
-                    }
-                }
-
-                $val.apply($el, args);
-            });
-        };
-    }
-
-    // Placeholder Enhanced plugin
-    $.fn[PLUGIN_NAME] = function(options) {
-
-        // Merge passed options with defaults
-        var settings = $.extend(DEFAULTS, options);
-
-        // Don't do anything if empty set or if placeholder is supported but
-        // don't want to normalize modern browsers
-        if (!this.length || (HAS_NATIVE_SUPPORT && !settings.normalize)) {
-            return;
-        }
-
-        // Check if options param is destroy method
-        if (options === 'destroy') {
-
-            // Completely destroy the plugin
-            return this
-
-            // Get the elements where the plugin was initialized
-            .filter(function(i, el) {
-                return $.data(el, PLUGIN_NAME);
-            })
-
-            // Remove class
-            .removeClass(settings.cssClass)
-
-            // Clean other stuff
-            .each(function(i, el) {
-                var $el = $(el).unbind('.placeholder');
-                var isPassword = (el.type === 'password');
-                var placeholderTxt = $el.attr('placeholder');
-
-                // Do all this only for unsupported browsers
-                if (!HAS_NATIVE_SUPPORT) {
-                    if (el.value === placeholderTxt) {
-                        el.value = '';
-                    }
-
-                    // Remove fake password input
-                    if (isPassword) {
-                        showInput($el);
-                        $el.prev().unbind('.placeholder').remove();
-                    }
-
-                    // Delete backup prop
-                } else {
-                    delete el._placeholder;
-                }
-
-                // Restore original jQuery .val() function
-                $.fn.val = $val;
-
-                // Plugin off
-                $.removeData(el, PLUGIN_NAME);
-            });
-        }
-
-        return this.each(function(i, el) {
-
-            // Check if the plugin was already initialized for this element
-            if ($.data(el, PLUGIN_NAME)) {
-                return;
-            }
-
-            // Mark plugin as initialized for the current element at the begining to
-            // prevent multiple calls of the plugin for the same set of elements
-            $.data(el, PLUGIN_NAME, settings);
-
-            // jQuery object
-            var $el = $(el);
-
-            // Passwords have different treatment
-            var isPassword = (el.type === 'password');
-
-            // Current placeholder text
-            var placeholderTxt = $el.attr('placeholder');
-
-            // A fake input will be created for passwords
-            var fakePassw = null;
-
-            var setPlaceholder = null;
-            var removePlaceholder = null;
-
-            // Placeholder support for unsupported browsers
-            if (!HAS_NATIVE_SUPPORT) {
-
-                setPlaceholder = function() {
-
-                    // If there is no initial value or initial value is equal to the
-                    // placeholder (done in the $.fn.val wrapper) show the placeholder
-                    if (!$el.val()) {
-                        if (isPassword) {
-                            showInput(fakePassw);
-                            hideInput($el);
-                        } else {
-                            $el.val(placeholderTxt).addClass(settings.cssClass);
-                        }
-                    } else if ($el.val() && isPassword) {
-
-                        // If there is a value already, we want to remove the fake
-                        // placeholder. Otherwise, we'll have both the fake placeholder
-                        // and the actual input visible
-                        removePlaceholder();
-                    }
-                };
-
-                // Remove function for inputs and textareas
-                if (!isPassword) {
-
-                    removePlaceholder = function() {
-                        if ($el.hasClass(settings.cssClass)) {
-                            el.value = '';
-                            $el.removeClass(settings.cssClass);
-                        }
-                    };
-
-                    // And for password inputs
-                } else {
-
-                    removePlaceholder = function() {
-                        showInput($el);
-                        hideInput(fakePassw);
-                    };
-
-                    // Create a fake password input
-                    fakePassw = $('<input>', $.extend(copyAttrs(el), {
-                        'type': 'text',
-                        value: placeholderTxt,
-                        tabindex: -1 // Skip tabbing
-                    }))
-                        .addClass(settings.cssClass)
-
-                    // When focus, trigger real input focus
-                    .bind(EVENT.FOCUS, function() {
-                        $el.trigger(EVENT.FOCUS);
-                    })
-
-                    // Insert the fake input
-                    .insertBefore($el);
-                }
-
-                // Normalize placeholder behaviour and style in modern browsers if normalize mode is on
-            } else if (HAS_NATIVE_SUPPORT && settings.normalize) {
-
-                // Save the placeholder to restore it when needed
-                el._placeholder = $el.attr('placeholder');
-
-                setPlaceholder = function() {
-                    if (!el.value) {
-                        $el.addClass(settings.cssClass).attr('placeholder', placeholderTxt);
-                    }
-                };
-
-                removePlaceholder = function() {
-                    $el.removeAttr('placeholder').removeClass(settings.cssClass);
-                };
-
-            }
-
-            // Bind events and trigger blur the first time
-            $el
-                .bind(EVENT.BLUR, setPlaceholder)
-                .bind(EVENT.FOCUS, removePlaceholder)
-                .trigger(EVENT.BLUR);
-        });
-    };
-
-    // Auto-initialize the plugin
-    $(function() {
-        $('input[placeholder], textarea[placeholder]')[PLUGIN_NAME]();
-    });
-
-}(jQuery, document));
-
-
-
-
-
-/* ==========================================================================
-   Sisyphus 1.1.2 - jQuery Plugin
-   https://github.com/simsalabim/sisyphus
-   ========================================================================== */
-
-
-( function( $ ) {
-
-    $.fn.sisyphus = function( options ) {
-        var identifier = $.map( this, function( obj, i ) {
-            return $( obj ).attr( "id" ) + $( obj ).attr( "name" )
-        }).join();
-
-        var sisyphus = Sisyphus.getInstance( identifier );
-        sisyphus.protect( this, options );
-        return sisyphus;
-    };
-
-    var browserStorage = {};
-
-    /**
-     * Check if local storage or other browser storage is available
-     *
-     * @return Boolean
-     */
-    browserStorage.isAvailable = function() {
-        if ( typeof $.jStorage === "object" ) {
-            return true;
-        }
-        try {
-            return localStorage.getItem;
-        } catch ( e ) {
-            return false;
-        }
-    };
-
-    /**
-     * Set data to browser storage
-     *
-     * @param [String] key
-     * @param [String] value
-     *
-     * @return Boolean
-     */
-    browserStorage.set = function( key, value ) {
-        if ( typeof $.jStorage === "object" ) {
-            $.jStorage.set( key, value + "" );
-        } else {
-            try {
-                localStorage.setItem( key, value + "" );
-            } catch ( e ) {
-                //QUOTA_EXCEEDED_ERR
-            }
-        }
-    };
-
-    /**
-     * Get data from browser storage by specified key
-     *
-     * @param [String] key
-     *
-     * @return string
-     */
-    browserStorage.get = function( key ) {
-        if ( typeof $.jStorage === "object" ) {
-            var result = $.jStorage.get( key );
-            return result ? result.toString() : result;
-        } else {
-            return localStorage.getItem( key );
-        }
-    };
-
-    /**
-     * Delete data from browser storage by specified key
-     *
-     * @param [String] key
-     *
-     * @return void
-     */
-    browserStorage.remove = function( key ) {
-        if ( typeof $.jStorage === "object" ) {
-            $.jStorage.deleteKey( key );
-        } else {
-            localStorage.removeItem( key );
-        }
-    };
-
-    Sisyphus = ( function() {
-        var params = {
-            instantiated: [],
-            started: []
-        };
-
-        function init () {
-
-            return {
-                setInstanceIdentifier: function( identifier ) {
-                    this.identifier = identifier
-                },
-
-                getInstanceIdentifier: function() {
-                    return this.identifier;
-                },
-
-                /**
-                 * Set plugin initial options
-                 *
-                 * @param [Object] options
-                 *
-                 * @return void
-                 */
-                setInitialOptions: function ( options ) {
-                    var defaults = {
-                        excludeFields: [],
-                        customKeySuffix: "",
-                        locationBased: false,
-                        timeout: 0,
-                        autoRelease: true,
-                        onSave: function() {},
-                        onBeforeRestore: function() {},
-                        onRestore: function() {},
-                        onRelease: function() {}
-                    };
-                    this.options = this.options || $.extend( defaults, options );
-                    this.browserStorage = browserStorage;
-                },
-
-                /**
-                 * Set plugin options
-                 *
-                 * @param [Object] options
-                 *
-                 * @return void
-                 */
-                setOptions: function ( options ) {
-                    this.options = this.options || this.setInitialOptions( options );
-                    this.options = $.extend( this.options, options );
-                },
-
-                /**
-                 * Protect specified forms, store it's fields data to local storage and restore them on page load
-                 *
-                 * @param [Object] targets      forms object(s), result of jQuery selector
-                 * @param Object options            plugin options
-                 *
-                 * @return void
-                 */
-                protect: function( targets, options ) {
-                    this.setOptions( options );
-                    targets = targets || {};
-                    var self = this;
-                    this.targets = this.targets || [];
-                    if ( self.options.name ) {
-                        this.href = self.options.name
-                    } else {
-                        this.href = location.hostname + location.pathname + location.search + location.hash;
-                    }
-                    this.targets = $.merge( this.targets, targets );
-                    this.targets = $.unique( this.targets );
-                    this.targets = $( this.targets );
-                    if ( ! this.browserStorage.isAvailable() ) {
-                        return false;
-                    }
-
-                    var callback_result = self.options.onBeforeRestore.call( self );
-                    if ( callback_result === undefined || callback_result ) {
-                        self.restoreAllData();
-                    }
-
-                    if ( this.options.autoRelease ) {
-                        self.bindReleaseData();
-                    }
-
-                    if ( ! params.started[ this.getInstanceIdentifier() ] ) {
-                        if ( self.isCKEditorPresent() ) {
-                            var intervalId = setInterval( function() {
-                                if (CKEDITOR.isLoaded) {
-                                    clearInterval(intervalId);
-                                    self.bindSaveData();
-                                    params.started[ self.getInstanceIdentifier() ] = true;
-                                }
-                            }, 100);
-                        } else {
-                            self.bindSaveData();
-                            params.started[ self.getInstanceIdentifier() ] = true;
-                        }
-                    }
-                },
-
-                isCKEditorPresent: function() {
-                    if ( this.isCKEditorExists() ) {
-                        CKEDITOR.isLoaded = false;
-                        CKEDITOR.on('instanceReady', function() {
-                            CKEDITOR.isLoaded = true;
-                        } );
-                        return true;
-                    } else {
-                        return false;
-                    }
-                },
-
-                isCKEditorExists: function() {
-                    return typeof CKEDITOR != "undefined";
-                },
-
-                findFieldsToProtect: function( target ) {
-                    return target.find( ":input" ).not( ":submit" ).not( ":reset" ).not( ":button" ).not( ":file" ).not( ":password" ).not( ":disabled" ).not( "[readonly]" );
-                },
-
-                /**
-                 * Bind saving data
-                 *
-                 * @return void
-                 */
-                bindSaveData: function() {
-                    var self = this;
-
-                    if ( self.options.timeout ) {
-                        self.saveDataByTimeout();
-                    }
-
-                    self.targets.each( function() {
-                        var targetFormIdAndName = $( this ).attr( "id" ) + $( this ).attr( "name" );
-                        self.findFieldsToProtect( $( this ) ).each( function() {
-                            if ( $.inArray( this, self.options.excludeFields ) !== -1 ) {
-                                // Returning non-false is the same as a continue statement in a for loop; it will skip immediately to the next iteration.
-                                return true;
-                            }
-                            var field = $( this );
-                            var prefix = (self.options.locationBased ? self.href : "") + targetFormIdAndName + field.attr( "name" ) + self.options.customKeySuffix;
-                            if ( field.is( ":text" ) || field.is( "textarea" ) ) {
-                                if ( ! self.options.timeout ) {
-                                    self.bindSaveDataImmediately( field, prefix );
-                                }
-                            }
-                            self.bindSaveDataOnChange( field );
-                        } );
-                    } );
-                },
-
-                /**
-                 * Save all protected forms data to Local Storage.
-                 * Common method, necessary to not lead astray user firing 'data is saved' when select/checkbox/radio
-                 * is changed and saved, while text field data is saved only by timeout
-                 *
-                 * @return void
-                 */
-                saveAllData: function() {
-                    var self = this;
-                    self.targets.each( function() {
-                        var targetFormIdAndName = $( this ).attr( "id" ) + $( this ).attr( "name" );
-                        var multiCheckboxCache = {};
-
-                        self.findFieldsToProtect( $( this) ).each( function() {
-                            var field = $( this );
-                            if ( $.inArray( this, self.options.excludeFields ) !== -1 || field.attr( "name" ) === undefined ) {
-                                // Returning non-false is the same as a continue statement in a for loop; it will skip immediately to the next iteration.
-                                return true;
-                            }
-                            var prefix = (self.options.locationBased ? self.href : "") + targetFormIdAndName + field.attr( "name" ) + self.options.customKeySuffix;
-                            var value = field.val();
-
-                            if ( field.is(":checkbox") ) {
-                                if ( field.attr( "name" ).indexOf( "[" ) !== -1 ) {
-                                    if ( multiCheckboxCache[ field.attr( "name" ) ] === true ) {
-                                        return;
-                                    }
-                                    value = [];
-                                    $( "[name='" + field.attr( "name" ) +"']:checked" ).each( function() {
-                                        value.push( $( this ).val() );
-                                    } );
-                                    multiCheckboxCache[ field.attr( "name" ) ] = true;
-                                } else {
-                                    value = field.is( ":checked" );
-                                }
-                                self.saveToBrowserStorage( prefix, value, false );
-                            } else if ( field.is( ":radio" ) ) {
-                                if ( field.is( ":checked" ) ) {
-                                    value = field.val();
-                                    self.saveToBrowserStorage( prefix, value, false );
-                                }
-                            } else {
-                                if ( self.isCKEditorExists() ) {
-                                    var editor;
-                                    if ( editor = CKEDITOR.instances[ field.attr("name") ] || CKEDITOR.instances[ field.attr("id") ] ) {
-                                        editor.updateElement();
-                                        self.saveToBrowserStorage( prefix, field.val(), false);
-                                    } else {
-                                        self.saveToBrowserStorage( prefix, value, false );
-                                    }
-                                } else {
-                                    self.saveToBrowserStorage( prefix, value, false );
-                                }
-                            }
-                        } );
-                    } );
-                    self.options.onSave.call( self );
-                },
-
-                /**
-                 * Restore forms data from Local Storage
-                 *
-                 * @return void
-                 */
-                restoreAllData: function() {
-                    var self = this;
-                    var restored = false;
-
-                    self.targets.each( function() {
-                        var target = $( this );
-                        var targetFormIdAndName = $( this ).attr( "id" ) + $( this ).attr( "name" );
-
-                        self.findFieldsToProtect( target ).each( function() {
-                            if ( $.inArray( this, self.options.excludeFields ) !== -1 ) {
-                                // Returning non-false is the same as a continue statement in a for loop; it will skip immediately to the next iteration.
-                                return true;
-                            }
-                            var field = $( this );
-                            var prefix = (self.options.locationBased ? self.href : "") + targetFormIdAndName + field.attr( "name" ) + self.options.customKeySuffix;
-                            var resque = self.browserStorage.get( prefix );
-                            if ( resque !== null ) {
-                                self.restoreFieldsData( field, resque );
-                                restored = true;
-                            }
-                        } );
-                    } );
-
-                    if ( restored ) {
-                        self.options.onRestore.call( self );
-                    }
-                },
-
-                /**
-                 * Restore form field data from local storage
-                 *
-                 * @param Object field      jQuery form element object
-                 * @param String resque  previously stored fields data
-                 *
-                 * @return void
-                 */
-                restoreFieldsData: function( field, resque ) {
-                    if ( field.attr( "name" ) === undefined ) {
-                        return false;
-                    }
-                    if ( field.is( ":checkbox" ) && resque !== "false" && field.attr( "name" ).indexOf( "[" ) === -1 ) {
-                        field.attr( "checked", "checked" );
-                    } else if( field.is( ":checkbox" ) && resque === "false" && field.attr( "name" ).indexOf( "[" ) === -1 ) {
-                        field.removeAttr( "checked" );
-                    } else if ( field.is( ":radio" ) ) {
-                        if ( field.val() === resque ) {
-                            field.attr( "checked", "checked" );
-                        }
-                    } else if ( field.attr( "name" ).indexOf( "[" ) === -1 ) {
-                        field.val( resque );
-                    } else {
-                        resque = resque.split( "," );
-                        field.val( resque );
-                    }
-                },
-
-                /**
-                 * Bind immediate saving (on typing/checking/changing) field data to local storage when user fills it
-                 *
-                 * @param Object field      jQuery form element object
-                 * @param String prefix  prefix used as key to store data in local storage
-                 *
-                 * @return void
-                 */
-                bindSaveDataImmediately: function( field, prefix ) {
-                    var self = this;
-                    if ( 'onpropertychange' in field ) {
-                        field.get(0).onpropertychange = function() {
-                            self.saveToBrowserStorage( prefix, field.val() );
-                        };
-                    } else {
-                        field.get(0).oninput = function() {
-                            self.saveToBrowserStorage( prefix, field.val() );
-                        };
-                    }
-                    if ( this.isCKEditorExists() ) {
-                        var editor;
-                        if ( editor = CKEDITOR.instances[ field.attr("name") ] || CKEDITOR.instances[ field.attr("id") ] ) {
-                            editor.document.on( 'keyup', function() {
-                                editor.updateElement();
-                                self.saveToBrowserStorage( prefix, field.val() );
-                            } );
-                        }
-                    }
-                },
-
-                /**
-                 * Save data to Local Storage and fire callback if defined
-                 *
-                 * @param String key
-                 * @param String value
-                 * @param Boolean [true] fireCallback
-                 *
-                 * @return void
-                 */
-                saveToBrowserStorage: function( key, value, fireCallback ) {
-                    // if fireCallback is undefined it should be true
-                    fireCallback = fireCallback === undefined ? true : fireCallback;
-                    this.browserStorage.set( key, value );
-                    if ( fireCallback && value !== "" ) {
-                        this.options.onSave.call( this );
-                    }
-                },
-
-                /**
-                 * Bind saving field data on change
-                 *
-                 * @param Object field      jQuery form element object
-                 *
-                 * @return void
-                 */
-                bindSaveDataOnChange: function( field ) {
-                    var self = this;
-                    field.change( function() {
-                        self.saveAllData();
-                    } );
-                },
-
-                /**
-                 * Saving (by timeout) field data to local storage when user fills it
-                 *
-                 * @return void
-                 */
-                saveDataByTimeout: function() {
-                    var self = this;
-                    var targetForms = self.targets;
-                    setTimeout( ( function() {
-                        function timeout() {
-                            self.saveAllData();
-                            setTimeout( timeout, self.options.timeout * 1000 );
-                        }
-                        return timeout;
-                    } )( targetForms ), self.options.timeout * 1000 );
-                },
-
-                /**
-                 * Bind release form fields data from local storage on submit/reset form
-                 *
-                 * @return void
-                 */
-                bindReleaseData: function() {
-                    var self = this;
-                    self.targets.each( function() {
-                        var target = $( this );
-                        var formIdAndName = target.attr( "id" ) + target.attr( "name" );
-                        $( this ).bind( "submit reset", function() {
-                            self.releaseData( formIdAndName, self.findFieldsToProtect( target ) );
-                        } );
-                    } );
-                },
-
-                /**
-                 * Manually release form fields
-                 *
-                 * @return void
-                 */
-                manuallyReleaseData: function() {
-                    var self = this;
-                    self.targets.each( function() {
-                        var target = $( this );
-                        var formIdAndName = target.attr( "id" ) + target.attr( "name" );
-                        self.releaseData( formIdAndName, self.findFieldsToProtect( target ) );
-                    } );
-                },
-
-                /**
-                 * Bind release form fields data from local storage on submit/resett form
-                 *
-                 * @param String targetFormIdAndName    a form identifier consists of its id and name glued
-                 * @param Object fieldsToProtect        jQuery object contains form fields to protect
-                 *
-                 * @return void
-                 */
-                releaseData: function( targetFormIdAndName, fieldsToProtect ) {
-                    var released = false;
-                    var self = this;
-
-                    // Released form, are not started anymore. Fix for ajax loaded forms.
-                    params.started[ self.getInstanceIdentifier() ] = false;
-
-                    fieldsToProtect.each( function() {
-                        if ( $.inArray( this, self.options.excludeFields ) !== -1 ) {
-                            // Returning non-false is the same as a continue statement in a for loop; it will skip immediately to the next iteration.
-                            return true;
-                        }
-                        var field = $( this );
-                        var prefix = (self.options.locationBased ? self.href : "") + targetFormIdAndName + field.attr( "name" ) + self.options.customKeySuffix;
-                        self.browserStorage.remove( prefix );
-                        released = true;
-                    } );
-
-                    if ( released ) {
-                        self.options.onRelease.call( self );
-                    }
-                }
-
-            };
-        }
-
-        return {
-            getInstance: function( identifier ) {
-                if ( ! params.instantiated[ identifier ] ) {
-                    params.instantiated[ identifier ] = init();
-                    params.instantiated[ identifier ].setInstanceIdentifier( identifier );
-                    params.instantiated[ identifier ].setInitialOptions();
-                }
-                if ( identifier ) {
-                    return params.instantiated[ identifier ];
-                }
-                return params.instantiated[ identifier ];
-            },
-
-            free: function() {
-                params = {
-                    instantiated: [],
-                    started: []
-                };
-                return null;
-            },
-            version: '1.1.2'
-        };
-    } )();
-} )( jQuery );
-
-
-
-
-
-/* ==========================================================================
    jQuery outside events 1.1 - jQuery Plugin
    http://benalman.com/projects/jquery-outside-events-plugin/
+   (+ replaced “.bind()” with “.on()”)
    ========================================================================== */
 
 
@@ -1093,22 +203,22 @@ $(document).ready(function() {
         //
         // Usage:
         //
-        // > jQuery('selector').bind( 'clickoutside', function(event) {
+        // > jQuery('selector').on( 'clickoutside', function(event) {
         // >   var clicked_elem = $(event.target);
         // >   ...
         // > });
         //
-        // > jQuery('selector').bind( 'dblclickoutside', function(event) {
+        // > jQuery('selector').on( 'dblclickoutside', function(event) {
         // >   var double_clicked_elem = $(event.target);
         // >   ...
         // > });
         //
-        // > jQuery('selector').bind( 'mouseoveroutside', function(event) {
+        // > jQuery('selector').on( 'mouseoveroutside', function(event) {
         // >   var moused_over_elem = $(event.target);
         // >   ...
         // > });
         //
-        // > jQuery('selector').bind( 'focusoutside', function(event) {
+        // > jQuery('selector').on( 'focusoutside', function(event) {
         // >   var focused_elem = $(event.target);
         // >   ...
         // > });
@@ -1128,7 +238,7 @@ $(document).ready(function() {
                 // If this is the first element getting the event bound, bind a handler
                 // to document to catch all corresponding "originating" events.
                 if (elems.length === 1) {
-                    $(doc).bind(event_namespaced, handle_event);
+                    $(doc).on(event_namespaced, handle_event);
                 }
             },
 
@@ -1143,7 +253,7 @@ $(document).ready(function() {
                 // If this is the last element removed, remove the "originating" event
                 // handler on document that powers this "outside" event.
                 if (elems.length === 0) {
-                    $(doc).unbind(event_namespaced);
+                    $(doc).off(event_namespaced);
                 }
             },
 
@@ -1658,69 +768,69 @@ $(document).ready(function() {
 
             // Reset the target element offsets when the window is resized, then
             // check to see if we need to fix or unfix the target element.
-            $(window).bind('resize.ScrollToFixed', windowResize);
+            $(window).on('resize.ScrollToFixed', windowResize);
 
             // When the window scrolls, check to see if we need to fix or unfix
             // the target element.
-            $(window).bind('scroll.ScrollToFixed', windowScroll);
+            $(window).on('scroll.ScrollToFixed', windowScroll);
 
             // For touch devices, call checkScroll directlly rather than
             // rAF wrapped windowScroll to animate the element
             if ('ontouchmove' in window) {
-              $(window).bind('touchmove.ScrollToFixed', checkScroll);
+              $(window).on('touchmove.ScrollToFixed', checkScroll);
             }
 
             if (base.options.preFixed) {
-                target.bind('preFixed.ScrollToFixed', base.options.preFixed);
+                target.on('preFixed.ScrollToFixed', base.options.preFixed);
             }
             if (base.options.postFixed) {
-                target.bind('postFixed.ScrollToFixed', base.options.postFixed);
+                target.on('postFixed.ScrollToFixed', base.options.postFixed);
             }
             if (base.options.preUnfixed) {
-                target.bind('preUnfixed.ScrollToFixed', base.options.preUnfixed);
+                target.on('preUnfixed.ScrollToFixed', base.options.preUnfixed);
             }
             if (base.options.postUnfixed) {
-                target.bind('postUnfixed.ScrollToFixed', base.options.postUnfixed);
+                target.on('postUnfixed.ScrollToFixed', base.options.postUnfixed);
             }
             if (base.options.preAbsolute) {
-                target.bind('preAbsolute.ScrollToFixed', base.options.preAbsolute);
+                target.on('preAbsolute.ScrollToFixed', base.options.preAbsolute);
             }
             if (base.options.postAbsolute) {
-                target.bind('postAbsolute.ScrollToFixed', base.options.postAbsolute);
+                target.on('postAbsolute.ScrollToFixed', base.options.postAbsolute);
             }
             if (base.options.fixed) {
-                target.bind('fixed.ScrollToFixed', base.options.fixed);
+                target.on('fixed.ScrollToFixed', base.options.fixed);
             }
             if (base.options.unfixed) {
-                target.bind('unfixed.ScrollToFixed', base.options.unfixed);
+                target.on('unfixed.ScrollToFixed', base.options.unfixed);
             }
 
             if (base.options.spacerClass) {
                 spacer.addClass(base.options.spacerClass);
             }
 
-            target.bind('resize.ScrollToFixed', function() {
+            target.on('resize.ScrollToFixed', function() {
                 spacer.height(target.height());
             });
 
-            target.bind('scroll.ScrollToFixed', function() {
+            target.on('scroll.ScrollToFixed', function() {
                 target.trigger('preUnfixed.ScrollToFixed');
                 setUnfixed();
                 target.trigger('unfixed.ScrollToFixed');
                 checkScroll();
             });
 
-            target.bind('detach.ScrollToFixed', function(ev) {
+            target.on('detach.ScrollToFixed', function(ev) {
                 preventDefault(ev);
 
                 target.trigger('preUnfixed.ScrollToFixed');
                 setUnfixed();
                 target.trigger('unfixed.ScrollToFixed');
 
-                $(window).unbind('resize.ScrollToFixed', windowResize);
-                $(window).unbind('scroll.ScrollToFixed', windowScroll);
+                $(window).off('resize.ScrollToFixed', windowResize);
+                $(window).off('scroll.ScrollToFixed', windowScroll);
 
-                target.unbind('.ScrollToFixed');
+                target.off('.ScrollToFixed');
 
                 //remove spacer from dom
                 spacer.remove();
@@ -1759,21 +869,26 @@ $(document).ready(function() {
 
 
 /* ==========================================================================
-   JavaScript Cookie 2.1.0
+   JavaScript Cookie 2.1.3
    https://github.com/js-cookie/js-cookie
    ========================================================================== */
 
 
-(function (factory) {
+;(function (factory) {
+    var registeredInModuleLoader = false;
     if (typeof define === 'function' && define.amd) {
         define(factory);
-    } else if (typeof exports === 'object') {
+        registeredInModuleLoader = true;
+    }
+    if (typeof exports === 'object') {
         module.exports = factory();
-    } else {
-        var _OldCookies = window.Cookies;
+        registeredInModuleLoader = true;
+    }
+    if (!registeredInModuleLoader) {
+        var OldCookies = window.Cookies;
         var api = window.Cookies = factory();
         api.noConflict = function () {
-            window.Cookies = _OldCookies;
+            window.Cookies = OldCookies;
             return api;
         };
     }
@@ -1793,6 +908,9 @@ $(document).ready(function() {
     function init (converter) {
         function api (key, value, attributes) {
             var result;
+            if (typeof document === 'undefined') {
+                return;
+            }
 
             // Write
 
@@ -1827,9 +945,9 @@ $(document).ready(function() {
 
                 return (document.cookie = [
                     key, '=', value,
-                    attributes.expires && '; expires=' + attributes.expires.toUTCString(), // use expires attribute, max-age is not supported by IE
-                    attributes.path    && '; path=' + attributes.path,
-                    attributes.domain  && '; domain=' + attributes.domain,
+                    attributes.expires ? '; expires=' + attributes.expires.toUTCString() : '', // use expires attribute, max-age is not supported by IE
+                    attributes.path ? '; path=' + attributes.path : '',
+                    attributes.domain ? '; domain=' + attributes.domain : '',
                     attributes.secure ? '; secure' : ''
                 ].join(''));
             }
@@ -1849,7 +967,6 @@ $(document).ready(function() {
 
             for (; i < cookies.length; i++) {
                 var parts = cookies[i].split('=');
-                var name = parts[0].replace(rdecode, decodeURIComponent);
                 var cookie = parts.slice(1).join('=');
 
                 if (cookie.charAt(0) === '"') {
@@ -1857,6 +974,7 @@ $(document).ready(function() {
                 }
 
                 try {
+                    var name = parts[0].replace(rdecode, decodeURIComponent);
                     cookie = converter.read ?
                         converter.read(cookie, name) : converter(cookie, name) ||
                         cookie.replace(rdecode, decodeURIComponent);
@@ -1881,7 +999,10 @@ $(document).ready(function() {
             return result;
         }
 
-        api.get = api.set = api;
+        api.set = api;
+        api.get = function (key) {
+            return api.call(api, key);
+        };
         api.getJSON = function () {
             return api.apply({
                 json: true

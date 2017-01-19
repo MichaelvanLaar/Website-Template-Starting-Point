@@ -1,43 +1,43 @@
-// -----------------------------------------------------------------------------
+//==============================================================================
 // Color scheme “van Laar”
-// -----------------------------------------------------------------------------
+//==============================================================================
 
 
 
 
 
-// -----------------------------------------------------------------------------
+//------------------------------------------------------------------------------
 // Reds
-// -----------------------------------------------------------------------------
+//------------------------------------------------------------------------------
 
 
 /// HEX: #640500
 /// @access public
-/// @group color scheme "van laar"
+/// @group Color scheme “van laar”
 /// @type Color
 $mvl-vl-red-1: rgb(100, 5, 0);
 
 /// HEX: #9b0a05
 /// @access public
-/// @group color scheme "van laar"
+/// @group Color scheme “van laar”
 /// @type Color
 $mvl-vl-red-2: rgb(155, 10, 5);
 
 /// HEX: #d20f0a
 /// @access public
-/// @group color scheme "van laar"
+/// @group Color scheme “van laar”
 /// @type Color
 $mvl-vl-red-3: rgb(210, 15, 10);
 
 /// HEX: #e65a5a
 /// @access public
-/// @group color scheme "van laar"
+/// @group Color scheme “van laar”
 /// @type Color
 $mvl-vl-red-4: rgb(230, 90, 90);
 
 /// HEX: #ffaaaa
 /// @access public
-/// @group color scheme "van laar"
+/// @group Color scheme “van laar”
 /// @type Color
 $mvl-vl-red-5: rgb(255, 170, 170);
 
@@ -45,38 +45,38 @@ $mvl-vl-red-5: rgb(255, 170, 170);
 
 
 
-// -----------------------------------------------------------------------------
+//------------------------------------------------------------------------------
 // Oranges
-// -----------------------------------------------------------------------------
+//------------------------------------------------------------------------------
 
 
 /// HEX: #783c00
 /// @access public
-/// @group color scheme "van laar"
+/// @group Color scheme “van laar”
 /// @type Color
 $mvl-vl-orange-1: rgb(120, 60, 0);
 
 /// HEX: #be640a
 /// @access public
-/// @group color scheme "van laar"
+/// @group Color scheme “van laar”
 /// @type Color
 $mvl-vl-orange-2: rgb(190, 100, 10);
 
 /// HEX: #ff870f
 /// @access public
-/// @group color scheme "van laar"
+/// @group Color scheme “van laar”
 /// @type Color
 $mvl-vl-orange-3: rgb(255, 135, 15);
 
 /// HEX: #ffaa5a
 /// @access public
-/// @group color scheme "van laar"
+/// @group Color scheme “van laar”
 /// @type Color
 $mvl-vl-orange-4: rgb(255, 170, 90);
 
 /// HEX: #ffd2aa
 /// @access public
-/// @group color scheme "van laar"
+/// @group Color scheme “van laar”
 /// @type Color
 $mvl-vl-orange-5: rgb(255, 210, 170);
 
@@ -84,38 +84,38 @@ $mvl-vl-orange-5: rgb(255, 210, 170);
 
 
 
-// -----------------------------------------------------------------------------
+//------------------------------------------------------------------------------
 // Yellows
-// -----------------------------------------------------------------------------
+//------------------------------------------------------------------------------
 
 
 /// HEX: #786e00
 /// @access public
-/// @group color scheme "van laar"
+/// @group Color scheme “van laar”
 /// @type Color
 $mvl-vl-yellow-1: rgb(120, 110, 0);
 
 /// HEX: #beaa0a
 /// @access public
-/// @group color scheme "van laar"
+/// @group Color scheme “van laar”
 /// @type Color
 $mvl-vl-yellow-2: rgb(190, 170, 10);
 
 /// HEX: #ffe60f
 /// @access public
-/// @group color scheme "van laar"
+/// @group Color scheme “van laar”
 /// @type Color
 $mvl-vl-yellow-3: rgb(255, 230, 15);
 
 /// HEX: #fff05a
 /// @access public
-/// @group color scheme "van laar"
+/// @group Color scheme “van laar”
 /// @type Color
 $mvl-vl-yellow-4: rgb(255, 240, 90);
 
 /// HEX: #fff5aa
 /// @access public
-/// @group color scheme "van laar"
+/// @group Color scheme “van laar”
 /// @type Color
 $mvl-vl-yellow-5: rgb(255, 245, 170);
 
@@ -123,38 +123,38 @@ $mvl-vl-yellow-5: rgb(255, 245, 170);
 
 
 
-// -----------------------------------------------------------------------------
+//------------------------------------------------------------------------------
 // Greens
-// -----------------------------------------------------------------------------
+//------------------------------------------------------------------------------
 
 
 /// HEX: #3c5a00
 /// @access public
-/// @group color scheme "van laar"
+/// @group Color scheme “van laar”
 /// @type Color
 $mvl-vl-green-1: rgb(60, 90, 0);
 
 /// HEX: #648c0a
 /// @access public
-/// @group color scheme "van laar"
+/// @group Color scheme “van laar”
 /// @type Color
 $mvl-vl-green-2: rgb(100, 140, 10);
 
 /// HEX: #8cbe0a
 /// @access public
-/// @group color scheme "van laar"
+/// @group Color scheme “van laar”
 /// @type Color
 $mvl-vl-green-3: rgb(140, 190, 10);
 
 /// HEX: #b4dc5a
 /// @access public
-/// @group color scheme "van laar"
+/// @group Color scheme “van laar”
 /// @type Color
 $mvl-vl-green-4: rgb(180, 220, 90);
 
 /// HEX: #dcf0a0
 /// @access public
-/// @group color scheme "van laar"
+/// @group Color scheme “van laar”
 /// @type Color
 $mvl-vl-green-5: rgb(220, 240, 160);
 
@@ -162,38 +162,38 @@ $mvl-vl-green-5: rgb(220, 240, 160);
 
 
 
-// -----------------------------------------------------------------------------
+//------------------------------------------------------------------------------
 // Blues
-// -----------------------------------------------------------------------------
+//------------------------------------------------------------------------------
 
 
 /// HEX: #001e50
 /// @access public
-/// @group color scheme "van laar"
+/// @group Color scheme “van laar”
 /// @type Color
 $mvl-vl-blue-1: rgb(0, 30, 80);
 
 /// HEX: #05327d
 /// @access public
-/// @group color scheme "van laar"
+/// @group Color scheme “van laar”
 /// @type Color
 $mvl-vl-blue-2: rgb(5, 50, 125);
 
 /// HEX: #0a4baa
 /// @access public
-/// @group color scheme "van laar"
+/// @group Color scheme “van laar”
 /// @type Color
 $mvl-vl-blue-3: rgb(10, 75, 170);
 
 /// HEX: #507dbe
 /// @access public
-/// @group color scheme "van laar"
+/// @group Color scheme “van laar”
 /// @type Color
 $mvl-vl-blue-4: rgb(80, 125, 190);
 
 /// HEX: #91afd7
 /// @access public
-/// @group color scheme "van laar"
+/// @group Color scheme “van laar”
 /// @type Color
 $mvl-vl-blue-5: rgb(145, 175, 215);
 
@@ -201,37 +201,37 @@ $mvl-vl-blue-5: rgb(145, 175, 215);
 
 
 
-// -----------------------------------------------------------------------------
+//------------------------------------------------------------------------------
 // Grays
-// -----------------------------------------------------------------------------
+//------------------------------------------------------------------------------
 
 
 /// HEX: #5a5a5a
 /// @access public
-/// @group color scheme "van laar"
+/// @group Color scheme “van laar”
 /// @type Color
 $mvl-vl-gray-1: rgb(90, 90, 90);
 
 /// HEX: #8c8c8c
 /// @access public
-/// @group color scheme "van laar"
+/// @group Color scheme “van laar”
 /// @type Color
 $mvl-vl-gray-2: rgb(140, 140, 140);
 
 /// HEX: #bebebe
 /// @access public
-/// @group color scheme "van laar"
+/// @group Color scheme “van laar”
 /// @type Color
 $mvl-vl-gray-3: rgb(190, 190, 190);
 
 /// HEX: #dcdcdc
 /// @access public
-/// @group color scheme "van laar"
+/// @group Color scheme “van laar”
 /// @type Color
 $mvl-vl-gray-4: rgb(220, 220, 220);
 
 /// HEX: #f0f0f0
 /// @access public
-/// @group color scheme "van laar"
+/// @group Color scheme “van laar”
 /// @type Color
 $mvl-vl-gray-5: rgb(240, 240, 240);

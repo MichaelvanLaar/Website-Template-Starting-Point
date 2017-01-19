@@ -1,6 +1,6 @@
-// -----------------------------------------------------------------------------
+//==============================================================================
 // Basic typography
-// -----------------------------------------------------------------------------
+//==============================================================================
 
 
 
@@ -63,7 +63,7 @@ cite {
 pre,
 code,
 code var {
-    font-family: $mvl-code-font-stack;
+    font-family: $mvl-font-stack--code;
 }
 
 
@@ -109,7 +109,7 @@ h3,
 h4,
 h5,
 h6 {
-    @include mvl-font-size-line-height($mvl-base-font-size-screen);
+    @include mvl-font-size-line-height($mvl-base-font-size--screen);
 
     margin-top: mvl-px-to-rem($mvl-base-line-height * 2);
     margin-bottom: mvl-px-to-rem($mvl-base-line-height);
@@ -129,28 +129,30 @@ td {
 
 
 
-// -----------------------------------------------------------------------------
+//------------------------------------------------------------------------------
 // Links
-// -----------------------------------------------------------------------------
+//------------------------------------------------------------------------------
 
 
 a {
+    transition: color $mvl-default-transition__duration $mvl-default-transition__timing-function;
     text-decoration: none;
-    color: $mvl-color-brand-1;
+    color: $mvl-color__brand-1;
 
     @media print {
         text-decoration: underline;
     }
-}
 
-a:visited {
-    color: $mvl-color-brand-1-darker;
+    &:visited {
+        color: $mvl-color__brand-1--darker;
 
-    @media print {
-        text-decoration: underline;
+        @media print {
+            text-decoration: underline;
+        }
     }
-}
 
-a:hover {
-    color: $mvl-color-brand-1-lighter;
+    &:hover,
+    &:focus {
+        color: $mvl-color__brand-1--lighter;
+    }
 }

@@ -1,6 +1,6 @@
-// -----------------------------------------------------------------------------
+//==============================================================================
 // Form elements
-// -----------------------------------------------------------------------------
+//==============================================================================
 
 
 
@@ -21,9 +21,9 @@ input[type="url"],
 input[type="week"],
 select,
 textarea {
-    font-family: $mvl-text-font-stack;
-    color: $mvl-color-text-default;
-    border: 1px solid $mvl-color-brand-2-darker;
+    font-family: $mvl-font-stack--text;
+    color: $mvl-color__default-text;
+    border: 1px solid $mvl-color__brand-2--darker;
 }
 
 input[type="date"],
@@ -53,23 +53,23 @@ select {
 
 
 .placeholder {
-    color: $mvl-color-brand-2-darker;
+    color: $mvl-color__brand-2--darker;
 }
 
 ::-webkit-input-placeholder {
-    color: $mvl-color-brand-2-darker;
+    color: $mvl-color__brand-2--darker;
 }
 
 :-moz-placeholder {
-    color: $mvl-color-brand-2-darker;
+    color: $mvl-color__brand-2--darker;
 }
 
 ::-moz-placeholder {
-    color: $mvl-color-brand-2-darker;
+    color: $mvl-color__brand-2--darker;
 }
 
 :-ms-input-placeholder {
-    color: $mvl-color-brand-2-darker;
+    color: $mvl-color__brand-2--darker;
 }
 
 
@@ -79,10 +79,10 @@ input[type="reset"],
 input[type="submit"] {
     font-family: Arial, Helvetica, sans-serif;
     padding: 0.1875rem 0.5625rem; /* 3px / 16px   and   9px / 16px */
-    color: $mvl-color-white;
-    border: 1px solid $mvl-color-brand-2-darker;
-    background-color: $mvl-color-brand-2-darker;
-    background-image: linear-gradient(to bottom, $mvl-color-brand-2, $mvl-color-brand-2-darker);
+    color: $mvl-color__white;
+    border: 1px solid $mvl-color__brand-2--darker;
+    background-color: $mvl-color__brand-2--darker;
+    background-image: linear-gradient(to bottom, $mvl-color__brand-2, $mvl-color__brand-2--darker);
     background-clip: padding-box;
 }
 
@@ -91,16 +91,16 @@ input:focus,
 select:focus,
 textarea:focus {
     outline: 0;
-    box-shadow: 1px 1px 3px $mvl-color-brand-1-lighter, -1px 1px 3px $mvl-color-brand-1-lighter, -1px -1px 3px $mvl-color-brand-1-lighter, 1px -1px 3px $mvl-color-brand-1-lighter;
+    box-shadow: 1px 1px 3px $mvl-color__brand-1--lighter, -1px 1px 3px $mvl-color__brand-1--lighter, -1px -1px 3px $mvl-color__brand-1--lighter, 1px -1px 3px $mvl-color__brand-1--lighter;
 }
 
 button:active,
 input[type="button"]:active,
 input[type="reset"]:active,
 input[type="submit"]:active {
-    background-color: $mvl-color-brand-2;
-    background-image: linear-gradient(to bottom, $mvl-color-brand-2-darker, $mvl-color-brand-2);
-    box-shadow: 1px 1px 3px $mvl-color-brand-1-lighter, -1px 1px 3px $mvl-color-brand-1-lighter, -1px -1px 3px $mvl-color-brand-1-lighter, 1px -1px 3px $mvl-color-brand-1-lighter;
+    background-color: $mvl-color__brand-2;
+    background-image: linear-gradient(to bottom, $mvl-color__brand-2--darker, $mvl-color__brand-2);
+    box-shadow: 1px 1px 3px $mvl-color__brand-1--lighter, -1px 1px 3px $mvl-color__brand-1--lighter, -1px -1px 3px $mvl-color__brand-1--lighter, 1px -1px 3px $mvl-color__brand-1--lighter;
 }
 
 
@@ -113,5 +113,5 @@ fieldset {
 
 input:invalid,
 textarea:invalid {
-    background-color: $mvl-color-validation-error;
+    background-color: $mvl-color__validation-error;
 }

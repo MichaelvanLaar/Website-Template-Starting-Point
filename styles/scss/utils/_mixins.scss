@@ -1,6 +1,6 @@
-// -----------------------------------------------------------------------------
+//==============================================================================
 // General mixins
-// -----------------------------------------------------------------------------
+//==============================================================================
 
 
 
@@ -9,7 +9,7 @@
 /// Responsive manager
 /// @author Hugo Giraudel
 /// @access public
-/// @group layout
+/// @group Layout
 /// @param {String} $breakpoint - Breakpoint
 /// @requires $mvl-breakpoints
 /// @example scss - Input (SCSS)
@@ -26,6 +26,11 @@
 ///       /* media query specific CSS rules */
 ///   }
 @mixin mvl-respond-to($breakpoint) {
+    $mvl-breakpoints: (
+        'main-content-width': (min-width: 592px),
+        'full-width': (min-width: 1020px),
+    ) !default;
+
     $raw-query: map-get($mvl-breakpoints, $breakpoint);
 
     @if $raw-query {
@@ -47,9 +52,9 @@
 /// Converts font size (input in px) to rem and outputs it.
 /// Also outputs corresponding (i. e. a multiple of $mvl-base-line-height) line-height.
 /// @access public
-/// @group typography
+/// @group Typography
 /// @param {Number} $font-size - font size in px
-/// @requires $mvl-base-font-size-screen
+/// @requires $mvl-base-font-size--screen
 /// @requires $mvl-base-line-height
 /// @example scss - Input (SCSS)
 ///     @include mvl-font-size-line-height(20px);
@@ -60,9 +65,12 @@
     @if unit($font-size) != 'px' {
         @error "mvl-font-size-line-height only supports px inputs.";
     }
+
+    $mvl-base-font-size--screen: 16px !default;
+    $mvl-base-line-height: 25px !default;
     $lines: ceil($font-size / $mvl-base-line-height);
 
-    font-size: #{($font-size / $mvl-base-font-size-screen)}rem;
+    font-size: #{($font-size / $mvl-base-font-size--screen)}rem;
     line-height: (($lines * $mvl-base-line-height) / $font-size);
 }
 
@@ -70,15 +78,15 @@
 
 
 
-// -----------------------------------------------------------------------------
+//------------------------------------------------------------------------------
 // Helpers
-// -----------------------------------------------------------------------------
+//------------------------------------------------------------------------------
 
 
 /// Helper to clear inner floats
 /// @author Nicolas Gallagher
 /// @link http://nicolasgallagher.com/micro-clearfix-hack/ Micro Clearfix
-/// @group helpers
+/// @group Helpers
 /// @access public
 @mixin mvl-clearfix {
     &::before,
@@ -94,7 +102,7 @@
 
 
 /// Hide content for image replacement
-/// @group helpers
+/// @group Helpers
 /// @access public
 @mixin mvl-image-replacement {
     overflow: hidden;
@@ -114,7 +122,7 @@
 /// Hide content from both screenreaders and browsers
 /// @author Jared Smith
 /// @link http://juicystudio.com/article/screen-readers-display-none.php
-/// @group helpers
+/// @group Helpers
 /// @access public
 @mixin mvl-hidden {
     display: none !important;
@@ -125,7 +133,7 @@
 /// Hide content only visually, but have it available for screenreaders
 /// @author Hugo Giraudel
 /// @link http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
-/// @group helpers
+/// @group Helpers
 /// @param {String} $focusable - use the string “focusable” to allow the element to be focusable when navigated to via the keyboard
 /// @access public
 @mixin mvl-visually-hidden($focusable: null) {

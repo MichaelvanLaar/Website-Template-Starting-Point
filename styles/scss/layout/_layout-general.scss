@@ -1,6 +1,6 @@
-// -----------------------------------------------------------------------------
+//==============================================================================
 // General layout
-// -----------------------------------------------------------------------------
+//==============================================================================
 
 
 
@@ -35,62 +35,62 @@
 
 
 
-// -----------------------------------------------------------------------------
+//------------------------------------------------------------------------------
 // Upscaling
-// -----------------------------------------------------------------------------
+//------------------------------------------------------------------------------
 
 
 @include mvl-respond-to('full-width-scale-1') {
     html {
-        font-size: ($mvl-base-font-size-screen + 1px);
+        font-size: ($mvl-base-font-size--screen + 1px);
     }
 }
 
 
 @include mvl-respond-to('full-width-scale-2') {
     html {
-        font-size: ($mvl-base-font-size-screen + 2px);
+        font-size: ($mvl-base-font-size--screen + 2px);
     }
 }
 
 
 @include mvl-respond-to('full-width-scale-3') {
     html {
-        font-size: ($mvl-base-font-size-screen + 3px);
+        font-size: ($mvl-base-font-size--screen + 3px);
     }
 }
 
 
 @include mvl-respond-to('full-width-scale-4') {
     html {
-        font-size: ($mvl-base-font-size-screen + 4px);
+        font-size: ($mvl-base-font-size--screen + 4px);
     }
 }
 
 
 @include mvl-respond-to('full-width-scale-5') {
     html {
-        font-size: ($mvl-base-font-size-screen + 5px);
+        font-size: ($mvl-base-font-size--screen + 5px);
     }
 }
 
 
 @include mvl-respond-to('full-width-scale-6') {
     html {
-        font-size: ($mvl-base-font-size-screen + 6px);
+        font-size: ($mvl-base-font-size--screen + 6px);
     }
 }
 
 
 @include mvl-respond-to('full-width-scale-7') {
     html {
-        font-size: ($mvl-base-font-size-screen + 7px);
+        font-size: ($mvl-base-font-size--screen + 7px);
     }
 }
 
 
 @include mvl-respond-to('full-width-scale-8') {
     html {
-        font-size: ($mvl-base-font-size-screen + 8px);
+        font-size: ($mvl-base-font-size--screen + 8px);
     }
 }

@@ -1,51 +1,51 @@
-// -----------------------------------------------------------------------------
+//==============================================================================
 // General functions
-// -----------------------------------------------------------------------------
+//==============================================================================
 
 
 
 
 
-// -----------------------------------------------------------------------------
+//------------------------------------------------------------------------------
 // Colors
-// -----------------------------------------------------------------------------
+//------------------------------------------------------------------------------
 
 
 /// Slightly lighten a color
 /// @author Hugo Giraudel
 /// @access public
-/// @group colors
+/// @group Colors
 /// @param {Color} $color - color to tint
 /// @param {Number} $percentage - percentage of `$color` in returned color
 /// @return {Color}
 @function mvl-tint($color, $percentage) {
-    @return mix($mvl-color-white, $color, $percentage);
+    @return mix($mvl-color__white, $color, $percentage);
 }
 
 
 /// Slightly darken a color
 /// @author Hugo Giraudel
 /// @access public
-/// @group colors
+/// @group Colors
 /// @param {Color} $color - color to shade
 /// @param {Number} $percentage - percentage of `$color` in returned color
 /// @return {Color}
 @function mvl-shade($color, $percentage) {
-    @return mix($mvl-color-black, $color, $percentage);
+    @return mix($mvl-color__black, $color, $percentage);
 }
 
 
 
 
 
-// -----------------------------------------------------------------------------
+//------------------------------------------------------------------------------
 // Units
-// -----------------------------------------------------------------------------
+//------------------------------------------------------------------------------
 
 
 /// Remove the unit of a length
 /// @access public
-/// @group helpers
+/// @group Helpers
 /// @param {Number} $number - Number to remove unit from
 /// @return {Number} - Unitless number
 @function mvl-strip-unit($number) {
@@ -58,28 +58,28 @@
 
 /// Convert px to rem
 /// @access public
-/// @group helpers
+/// @group Helpers
 /// @param {Number} $value - Number (with unit px) to convert to rem
-/// @requires $mvl-base-font-size-screen
+/// @requires $mvl-base-font-size--screen
 /// @return {Number} - Number converted to rem
 @function mvl-px-to-rem($value) {
     @if unit($value) != 'px' {
         @error "mvl-px-to-rem only supports px inputs.";
     }
-    @return #{($value / $mvl-base-font-size-screen)}rem;
+    @return #{($value / $mvl-base-font-size--screen)}rem;
 }
 
 
 /// Convert rem to px
 /// @access public
-/// @group helpers
+/// @group Helpers
 /// @param {Number} $value - Number (with unit rem) to convert to px
-/// @requires $mvl-base-font-size-screen
+/// @requires $mvl-base-font-size--screen
 /// @return {Number} - Number converted to px
 @function mvl-rem-to-px($value) {
     @if unit($value) != 'rem' {
         @error "mvl-rem-to-px only supports rem inputs.";
     }
     $unitless-value: mvl-strip-unit($value);
-    @return ($unitless-value * $mvl-base-font-size-screen);
+    @return ($unitless-value * $mvl-base-font-size--screen);
 }

@@ -87,7 +87,8 @@ linters:
 
   NameFormat:
     enabled: true
-    convention: hyphenated_lowercase
+    convention: ^(_)?[a-z0-9-]+((_{2}|-{2})?[a-z0-9-]+)?(-{2}[a-z0-9-]+)?[a-z0-9]$
+    convention_explanation: 'should be written in BEM format'
     allow_leading_underscore: true
 
   NestingDepth:
