@@ -138,6 +138,7 @@ $(document).ready(function() {
 /* ==========================================================================
    jQuery outside events 1.1 - jQuery Plugin
    http://benalman.com/projects/jquery-outside-events-plugin/
+   (+ replaced “.bind()” with “.on()”)
    ========================================================================== */
 
 
@@ -202,22 +203,22 @@ $(document).ready(function() {
         //
         // Usage:
         //
-        // > jQuery('selector').bind( 'clickoutside', function(event) {
+        // > jQuery('selector').on( 'clickoutside', function(event) {
         // >   var clicked_elem = $(event.target);
         // >   ...
         // > });
         //
-        // > jQuery('selector').bind( 'dblclickoutside', function(event) {
+        // > jQuery('selector').on( 'dblclickoutside', function(event) {
         // >   var double_clicked_elem = $(event.target);
         // >   ...
         // > });
         //
-        // > jQuery('selector').bind( 'mouseoveroutside', function(event) {
+        // > jQuery('selector').on( 'mouseoveroutside', function(event) {
         // >   var moused_over_elem = $(event.target);
         // >   ...
         // > });
         //
-        // > jQuery('selector').bind( 'focusoutside', function(event) {
+        // > jQuery('selector').on( 'focusoutside', function(event) {
         // >   var focused_elem = $(event.target);
         // >   ...
         // > });
@@ -237,7 +238,7 @@ $(document).ready(function() {
                 // If this is the first element getting the event bound, bind a handler
                 // to document to catch all corresponding "originating" events.
                 if (elems.length === 1) {
-                    $(doc).bind(event_namespaced, handle_event);
+                    $(doc).on(event_namespaced, handle_event);
                 }
             },
 
@@ -252,7 +253,7 @@ $(document).ready(function() {
                 // If this is the last element removed, remove the "originating" event
                 // handler on document that powers this "outside" event.
                 if (elems.length === 0) {
-                    $(doc).unbind(event_namespaced);
+                    $(doc).off(event_namespaced);
                 }
             },
 
@@ -767,69 +768,69 @@ $(document).ready(function() {
 
             // Reset the target element offsets when the window is resized, then
             // check to see if we need to fix or unfix the target element.
-            $(window).bind('resize.ScrollToFixed', windowResize);
+            $(window).on('resize.ScrollToFixed', windowResize);
 
             // When the window scrolls, check to see if we need to fix or unfix
             // the target element.
-            $(window).bind('scroll.ScrollToFixed', windowScroll);
+            $(window).on('scroll.ScrollToFixed', windowScroll);
 
             // For touch devices, call checkScroll directlly rather than
             // rAF wrapped windowScroll to animate the element
             if ('ontouchmove' in window) {
-              $(window).bind('touchmove.ScrollToFixed', checkScroll);
+              $(window).on('touchmove.ScrollToFixed', checkScroll);
             }
 
             if (base.options.preFixed) {
-                target.bind('preFixed.ScrollToFixed', base.options.preFixed);
+                target.on('preFixed.ScrollToFixed', base.options.preFixed);
             }
             if (base.options.postFixed) {
-                target.bind('postFixed.ScrollToFixed', base.options.postFixed);
+                target.on('postFixed.ScrollToFixed', base.options.postFixed);
             }
             if (base.options.preUnfixed) {
-                target.bind('preUnfixed.ScrollToFixed', base.options.preUnfixed);
+                target.on('preUnfixed.ScrollToFixed', base.options.preUnfixed);
             }
             if (base.options.postUnfixed) {
-                target.bind('postUnfixed.ScrollToFixed', base.options.postUnfixed);
+                target.on('postUnfixed.ScrollToFixed', base.options.postUnfixed);
             }
             if (base.options.preAbsolute) {
-                target.bind('preAbsolute.ScrollToFixed', base.options.preAbsolute);
+                target.on('preAbsolute.ScrollToFixed', base.options.preAbsolute);
             }
             if (base.options.postAbsolute) {
-                target.bind('postAbsolute.ScrollToFixed', base.options.postAbsolute);
+                target.on('postAbsolute.ScrollToFixed', base.options.postAbsolute);
             }
             if (base.options.fixed) {
-                target.bind('fixed.ScrollToFixed', base.options.fixed);
+                target.on('fixed.ScrollToFixed', base.options.fixed);
             }
             if (base.options.unfixed) {
-                target.bind('unfixed.ScrollToFixed', base.options.unfixed);
+                target.on('unfixed.ScrollToFixed', base.options.unfixed);
             }
 
             if (base.options.spacerClass) {
                 spacer.addClass(base.options.spacerClass);
             }
 
-            target.bind('resize.ScrollToFixed', function() {
+            target.on('resize.ScrollToFixed', function() {
                 spacer.height(target.height());
             });
 
-            target.bind('scroll.ScrollToFixed', function() {
+            target.on('scroll.ScrollToFixed', function() {
                 target.trigger('preUnfixed.ScrollToFixed');
                 setUnfixed();
                 target.trigger('unfixed.ScrollToFixed');
                 checkScroll();
             });
 
-            target.bind('detach.ScrollToFixed', function(ev) {
+            target.on('detach.ScrollToFixed', function(ev) {
                 preventDefault(ev);
 
                 target.trigger('preUnfixed.ScrollToFixed');
                 setUnfixed();
                 target.trigger('unfixed.ScrollToFixed');
 
-                $(window).unbind('resize.ScrollToFixed', windowResize);
-                $(window).unbind('scroll.ScrollToFixed', windowScroll);
+                $(window).off('resize.ScrollToFixed', windowResize);
+                $(window).off('scroll.ScrollToFixed', windowScroll);
 
-                target.unbind('.ScrollToFixed');
+                target.off('.ScrollToFixed');
 
                 //remove spacer from dom
                 spacer.remove();

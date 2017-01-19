@@ -111,13 +111,13 @@ enquire.register('screen and (max-width: 1019px)', {
 // dropdown menu for bigger screen sizes
 enquire.register('screen and (min-width: 1020px)', {
     match: function() {
-        mvl_main_navigation__list.bind('clickoutside', function() {
+        mvl_main_navigation__list.on('clickoutside', function() {
             mvl_dropdown_toggles.removeClass('show-submenu'); // hide all dropdown menus when the user clicks anywhere outside the menu area
         });
     },
     unmatch: function() {
         mvl_main_navigation__list
-                .unbind('clickoutside')
+                .off('clickoutside')
                 .find('.show-submenu')
                 .removeClass('show-submenu');
     }
