@@ -299,6 +299,10 @@ $mvl-main-navigation__dropdown-menu-width: 250px;
     top: mvl-px-to-rem($mvl-main-navigation__menu-bar-padding--vertical + ($mvl-main-navigation__dropdown-font-size * 0.2));
     right: mvl-px-to-rem($mvl-gutter-width);
     content: '►';
+
+    @include mvl-respond-to('full-width') {
+        right: mvl-px-to-rem($mvl-gutter-width / 2);
+    }
 }
 
 
@@ -439,7 +443,7 @@ $mvl-main-navigation__bar-height: ($mvl-main-navigation__menu-bar-font-size * $m
 /// @access public
 /// @group Main navigation
 /// @type Number
-$mvl-main-navigation__logo-wide-calculated-height: $mvl-main-navigation__bar-height - $mvl-gutter-width;
+$mvl-main-navigation__logo-wide-calculated-height: $mvl-main-navigation__bar-height - $mvl-base-font-size--screen;
 
 /// Calculated width of (wide) navigation bar logo for smaller screens in px
 /// @access public
@@ -451,7 +455,7 @@ $mvl-main-navigation__logo-wide-calculated-width: $mvl-main-navigation__logo-wid
 /// @access public
 /// @group Main navigation
 /// @type Number
-$mvl-main-navigation__toggle-icon-calculated-height: mvl-strip-unit(floor(($mvl-main-navigation__bar-height - ($mvl-gutter-width * 2)) / 5)) * 5px;
+$mvl-main-navigation__toggle-icon-calculated-height: mvl-strip-unit(floor(($mvl-main-navigation__bar-height - ($mvl-base-font-size--screen * 2)) / 5)) * 5px;
 
 /// Calculated width of navigation bar toggle icon for smaller screens in px
 /// @access public
@@ -516,7 +520,7 @@ $mvl-main-navigation__toggle-icon-calculated-width: $mvl-main-navigation__toggle
             .scroll-to-fixed-fixed & {
                 overflow: auto;
                 width: auto;
-                padding: mvl-px-to-rem($mvl-gutter-width / 2) mvl-px-to-rem($mvl-gutter-width);
+                padding: mvl-px-to-rem($mvl-base-font-size--screen / 2) mvl-px-to-rem($mvl-gutter-width);
                 opacity: 1;
             }
         }
@@ -651,88 +655,103 @@ $mvl-main-navigation__toggle-icon-calculated-width: $mvl-main-navigation__toggle
 //------------------------------------------------------------------------------
 
 
-.main-navigation__list {
+.main-navigation {
     @include mvl-respond-to('full-width') {
-        display: flex;
-        background-color: $mvl-main-navigation__menu-bar-background-color--with-header;
-
-
-        & > li {
-            font-size: mvl-px-to-rem($mvl-main-navigation__menu-bar-font-size);
-            line-height: $mvl-main-navigation__menu-bar-line-height;
-            flex-grow: 1;
-            text-align: center;
-
-
-            & > a:hover,
-            & > a:focus,
-            &:hover > a,
-            .js &.show-submenu > a {
-                background-color: $mvl-main-navigation__menu-bar-background-hover-color--with-header;
-            }
+        &__box {
+            padding-right: mvl-px-to-rem($mvl-gutter-width / 2);
+            padding-left: mvl-px-to-rem($mvl-gutter-width / 2);
         }
 
 
-            & > .has-children > a::after {
-                @include mvl-main-navigation__arrow--down;
-            }
+            &__list {
+                display: flex;
+                background-color: $mvl-main-navigation__menu-bar-background-color--with-header;
 
 
-        .parent {
-            & > a {
-                background-color: $mvl-main-navigation__background-color--current;
-
-                &:hover,
-                &:focus {
-                    background-color: $mvl-main-navigation__background-hover-color--current;
-                }
-            }
-
-            &:hover > a {
-                background-color: $mvl-main-navigation__background-hover-color--current;
-            }
-        }
+                & > li {
+                    font-size: mvl-px-to-rem($mvl-main-navigation__menu-bar-font-size);
+                    line-height: $mvl-main-navigation__menu-bar-line-height;
+                    flex-grow: 1;
+                    text-align: center;
 
 
-        ul {
-            box-shadow: 0 2px 5px -1px $mvl-color__drop-shadow;
-
-
-            li {
-                text-align: left;
-                background-color: $mvl-main-navigation__dropdown-background-color--level-2;
-
-
-                a {
-                    padding-left: mvl-px-to-rem($mvl-gutter-width);
-
-                    &:hover,
-                    &:focus {
-                        background-color: $mvl-main-navigation__dropdown-background-hover-color--level-2;
+                    & > a:hover,
+                    & > a:focus,
+                    &:hover > a,
+                    .js &.show-submenu > a {
+                        background-color: $mvl-main-navigation__menu-bar-background-hover-color--with-header;
                     }
                 }
 
-                &:hover > a,
-                .js &.show-submenu > a {
-                    background-color: $mvl-main-navigation__dropdown-background-hover-color--level-2;
+
+                    a {
+                        padding-right: mvl-px-to-rem($mvl-gutter-width / 2);
+                        padding-left: mvl-px-to-rem($mvl-gutter-width / 2);
+                    }
+
+
+                    & > .has-children > a::after {
+                        @include mvl-main-navigation__arrow--down;
+                    }
+
+
+                .parent {
+                    & > a {
+                        background-color: $mvl-main-navigation__background-color--current;
+
+                        &:hover,
+                        &:focus {
+                            background-color: $mvl-main-navigation__background-hover-color--current;
+                        }
+                    }
+
+                    &:hover > a {
+                        background-color: $mvl-main-navigation__background-hover-color--current;
+                    }
                 }
 
 
-                li {
-                    background-color: $mvl-main-navigation__dropdown-background-color--level-3;
+                ul {
+                    box-shadow: 0 2px 5px -1px $mvl-color__drop-shadow;
 
-                    a:hover,
-                    a:focus {
-                        background-color: $mvl-main-navigation__dropdown-background-hover-color--level-3;
+
+                    li {
+                        text-align: left;
+                        background-color: $mvl-main-navigation__dropdown-background-color--level-2;
+
+
+                        a {
+                            padding-right: mvl-px-to-rem($mvl-gutter-width / 2);
+                            padding-left: mvl-px-to-rem($mvl-gutter-width / 2);
+
+                            &:hover,
+                            &:focus {
+                                background-color: $mvl-main-navigation__dropdown-background-hover-color--level-2;
+                            }
+                        }
+
+                        &:hover > a,
+                        .js &.show-submenu > a {
+                            background-color: $mvl-main-navigation__dropdown-background-hover-color--level-2;
+                        }
+
+
+                        li {
+                            background-color: $mvl-main-navigation__dropdown-background-color--level-3;
+
+                            a:hover,
+                            a:focus {
+                                background-color: $mvl-main-navigation__dropdown-background-hover-color--level-3;
+                            }
+                        }
+                    }
+
+
+                    .has-children > a::after {
+                        @include mvl-main-navigation__arrow--right;
                     }
                 }
             }
-
-
-            .has-children > a::after {
-                @include mvl-main-navigation__arrow--right;
-            }
-        }
     }
 }
 
@@ -801,7 +820,7 @@ $mvl-main-navigation__toggle-icon-calculated-width: $mvl-main-navigation__toggle
 /// @access public
 /// @group Main navigation
 /// @type Number
-$mvl-main-navigation__logo-narrow-calculated-height: $mvl-main-navigation__bar-height - $mvl-gutter-width;
+$mvl-main-navigation__logo-narrow-calculated-height: $mvl-main-navigation__bar-height - $mvl-base-font-size--screen;
 
 /// Calculated width of (narrow) navigation bar logo for smaller screens in px
 /// @access public
@@ -847,42 +866,48 @@ $mvl-main-navigation__logo-narrow-calculated-width: $mvl-main-navigation__logo-n
                 }
 
                 .scroll-to-fixed-fixed & {
-                    width: mvl-px-to-rem(($mvl-gutter-width * 2) + $mvl-main-navigation__logo-narrow-calculated-width);
+                    width: mvl-px-to-rem(($mvl-gutter-width) + $mvl-main-navigation__logo-narrow-calculated-width);
                 }
             }
 
 
-                .js &__logo--wide {
-                    display: none;
+                .scroll-to-fixed-fixed &__logo-link {
+                    padding-right: mvl-px-to-rem($mvl-gutter-width / 2);
+                    padding-left: mvl-px-to-rem($mvl-gutter-width / 2);
                 }
 
-
-                &__logo--narrow {
-                    .js & {
-                        display: block;
-                        width: mvl-px-to-rem($mvl-main-navigation__logo-narrow-calculated-width);
-                        height: mvl-px-to-rem($mvl-main-navigation__logo-narrow-calculated-height);
-                        transition: fill $mvl-default-transition__duration $mvl-default-transition__timing-function, opacity $mvl-default-transition__duration $mvl-default-transition__timing-function 0s;
-                        color: $mvl-color__white;
-                        fill: $mvl-color__brand-1--darker;
-                        opacity: 0;
+                    .js &__logo--wide {
+                        display: none;
                     }
 
-                    a:hover & {
-                        fill: $mvl-color__brand-1;
+
+                    &__logo--narrow {
+                        .js & {
+                            display: block;
+                            width: mvl-px-to-rem($mvl-main-navigation__logo-narrow-calculated-width);
+                            height: mvl-px-to-rem($mvl-main-navigation__logo-narrow-calculated-height);
+                            transition: fill $mvl-default-transition__duration $mvl-default-transition__timing-function, opacity $mvl-default-transition__duration $mvl-default-transition__timing-function 0s;
+                            color: $mvl-color__white;
+                            fill: $mvl-color__brand-1--darker;
+                            opacity: 0;
+                        }
+
+                        a:hover &,
+                        a:focus & {
+                            fill: $mvl-color__brand-1;
+                        }
+
+                        .scroll-to-fixed-fixed & {
+                            opacity: 1;
+                            transition: fill $mvl-default-transition__duration $mvl-default-transition__timing-function, opacity $mvl-default-transition__duration $mvl-default-transition__timing-function $mvl-default-transition__duration;
+                        }
                     }
 
-                    .scroll-to-fixed-fixed & {
-                        opacity: 1;
-                        transition: fill $mvl-default-transition__duration $mvl-default-transition__timing-function, opacity $mvl-default-transition__duration $mvl-default-transition__timing-function $mvl-default-transition__duration;
+
+                    .js &__toggle {
+                        display: none;
+                        visibility: hidden;
                     }
-                }
-
-
-                .js &__toggle {
-                    display: none;
-                    visibility: hidden;
-                }
 
 
             .js &__list {
