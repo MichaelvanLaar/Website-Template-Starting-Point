@@ -22,7 +22,6 @@ html {
 *::before,
 *::after {
     box-sizing: inherit; // Allow components to change to other box-sizing models if necessary
-    //transition: $mvl-default-transition;
 }
 
 
@@ -37,6 +36,7 @@ textarea {
 
 body {
     font-family: $mvl-font-stack--text;
+    background-color: $mvl-color__white;
 }
 
 
@@ -76,4 +76,8 @@ video {
 
 img {
     height: auto;
+}
+
+svg {
+    fill: currentColor;
 }

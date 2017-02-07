@@ -57,7 +57,7 @@ $mvl-main-navigation__accordion-background-color--level-1: $mvl-color__brand-2;
 /// @access public
 /// @group Main navigation
 /// @type Color
-$mvl-main-navigation__accodrion-background-hover-color--level-1: mix($mvl-color__brand-2, $mvl-color__brand-2--lighter, 50%);
+$mvl-main-navigation__accordion-background-hover-color--level-1: mix($mvl-color__brand-2, $mvl-color__brand-2--lighter, 50%);
 
 
 /// Background color of 2nd fold-out level of main navigation
@@ -70,7 +70,7 @@ $mvl-main-navigation__accordion-background-color--level-2: $mvl-color__brand-2--
 /// @access public
 /// @group Main navigation
 /// @type Color
-$mvl-main-navigation__accodrion-background-hover-color--level-2: mix($mvl-color__brand-2--lighter, $mvl-color__brand-2--lightest, 50%);
+$mvl-main-navigation__accordion-background-hover-color--level-2: mix($mvl-color__brand-2--lighter, $mvl-color__brand-2--lightest, 50%);
 
 
 /// Background color of 3rd fold-out level of main navigation
@@ -83,7 +83,7 @@ $mvl-main-navigation__accordion-background-color--level-3: $mvl-color__brand-2--
 /// @access public
 /// @group Main navigation
 /// @type Color
-$mvl-main-navigation__accodrion-background-hover-color--level-3: mix($mvl-color__brand-2--lightest, $mvl-color__white, 50%);
+$mvl-main-navigation__accordion-background-hover-color--level-3: mix($mvl-color__brand-2--lightest, $mvl-color__white, 50%);
 
 
 /// Background color of 1st dropdown level (= navigation level 2) of main navigation
@@ -343,13 +343,13 @@ $mvl-main-navigation__dropdown-menu-width: 250px;
                 &:hover,
                 &:focus {
                     color: $mvl-main-navigation__menu-bar-link-hover-color--with-header;
-                    background-color: $mvl-main-navigation__accodrion-background-hover-color--level-1;
+                    background-color: $mvl-main-navigation__accordion-background-hover-color--level-1;
                 }
             }
 
             & > li:hover > a {
                 color: $mvl-main-navigation__menu-bar-link-hover-color--with-header;
-                background-color: $mvl-main-navigation__accodrion-background-hover-color--level-1;
+                background-color: $mvl-main-navigation__accordion-background-hover-color--level-1;
             }
 
             .current {
@@ -379,7 +379,7 @@ $mvl-main-navigation__dropdown-menu-width: 250px;
                 a:focus,
                 li:hover > a {
                     color: $mvl-main-navigation__menu-bar-link-hover-color--with-header;
-                    background-color: $mvl-main-navigation__accodrion-background-hover-color--level-2;
+                    background-color: $mvl-main-navigation__accordion-background-hover-color--level-2;
                 }
 
 
@@ -389,7 +389,7 @@ $mvl-main-navigation__dropdown-menu-width: 250px;
 
                     a:hover,
                     a:focus {
-                        background-color: $mvl-main-navigation__accodrion-background-hover-color--level-3;
+                        background-color: $mvl-main-navigation__accordion-background-hover-color--level-3;
                     }
                 }
             }
@@ -636,12 +636,12 @@ $mvl-main-navigation__toggle-icon-calculated-width: $mvl-main-navigation__toggle
 
         .show-submenu > a {
             color: $mvl-main-navigation__menu-bar-link-hover-color--with-header;
-            background-color: $mvl-main-navigation__accodrion-background-hover-color--level-1;
+            background-color: $mvl-main-navigation__accordion-background-hover-color--level-1;
         }
 
 
         ul .show-submenu > a {
-            background-color: $mvl-main-navigation__accodrion-background-hover-color--level-2;
+            background-color: $mvl-main-navigation__accordion-background-hover-color--level-2;
         }
     }
 }

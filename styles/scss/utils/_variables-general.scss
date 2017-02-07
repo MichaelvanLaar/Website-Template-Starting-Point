@@ -58,8 +58,21 @@ $mvl-gutter-width: 25px;
 
 
 //------------------------------------------------------------------------------
-// Fonts
+// Typography
 //------------------------------------------------------------------------------
+
+
+/// Regular font family
+/// @access public
+/// @group Typography
+/// @type list
+$mvl-font-stack--text: 'Arial', 'Helvetica', sans-serif;
+
+/// Code (monospace) font family
+/// @access public
+/// @group Typography
+/// @type list
+$mvl-font-stack--code: 'Lucida Console', 'Courier New', 'Courier', monospace;
 
 
 /// Font size (in px) for basic copy text on screen
@@ -82,17 +95,11 @@ $mvl-base-font-size--print: 12pt;
 $mvl-base-line-height: 25px;
 
 
-/// Regular font family
+/// Indent (in px) for basic lists and blockquotes
 /// @access public
-/// @group Typography
-/// @type list
-$mvl-font-stack--text: 'Arial', 'Helvetica', sans-serif;
-
-/// Code (monospace) font family
-/// @access public
-/// @group Typography
-/// @type list
-$mvl-font-stack--code: 'Lucida Console', 'Courier New', 'Courier', monospace;
+/// @group typography
+/// @type number
+$mvl-base-indent: 35px;
 
 
 
