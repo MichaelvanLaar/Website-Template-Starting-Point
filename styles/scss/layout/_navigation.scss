@@ -685,6 +685,7 @@ $mvl-main-navigation__toggle-icon-calculated-width: $mvl-main-navigation__toggle
 
 
                     a {
+                        height: 100%;
                         padding-right: mvl-px-to-rem($mvl-gutter-width / 2);
                         padding-left: mvl-px-to-rem($mvl-gutter-width / 2);
                     }
