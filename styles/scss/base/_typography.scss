@@ -82,7 +82,7 @@ del {
 
 
 h1 {
-    @include mvl-font-size-line-height(46px);
+    @include mvl-font-size-line-height(42px);
 
     margin-top: mvl-px-to-rem($mvl-base-line-height);
     margin-bottom: mvl-px-to-rem($mvl-base-line-height);
@@ -94,7 +94,7 @@ h1 {
 }
 
 h2 {
-    @include mvl-font-size-line-height(23px);
+    @include mvl-font-size-line-height(21px);
 
     margin-top: mvl-px-to-rem($mvl-base-line-height * 2);
     margin-bottom: mvl-px-to-rem($mvl-base-line-height);
