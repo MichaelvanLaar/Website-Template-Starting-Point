@@ -29,6 +29,8 @@
 
 .main-container {
     @include mvl-clearfix;
+
+    flex: 1;
 }
 
 
