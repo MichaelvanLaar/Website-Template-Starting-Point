@@ -53,12 +53,13 @@ The Website Template Starting Point supports all modern browsers as well as Inte
 * [jQuery outside events 1.1](https://github.com/cowboy/jquery-outside-events)
 * [ScrollToFixed 1.0.6](https://github.com/bigspotteddog/ScrollToFixed)
 
-## Used Tools
+## Used tools
 
 * [Sass 3.4.20](http://sass-lang.com/)
 * [Autoprefixer](https://github.com/postcss/autoprefixer)
 * [CSScomb 3.0.0](http://csscomb.com/)
 * [SassDoc 2.0](http://sassdoc.com/)
+* [Sass Lint 1.10.2](https://github.com/sasstools/sass-lint/)
 * [EditorConfig](http://editorconfig.org/)
 * [RealFaviconGenerator](http://realfavicongenerator.net/)
 * [Prepros 6.0.6](https://prepros.io/)
