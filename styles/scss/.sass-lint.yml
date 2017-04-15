@@ -288,7 +288,6 @@ rules:
         - justify-content
         - align-items
         - align-content
-        - justify-content
         - order
         - flex-grow
         - flex-shrink
