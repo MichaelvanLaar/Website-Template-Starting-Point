@@ -23,24 +23,6 @@ $support-for: (
 //------------------------------------------------------------------------------
 
 
-/// Named breakpoints for media queries
-/// @access public
-/// @group Layout
-/// @type Map
-$mvl-breakpoints: (
-    'main-content-width': (min-width: 625px),
-    'full-width': (min-width: 975px),
-    'full-width-scale-1': (min-width: 1090px), // base font size: 17px
-    'full-width-scale-2': (min-width: 1206px), // base font size: 18px
-    'full-width-scale-3': (min-width: 1322px), // base font size: 19px
-    'full-width-scale-4': (min-width: 1438px), // base font size: 20px
-    'full-width-scale-5': (min-width: 1553px), // base font size: 21px
-    'full-width-scale-6': (min-width: 1669px), // base font size: 22px
-    'full-width-scale-7': (min-width: 1784px), // base font size: 23px
-    'full-width-scale-8': (min-width: 1900px), // base font size: 24px
-);
-
-
 /// Width (in px) of one column of the 12-column layout grid
 /// @access public
 /// @group Layout
@@ -52,6 +34,24 @@ $mvl-column-width: 50px;
 /// @group Layout
 /// @type Number
 $mvl-gutter-width: 25px;
+
+
+/// Named breakpoints for media queries
+/// @access public
+/// @group Layout
+/// @type Map
+$mvl-breakpoints: (
+    'main-content-width': (min-width: (($mvl-column-width * 8) + ($mvl-gutter-width * 9))),
+    'full-width': (min-width: (($mvl-column-width * 12) + ($mvl-gutter-width * 14))),
+    'full-width-scale-1': (min-width: floor(($mvl-column-width * 12) + (($mvl-gutter-width * 14)) + (1900 - (($mvl-column-width * 12) + ($mvl-gutter-width * 14))) * (1/8))), // base font size: 17px
+    'full-width-scale-2': (min-width: floor(($mvl-column-width * 12) + (($mvl-gutter-width * 14)) + (1900 - (($mvl-column-width * 12) + ($mvl-gutter-width * 14))) * (2/8))), // base font size: 18px
+    'full-width-scale-3': (min-width: floor(($mvl-column-width * 12) + (($mvl-gutter-width * 14)) + (1900 - (($mvl-column-width * 12) + ($mvl-gutter-width * 14))) * (3/8))), // base font size: 19px
+    'full-width-scale-4': (min-width: floor(($mvl-column-width * 12) + (($mvl-gutter-width * 14)) + (1900 - (($mvl-column-width * 12) + ($mvl-gutter-width * 14))) * (4/8))), // base font size: 20px
+    'full-width-scale-5': (min-width: floor(($mvl-column-width * 12) + (($mvl-gutter-width * 14)) + (1900 - (($mvl-column-width * 12) + ($mvl-gutter-width * 14))) * (5/8))), // base font size: 21px
+    'full-width-scale-6': (min-width: floor(($mvl-column-width * 12) + (($mvl-gutter-width * 14)) + (1900 - (($mvl-column-width * 12) + ($mvl-gutter-width * 14))) * (6/8))), // base font size: 22px
+    'full-width-scale-7': (min-width: floor(($mvl-column-width * 12) + (($mvl-gutter-width * 14)) + (1900 - (($mvl-column-width * 12) + ($mvl-gutter-width * 14))) * (7/8))), // base font size: 23px
+    'full-width-scale-8': (min-width: 1900px), // base font size: 24px
+);
 
 
 
