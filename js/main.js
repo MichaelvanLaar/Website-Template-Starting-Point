@@ -5,12 +5,13 @@
  *
  * CONTENTS
  * -----------------------------------------------------------------------------
- * Cache some repeatedly used elements
- * Ajax for the SVG icons sprite
+ *
+ * Caching some repeatedly used elements
+ * Ajaxing for the SVG icons sprite
  * Menu (accordion menu or dropdown menu, according to screen size)
  * ScrollToFixed application
  * Cookie information banner
- * Add “rel='noopener'” to all links with “target='_blank'” for more security
+ * Adding “rel='noopener'” to all links with “target='_blank'” for more security
  */
 
 
@@ -19,13 +20,27 @@
 
 /**
  * -----------------------------------------------------------------------------
- * Cache some repeatedly used elements
+ * Preventing ESLint errors regarding those variables which are defined in
+ * plugins.js
+ * -----------------------------------------------------------------------------
+ */
+
+
+/* global Cookies */
+/* global enquire */
+
+
+
+
+
+/**
+ * -----------------------------------------------------------------------------
+ * Caching some repeatedly used elements
  * -----------------------------------------------------------------------------
  */
 
 
 var mvl_main_navigation = $('.js-main-navigation');
-var mvl_main_navigation__box = $('.js-main-navigation__box');
 var mvl_main_navigation__helpers = $('.js-main-navigation__helpers');
 var mvl_main_navigation__toggle = $('.js-main-navigation__toggle');
 var mvl_main_navigation__list = $('.js-main-navigation__list');
@@ -39,7 +54,7 @@ var mvl_page_footer = $('.js-page-footer');
 
 /**
  * -----------------------------------------------------------------------------
- * Ajax for the SVG icons sprite
+ * Ajaxing for the SVG icons sprite
  * https://css-tricks.com/ajaxing-svg-sprite/
  * -----------------------------------------------------------------------------
  */
@@ -48,7 +63,7 @@ var mvl_page_footer = $('.js-page-footer');
 var ajax = new XMLHttpRequest();
 ajax.open("GET", "images/icons.svg", true);
 ajax.send();
-ajax.onload = function (e) {
+ajax.onload = function () {
     var div = document.createElement("div");
     div.innerHTML = ajax.responseText;
     document.body.insertBefore(div, document.body.childNodes[0]);
@@ -187,6 +202,8 @@ $(document).ready(function () {
 
 });
 
+var mvl_page_footer__margin_bottom = '0px';
+
 $(window).resize(function () {
     if (Cookies.get('mvl_cookiePermission') != 'ok') {
         mvl_page_footer__margin_bottom = $('.cookie-info-banner').outerHeight() + 'px';
@@ -200,7 +217,7 @@ $(window).resize(function () {
 
 /**
  * -----------------------------------------------------------------------------
- * Add “rel='noopener'” to all links with “target='_blank'” for more security
+ * Adding “rel='noopener'” to all links with “target='_blank'” for more security
  * https://mathiasbynens.github.io/rel-noopener/ for details
  * -----------------------------------------------------------------------------
  */
