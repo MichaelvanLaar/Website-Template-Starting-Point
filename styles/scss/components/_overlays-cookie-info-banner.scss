@@ -25,6 +25,10 @@
             margin-top: 6px;
             margin-bottom: 6px;
             padding-right: 25px;
+
+            @include mvl-respond-to('full-width') {
+                text-align: center;
+            }
         }
 
         &__close-button {

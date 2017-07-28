@@ -11,6 +11,7 @@ html {
     line-height: ($mvl-base-line-height / $mvl-base-font-size--screen);
     overflow-y: scroll;
     box-sizing: border-box;
+    height: 100%;
 
     @media print {
         font-size: $mvl-base-font-size--print;
@@ -22,7 +23,6 @@ html {
 *::before,
 *::after {
     box-sizing: inherit; // Allow components to change to other box-sizing models if necessary
-    //transition: $mvl-default-transition;
 }
 
 
@@ -37,6 +37,10 @@ textarea {
 
 body {
     font-family: $mvl-font-stack--text;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    background-color: $mvl-color__white;
 }
 
 

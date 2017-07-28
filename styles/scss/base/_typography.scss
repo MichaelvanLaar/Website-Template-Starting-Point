@@ -21,7 +21,7 @@ ol {
 
 ul,
 ol {
-    padding: 0 0 0 mvl-px-to-rem(35px);
+    padding: 0 0 0 mvl-px-to-rem($mvl-base-indent);
 
     li * {
         margin-top: 0;
@@ -42,13 +42,13 @@ ol {
 
 
 dd {
-    margin: 0 0 0 mvl-px-to-rem(35px);
+    margin: 0 0 0 mvl-px-to-rem($mvl-base-indent);
 }
 
 
 blockquote {
     font-style: italic;
-    margin: mvl-px-to-rem($mvl-base-line-height) mvl-px-to-rem(35px);
+    margin: mvl-px-to-rem($mvl-base-line-height) mvl-px-to-rem($mvl-base-indent);
 
     p {
         font-style: italic;
@@ -82,7 +82,7 @@ del {
 
 
 h1 {
-    @include mvl-font-size-line-height(46px);
+    @include mvl-font-size-line-height(42px);
 
     margin-top: mvl-px-to-rem($mvl-base-line-height);
     margin-bottom: mvl-px-to-rem($mvl-base-line-height);
@@ -94,7 +94,7 @@ h1 {
 }
 
 h2 {
-    @include mvl-font-size-line-height(23px);
+    @include mvl-font-size-line-height(21px);
 
     margin-top: mvl-px-to-rem($mvl-base-line-height * 2);
     margin-bottom: mvl-px-to-rem($mvl-base-line-height);
