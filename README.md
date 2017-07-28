@@ -45,24 +45,25 @@ The Website Template Starting Point supports all modern browsers as well as Inte
 
 ### JavaScript
 
-* [respimage 1.3.0](https://github.com/aFarkas/respimage)
-* [lazysizes 1.0.0-RC2](https://github.com/aFarkas/lazysizes)
 * [enquire.js 2.1.2](https://github.com/WickyNilliams/enquire.js)
 * [JavaScript Cookie 2.1.3](https://github.com/js-cookie/js-cookie)
-* [jQuery 3.1.1](http://jquery.com/)
+* [jQuery 3.2.1](http://jquery.com/)
 * [jQuery outside events 1.1](https://github.com/cowboy/jquery-outside-events)
+* [lazysizes 1.0.0-RC2](https://github.com/aFarkas/lazysizes)
+* [respimage 1.3.0](https://github.com/aFarkas/respimage)
 * [ScrollToFixed 1.0.6](https://github.com/bigspotteddog/ScrollToFixed)
 
 ## Used tools
 
-* [Sass 3.4.20](http://sass-lang.com/)
-* [Autoprefixer](https://github.com/postcss/autoprefixer)
-* [CSScomb 3.0.0](http://csscomb.com/)
-* [SassDoc 2.0](http://sassdoc.com/)
-* [Sass Lint 1.10.2](https://github.com/sasstools/sass-lint/)
+* [Autoprefixer 7.1.1](https://github.com/postcss/autoprefixer)
+* [CSScomb 4.0.0](http://csscomb.com/)
+* [ESLint 4.3.0](http://eslint.org/)
 * [EditorConfig](http://editorconfig.org/)
+* [node-sass 4.5.3](https://www.npmjs.com/package/node-sass)
+* [Prepros 6.0.16](https://prepros.io/)
 * [RealFaviconGenerator](http://realfavicongenerator.net/)
-* [Prepros 6.0.6](https://prepros.io/)
+* [SassDoc 2.0](http://sassdoc.com/)
+* [Visual Studio Code 1.14.2](https://code.visualstudio.com/)
 
 ## Code conventions
 
