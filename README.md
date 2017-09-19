@@ -1,4 +1,4 @@
-# Website Template Starting Point 3.5.2
+# Website Template Starting Point 3.5.3
 
 CSS frameworks are not everybody’s cup of tea. Some web designers rather like to write their own code because they don’t want to bow to external specifications. They want to have full control over architectural principles as well as coding and naming conventions – instead of overwriting predefined default styles over and over to achieve the desired result.
 
@@ -24,7 +24,7 @@ If you are one of these web designers, this starting point for building websites
   * Submenus appear on click/tab to avoid :hover problem on touchscreens
   * Fully usable fallback layout for browsers with no JavaScript activated
 * Layout can be scaled (e.g. to better fill high resolution screens) simply by adjusting the base font size.
-* Sticky footer ([without additional markup](https://css-tricks.com/couple-takes-sticky-footer/#article-header-id-3))
+* Sticky footer ([without additional markup](https://css-tricks.com/couple-takes-sticky-footer/#article-header-id-3)), except in Internet Explorer
 * URLs of links appear as footnotes in print layout.
 * Cookie information banner
 
