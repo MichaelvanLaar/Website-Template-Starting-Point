@@ -43,6 +43,11 @@ body {
     background-color: $mvl-color__white;
 }
 
+// Hack for IE10 and IE11, required due to a flexbox bug
+_:-ms-lang(x), body {
+    display: block;
+}
+
 
 // Change the selection background color to fit with the used color scheme
 ::selection {
