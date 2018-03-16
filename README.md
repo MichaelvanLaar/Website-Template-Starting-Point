@@ -56,11 +56,10 @@ The Website Template Starting Point supports all modern browsers as well as Inte
 ## Used tools
 
 * [Autoprefixer 7.1.1](https://github.com/postcss/autoprefixer)
-* [CSScomb 4.0.0](http://csscomb.com/)
 * [ESLint 4.3.0](http://eslint.org/)
 * [EditorConfig](http://editorconfig.org/)
 * [node-sass 4.5.3](https://www.npmjs.com/package/node-sass)
-* [Prepros 6.0.16](https://prepros.io/)
+* [Prepros 6.1.1](https://prepros.io/)
 * [RealFaviconGenerator](http://realfavicongenerator.net/)
 * [SassDoc 2.0](http://sassdoc.com/)
 * [Visual Studio Code 1.14.2](https://code.visualstudio.com/)
