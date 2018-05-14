@@ -1,24 +1,23 @@
 // Support the last 4 versions of all browsers except IE.
 $support-for: (
-  chrome:  -4,
-  edge:    -4,
+  chrome: -4,
+  edge: -4,
   firefox: -4,
-  ie:      9,
-  opera:   -4,
-  safari:  -4,
-  '*':     -4,
+  ie: 9,
+  opera: -4,
+  safari: -4,
+  "*": -4
 ) !default;
 
 // Set the current version number for all browsers. As of: 2015-11-17
 $support-for-current-browser-version: (
-  chrome:  46,
-  edge:    25,
+  chrome: 46,
+  edge: 25,
   firefox: 42,
-  ie:      11,
-  opera:   33,
-  safari:  9,
+  ie: 11,
+  opera: 33,
+  safari: 9
 ) !default;
-
 
 // support-for()
 //
@@ -31,7 +30,15 @@ $support-for-current-browser-version: (
 //
 @function support-for($browser, $version) {
   // Ensure $version is an integer (or null).
-  @if not (type-of($version) == "null" or type-of($version) == "number" and round($version) == $version) {
+  @if not(
+    type-of($version) ==
+      "null" or
+      type-of($version) ==
+      "number" and
+      round($version) ==
+      $version
+  )
+  {
     @error "The $version parameter of support-for() must be an integer; #{type-of($version)} given.";
   }
 
@@ -39,9 +46,8 @@ $support-for-current-browser-version: (
   $min-version: null;
   @if map-has-key($support-for, $browser) {
     $min-version: map-get($support-for, $browser);
-  }
-  @else if map-has-key($support-for, '*') {
-    $min-version: map-get($support-for, '*');
+  } @else if map-has-key($support-for, "*") {
+    $min-version: map-get($support-for, "*");
   }
 
   // Ensure $min-version is an integer (or null).
@@ -57,7 +63,9 @@ $support-for-current-browser-version: (
     @if not map-has-key($support-for-current-browser-version, $browser) {
       @error "#{$browser} not found in $support-for-current-browser-version map; it must be set to an integer.";
     }
-    $min-version: map-get($support-for-current-browser-version, $browser) + $min-version + 1;
+    $min-version: map-get($support-for-current-browser-version, $browser) +
+      $min-version +
+      1;
   }
 
   @return if(($min-version and ($version >= $min-version)), true, false);

@@ -2,157 +2,141 @@
 // Basic typography
 //==============================================================================
 
-
-
-
-
 p,
 ul,
 ol {
-    margin-top: mvl-px-to-rem($mvl-base-line-height);
-    margin-bottom: mvl-px-to-rem($mvl-base-line-height);
+  margin-top: mvl-px-to-rem($mvl-base-line-height);
+  margin-bottom: mvl-px-to-rem($mvl-base-line-height);
 
-    @media print {
-        orphans: 3;
-        widows: 3;
-    }
+  @media print {
+    orphans: 3;
+    widows: 3;
+  }
 }
-
 
 ul,
 ol {
-    padding: 0 0 0 mvl-px-to-rem($mvl-base-indent);
+  padding: 0 0 0 mvl-px-to-rem($mvl-base-indent);
 
-    li * {
-        margin-top: 0;
-        margin-bottom: 0;
-    }
+  li * {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
 
-    ul,
-    ol {
-        margin-top: 0;
-        margin-bottom: 0;
-    }
+  ul,
+  ol {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
 
-    nav & {
-        margin: 0;
-        padding: 0;
-    }
+  nav & {
+    margin: 0;
+    padding: 0;
+  }
 }
-
 
 dd {
-    margin: 0 0 0 mvl-px-to-rem($mvl-base-indent);
+  margin: 0 0 0 mvl-px-to-rem($mvl-base-indent);
 }
 
-
 blockquote {
-    font-style: italic;
-    margin: mvl-px-to-rem($mvl-base-line-height) mvl-px-to-rem($mvl-base-indent);
+  font-style: italic;
+  margin: mvl-px-to-rem($mvl-base-line-height) mvl-px-to-rem($mvl-base-indent);
 
-    p {
-        font-style: italic;
-    }
+  p {
+    font-style: italic;
+  }
 }
 
 cite {
-    font-style: normal;
+  font-style: normal;
 }
-
 
 pre,
 code,
 code var {
-    font-family: $mvl-font-stack--code;
+  font-family: $mvl-font-stack--code;
 }
-
 
 abbr {
-    cursor: help;
+  cursor: help;
 
-    &[title] {
-        text-decoration: none;
-    }
+  &[title] {
+    text-decoration: none;
+  }
 }
-
 
 del {
-    text-decoration: line-through;
+  text-decoration: line-through;
 }
 
-
 h1 {
-    @include mvl-font-size-line-height(42px);
+  @include mvl-font-size-line-height(42px);
 
-    margin-top: mvl-px-to-rem($mvl-base-line-height);
-    margin-bottom: mvl-px-to-rem($mvl-base-line-height);
+  margin-top: mvl-px-to-rem($mvl-base-line-height);
+  margin-bottom: mvl-px-to-rem($mvl-base-line-height);
 
-    @media print {
-        page-break-after: avoid;
-        page-break-inside: avoid;
-    }
+  @media print {
+    page-break-after: avoid;
+    page-break-inside: avoid;
+  }
 }
 
 h2 {
-    @include mvl-font-size-line-height(21px);
+  @include mvl-font-size-line-height(21px);
 
-    margin-top: mvl-px-to-rem($mvl-base-line-height * 2);
-    margin-bottom: mvl-px-to-rem($mvl-base-line-height);
+  margin-top: mvl-px-to-rem($mvl-base-line-height * 2);
+  margin-bottom: mvl-px-to-rem($mvl-base-line-height);
 
-    @media print {
-        page-break-after: avoid;
-        page-break-inside: avoid;
-    }
+  @media print {
+    page-break-after: avoid;
+    page-break-inside: avoid;
+  }
 }
 
 h3,
 h4,
 h5,
 h6 {
-    @include mvl-font-size-line-height($mvl-base-font-size--screen);
+  @include mvl-font-size-line-height($mvl-base-font-size--screen);
 
-    margin-top: mvl-px-to-rem($mvl-base-line-height * 2);
-    margin-bottom: mvl-px-to-rem($mvl-base-line-height);
+  margin-top: mvl-px-to-rem($mvl-base-line-height * 2);
+  margin-bottom: mvl-px-to-rem($mvl-base-line-height);
 
-    @media print {
-        page-break-after: avoid;
-        page-break-inside: avoid;
-    }
+  @media print {
+    page-break-after: avoid;
+    page-break-inside: avoid;
+  }
 }
-
 
 td {
-    vertical-align: top;
+  vertical-align: top;
 }
-
-
-
-
 
 //------------------------------------------------------------------------------
 // Links
 //------------------------------------------------------------------------------
 
-
 a {
-    transition: color $mvl-default-transition__duration $mvl-default-transition__timing-function;
-    text-decoration: none;
-    color: $mvl-color__brand-1;
+  transition: color $mvl-default-transition__duration
+    $mvl-default-transition__timing-function;
+  text-decoration: none;
+  color: $mvl-color__brand-1;
+
+  @media print {
+    text-decoration: underline;
+  }
+
+  &:visited {
+    color: $mvl-color__brand-1--darker;
 
     @media print {
-        text-decoration: underline;
+      text-decoration: underline;
     }
+  }
 
-    &:visited {
-        color: $mvl-color__brand-1--darker;
-
-        @media print {
-            text-decoration: underline;
-        }
-    }
-
-    &:hover,
-    &:focus {
-        color: $mvl-color__brand-1--lighter;
-    }
+  &:hover,
+  &:focus {
+    color: $mvl-color__brand-1--lighter;
+  }
 }

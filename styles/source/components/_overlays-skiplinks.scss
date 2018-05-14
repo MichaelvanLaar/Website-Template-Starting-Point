@@ -2,10 +2,6 @@
 // Overlays: Skiplinks
 //==============================================================================
 
-
-
-
-
 .skiplinks {
-    @include mvl-visually-hidden('focusable');
+  @include mvl-visually-hidden("focusable");
 }

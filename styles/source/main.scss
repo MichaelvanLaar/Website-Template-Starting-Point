@@ -1,30 +1,29 @@
 @charset 'utf-8';
 
+@import "utils/variables-vl-color-scheme"; // Color scheme “van Laar”
+@import "utils/variables-colors"; // Project colors
+@import "utils/variables-general"; // General variables
+@import "utils/functions"; // General functions
+@import "utils/mixins"; // General mixins
 
-@import 'utils/variables-vl-color-scheme';         // Color scheme “van Laar”
-@import 'utils/variables-colors';                  // Project colors
-@import 'utils/variables-general';                 // General variables
-@import 'utils/functions';                         // General functions
-@import 'utils/mixins';                            // General mixins
+@import "base/fonts"; // @font-face declarations
+@import "base/apply-normalize"; // Application of normalize.scss
+@import "base/base"; // Base styles
+@import "base/typography"; // Basic typography
+@import "base/form-elements"; // Form elements
 
-@import 'base/fonts';                              // @font-face declarations
-@import 'base/apply-normalize';                    // Application of normalize.scss
-@import 'base/base';                               // Base styles
-@import 'base/typography';                         // Basic typography
-@import 'base/form-elements';                      // Form elements
-
-@import 'layout/layout-general';                   // General layout
-@import 'layout/navigation';                       // Main navigation
-@import 'layout/header';                           // Page header
-@import 'layout/main-content';                     // Main content area
-@import 'layout/sidebar';                          // Sidebar
-@import 'layout/footer';                           // Page footer
+@import "layout/layout-general"; // General layout
+@import "layout/navigation"; // Main navigation
+@import "layout/header"; // Page header
+@import "layout/main-content"; // Main content area
+@import "layout/sidebar"; // Sidebar
+@import "layout/footer"; // Page footer
 // @import 'layout/forms';
-@import 'layout/print';                            // Print styles
+@import "layout/print"; // Print styles
 
-@import 'components/overlays-ie-warnings';         // Overlays: IE warnings
-@import 'components/overlays-skiplinks';           // Overlays: Skiplinks
-@import 'components/overlays-cookie-info-banner';  // Overlay: Cookie info banner
+@import "components/overlays-ie-warnings"; // Overlays: IE warnings
+@import "components/overlays-skiplinks"; // Overlays: Skiplinks
+@import "components/overlays-cookie-info-banner"; // Overlay: Cookie info banner
 // @import 'components/buttons';
 // @import 'components/carousel';
 // @import 'components/cover';

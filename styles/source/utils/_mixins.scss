@@ -2,10 +2,6 @@
 // General mixins
 //==============================================================================
 
-
-
-
-
 /// Responsive manager
 /// @author Hugo Giraudel
 /// @access public
@@ -26,28 +22,28 @@
 ///       /* media query specific CSS rules */
 ///   }
 @mixin mvl-respond-to($breakpoint) {
-    $mvl-breakpoints: (
-        'main-content-width': (min-width: 592px),
-        'full-width': (min-width: 1020px),
-    ) !default;
+  $mvl-breakpoints: (
+    "main-content-width": (min-width: 592px),
+    "full-width": (min-width: 1020px)
+  ) !default;
 
-    $raw-query: map-get($mvl-breakpoints, $breakpoint);
+  $raw-query: map-get($mvl-breakpoints, $breakpoint);
 
-    @if $raw-query {
-        $query: if(type-of($raw-query) == 'string', unquote($raw-query), inspect($raw-query));
+  @if $raw-query {
+    $query: if(
+      type-of($raw-query) == "string",
+      unquote($raw-query),
+      inspect($raw-query)
+    );
 
-        @media only screen and #{$query} {
-            @content;
-        }
-    } @else {
-        @error 'No value found for `#{$breakpoint}`. '
-            + 'Please make sure it is defined in `$mvl-breakpoints` map.';
+    @media only screen and #{$query} {
+      @content;
     }
+  } @else {
+    @error "No value found for `#{$breakpoint}`. "
+            + "Please make sure it is defined in `$mvl-breakpoints` map.";
+  }
 }
-
-
-
-
 
 /// Converts font size (input in px) to rem and outputs it.
 /// Also outputs corresponding (i. e. a multiple of $mvl-base-line-height) line-height.
@@ -62,26 +58,21 @@
 ///     font-size: 1.1875rem;
 ///     line-height: 1.31579;
 @mixin mvl-font-size-line-height($font-size) {
-    @if unit($font-size) != 'px' {
-        @error "mvl-font-size-line-height only supports px inputs.";
-    }
+  @if unit($font-size) != "px" {
+    @error "mvl-font-size-line-height only supports px inputs.";
+  }
 
-    $mvl-base-font-size--screen: 16px !default;
-    $mvl-base-line-height: 25px !default;
-    $lines: ceil($font-size / $mvl-base-line-height);
+  $mvl-base-font-size--screen: 16px !default;
+  $mvl-base-line-height: 25px !default;
+  $lines: ceil($font-size / $mvl-base-line-height);
 
-    font-size: #{($font-size / $mvl-base-font-size--screen)}rem;
-    line-height: (($lines * $mvl-base-line-height) / $font-size);
+  font-size: #{($font-size / $mvl-base-font-size--screen)}rem;
+  line-height: (($lines * $mvl-base-line-height) / $font-size);
 }
-
-
-
-
 
 //------------------------------------------------------------------------------
 // Helpers
 //------------------------------------------------------------------------------
-
 
 /// Helper to clear inner floats
 /// @author Nicolas Gallagher
@@ -89,35 +80,33 @@
 /// @group Helpers
 /// @access public
 @mixin mvl-clearfix {
-    &::before,
-    &::after {
-        display: table;
-        content: '';
-    }
+  &::before,
+  &::after {
+    display: table;
+    content: "";
+  }
 
-    &::after {
-        clear: both;
-    }
+  &::after {
+    clear: both;
+  }
 }
-
 
 /// Hide content for image replacement
 /// @group Helpers
 /// @access public
 @mixin mvl-image-replacement {
-    overflow: hidden;
-    border: 0;
-    background-color: transparent;
-    *text-indent: -9999px;
+  overflow: hidden;
+  border: 0;
+  background-color: transparent;
+  *text-indent: -9999px;
 
-    &::before {
-        display: block;
-        width: 0;
-        height: 150%;
-        content: '';
-    }
+  &::before {
+    display: block;
+    width: 0;
+    height: 150%;
+    content: "";
+  }
 }
-
 
 /// Hide content from both screenreaders and browsers
 /// @author Jared Smith
@@ -125,10 +114,9 @@
 /// @group Helpers
 /// @access public
 @mixin mvl-hidden {
-    display: none !important;
-    visibility: hidden;
+  display: none !important;
+  visibility: hidden;
 }
-
 
 /// Hide content only visually, but have it available for screenreaders
 /// @author Hugo Giraudel
@@ -137,25 +125,25 @@
 /// @param {String} $focusable - use the string “focusable” to allow the element to be focusable when navigated to via the keyboard
 /// @access public
 @mixin mvl-visually-hidden($focusable: null) {
-    position: absolute !important;
-    overflow: hidden !important;
-    clip: rect(1px, 1px, 1px, 1px) !important;
-    clip-path: inset(50%) !important;
-    width: 1px !important;
-    height: 1px !important;
-    padding: 0 !important;
-    white-space: nowrap !important;
-    border: 0 !important;
+  position: absolute !important;
+  overflow: hidden !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  clip-path: inset(50%) !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  white-space: nowrap !important;
+  border: 0 !important;
 
-    @if $focusable == 'focusable' {
-        &:active,
-        &:focus {
-            overflow: visible !important;
-            clip: auto !important;
-            clip-path: none !important;
-            width: auto !important;
-            height: auto !important;
-            white-space: normal !important;
-        }
+  @if $focusable == "focusable" {
+    &:active,
+    &:focus {
+      overflow: visible !important;
+      clip: auto !important;
+      clip-path: none !important;
+      width: auto !important;
+      height: auto !important;
+      white-space: normal !important;
     }
+  }
 }

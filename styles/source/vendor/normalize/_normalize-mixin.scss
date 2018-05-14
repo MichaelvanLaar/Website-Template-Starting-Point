@@ -7,7 +7,10 @@ $_normalize-exclude: ();
     @return true;
   }
   // If $include is set to (all), make sure $section is not in $exclude.
-  @else if not index($_normalize-exclude, $section) and index($_normalize-include, all) {
+  @else if not
+    index($_normalize-exclude, $section) and
+    index($_normalize-include, all)
+  {
     @return true;
   }
   @return false;
@@ -17,20 +20,45 @@ $_normalize-exclude: ();
   // If we had local functions, we could access our parameters inside the
   // function without passing them in as parameters. The hacky work-around is to
   // stuff them into global variables so can access them from a global function.
-  $_normalize-include: if(type-of($include) == 'list', $include, ($include)) !global;
-  $_normalize-exclude: if(type-of($exclude) == 'list', $exclude, ($exclude)) !global;
+  $_normalize-include: if(
+    type-of($include) == "list",
+    $include,
+    ($include)
+  ) !global;
+  $_normalize-exclude: if(
+    type-of($exclude) == "list",
+    $exclude,
+    ($exclude)
+  ) !global;
 
   // If we've customized any font variables, we'll need extra properties.
-  @if $base-font-size != 16px
-    or $base-line-height != 24px
-    or $base-unit != 'em'
-    or $h1-font-size != 2    * $base-font-size
-    or $h2-font-size != 1.5  * $base-font-size
-    or $h3-font-size != 1.17 * $base-font-size
-    or $h4-font-size != 1    * $base-font-size
-    or $h5-font-size != 0.83 * $base-font-size
-    or $h6-font-size != 0.67 * $base-font-size
-    or $indent-amount != 40px {
+  @if $base-font-size !=
+    16px or
+    $base-line-height !=
+    24px or
+    $base-unit !=
+    "em" or
+    $h1-font-size !=
+    2 *
+    $base-font-size or
+    $h2-font-size !=
+    1.5 *
+    $base-font-size or
+    $h3-font-size !=
+    1.17 *
+    $base-font-size or
+    $h4-font-size !=
+    1 *
+    $base-font-size or
+    $h5-font-size !=
+    0.83 *
+    $base-font-size or
+    $h6-font-size !=
+    0.67 *
+    $base-font-size or
+    $indent-amount !=
+    40px
+  {
     $normalize-vertical-rhythm: true !global;
   }
 
@@ -388,7 +416,10 @@ $_normalize-exclude: ();
       }
     }
 
-    @if $normalize-vertical-rhythm or support-for(ie, 9) or support-for(safari, 6) {
+    @if $normalize-vertical-rhythm or
+      support-for(ie, 9) or
+      support-for(safari, 6)
+    {
       /**
        * Address margin not present in IE 8/9 and Safari.
        */
@@ -439,7 +470,7 @@ $_normalize-exclude: ();
     samp {
       font-family: monospace, monospace;
       @if support-for(ie, 6) {
-        _font-family: 'courier new', monospace;
+        _font-family: "courier new", monospace;
       }
       font-size: 1em;
     }

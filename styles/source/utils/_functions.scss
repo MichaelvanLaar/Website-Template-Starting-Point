@@ -2,14 +2,9 @@
 // General functions
 //==============================================================================
 
-
-
-
-
 //------------------------------------------------------------------------------
 // Colors
 //------------------------------------------------------------------------------
-
 
 /// Slightly lighten a color
 /// @author Hugo Giraudel
@@ -19,9 +14,8 @@
 /// @param {Number} $percentage - percentage of `$color` in returned color
 /// @return {Color}
 @function mvl-tint($color, $percentage) {
-    @return mix($mvl-color__white, $color, $percentage);
+  @return mix($mvl-color__white, $color, $percentage);
 }
-
 
 /// Slightly darken a color
 /// @author Hugo Giraudel
@@ -31,17 +25,12 @@
 /// @param {Number} $percentage - percentage of `$color` in returned color
 /// @return {Color}
 @function mvl-shade($color, $percentage) {
-    @return mix($mvl-color__black, $color, $percentage);
+  @return mix($mvl-color__black, $color, $percentage);
 }
-
-
-
-
 
 //------------------------------------------------------------------------------
 // Units
 //------------------------------------------------------------------------------
-
 
 /// Remove the unit of a length
 /// @access public
@@ -49,12 +38,11 @@
 /// @param {Number} $number - Number to remove unit from
 /// @return {Number} - Unitless number
 @function mvl-strip-unit($number) {
-    @if type-of($number) == 'number' and not unitless($number) {
-        @return $number / ($number * 0 + 1);
-    }
-    @return $number;
+  @if type-of($number) == "number" and not unitless($number) {
+    @return $number / ($number * 0 + 1);
+  }
+  @return $number;
 }
-
 
 /// Convert px to rem
 /// @access public
@@ -63,12 +51,11 @@
 /// @requires $mvl-base-font-size--screen
 /// @return {Number} - Number converted to rem
 @function mvl-px-to-rem($value) {
-    @if unit($value) != 'px' {
-        @error "mvl-px-to-rem only supports px inputs.";
-    }
-    @return #{($value / $mvl-base-font-size--screen)}rem;
+  @if unit($value) != "px" {
+    @error "mvl-px-to-rem only supports px inputs.";
+  }
+  @return #{($value / $mvl-base-font-size--screen)}rem;
 }
-
 
 /// Convert rem to px
 /// @access public
@@ -77,9 +64,9 @@
 /// @requires $mvl-base-font-size--screen
 /// @return {Number} - Number converted to px
 @function mvl-rem-to-px($value) {
-    @if unit($value) != 'rem' {
-        @error "mvl-rem-to-px only supports rem inputs.";
-    }
-    $unitless-value: mvl-strip-unit($value);
-    @return ($unitless-value * $mvl-base-font-size--screen);
+  @if unit($value) != "rem" {
+    @error "mvl-rem-to-px only supports rem inputs.";
+  }
+  $unitless-value: mvl-strip-unit($value);
+  @return ($unitless-value * $mvl-base-font-size--screen);
 }

@@ -2,70 +2,61 @@
 // Base styles
 //==============================================================================
 
-
-
-
-
 html {
-    font-size: $mvl-base-font-size--screen;
-    line-height: ($mvl-base-line-height / $mvl-base-font-size--screen);
-    overflow-y: scroll;
-    box-sizing: border-box;
-    height: 100%;
+  font-size: $mvl-base-font-size--screen;
+  line-height: ($mvl-base-line-height / $mvl-base-font-size--screen);
+  overflow-y: scroll;
+  box-sizing: border-box;
+  height: 100%;
 
-    @media print {
-        font-size: $mvl-base-font-size--print;
-    }
+  @media print {
+    font-size: $mvl-base-font-size--print;
+  }
 }
-
 
 *,
 *::before,
 *::after {
-    box-sizing: inherit; // Allow components to change to other box-sizing models if necessary
+  box-sizing: inherit; // Allow components to change to other box-sizing models if necessary
 }
-
 
 html,
 button,
 input,
 select,
 textarea {
-    color: $mvl-color__default-text;
+  color: $mvl-color__default-text;
 }
 
-
 body {
-    font-family: $mvl-font-stack--text;
-    display: flex;
-    flex-direction: column;
-    min-height: 100%;
-    background-color: $mvl-color__white;
+  font-family: $mvl-font-stack--text;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  background-color: $mvl-color__white;
 }
 
 // Hack for IE10 and IE11, required due to a flexbox bug
-_:-ms-lang(x), body {
-    display: block;
+_:-ms-lang(x),
+body {
+  display: block;
 }
-
 
 // Change the selection background color to fit with the used color scheme
 ::selection {
-    color: $mvl-color__white;
-    background: $mvl-color__brand-1--lighter;
-    text-shadow: none;
+  color: $mvl-color__white;
+  background: $mvl-color__brand-1--lighter;
+  text-shadow: none;
 }
-
 
 hr {
-    display: block;
-    height: 1px;
-    margin: mvl-px-to-rem($mvl-base-line-height) 0;
-    padding: 0;
-    border: 0;
-    border-top: 1px solid $mvl-color__brand-2--lighter;
+  display: block;
+  height: 1px;
+  margin: mvl-px-to-rem($mvl-base-line-height) 0;
+  padding: 0;
+  border: 0;
+  border-top: 1px solid $mvl-color__brand-2--lighter;
 }
-
 
 audio,
 canvas,
@@ -73,16 +64,16 @@ iframe,
 img,
 svg,
 video {
-    vertical-align: middle;
+  vertical-align: middle;
 }
 
 embed,
 img,
 object,
 video {
-    max-width: 100%;
+  max-width: 100%;
 }
 
 img {
-    height: auto;
+  height: auto;
 }

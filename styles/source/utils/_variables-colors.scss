@@ -2,14 +2,9 @@
 // Project colors
 //==============================================================================
 
-
-
-
-
 //------------------------------------------------------------------------------
 // General colors
 //------------------------------------------------------------------------------
-
 
 /// HEX: #fff
 /// @access public
@@ -41,21 +36,15 @@ $mvl-color__validation-error: rgb(255, 170, 170);
 /// @type Color
 $mvl-color__drop-shadow: rgba(0, 0, 0, 0.5);
 
-
-
-
-
 //------------------------------------------------------------------------------
 // Brand color 1 - Blue
 //------------------------------------------------------------------------------
-
 
 /// Main brand color
 /// @access public
 /// @group Colors
 /// @type Color
 $mvl-color__brand-1: $mvl-vl-blue-3;
-
 
 /// Main brand color, lighter
 /// @access public
@@ -69,7 +58,6 @@ $mvl-color__brand-1--lighter: $mvl-vl-blue-4;
 /// @type Color
 $mvl-color__brand-1--lightest: $mvl-vl-blue-5;
 
-
 /// Main brand color, darker
 /// @access public
 /// @group Colors
@@ -82,23 +70,15 @@ $mvl-color__brand-1--darker: $mvl-vl-blue-2;
 /// @type Color
 $mvl-color__brand-1--darkest: $mvl-vl-blue-1;
 
-
-
-
-
 //------------------------------------------------------------------------------
 // Brand color 2 - Gray
 //------------------------------------------------------------------------------
-
-
-
 
 /// Secondary brand color
 /// @access public
 /// @group Colors
 /// @type Color
 $mvl-color__brand-2: $mvl-vl-gray-3;
-
 
 /// Secondary brand color, lighter
 /// @access public
@@ -111,7 +91,6 @@ $mvl-color__brand-2--lighter: $mvl-vl-gray-4;
 /// @group Colors
 /// @type Color
 $mvl-color__brand-2--lightest: $mvl-vl-gray-5;
-
 
 /// Secondary brand color, darker
 /// @access public
