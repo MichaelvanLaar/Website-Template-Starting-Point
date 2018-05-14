@@ -93,6 +93,7 @@
     "build:styles:main": "node-sass --output-style compressed --source-map-root ../../ --source-map-embed true styles/source/main.scss styles/production/main.css",
     "postbuild:styles:main": "postcss styles/production/main.css --use postcss-flexbugs-fixes autoprefixer --replace true --map",
     "build:styles:sassdoc": "sassdoc styles/source/ --dest styles/sassdoc/",
-    "build:styles": "npm-run-all --parallel build:styles:* build:styles:sassdoc"
+    "build:styles": "npm-run-all --parallel build:styles:* build:styles:sassdoc",
+    "prebuild:styles": "npm run lint:styles:fix"
   }
 }
