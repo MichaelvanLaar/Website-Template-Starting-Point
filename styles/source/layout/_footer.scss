@@ -9,11 +9,11 @@
 
   &__box {
     @include mvl-clearfix;
+    color: $mvl-color__white;
 
     font-size: mvl-px-to-rem(13px);
-    margin-right: mvl-px-to-rem($mvl-gutter-width);
     margin-left: mvl-px-to-rem($mvl-gutter-width);
-    color: $mvl-color__white;
+    margin-right: mvl-px-to-rem($mvl-gutter-width);
 
     @media print {
       display: none;

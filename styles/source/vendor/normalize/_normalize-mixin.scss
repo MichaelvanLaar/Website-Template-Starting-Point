@@ -468,11 +468,11 @@ $_normalize-exclude: ();
     kbd,
     pre,
     samp {
-      font-family: monospace, monospace;
+      font-family: monospace;
+      font-size: 1em;
       @if support-for(ie, 6) {
         _font-family: "courier new", monospace;
       }
-      font-size: 1em;
     }
   }
 
@@ -569,6 +569,15 @@ $_normalize-exclude: ();
     }
 
     /**
+     * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+     * the UA stylesheet.
+     */
+
+    input {
+      line-height: normal;
+    }
+
+    /**
      * Remove inner padding and border in Firefox 4+.
      */
 
@@ -576,15 +585,6 @@ $_normalize-exclude: ();
     input::-moz-focus-inner {
       border: 0;
       padding: 0;
-    }
-
-    /**
-     * Address Firefox 4+ setting `line-height` on `input` using `!important` in
-     * the UA stylesheet.
-     */
-
-    input {
-      line-height: normal;
     }
 
     @if support-for(ie, 10) {
@@ -627,10 +627,10 @@ $_normalize-exclude: ();
 
     input[type="search"] {
       -webkit-appearance: textfield; /* 1 */
+      box-sizing: content-box; /* 2 */
       @if support-for(safari, 5) or support-for(chrome, 9) {
         -webkit-box-sizing: content-box;
       }
-      box-sizing: content-box; /* 2 */
 
       /**
        * Remove inner padding and search cancel button in Safari and Chrome on OS X.

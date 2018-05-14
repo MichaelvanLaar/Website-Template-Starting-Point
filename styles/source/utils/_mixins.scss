@@ -82,8 +82,8 @@
 @mixin mvl-clearfix {
   &::before,
   &::after {
-    display: table;
     content: "";
+    display: table;
   }
 
   &::after {
@@ -95,16 +95,16 @@
 /// @group Helpers
 /// @access public
 @mixin mvl-image-replacement {
-  overflow: hidden;
-  border: 0;
   background-color: transparent;
+  border: 0;
+  overflow: hidden;
   *text-indent: -9999px;
 
   &::before {
-    display: block;
-    width: 0;
-    height: 150%;
     content: "";
+    display: block;
+    height: 150%;
+    width: 0;
   }
 }
 
@@ -125,25 +125,25 @@
 /// @param {String} $focusable - use the string “focusable” to allow the element to be focusable when navigated to via the keyboard
 /// @access public
 @mixin mvl-visually-hidden($focusable: null) {
-  position: absolute !important;
-  overflow: hidden !important;
+  border: 0 !important;
   clip: rect(1px, 1px, 1px, 1px) !important;
   clip-path: inset(50%) !important;
-  width: 1px !important;
   height: 1px !important;
+  overflow: hidden !important;
   padding: 0 !important;
+  position: absolute !important;
   white-space: nowrap !important;
-  border: 0 !important;
+  width: 1px !important;
 
   @if $focusable == "focusable" {
     &:active,
     &:focus {
-      overflow: visible !important;
       clip: auto !important;
       clip-path: none !important;
-      width: auto !important;
       height: auto !important;
+      overflow: visible !important;
       white-space: normal !important;
+      width: auto !important;
     }
   }
 }

@@ -3,23 +3,23 @@
 //==============================================================================
 
 .cookie-info-banner {
-  position: fixed;
-  right: 0;
+  background-color: $mvl-color__brand-2--lighter;
   bottom: 0;
   left: 0;
-  background-color: $mvl-color__brand-2--lighter;
+  position: fixed;
+  right: 0;
   width: 100%;
 
   &__box {
-    margin-right: mvl-px-to-rem($mvl-gutter-width);
     margin-left: mvl-px-to-rem($mvl-gutter-width);
+    margin-right: mvl-px-to-rem($mvl-gutter-width);
   }
 
   &__message {
     font-size: 13px;
     line-height: 21px;
-    margin-top: 6px;
     margin-bottom: 6px;
+    margin-top: 6px;
     padding-right: 25px;
 
     @include mvl-respond-to("full-width") {

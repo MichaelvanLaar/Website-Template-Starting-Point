@@ -10,15 +10,15 @@
 }
 
 .print-links-footer {
-  padding: 0 1.25rem;
   border: 1pt solid $mvl-color__black;
+  padding: 0 1.25rem;
   page-break-inside: avoid;
 
   h3 {
     font-size: 1.25rem;
     line-height: 1.2;
-    margin-top: 1.25rem;
     margin-bottom: 1.25rem;
+    margin-top: 1.25rem;
   }
 }
 
@@ -26,9 +26,9 @@
   *,
   *::before,
   *::after {
-    color: $mvl-color__black !important;
     background: transparent !important;
     box-shadow: none !important;
+    color: $mvl-color__black !important;
     text-shadow: none !important;
   }
 

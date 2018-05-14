@@ -6,7 +6,15 @@
  * PLEASE NOTE: Classes and styling of the main navigation don’t follow BEM-like
  * naming conventions – with intent to be easily applicable to almost any
  * HTML code produced by a CMS.
+ *
+ * ATTENTION: Stylelint is disabled for this file because there are to manny 
+ * errors. This doesn’t mean that the style rules are not working. They are just
+ * not clean enough to match stylelint’s strict rules.
+ *
+ * TO DO: Refactor the navigation styles and re-enable stylelint.
  */
+
+/* stylelint-disable */
 
 //------------------------------------------------------------------------------
 // Configuration: colors
@@ -277,20 +285,20 @@ $mvl-main-navigation__dropdown-menu-width: 250px;
 //------------------------------------------------------------------------------
 
 @mixin mvl-main-navigation__arrow--down {
+  content: "▼";
   font-size: 80%;
   margin-left: mvl-px-to-rem(5px);
-  content: "▼";
 }
 
 @mixin mvl-main-navigation__arrow--right {
+  content: "►";
   font-size: 80%;
   position: absolute;
+  right: mvl-px-to-rem($mvl-gutter-width);
   top: mvl-px-to-rem(
     $mvl-main-navigation__menu-bar-padding--vertical +
       ($mvl-main-navigation__dropdown-font-size * 0.2)
   );
-  right: mvl-px-to-rem($mvl-gutter-width);
-  content: "►";
 
   @include mvl-respond-to("full-width") {
     right: mvl-px-to-rem($mvl-gutter-width / 2);
@@ -299,17 +307,17 @@ $mvl-main-navigation__dropdown-menu-width: 250px;
 
 .main-navigation {
   @include mvl-clearfix;
+  background-color: $mvl-main-navigation__menu-bar-background-color--without-header;
 
   width: 100%;
-  background-color: $mvl-main-navigation__menu-bar-background-color--without-header;
 
   @include mvl-respond-to("main-content-width") {
     background-color: $mvl-main-navigation__menu-bar-background-color--with-header;
   }
 
   &__list {
-    list-style: none;
     background-color: $mvl-main-navigation__accordion-background-color--level-1;
+    list-style: none;
     transition: $mvl-default-transition;
 
     li {
@@ -318,15 +326,15 @@ $mvl-main-navigation__dropdown-menu-width: 250px;
     }
 
     a {
-      position: relative;
+      color: $mvl-main-navigation__menu-bar-link-color--with-header;
       display: block;
       padding: mvl-px-to-rem($mvl-main-navigation__dropdown-padding--vertical)
         mvl-px-to-rem($mvl-gutter-width);
+      position: relative;
       transition: color $mvl-default-transition__duration
           $mvl-default-transition__timing-function,
         background-color $mvl-default-transition__duration
           $mvl-default-transition__timing-function;
-      color: $mvl-main-navigation__menu-bar-link-color--with-header;
 
       &:visited {
         color: $mvl-main-navigation__menu-bar-link-color--with-header;
@@ -334,14 +342,14 @@ $mvl-main-navigation__dropdown-menu-width: 250px;
 
       &:hover,
       &:focus {
-        color: $mvl-main-navigation__menu-bar-link-hover-color--with-header;
         background-color: $mvl-main-navigation__accordion-background-hover-color--level-1;
+        color: $mvl-main-navigation__menu-bar-link-hover-color--with-header;
       }
     }
 
     & > li:hover > a {
-      color: $mvl-main-navigation__menu-bar-link-hover-color--with-header;
       background-color: $mvl-main-navigation__accordion-background-hover-color--level-1;
+      color: $mvl-main-navigation__menu-bar-link-hover-color--with-header;
     }
 
     .current {
@@ -355,21 +363,21 @@ $mvl-main-navigation__dropdown-menu-width: 250px;
       }
 
       &:hover > a {
-        color: $mvl-main-navigation__menu-bar-link-hover-color--with-header;
         background-color: $mvl-main-navigation__background-hover-color--current !important;
+        color: $mvl-main-navigation__menu-bar-link-hover-color--with-header;
       }
     }
 
     ul {
-      list-style: none;
       background-color: $mvl-main-navigation__accordion-background-color--level-2;
+      list-style: none;
       transition: $mvl-default-transition;
 
       a:hover,
       a:focus,
       li:hover > a {
-        color: $mvl-main-navigation__menu-bar-link-hover-color--with-header;
         background-color: $mvl-main-navigation__accordion-background-hover-color--level-2;
+        color: $mvl-main-navigation__menu-bar-link-hover-color--with-header;
       }
 
       ul {
@@ -461,28 +469,28 @@ $mvl-main-navigation__toggle-icon-calculated-width: $mvl-main-navigation__toggle
 
 .main-navigation__list {
   .js & {
-    position: absolute;
-    z-index: 9999;
-    top: mvl-px-to-rem($mvl-main-navigation__bar-height);
-    left: 0;
-    overflow: hidden;
-    width: 100%;
     height: 0;
+    left: 0;
     opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    top: mvl-px-to-rem($mvl-main-navigation__bar-height);
+    width: 100%;
+    z-index: 9999;
 
     ul {
-      overflow: hidden;
       height: 0;
       opacity: 0;
+      overflow: hidden;
     }
   }
 
   .js .show-submenu + &,
   .show-submenu > ul {
-    overflow-x: visible;
-    overflow-y: auto;
     height: auto;
     opacity: 1;
+    overflow-x: visible;
+    overflow-y: auto;
   }
 
   ul ul ul {
@@ -502,28 +510,28 @@ $mvl-main-navigation__toggle-icon-calculated-width: $mvl-main-navigation__toggle
   &__logo-link {
     display: block;
     float: left;
+    opacity: 0;
     overflow: hidden;
-    width: 0;
     transition: opacity $mvl-default-transition__duration
       $mvl-default-transition__timing-function;
-    opacity: 0;
+    width: 0;
 
     .scroll-to-fixed-fixed & {
+      opacity: 1;
       overflow: auto;
-      width: auto;
       padding: mvl-px-to-rem($mvl-base-font-size--screen / 2)
         mvl-px-to-rem($mvl-gutter-width);
-      opacity: 1;
+      width: auto;
     }
   }
 
   &__logo--wide {
     display: block;
-    width: mvl-px-to-rem($mvl-main-navigation__logo-wide-calculated-width);
+    fill: $mvl-main-navigation__menu-bar-link-color--without-header;
     height: mvl-px-to-rem($mvl-main-navigation__logo-wide-calculated-height);
     transition: fill $mvl-default-transition__duration
       $mvl-default-transition__timing-function;
-    fill: $mvl-main-navigation__menu-bar-link-color--without-header;
+    width: mvl-px-to-rem($mvl-main-navigation__logo-wide-calculated-width);
 
     &:hover,
     &:focus {
@@ -546,10 +554,6 @@ $mvl-main-navigation__toggle-icon-calculated-width: $mvl-main-navigation__toggle
 
   &__toggle {
     float: right;
-    width: mvl-px-to-rem(
-      $mvl-main-navigation__toggle-icon-calculated-width +
-        ($mvl-gutter-width * 2)
-    );
     height: mvl-px-to-rem($mvl-main-navigation__bar-height);
     padding: mvl-px-to-rem(
         (
@@ -560,12 +564,16 @@ $mvl-main-navigation__toggle-icon-calculated-width: $mvl-main-navigation__toggle
       mvl-px-to-rem($mvl-gutter-width);
     transition: background-color $mvl-default-transition__duration
       $mvl-default-transition__timing-function;
+    width: mvl-px-to-rem(
+      $mvl-main-navigation__toggle-icon-calculated-width +
+        ($mvl-gutter-width * 2)
+    );
 
     &:hover,
     &:focus,
     .show-submenu & {
-      cursor: pointer;
       background-color: $mvl-main-navigation__menu-bar-background-hover-color--without-header;
+      cursor: pointer;
     }
 
     @include mvl-respond-to("main-content-width") {
@@ -578,13 +586,13 @@ $mvl-main-navigation__toggle-icon-calculated-width: $mvl-main-navigation__toggle
 
     &-icon {
       display: block;
-      width: mvl-px-to-rem($mvl-main-navigation__toggle-icon-calculated-width);
+      fill: $mvl-main-navigation__menu-bar-link-color--without-header;
       height: mvl-px-to-rem(
         $mvl-main-navigation__toggle-icon-calculated-height
       );
       transition: fill $mvl-default-transition__duration
         $mvl-default-transition__timing-function;
-      fill: $mvl-main-navigation__menu-bar-link-color--without-header;
+      width: mvl-px-to-rem($mvl-main-navigation__toggle-icon-calculated-width);
 
       .main-navigation__toggle:hover &,
       .main-navigation__toggle:focus &,
@@ -635,8 +643,8 @@ $mvl-main-navigation__toggle-icon-calculated-width: $mvl-main-navigation__toggle
     }
 
     .show-submenu > a {
-      color: $mvl-main-navigation__menu-bar-link-hover-color--with-header;
       background-color: $mvl-main-navigation__accordion-background-hover-color--level-1;
+      color: $mvl-main-navigation__menu-bar-link-hover-color--with-header;
     }
 
     ul .show-submenu > a {
@@ -652,18 +660,18 @@ $mvl-main-navigation__toggle-icon-calculated-width: $mvl-main-navigation__toggle
 .main-navigation {
   @include mvl-respond-to("full-width") {
     &__box {
-      padding-right: mvl-px-to-rem($mvl-gutter-width / 2);
       padding-left: mvl-px-to-rem($mvl-gutter-width / 2);
+      padding-right: mvl-px-to-rem($mvl-gutter-width / 2);
     }
 
     &__list {
-      display: flex;
       background-color: $mvl-main-navigation__menu-bar-background-color--with-header;
+      display: flex;
 
       & > li {
+        flex-grow: 1;
         font-size: mvl-px-to-rem($mvl-main-navigation__menu-bar-font-size);
         line-height: $mvl-main-navigation__menu-bar-line-height;
-        flex-grow: 1;
         text-align: center;
 
         & > a:hover,
@@ -676,8 +684,8 @@ $mvl-main-navigation__toggle-icon-calculated-width: $mvl-main-navigation__toggle
 
       a {
         height: 100%;
-        padding-right: mvl-px-to-rem($mvl-gutter-width / 2);
         padding-left: mvl-px-to-rem($mvl-gutter-width / 2);
+        padding-right: mvl-px-to-rem($mvl-gutter-width / 2);
       }
 
       & > .has-children > a::after {
@@ -703,12 +711,12 @@ $mvl-main-navigation__toggle-icon-calculated-width: $mvl-main-navigation__toggle
         box-shadow: 0 2px 5px -1px $mvl-color__drop-shadow;
 
         li {
-          text-align: left;
           background-color: $mvl-main-navigation__dropdown-background-color--level-2;
+          text-align: left;
 
           a {
-            padding-right: mvl-px-to-rem($mvl-gutter-width / 2);
             padding-left: mvl-px-to-rem($mvl-gutter-width / 2);
+            padding-right: mvl-px-to-rem($mvl-gutter-width / 2);
 
             &:hover,
             &:focus {
@@ -744,9 +752,9 @@ $mvl-main-navigation__toggle-icon-calculated-width: $mvl-main-navigation__toggle
 //------------------------------------------------------------------------------
 
 @mixin mvl-main-navigation__show-dropdown {
-  z-index: 9999;
-  overflow: visible;
   opacity: 1;
+  overflow: visible;
+  z-index: 9999;
 }
 
 //------------------------------------------------------------------------------
@@ -758,18 +766,18 @@ $mvl-main-navigation__toggle-icon-calculated-width: $mvl-main-navigation__toggle
 .main-navigation__list {
   @include mvl-respond-to("full-width") {
     ul {
-      position: absolute;
-      z-index: -1;
-      width: mvl-px-to-rem($mvl-main-navigation__dropdown-menu-width);
       opacity: 0;
+      position: absolute;
+      width: mvl-px-to-rem($mvl-main-navigation__dropdown-menu-width);
+      z-index: -1;
 
       li {
         position: relative;
       }
 
       ul {
-        top: 0;
         left: mvl-px-to-rem($mvl-main-navigation__dropdown-menu-width);
+        top: 0;
       }
     }
 
@@ -806,11 +814,11 @@ $mvl-main-navigation__logo-narrow-calculated-width: $mvl-main-navigation__logo-n
 .main-navigation__list {
   @include mvl-respond-to("full-width") {
     .js & {
-      position: static;
-      z-index: auto;
-      overflow-y: auto;
       height: auto;
       opacity: 1;
+      overflow-y: auto;
+      position: static;
+      z-index: auto;
 
       & .show-submenu > ul {
         @include mvl-main-navigation__show-dropdown;
@@ -829,9 +837,9 @@ $mvl-main-navigation__logo-narrow-calculated-width: $mvl-main-navigation__logo-n
 
     &__helpers {
       .js & {
-        width: 0;
         transition: width $mvl-default-transition__duration
           $mvl-default-transition__timing-function;
+        width: 0;
       }
 
       .scroll-to-fixed-fixed & {
@@ -843,8 +851,8 @@ $mvl-main-navigation__logo-narrow-calculated-width: $mvl-main-navigation__logo-n
     }
 
     .scroll-to-fixed-fixed &__logo-link {
-      padding-right: mvl-px-to-rem($mvl-gutter-width / 2);
       padding-left: mvl-px-to-rem($mvl-gutter-width / 2);
+      padding-right: mvl-px-to-rem($mvl-gutter-width / 2);
     }
 
     .js &__logo--wide {
@@ -853,20 +861,20 @@ $mvl-main-navigation__logo-narrow-calculated-width: $mvl-main-navigation__logo-n
 
     &__logo--narrow {
       .js & {
+        color: $mvl-color__white;
         display: block;
-        width: mvl-px-to-rem(
-          $mvl-main-navigation__logo-narrow-calculated-width
-        );
+        fill: $mvl-color__brand-1--darker;
         height: mvl-px-to-rem(
           $mvl-main-navigation__logo-narrow-calculated-height
         );
+        opacity: 0;
         transition: fill $mvl-default-transition__duration
             $mvl-default-transition__timing-function,
           opacity $mvl-default-transition__duration
             $mvl-default-transition__timing-function 0s;
-        color: $mvl-color__white;
-        fill: $mvl-color__brand-1--darker;
-        opacity: 0;
+        width: mvl-px-to-rem(
+          $mvl-main-navigation__logo-narrow-calculated-width
+        );
       }
 
       a:hover &,
@@ -890,8 +898,8 @@ $mvl-main-navigation__logo-narrow-calculated-width: $mvl-main-navigation__logo-n
     }
 
     .js &__list {
-      flex-grow: 1;
       box-shadow: none;
+      flex-grow: 1;
 
       ul .has-children > a::after {
         @include mvl-main-navigation__arrow--right;
@@ -909,3 +917,5 @@ $mvl-main-navigation__logo-narrow-calculated-width: $mvl-main-navigation__logo-n
     display: none;
   }
 }
+
+/* stylelint-enable */

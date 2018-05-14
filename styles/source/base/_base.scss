@@ -3,11 +3,11 @@
 //==============================================================================
 
 html {
+  box-sizing: border-box;
   font-size: $mvl-base-font-size--screen;
+  height: 100%;
   line-height: ($mvl-base-line-height / $mvl-base-font-size--screen);
   overflow-y: scroll;
-  box-sizing: border-box;
-  height: 100%;
 
   @media print {
     font-size: $mvl-base-font-size--print;
@@ -29,33 +29,35 @@ textarea {
 }
 
 body {
-  font-family: $mvl-font-stack--text;
+  background-color: $mvl-color__white;
   display: flex;
   flex-direction: column;
+  font-family: $mvl-font-stack--text;
   min-height: 100%;
-  background-color: $mvl-color__white;
 }
 
 // Hack for IE10 and IE11, required due to a flexbox bug
+/* stylelint-disable selector-type-no-unknown */
 _:-ms-lang(x),
 body {
   display: block;
 }
+/* stylelint-enable */
 
 // Change the selection background color to fit with the used color scheme
 ::selection {
-  color: $mvl-color__white;
   background: $mvl-color__brand-1--lighter;
+  color: $mvl-color__white;
   text-shadow: none;
 }
 
 hr {
+  border: 0;
+  border-top: 1px solid $mvl-color__brand-2--lighter;
   display: block;
   height: 1px;
   margin: mvl-px-to-rem($mvl-base-line-height) 0;
   padding: 0;
-  border: 0;
-  border-top: 1px solid $mvl-color__brand-2--lighter;
 }
 
 audio,

@@ -3,16 +3,16 @@
 //==============================================================================
 
 .wrapper {
+  margin: 0 auto;
+  max-width: (($mvl-column-width * 8) + ($mvl-gutter-width * 9));
   position: relative;
   width: 100%;
-  max-width: (($mvl-column-width * 8) + ($mvl-gutter-width * 9));
-  margin: 0 auto;
 
   @include mvl-respond-to("full-width") {
-    width: mvl-px-to-rem(($mvl-column-width * 12) + ($mvl-gutter-width * 13));
     max-width: mvl-px-to-rem(
       ($mvl-column-width * 12) + ($mvl-gutter-width * 13)
     );
+    width: mvl-px-to-rem(($mvl-column-width * 12) + ($mvl-gutter-width * 13));
   }
 
   .main-container & {

@@ -17,9 +17,9 @@ input[type="url"],
 input[type="week"],
 select,
 textarea {
-  font-family: $mvl-font-stack--text;
-  color: $mvl-color__default-text;
   border: 1px solid $mvl-color__brand-2--darker;
+  color: $mvl-color__default-text;
+  font-family: $mvl-font-stack--text;
 }
 
 input[type="date"],
@@ -55,11 +55,11 @@ select {
   color: $mvl-color__brand-2--darker;
 }
 
-:-moz-placeholder {
+::-moz-placeholder {
   color: $mvl-color__brand-2--darker;
 }
 
-::-moz-placeholder {
+:-moz-placeholder {
   color: $mvl-color__brand-2--darker;
 }
 
@@ -71,28 +71,28 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-  font-family: $mvl-font-stack--text;
-  padding: 0.1875rem 0.5625rem; /* 3px / 16px   and   9px / 16px */
-  color: $mvl-color__white;
-  border: 1px solid $mvl-color__brand-2--darker;
+  background-clip: padding-box;
   background-color: $mvl-color__brand-2--darker;
   background-image: linear-gradient(
     to bottom,
     $mvl-color__brand-2,
     $mvl-color__brand-2--darker
   );
-  background-clip: padding-box;
+  border: 1px solid $mvl-color__brand-2--darker;
+  color: $mvl-color__white;
+  font-family: $mvl-font-stack--text;
+  padding: 0.1875rem 0.5625rem; /* 3px / 16px   and   9px / 16px */
 }
 
 button:focus,
 input:focus,
 select:focus,
 textarea:focus {
-  outline: 0;
   box-shadow: 1px 1px 3px $mvl-color__brand-1--lighter,
     -1px 1px 3px $mvl-color__brand-1--lighter,
     -1px -1px 3px $mvl-color__brand-1--lighter,
     1px -1px 3px $mvl-color__brand-1--lighter;
+  outline: 0;
 }
 
 button:active,
@@ -112,9 +112,9 @@ input[type="submit"]:active {
 }
 
 fieldset {
+  border: 0;
   margin: 0;
   padding: 0;
-  border: 0;
 }
 
 input:invalid,

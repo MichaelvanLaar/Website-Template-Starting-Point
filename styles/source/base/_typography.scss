@@ -5,8 +5,8 @@
 p,
 ul,
 ol {
-  margin-top: mvl-px-to-rem($mvl-base-line-height);
   margin-bottom: mvl-px-to-rem($mvl-base-line-height);
+  margin-top: mvl-px-to-rem($mvl-base-line-height);
 
   @media print {
     orphans: 3;
@@ -19,14 +19,14 @@ ol {
   padding: 0 0 0 mvl-px-to-rem($mvl-base-indent);
 
   li * {
-    margin-top: 0;
     margin-bottom: 0;
+    margin-top: 0;
   }
 
   ul,
   ol {
-    margin-top: 0;
     margin-bottom: 0;
+    margin-top: 0;
   }
 
   nav & {
@@ -72,9 +72,9 @@ del {
 
 h1 {
   @include mvl-font-size-line-height(42px);
+  margin-bottom: mvl-px-to-rem($mvl-base-line-height);
 
   margin-top: mvl-px-to-rem($mvl-base-line-height);
-  margin-bottom: mvl-px-to-rem($mvl-base-line-height);
 
   @media print {
     page-break-after: avoid;
@@ -84,9 +84,9 @@ h1 {
 
 h2 {
   @include mvl-font-size-line-height(21px);
+  margin-bottom: mvl-px-to-rem($mvl-base-line-height);
 
   margin-top: mvl-px-to-rem($mvl-base-line-height * 2);
-  margin-bottom: mvl-px-to-rem($mvl-base-line-height);
 
   @media print {
     page-break-after: avoid;
@@ -99,9 +99,9 @@ h4,
 h5,
 h6 {
   @include mvl-font-size-line-height($mvl-base-font-size--screen);
+  margin-bottom: mvl-px-to-rem($mvl-base-line-height);
 
   margin-top: mvl-px-to-rem($mvl-base-line-height * 2);
-  margin-bottom: mvl-px-to-rem($mvl-base-line-height);
 
   @media print {
     page-break-after: avoid;
@@ -118,10 +118,10 @@ td {
 //------------------------------------------------------------------------------
 
 a {
+  color: $mvl-color__brand-1;
+  text-decoration: none;
   transition: color $mvl-default-transition__duration
     $mvl-default-transition__timing-function;
-  text-decoration: none;
-  color: $mvl-color__brand-1;
 
   @media print {
     text-decoration: underline;
