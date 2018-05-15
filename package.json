@@ -10,7 +10,8 @@
     "js-cookie": "^2.2.0",
     "lazysizes": "^4.0.2",
     "respimage": "^1.4.2",
-    "scrolltofixed": "^1.0.6"
+    "scrolltofixed": "^1.0.6",
+    "skip-link-focus": "^1.0.0"
   },
   "devDependencies": {
     "asset-cache-bust": "^2.2.0",

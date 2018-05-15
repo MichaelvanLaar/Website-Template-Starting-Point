@@ -5,79 +5,12 @@
  *
  * CONTENTS
  * -----------------------------------------------------------------------------
- * (Avoid console errors in browsers that lack a console)
- * Skiplink Focus Fix
  * Printed Footer Links
  * jQuery outside events 1.1
  * ScrollToFixed 1.0.6
  * JavaScript Cookie 2.1.3
  * enquire.js 2.1.2
  */
-
-
-
-
-
-/**
- * -----------------------------------------------------------------------------
- * (Avoid console errors in browsers that lack a console)
- * -----------------------------------------------------------------------------
- */
-
-
-(function() {
-    var method;
-    var noop = function () {};
-    var methods = [
-        'assert', 'clear', 'count', 'debug', 'dir', 'dirxml', 'error',
-        'exception', 'group', 'groupCollapsed', 'groupEnd', 'info', 'log',
-        'markTimeline', 'profile', 'profileEnd', 'table', 'time', 'timeEnd',
-        'timeline', 'timelineEnd', 'timeStamp', 'trace', 'warn'
-    ];
-    var length = methods.length;
-    var console = (window.console = window.console || {});
-
-    while (length--) {
-        method = methods[length];
-
-        // Only stub undefined methods.
-        if (!console[method]) {
-            console[method] = noop;
-        }
-    }
-}());
-
-
-
-
-
-/**
- * -----------------------------------------------------------------------------
- * Skiplink Focus Fix - jQuery Plugin
- * -----------------------------------------------------------------------------
- */
-
-
-// Configuration: Enter a proper selector for your skiplinks
-// (the same way you would address these elements in your CSS).
-var mvl_skiplinkselector = '.skiplinks a';
-
-// From here on no configuration or changes required.
-$(document).ready(function() {
-    var is_webkit = navigator.userAgent.toLowerCase().indexOf('webkit') > -1;
-    var is_opera = navigator.userAgent.toLowerCase().indexOf('opera') > -1;
-    if (is_webkit || is_opera) {
-        $(mvl_skiplinkselector).click(function() {
-            var targetname = this.hash.replace("#", "");
-            $('<a name="skiptarget-' + targetname + '" tabindex="0"></a>')
-                .prependTo('#' + targetname)
-                .focus()
-                .focusout(function() {
-                    $(this).remove();
-                });
-        });
-    }
-});
 
 
 

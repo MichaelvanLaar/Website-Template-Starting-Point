@@ -41,7 +41,7 @@
 
   <link rel="stylesheet" href="styles/production/main.css">
 
-  <script src="scripts/production/lazysizes-bundle.js" async=""></script>
+  <script src="scripts/production/lazysizes-bundle.js" async></script>
 
   <!-- Open Graph Data -->
   <meta property="og:title" content="[Insert page title, max. 90 characters]">
@@ -82,8 +82,8 @@
         <![endif]-->
 
   <ul class="skiplinks">
-    <li><a href="#main-navigation">Jump to navigation (press enter)</a></li>
-    <li><a href="#main">Jump to main content (press enter)</a></li>
+    <li><a href="#main-navigation" class="skiplinks__link">Jump to navigation (press enter)</a></li>
+    <li><a href="#main" class="skiplinks__link">Jump to main content (press enter)</a></li>
   </ul>
   <!-- end of #skiplinks -->
 
@@ -337,12 +337,13 @@
 
 
 
+  <script src="scripts/production/main-bundle.js" async></script>
   <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
   <script>
     window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')
   </script>
-  <script src="js/plugins.min.js"></script>
-  <script src="js/main.min.js"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
 
 </body>
 
