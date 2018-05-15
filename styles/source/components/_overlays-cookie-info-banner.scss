@@ -30,4 +30,8 @@
   &__close-button {
     line-height: 1;
   }
+
+  @media print {
+    display: none;
+  }
 }
