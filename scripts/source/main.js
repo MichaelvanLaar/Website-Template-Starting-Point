@@ -7,4 +7,6 @@
  * =============================================================================
  */
 
-import "./main-partials/_skip-link-focus";
+require("./main-partials/_skip-link-focus");
+
+require("./main-partials/_print-links-as-footnotes");

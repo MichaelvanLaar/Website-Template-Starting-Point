@@ -5,6 +5,6 @@
  * =============================================================================
  */
 
-import * as skipLinkFocus from "skip-link-focus";
+const skipLinkFocus = require("skip-link-focus");
 
 skipLinkFocus.init({ selector: ".skiplinks__link" });

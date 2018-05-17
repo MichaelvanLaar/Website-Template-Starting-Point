@@ -8,4 +8,4 @@
  * =============================================================================
  */
 
-import "../../node_modules/respimage/respimage";
+require("../../node_modules/respimage/respimage");

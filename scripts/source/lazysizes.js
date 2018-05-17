@@ -8,7 +8,7 @@
  * =============================================================================
  */
 
-import * as lazySizes from "lazysizes";
-import "../../node_modules/lazysizes/plugins/print/ls.print";
+require("../../node_modules/lazysizes/plugins/print/ls.print.js");
+const lazySizes = require("lazysizes");
 
 lazySizes.init();
