@@ -41,7 +41,7 @@
   },
   "browserslist": [
     "> 0.5%",
-    "last 2 version",
+    "last 2 versions",
     "Firefox ESR",
     "ie >= 10"
   ],
