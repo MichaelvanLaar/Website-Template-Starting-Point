@@ -5,66 +5,11 @@
  *
  * CONTENTS
  * -----------------------------------------------------------------------------
- * Printed Footer Links
  * jQuery outside events 1.1
  * ScrollToFixed 1.0.6
  * JavaScript Cookie 2.1.3
  * enquire.js 2.1.2
  */
-
-
-
-
-
-/**
- * -----------------------------------------------------------------------------
- * Printed Footer Links - jQuery Plugin
- * -----------------------------------------------------------------------------
- */
-
-
-$(document).ready(function() {
-    // get the container and target
-    var links = $('.page-main-content').find('a[href]:not([href^="#"],[href^="mailto"],[href^="javascript"],:has(img))');
-
-    if ($(links).length) {
-        // create a container and heading for the footnotes
-        var footnotesWrapper = $('<section></section>', {
-            css: {
-                clear: 'both'
-            }
-        }).addClass('print-links-footer  print-only');
-        var footnotesLabel = $('<h3></h3>', {
-            text: 'Links:'
-        }).appendTo(footnotesWrapper);
-
-        // create an OL to hold the footnotes
-        var footnoteList = $('<ol></ol>').appendTo(footnotesWrapper);
-
-        $.each(links, function(i) {
-            var linkText = $(this).text();
-            var linkValue = $(this).attr('href');
-            if (linkValue.substring(0, 7) !== 'http://' && linkValue.substring(0, 8) !== 'https://') {
-                if (linkValue.substring(0, 1) === '/') {
-                    linkValue = 'http://' + document.location.host + linkValue;
-                } else {
-                    linkValue = 'http://' + document.location.host + '/' + linkValue;
-                }
-            }
-            // create element to hold span with class to hide except on print
-            var newElement = $('<sup></sup>', {
-                text: '[' + ++i + ']'
-            }).addClass('print-only').insertAfter($(this));
-
-            var listEntry = $('<li></li>', {
-                text: linkValue
-            }).appendTo(footnoteList);
-        });
-
-        // append the heading and <ol> to the target
-        $('.main-container').append(footnotesWrapper);
-    }
-});
 
 
 
