@@ -3,6 +3,8 @@
 //==============================================================================
 
 .cookie-info-banner {
+  @include mvl-clearfix;
+
   background-color: $mvl-color__brand-2--lighter;
   bottom: 0;
   left: 0;
