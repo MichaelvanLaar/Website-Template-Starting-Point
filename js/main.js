@@ -9,8 +9,6 @@
  * Caching some repeatedly used elements
  * Menu (accordion menu or dropdown menu, according to screen size)
  * ScrollToFixed application
- * Cookie information banner
- * Adding “rel='noopener'” to all links with “target='_blank'” for more security
  * Adding offset to anchor scroll
  */
 

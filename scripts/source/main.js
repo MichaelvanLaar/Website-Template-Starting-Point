@@ -14,3 +14,5 @@ require("./main-partials/_print-links-as-footnotes");
 require("./main-partials/_cookie-info-banner");
 
 require("./main-partials/_ajax-svg-icons-sprite");
+
+require("./main-partials/_link-security");
