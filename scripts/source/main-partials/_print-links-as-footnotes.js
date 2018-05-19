@@ -110,4 +110,4 @@ function printLinksAsFootnotes(
   }
 }
 
-printLinksAsFootnotes(".page-main-content");
+printLinksAsFootnotes(".js-page-main-content");
