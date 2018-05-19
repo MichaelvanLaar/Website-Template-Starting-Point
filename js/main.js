@@ -7,7 +7,6 @@
  * -----------------------------------------------------------------------------
  *
  * Caching some repeatedly used elements
- * Ajaxing for the SVG icons sprite
  * Menu (accordion menu or dropdown menu, according to screen size)
  * ScrollToFixed application
  * Cookie information banner
@@ -47,27 +46,6 @@ var mvl_main_navigation__list = $('.js-main-navigation__list');
 var mvl_dropdown_toggles = mvl_main_navigation__list.find('.has-children');
 var mvl_dropdown_toggles__a = mvl_dropdown_toggles.children('a');
 var mvl_page_footer = $('.js-page-footer');
-
-
-
-
-
-/**
- * -----------------------------------------------------------------------------
- * Ajaxing for the SVG icons sprite
- * https://css-tricks.com/ajaxing-svg-sprite/
- * -----------------------------------------------------------------------------
- */
-
-
-var ajax = new XMLHttpRequest();
-ajax.open("GET", "images/icons.svg", true);
-ajax.send();
-ajax.onload = function () {
-    var div = document.createElement("div");
-    div.innerHTML = ajax.responseText;
-    document.body.insertBefore(div, document.body.childNodes[0]);
-}
 
 
 
