@@ -71,7 +71,6 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-  background-clip: padding-box;
   background-color: $mvl-color__brand-2--darker;
   background-image: linear-gradient(
     to bottom,
