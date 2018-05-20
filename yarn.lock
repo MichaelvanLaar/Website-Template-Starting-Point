@@ -5559,10 +5559,6 @@ scope-analyzer@^2.0.0:
     estree-is-function "^1.0.0"
     get-assigned-identifiers "^1.1.0"
 
-scrolltofixed@^1.0.6:
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/scrolltofixed/-/scrolltofixed-1.0.6.tgz#2db222f1eaa178b7814ed49e64356b8025bbca25"
-
 scss-comment-parser@^0.8.3:
   version "0.8.4"
   resolved "https://registry.yarnpkg.com/scss-comment-parser/-/scss-comment-parser-0.8.4.tgz#8e82c3fcf7fdbbb7f172f8955e2aa88b685f86d8"
