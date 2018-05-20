@@ -6,7 +6,7 @@
  */
 
 const mvl_ajax = new XMLHttpRequest();
-mvl_ajax.open("GET", "/images/icons.svg", true);
+mvl_ajax.open("GET", "../../../images/icons.svg", true);
 mvl_ajax.send();
 mvl_ajax.onload = function() {
   const mvl_svg_container = document.createElement("div");
