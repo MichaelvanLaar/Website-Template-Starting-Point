@@ -9,8 +9,7 @@
     "jquery": "^3.3.1",
     "js-cookie": "^2.2.0",
     "lazysizes": "^4.0.2",
-    "respimage": "^1.4.2",
-    "skip-link-focus": "^1.0.0"
+    "respimage": "^1.4.2"
   },
   "devDependencies": {
     "asset-cache-bust": "^2.2.0",

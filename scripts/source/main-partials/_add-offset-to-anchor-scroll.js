@@ -1,56 +1,56 @@
 /**
  * =============================================================================
- * Adding offset to anchor scroll
- * Mostly taken from https://jsfiddle.net/ianclark001/aShQL/
+ * Add offset to anchor scroll
+ *
+ * Inspired by https://jsfiddle.net/ianclark001/aShQL/
  * =============================================================================
  */
 
-/* eslint-disable */
+function mvlAddOffsetToAnchorScroll(anchor) {
+  if (anchor.length > 1) {
+    // Wait for 50 ms. Required to prevent problems with default scrolling,
+    setTimeout(() => {
+      // Get original position of target element relative to viewport.
+      const mvl_target_element_viewport_offset = document
+        .querySelector(anchor)
+        .getBoundingClientRect();
 
-import jquery from "jquery";
-window.jQuery = jquery;
-window.$ = window.jQuery;
+      // Get current scroll position of page.
+      const mvl_page_scroll_position =
+        window.pageYOffset !== undefined
+          ? window.pageYOffset
+          : (
+              document.documentElement ||
+              document.body.parentNode ||
+              document.body
+            ).scrollTop;
 
-/**
- * Check a href for an anchor. If exists, and in document, scroll to it.
- * If href argument ommited, assumes context (this) is HTML Element,
- * which will be the case when invoked by jQuery after an event
- */
-function mvlAddOffsetToAnchorScroll(href) {
-  href = typeof href === "string" ? href : $(this).attr("href");
+      // Get height of additional scroll offset.
+      const mvl_additional_scroll_offset =
+        document.querySelector(".js-main-navigation").offsetHeight * 1.5;
 
-  const mvl_additional_scroll_offset = $(".js-main-navigation").height() * 1.5;
-
-  // If our Href points to a valid, non-empty anchor, and is on the same page
-  // Legacy jQuery and IE7 may have issues: http://stackoverflow.com/q/1593174
-  if (href) {
-    if (href.indexOf("#") == 0) {
-      const mvl_scroll_target = $(href);
-
-      // Older browser without pushState might flicker here, as they
-      // momentarily jump to the wrong position (IE < 10)
-      if (mvl_scroll_target.length) {
-        $("html, body").animate({
-          scrollTop:
-            mvl_scroll_target.offset().top - mvl_additional_scroll_offset
-        });
-        if (history && "pushState" in history) {
-          history.pushState(
-            {},
-            document.title,
-            window.location.pathname + href
-          );
-          return false;
-        }
-      }
-    }
+      // Scroll to new scroll position of target element, including the
+      // additional offset.
+      document.documentElement.scrollTop =
+        mvl_target_element_viewport_offset.top +
+        mvl_page_scroll_position -
+        mvl_additional_scroll_offset;
+    }, 50);
   }
 }
 
-// When a page loads, check to see if it contains and anchor
-mvlAddOffsetToAnchorScroll(window.location.hash);
+// When a page loads, check to see if it contains and anchor.
+if (window.location.hash.length > 0) {
+  mvlAddOffsetToAnchorScroll(window.location.hash);
+}
 
-// Intercept all anchor clicks
-$("body").on("click", "a", mvlAddOffsetToAnchorScroll);
-
-/* eslint-enable */
+// Intercept all clicks on links starting with “#”.
+const mvl_all_anchor_links = document.querySelectorAll("a[href^='#']");
+if (mvl_all_anchor_links.length > 0) {
+  mvl_all_anchor_links.forEach(mvl_anchor_link => {
+    const mvl_href = mvl_anchor_link.getAttribute("href");
+    mvl_anchor_link.addEventListener("click", () => {
+      mvlAddOffsetToAnchorScroll(mvl_href);
+    });
+  });
+}

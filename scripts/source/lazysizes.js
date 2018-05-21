@@ -1,6 +1,7 @@
 /**
  * =============================================================================
  * lazysizes
+ *
  * https://github.com/aFarkas/lazysizes
  *
  * Use build process (see “build:scripts” script in package.json) to transpile,

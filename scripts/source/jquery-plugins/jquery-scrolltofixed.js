@@ -8,6 +8,10 @@
 
 /* eslint-disable */
 
+import jquery from "jquery";
+window.jQuery = jquery;
+window.$ = window.jQuery;
+
 (function($) {
   $.isScrollToFixed = function(el) {
     return !!$(el).data("ScrollToFixed");
