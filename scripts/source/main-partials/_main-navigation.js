@@ -9,7 +9,7 @@
 
 // This script requires jQuery to be required as a global object in main.js
 
-require("../jquery-plugins/jquery-scrolltofixed");
+// require("../jquery-plugins/jquery-scrolltofixed");
 const enquire = require("enquire.js");
 require("../jquery-plugins/jquery-outside-events");
 
@@ -26,9 +26,9 @@ const mvl_dropdown_toggles__a = mvl_dropdown_toggles.children("a");
  * -----------------------------------------------------------------------------
  */
 
-mvl_main_navigation.scrollToFixed({
-  dontSetWidth: true
-});
+// mvl_main_navigation.scrollToFixed({
+//   dontSetWidth: true
+// });
 
 /**
  * -----------------------------------------------------------------------------

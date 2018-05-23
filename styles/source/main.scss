@@ -4,6 +4,9 @@
 
 @charset 'utf-8';
 
+@import "../../node_modules/normalize.css/normalize"; // normalize.css from npm package
+
+/*! Custom styles */
 @import "utils/variables-vl-color-scheme"; // Color scheme “van Laar”
 @import "utils/variables-colors"; // Project colors
 @import "utils/variables-general"; // General variables
@@ -11,7 +14,7 @@
 @import "utils/mixins"; // General mixins
 
 @import "base/fonts"; // @font-face declarations
-@import "base/apply-normalize"; // Application of normalize.scss
+// @import "base/apply-normalize"; // Application of normalize.scss
 @import "base/base"; // Base styles
 @import "base/typography"; // Basic typography
 @import "base/form-elements"; // Form elements

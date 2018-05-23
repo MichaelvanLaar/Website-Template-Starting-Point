@@ -308,8 +308,11 @@ $mvl-main-navigation__dropdown-menu-width: 250px;
 .main-navigation {
   @include mvl-clearfix;
   background-color: $mvl-main-navigation__menu-bar-background-color--without-header;
+  position: sticky;
+  top: 0;
 
   width: 100%;
+  z-index: 1;
 
   @include mvl-respond-to("main-content-width") {
     background-color: $mvl-main-navigation__menu-bar-background-color--with-header;

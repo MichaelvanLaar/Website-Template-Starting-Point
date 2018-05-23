@@ -4,15 +4,18 @@
 
 .page-sidebar {
   @include mvl-clearfix;
+
   border-top: 1px solid $mvl-color__brand-2;
   margin-left: mvl-px-to-rem($mvl-gutter-width);
-
   margin-right: mvl-px-to-rem($mvl-gutter-width);
   padding-bottom: mvl-px-to-rem($mvl-base-line-height);
   padding-top: mvl-px-to-rem($mvl-base-line-height);
 
   @include mvl-respond-to("full-width") {
+    align-self: flex-start;
     border-top: 0;
+    position: sticky;
+    top: mvl-px-to-rem($mvl-base-line-height * 2);
     width: mvl-px-to-rem(($mvl-column-width * 3) + ($mvl-gutter-width * 2));
   }
 
