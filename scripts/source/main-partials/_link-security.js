@@ -6,9 +6,11 @@
  * =============================================================================
  */
 
-const mvl_unsecure_links = document.querySelectorAll(
+// Namespace prefix for variables: “ls”
+
+const lsUnsecureLInks = document.querySelectorAll(
   "a[target='_blank']:not([rel='noopener'])"
 );
-mvl_unsecure_links.forEach(mvl_unsecure_link => {
-  mvl_unsecure_link.setAttribute("rel", "noopener");
+lsUnsecureLInks.forEach(lsUnsecureLInk => {
+  lsUnsecureLInk.setAttribute("rel", "noopener");
 });

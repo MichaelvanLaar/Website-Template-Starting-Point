@@ -5,8 +5,8 @@
 p,
 ul,
 ol {
-  margin-bottom: mvl-px-to-rem($mvl-base-line-height);
-  margin-top: mvl-px-to-rem($mvl-base-line-height);
+  margin-bottom: size(base-margin, rem);
+  margin-top: size(base-margin, rem);
 
   @media print {
     orphans: 3;
@@ -16,7 +16,7 @@ ol {
 
 ul,
 ol {
-  padding: 0 0 0 mvl-px-to-rem($mvl-base-indent);
+  padding: 0 0 0 size(base-indent, rem);
 
   li * {
     margin-bottom: 0;
@@ -36,12 +36,12 @@ ol {
 }
 
 dd {
-  margin: 0 0 0 mvl-px-to-rem($mvl-base-indent);
+  margin: 0 0 0 size(base-indent, rem);
 }
 
 blockquote {
   font-style: italic;
-  margin: mvl-px-to-rem($mvl-base-line-height) mvl-px-to-rem($mvl-base-indent);
+  margin: size(base-margin, rem) size(base-indent, rem);
 
   p {
     font-style: italic;
@@ -55,7 +55,7 @@ cite {
 pre,
 code,
 code var {
-  font-family: $mvl-font-stack--code;
+  font-family: font-stack(code);
 }
 
 abbr {
@@ -70,11 +70,15 @@ del {
   text-decoration: line-through;
 }
 
-h1 {
-  @include mvl-font-size-line-height(42px);
-  margin-bottom: mvl-px-to-rem($mvl-base-line-height);
+small {
+  font-size: 100% * map-get($scaling-factors, smaller);
+}
 
-  margin-top: mvl-px-to-rem($mvl-base-line-height);
+h1 {
+  font-size: (size(base-font-size, rem) * 2);
+  line-height: 1.25;
+  margin-bottom: size(base-margin, rem);
+  margin-top: size(base-margin, rem);
 
   @media print {
     page-break-after: avoid;
@@ -83,10 +87,10 @@ h1 {
 }
 
 h2 {
-  @include mvl-font-size-line-height(21px);
-  margin-bottom: mvl-px-to-rem($mvl-base-line-height);
-
-  margin-top: mvl-px-to-rem($mvl-base-line-height * 2);
+  font-size: (size(base-font-size, rem) * 1.5);
+  line-height: 1.25;
+  margin-bottom: size(base-margin, rem);
+  margin-top: (size(base-margin, rem) * 2);
 
   @media print {
     page-break-after: avoid;
@@ -98,10 +102,10 @@ h3,
 h4,
 h5,
 h6 {
-  @include mvl-font-size-line-height($mvl-base-font-size--screen);
-  margin-bottom: mvl-px-to-rem($mvl-base-line-height);
-
-  margin-top: mvl-px-to-rem($mvl-base-line-height * 2);
+  font-size: size(base-font-size, rem);
+  line-height: 1.25;
+  margin-bottom: size(base-margin, rem);
+  margin-top: (size(base-margin, rem) * 2);
 
   @media print {
     page-break-after: avoid;
@@ -118,17 +122,16 @@ td {
 //------------------------------------------------------------------------------
 
 a {
-  color: $mvl-color__brand-1;
+  color: color(brand-1);
   text-decoration: none;
-  transition: color $mvl-default-transition__duration
-    $mvl-default-transition__timing-function;
+  transition: transition(color, default);
 
   @media print {
     text-decoration: underline;
   }
 
   &:visited {
-    color: $mvl-color__brand-1--darker;
+    color: color(brand-1, darker);
 
     @media print {
       text-decoration: underline;
@@ -137,6 +140,6 @@ a {
 
   &:hover,
   &:focus {
-    color: $mvl-color__brand-1--lighter;
+    color: color(brand-1, lighter);
   }
 }

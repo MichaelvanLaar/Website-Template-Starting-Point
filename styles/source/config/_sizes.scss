@@ -1,0 +1,81 @@
+//==============================================================================
+// Basic sizes
+//==============================================================================
+
+/// Max. width of named layout sections in terms of layout columns
+/// (based on a 12 columns layout grid)
+/// @access public
+/// @group Layout
+/// @type Map
+/// @prop {Number} main-content [8] - Main content area
+/// @prop {Number} sidebar [3] - Sidebar
+$max-columns: (
+  main-content: 8,
+  sidebar: 3
+);
+
+/// Scaling factors
+/// @access public
+/// @group Sizes
+/// @type Map
+/// @prop {Number} bigger [1.25] - Scale up
+/// @prop {Number} smaller [0.8] - Scale down
+$scaling-factors: (
+  bigger: 1.25,
+  smaller: 0.8
+);
+
+/// Basic sizes in px, with reference to the non-scaled versions of the layout
+/// @access public
+/// @group Sizes
+/// @type Map
+/// @prop {Number} column-width [48px] - Width (in px) of one column of the 12-column layout grid
+/// @prop {Number} gutter-width [24px] - Width (in px) of the gutter between columns of the 12-column layout grid
+/// @prop {Number} base-font-size [16px] - Font size (in px) for basic copy text
+/// @prop {Number} base-line-height [24px] - Line height (in px) for basic copy text
+/// @prop {Number} base-margin [24px] - Top and bottom margin (in px) for basic copy text paragraphs
+/// @prop {Number} base-indent [35px] - Indent (in px) for basic lists and blockquotes
+/// @prop {Number} site-logo-width - Original width (in px) of the website’s logo (used for aspect ratio calculation)
+/// @prop {Number} site-logo-height - Original height (in px) of the website’s logo (used for aspect ratio calculation)
+/// @prop {Number} header-height [48px] - Height (in px) of the fixed header bar
+/// @prop {Number} navigation-toggle-width [24px] - Width (in px) of the hamburger icon to slide out the main navigation menu
+/// @prop {Number} off-canvas-menu-width [320px] - Width (in px) of the off-canvas-menu, used to display the main navigation on smaller screen sizes
+$sizes: (
+  column-width: 48px,
+  gutter-width: 24px,
+  base-font-size: 16px,
+  base-line-height: 24px,
+  base-margin: 16px,
+  base-indent: 35px,
+  site-logo-width: 506px,
+  site-logo-height: 100px,
+  header-height: 48px,
+  navigation-toggle-width: 24px,
+  off-canvas-menu-width: 320px
+);
+
+/// Return the value of a named basic size as px or rem
+/// @access public
+/// @group Sizes
+/// @requires $sizes
+/// @param {String} $size - Size name from $sizes map
+/// @param {String} $unit [px] - Unit, only accepts px and rem
+/// @return {Number}
+@function size($size, $unit: px) {
+  @if ($unit == px or $unit == rem) {
+    @if (map-has-key($sizes, $size)) {
+      @if ($unit == rem) {
+        @return (
+          (map-get($sizes, $size) / map-get($sizes, base-font-size)) * 1rem
+        );
+      } @else {
+        @return map-get($sizes, $size);
+      }
+    } @else {
+      @error "No value found for `#{$size}`. "
+           + "Please make sure it is defined in `$sizes` map.";
+    }
+  } @else {
+    @error "`size()` only accepts px and rem as unit.";
+  }
+}

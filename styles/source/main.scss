@@ -4,37 +4,43 @@
 
 @charset 'utf-8';
 
-@import "../../node_modules/normalize.css/normalize"; // normalize.css from npm package
+//------------------------------------------------------------------------------
+// Configuration: variables, mixins and functions
+//------------------------------------------------------------------------------
+
+@import "config/colors"; // Colors
+@import "config/font-stacks"; // Font stacks
+@import "config/layers"; // Layers
+@import "config/sizes"; // Basic sizes
+@import "config/transitions"; // Pre-defined transitions
+@import "config/breakpoints"; // Named breakpoints for media queries
+
+//------------------------------------------------------------------------------
+// Utils
+//------------------------------------------------------------------------------
+
+@import "utils/helpers"; // Helper functions and mixins
+@import "utils/normalize"; // normalize.css from npm package (copied to be importable)
+
+//------------------------------------------------------------------------------
+// Custom styles
+//------------------------------------------------------------------------------
 
 /*! Custom styles */
-@import "utils/variables-vl-color-scheme"; // Color scheme “van Laar”
-@import "utils/variables-colors"; // Project colors
-@import "utils/variables-general"; // General variables
-@import "utils/functions"; // General functions
-@import "utils/mixins"; // General mixins
-
 @import "base/fonts"; // @font-face declarations
-// @import "base/apply-normalize"; // Application of normalize.scss
 @import "base/base"; // Base styles
 @import "base/typography"; // Basic typography
 @import "base/form-elements"; // Form elements
 
 @import "layout/layout-general"; // General layout
-@import "layout/navigation"; // Main navigation
 @import "layout/header"; // Page header
 @import "layout/main-content"; // Main content area
 @import "layout/sidebar"; // Sidebar
 @import "layout/footer"; // Page footer
-// @import 'layout/forms';
 @import "layout/print"; // Print styles
 
 @import "components/overlays-ie-warnings"; // Overlays: IE warnings
-@import "components/overlays-skiplinks"; // Overlays: Skiplinks
 @import "components/overlays-cookie-info-banner"; // Overlay: Cookie info banner
-// @import 'components/buttons';
-// @import 'components/carousel';
-// @import 'components/cover';
-// @import 'components/dropdown';
 
 // @import 'pages/home';
 // @import 'pages/contact';

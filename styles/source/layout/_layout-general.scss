@@ -4,19 +4,24 @@
 
 .wrapper {
   margin: 0 auto;
-  max-width: (($mvl-column-width * 8) + ($mvl-gutter-width * 9));
+  max-width: (
+    (size(column-width, px) * map-get($max-columns, main-content)) +
+      ((size(gutter-width, px) * (map-get($max-columns, main-content) + 1)))
+  );
   position: relative;
   width: 100%;
 
-  @include mvl-respond-to("full-width") {
-    max-width: mvl-px-to-rem(
-      ($mvl-column-width * 12) + ($mvl-gutter-width * 13)
+  @include respond-to(full-width) {
+    max-width: px-to-rem(
+      (size(column-width, px) * 12) + (size(gutter-width, px) * 13)
     );
-    width: mvl-px-to-rem(($mvl-column-width * 12) + ($mvl-gutter-width * 13));
+    width: px-to-rem(
+      (size(column-width, px) * 12) + (size(gutter-width, px) * 13)
+    );
   }
 
   .main-container & {
-    @include mvl-respond-to("full-width") {
+    @include respond-to(full-width) {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
@@ -25,59 +30,30 @@
 }
 
 .main-container {
-  @include mvl-clearfix;
+  @include clearfix;
 
   flex: 1;
+  margin-top: size(header-height, rem);
 }
 
 //------------------------------------------------------------------------------
 // Upscaling
 //------------------------------------------------------------------------------
 
-@include mvl-respond-to("full-width-scale-1") {
-  html {
-    font-size: ($mvl-base-font-size--screen + 1px);
+html {
+  @include respond-to(full-width--scale-1) {
+    font-size: (size(base-font-size, px) + 1px);
   }
-}
 
-@include mvl-respond-to("full-width-scale-2") {
-  html {
-    font-size: ($mvl-base-font-size--screen + 2px);
+  @include respond-to(full-width--scale-2) {
+    font-size: (size(base-font-size, px) + 2px);
   }
-}
 
-@include mvl-respond-to("full-width-scale-3") {
-  html {
-    font-size: ($mvl-base-font-size--screen + 3px);
+  @include respond-to(full-width--scale-3) {
+    font-size: (size(base-font-size, px) + 3px);
   }
-}
 
-@include mvl-respond-to("full-width-scale-4") {
-  html {
-    font-size: ($mvl-base-font-size--screen + 4px);
-  }
-}
-
-@include mvl-respond-to("full-width-scale-5") {
-  html {
-    font-size: ($mvl-base-font-size--screen + 5px);
-  }
-}
-
-@include mvl-respond-to("full-width-scale-6") {
-  html {
-    font-size: ($mvl-base-font-size--screen + 6px);
-  }
-}
-
-@include mvl-respond-to("full-width-scale-7") {
-  html {
-    font-size: ($mvl-base-font-size--screen + 7px);
-  }
-}
-
-@include mvl-respond-to("full-width-scale-8") {
-  html {
-    font-size: ($mvl-base-font-size--screen + 8px);
+  @include respond-to(full-width--scale-4) {
+    font-size: (size(base-font-size, px) + 4px);
   }
 }

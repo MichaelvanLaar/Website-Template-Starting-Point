@@ -1,0 +1,14 @@
+//==============================================================================
+// Main navigation:
+// General visual styling
+//==============================================================================
+
+.main-navigation__list li {
+  line-height: 1;
+  list-style: none;
+}
+
+.main-navigation__list ul li {
+  font-size: (size(base-font-size, rem) * map-get($scaling-factors, smaller));
+  padding-left: size(gutter-width, rem);
+}

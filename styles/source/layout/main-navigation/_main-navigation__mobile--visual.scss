@@ -1,0 +1,49 @@
+//==============================================================================
+// Main navigation:
+// Visual styling for mobile screen sizes
+//==============================================================================
+
+//------------------------------------------------------------------------------
+// General
+//------------------------------------------------------------------------------
+
+.main-navigation__toggle {
+  padding-left: size(gutter-width, rem);
+  padding-right: size(gutter-width, rem);
+  width: (size(navigation-toggle-width, rem) + (size(gutter-width, rem) * 2));
+}
+
+.main-navigation__toggle-icon {
+  fill: color(white);
+  height: size(header-height, rem);
+  width: 100%;
+}
+
+.no-js .main-navigation:hover .main-navigation__toggle-icon,
+.js .main-navigation__toggle.show-submenu .main-navigation__toggle-icon {
+  fill: color(brand-1, lightest);
+}
+
+.main-navigation__list-container {
+  background-color: color(brand-1, lightest);
+  padding-left: size(gutter-width, rem);
+  padding-right: size(gutter-width, rem);
+}
+
+//------------------------------------------------------------------------------
+// With JavaScript
+//------------------------------------------------------------------------------
+
+.js {
+  // Add “►” after dropdown toggle elements with hidden submenus
+  .main-navigation__list > .has-children > a:after {
+    content: "►";
+    font-size: (map-get($scaling-factors, smaller) * 1em);
+    margin-left: 0.5em;
+  }
+
+  // Add “▼” after dropdown toggle elements with visible submenus
+  .main-navigation__list > .has-children.show-submenu > a:after {
+    content: "▼";
+  }
+}

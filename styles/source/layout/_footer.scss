@@ -3,20 +3,20 @@
 //==============================================================================
 
 .page-footer {
-  @include mvl-clearfix;
+  @include clearfix;
 
-  background: $mvl-color__default-text;
+  background: color(default-text);
+}
 
-  &__box {
-    @include mvl-clearfix;
-    color: $mvl-color__white;
+.page-footer__box {
+  @include clearfix;
 
-    font-size: mvl-px-to-rem(13px);
-    margin-left: mvl-px-to-rem($mvl-gutter-width);
-    margin-right: mvl-px-to-rem($mvl-gutter-width);
+  color: color(white);
+  font-size: (size(base-font-size, rem) * map-get($scaling-factors, smaller));
+  margin-left: size(gutter-width, rem);
+  margin-right: size(gutter-width, rem);
 
-    @media print {
-      display: none;
-    }
+  @media print {
+    display: none;
   }
 }

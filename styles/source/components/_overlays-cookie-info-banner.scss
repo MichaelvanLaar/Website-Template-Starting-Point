@@ -3,37 +3,37 @@
 //==============================================================================
 
 .cookie-info-banner {
-  @include mvl-clearfix;
+  @include clearfix;
 
-  background-color: $mvl-color__brand-2--lighter;
+  background-color: color(brand-2, lighter);
   bottom: 0;
   left: 0;
   position: fixed;
   right: 0;
   width: 100%;
-
-  &__box {
-    margin-left: mvl-px-to-rem($mvl-gutter-width);
-    margin-right: mvl-px-to-rem($mvl-gutter-width);
-  }
-
-  &__message {
-    font-size: 13px;
-    line-height: 21px;
-    margin-bottom: 6px;
-    margin-top: 6px;
-    padding-right: 25px;
-
-    @include mvl-respond-to("full-width") {
-      text-align: center;
-    }
-  }
-
-  &__close-button {
-    line-height: 1;
-  }
+  z-index: layer(cookie-info-banner);
 
   @media print {
     display: none;
   }
+}
+
+.cookie-info-banner__box {
+  margin-left: size(gutter-width, rem);
+  margin-right: size(gutter-width, rem);
+}
+
+.cookie-info-banner__message {
+  font-size: (size(base-font-size, px) * 0.8);
+  margin-bottom: (size(base-font-size, px) * 0.4);
+  margin-top: (size(base-font-size, px) * 0.4);
+  padding-right: size(gutter-width, px);
+
+  @include respond-to(full-width) {
+    text-align: center;
+  }
+}
+
+.cookie-info-banner__close-button {
+  line-height: 1;
 }

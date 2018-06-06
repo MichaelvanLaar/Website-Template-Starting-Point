@@ -4,20 +4,17 @@
 
 html {
   box-sizing: border-box;
-  font-size: $mvl-base-font-size--screen;
+  font-size: size(base-font-size, px);
   height: 100%;
-  line-height: ($mvl-base-line-height / $mvl-base-font-size--screen);
+  line-height: (size(base-line-height, px) / size(base-font-size, px));
   overflow-y: scroll;
-
-  @media print {
-    font-size: $mvl-base-font-size--print;
-  }
 }
 
+// Allow components to change to other box-sizing models if necessary
 *,
 *::before,
 *::after {
-  box-sizing: inherit; // Allow components to change to other box-sizing models if necessary
+  box-sizing: inherit;
 }
 
 html,
@@ -25,14 +22,14 @@ button,
 input,
 select,
 textarea {
-  color: $mvl-color__default-text;
+  color: color(default-text);
 }
 
 body {
-  background-color: $mvl-color__white;
+  background-color: color(white);
   display: flex;
   flex-direction: column;
-  font-family: $mvl-font-stack--text;
+  font-family: font-stack(text);
   min-height: 100%;
 }
 
@@ -46,17 +43,17 @@ body {
 
 // Change the selection background color to fit with the used color scheme
 ::selection {
-  background: $mvl-color__brand-1--lighter;
-  color: $mvl-color__white;
+  background: color(brand-1, lighter);
+  color: color(white);
   text-shadow: none;
 }
 
 hr {
   border: 0;
-  border-top: 1px solid $mvl-color__brand-2--lighter;
+  border-top: 1px solid color(brand-2, lighter);
   display: block;
   height: 1px;
-  margin: mvl-px-to-rem($mvl-base-line-height) 0;
+  margin: size(base-margin, rem) 0;
   padding: 0;
 }
 

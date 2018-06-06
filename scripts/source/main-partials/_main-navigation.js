@@ -1,109 +1,105 @@
 /**
  * =============================================================================
  * Main navigation
- *
- * - Sticky position at the top when the page is scrolled down
- * - Accordion menu or dropdown menu, according to screen size
  * =============================================================================
  */
 
-// This script requires jQuery to be required as a global object in main.js
-
-// require("../jquery-plugins/jquery-scrolltofixed");
-const enquire = require("enquire.js");
-require("../jquery-plugins/jquery-outside-events");
-
-const mvl_main_navigation = $(".js-main-navigation");
-const mvl_main_navigation__helpers = $(".js-main-navigation__helpers");
-const mvl_main_navigation__toggle = $(".js-main-navigation__toggle");
-const mvl_main_navigation__list = $(".js-main-navigation__list");
-const mvl_dropdown_toggles = mvl_main_navigation__list.find(".has-children");
-const mvl_dropdown_toggles__a = mvl_dropdown_toggles.children("a");
+// Namespace prefix for variables: “mn”
 
 /**
  * -----------------------------------------------------------------------------
- * Sticky position at the top when the page is scrolled down
+ * Configuration
  * -----------------------------------------------------------------------------
  */
 
-// mvl_main_navigation.scrollToFixed({
-//   dontSetWidth: true
-// });
+const mnNavClass = "js-main-navigation";
+const mnOffCanvasMenuToggleClass = "js-main-navigation__toggle";
+const mnListClass = "js-main-navigation__list";
+const mnHasChildrenClass = "has-children";
+const mnShowSubmenuClass = "show-submenu";
 
 /**
  * -----------------------------------------------------------------------------
- * Accordion menu or dropdown menu, according to screen size
+ * Preparation
+ * -----------------------------------------------------------------------------
+ */
+
+// Get DOM elements
+const mnNav = document.querySelector(`.${mnNavClass}`);
+const mnOffCanvasMenuToggle = document.querySelector(
+  `.${mnOffCanvasMenuToggleClass}`
+);
+const mnDropdownToggles = document.querySelectorAll(
+  `.${mnListClass} > .${mnHasChildrenClass}`
+);
+const mnDropdownTogglesA = document.querySelectorAll(
+  `.${mnListClass} > .${mnHasChildrenClass} > a`
+);
+
+/**
+ * -----------------------------------------------------------------------------
+ * Submenu toggles
  * -----------------------------------------------------------------------------
  */
 
 // Remove href attribute from all menu links which are used as submenu toggle
 // links
-mvl_dropdown_toggles__a.each(function() {
-  const mvl_dropdown_toggle__href = $(this).attr("href");
-  $(this)
-    .attr("data-target", mvl_dropdown_toggle__href)
-    .removeAttr("href");
+mnDropdownTogglesA.forEach(mnDropdownToggleA => {
+  const mnDropdownToggleHref = mnDropdownToggleA.getAttribute("href");
+  mnDropdownToggleA.setAttribute("data-href", mnDropdownToggleHref);
+  mnDropdownToggleA.removeAttribute("href");
 });
 
-// Add functionality to toggle icon which reveals the accordion menu
-mvl_main_navigation__toggle.click(() => {
-  mvl_main_navigation__helpers.toggleClass("show-submenu");
-  // Hide all "inner" accordion submenus
-  mvl_dropdown_toggles.removeClass("show-submenu");
-});
-
-// Accordion resp. dropdown functionality
-mvl_dropdown_toggles__a.click(function() {
-  // The <li class="has-children"> which is a direct parent of the clicked
-  // <a href="…">
-  const mvl_dropdown_toggle = $(this).parent("li");
-  // Show resp. hide clicked dropdown menu
-  mvl_dropdown_toggle.toggleClass("show-submenu");
-  // Hide all dropdown menus below all siblings of the <li class="has-children">
-  // which is a direct parent of the clicked <a href="…">
-  mvl_dropdown_toggle.siblings(".show-submenu").removeClass("show-submenu");
-  // Hide all dropdown menus below clicked <a href="…">
-  mvl_dropdown_toggle.find(".show-submenu").removeClass("show-submenu");
-});
-
-// Accordion menu for smaller screen sizes
-enquire.register("screen and (max-width: 1019px)", {
-  match() {
-    // Set max. height for dropped down menu
-    mvl_main_navigation__list.css(
-      "max-height",
-      $(window).height() - $(mvl_main_navigation__helpers).outerHeight()
-    );
-    mvl_main_navigation.bind("clickoutside", () => {
-      // Hide accordion menus when the user clicks outside the menu area
-      mvl_main_navigation__helpers.removeClass("show-submenu");
-      // Hide all dropdown menus when the user clicks outside the menu area
-      mvl_dropdown_toggles.removeClass("show-submenu");
+// Add “show/hide submenu” functionality
+mnDropdownToggles.forEach(mnDropdownToggle => {
+  mnDropdownToggle.addEventListener("click", () => {
+    // Hide all sumbenus except the current one
+    const mnDropdownToggleSiblings = Array.from(
+      mnDropdownToggle.parentElement.children
+    ).filter(x => x !== mnDropdownToggle);
+    mnDropdownToggleSiblings.forEach(mnDropdownToggleSibling => {
+      mnDropdownToggleSibling.classList.remove(mnShowSubmenuClass);
     });
-  },
-  unmatch() {
-    mvl_main_navigation.unbind("clickoutside");
-    mvl_main_navigation__toggle.removeClass("show-submenu");
-    mvl_main_navigation__list
-      .css("max-height", "")
-      .find(".show-submenu")
-      .removeClass("show-submenu");
-    mvl_main_navigation__toggle.removeClass("show-submenu");
-  }
+
+    // Toggle “show submenu” class fot current toggle element
+    mnDropdownToggle.classList.toggle(mnShowSubmenuClass);
+  });
 });
 
-// Dropdown menu for bigger screen sizes
-enquire.register("screen and (min-width: 1020px)", {
-  match() {
-    mvl_main_navigation__list.on("clickoutside", () => {
-      // Hide all dropdown menus when the user clicks outside the menu area
-      mvl_dropdown_toggles.removeClass("show-submenu");
+/**
+ * -----------------------------------------------------------------------------
+ * Off-canvas menu toggle
+ * -----------------------------------------------------------------------------
+ */
+
+// Make toggle icon (for mobile navigation) reveal off-canvas menu on click
+mnOffCanvasMenuToggle.addEventListener("click", () => {
+  // If the click closes the off-canvas menu, hide any visible submenu
+  if (mnOffCanvasMenuToggle.classList.contains(mnShowSubmenuClass)) {
+    mnDropdownToggles.forEach(mnDropdownToggle => {
+      mnDropdownToggle.classList.remove(mnShowSubmenuClass);
     });
-  },
-  unmatch() {
-    mvl_main_navigation__list
-      .off("clickoutside")
-      .find(".show-submenu")
-      .removeClass("show-submenu");
   }
+  mnOffCanvasMenuToggle.classList.toggle(mnShowSubmenuClass);
+});
+
+/**
+ * -----------------------------------------------------------------------------
+ * Close all menus when a visitor clicks anywhere outside the main navigation
+ * -----------------------------------------------------------------------------
+ */
+
+document.documentElement.addEventListener("click", () => {
+  // Hide any visible submenu
+  mnDropdownToggles.forEach(mnDropdownToggle => {
+    mnDropdownToggle.classList.remove(mnShowSubmenuClass);
+  });
+
+  // Close off-canvas menu
+  mnOffCanvasMenuToggle.classList.remove(mnShowSubmenuClass);
+});
+
+// Exclude all main navigation elements from the above behavior
+mnNav.addEventListener("click", event => {
+  event.stopPropagation();
 });

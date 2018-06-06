@@ -1,0 +1,43 @@
+//==============================================================================
+// Main navigation:
+// Visual styling for desktop screen sizes
+//==============================================================================
+
+@include respond-to(full-width) {
+  .main-navigation__list-container {
+    background: transparent;
+    justify-content: flex-end;
+  }
+
+  .main-navigation__list > li > a,
+  .main-navigation__list > li > a:visited {
+    color: color(white);
+    display: table-cell;
+    height: size(header-height, rem);
+    padding-left: (size(gutter-width, rem) / 2);
+    padding-right: (size(gutter-width, rem) / 2);
+    vertical-align: middle;
+  }
+
+  .main-navigation__list > li > a:hover,
+  .main-navigation__list > li > a:focus,
+  .main-navigation__list > li:hover > a,
+  .main-navigation__list > li.show-submenu > a,
+  .main-navigation__list > li:hover > a:visited,
+  .main-navigation__list > li.show-submenu > a:visited {
+    color: color(brand-1, lightest);
+  }
+
+  // Add “▼” after dropdown toggle elements with visible submenus
+  .main-navigation__list > .has-children > a:after,
+  .js .main-navigation__list > .has-children > a:after {
+    content: "▼";
+    font-size: (map-get($scaling-factors, smaller) * 1em);
+    margin-left: 0.5em;
+  }
+
+  .main-navigation__list > li > ul {
+    background-color: color(brand-1, lightest);
+    padding-right: size(gutter-width, rem);
+  }
+}

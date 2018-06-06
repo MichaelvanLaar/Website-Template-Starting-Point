@@ -1,0 +1,77 @@
+//==============================================================================
+// Colors
+//==============================================================================
+
+/// Project colors
+/// @access public
+/// @group Colors
+/// @type Map
+/// @prop {Color} white [rgb(255, 255, 255)] - HEX: #ffffff
+/// @prop {Color} black [rgb(0, 0, 0)] - HEX: #000000
+/// @prop {Color} default-text [rgb(51, 51, 51)] - HEX: #333333
+/// @prop {Color} validation-error [rgb(255, 170, 170)] - HEX: #ffaaaa
+/// @prop {Color} drop-shadow [rgba(0, 0, 0, 0.5)] - Half transparent black for drop shadows
+/// @prop {Color} brand-1 [rgb(10, 75, 170)] - Main brand color
+/// @prop {Color} brand-2 [rgb(190, 190, 190)] - Secondary brand color
+$colors: (
+  white: rgb(255, 255, 255),
+  black: rgb(0, 0, 0),
+  default-text: rgb(51, 51, 51),
+  validation-error: rgb(255, 170, 170),
+  drop-shadow: rgba(0, 0, 0, 0.5),
+  brand-1: rgb(10, 75, 170),
+  brand-2: rgb(190, 190, 190)
+);
+
+/// Named shades of colors
+/// @access public
+/// @group Colors
+/// @type Map
+/// @prop {Number} original [100%] - Original color
+/// @prop {Number} lighter [66%] - Lighter version of the original color (The `color` function will return a mix of 66% color and 34% white.)
+/// @prop {Number} lightest [33%] - Lightest version of the original color (The `color` function will return a mix of 33% color and 67% white.)
+/// @prop {Number} darker [74%] - Darker version of the original color (The `color` function will return a mix of 74% color and 26% black.)
+/// @prop {Number} darkest [48%] - Darkest version of the original color (The `color` function will return a mix of 48% color and 52% black.)
+$shades: (
+  original: 100%,
+  lighter: 66%,
+  lightest: 33%,
+  darker: 74%,
+  darkest: 48%
+);
+
+/// Return the value of a named color or of a shaded version
+/// @access public
+/// @group Colors
+/// @requires $colors
+/// @requires $shades
+/// @param {String} $color - Color name from `$colors` map
+/// @param {String} $shade [original] - Shade name from `$shades` map
+/// @return {Color} - Color value
+@function color($color, $shade: original) {
+  @if (map-has-key($colors, $color)) {
+    @if (map-has-key($shades, $shade)) {
+      @if ($shade == lighter or $shade == lightest) {
+        @return mix(
+          map-get($colors, $color),
+          #ffffff,
+          map-get($shades, $shade)
+        );
+      } @else if ($shade != original) {
+        @return mix(
+          map-get($colors, $color),
+          #000000,
+          map-get($shades, $shade)
+        );
+      } @else {
+        @return map-get($colors, $color);
+      }
+    } @else {
+      @error "No value found for `#{$shade}`. "
+           + "Please make sure it is defined in `$shades` map.";
+    }
+  } @else {
+    @error "No value found for `#{$color}`. "
+         + "Please make sure it is defined in `$colors` map.";
+  }
+}

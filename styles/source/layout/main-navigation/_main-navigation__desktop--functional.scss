@@ -1,0 +1,80 @@
+//==============================================================================
+// Main navigation:
+// Functional styling for desktop screen sizes
+//==============================================================================
+
+//------------------------------------------------------------------------------
+// General
+//------------------------------------------------------------------------------
+
+@include respond-to(full-width) {
+  // Hide off-canvas menu toggle
+  .main-navigation__toggle {
+    @include hidden;
+  }
+
+  // Let main navigation fill the remaining space of the header
+  // (adding a little room between logo and main navigation)
+  .main-navigation {
+    margin-left: size(gutter-width, rem);
+    width: 100%;
+  }
+
+  // Prepare list container and revert some settings used for the mobile
+  // off-canvas navigation
+  .main-navigation__list-container {
+    display: flex;
+    height: size(header-height, rem);
+    overflow-y: auto;
+    position: static;
+    right: auto;
+    top: 0;
+    width: auto;
+  }
+
+  // Make 1st level list items line up horizontally
+  .main-navigation__list {
+    display: flex;
+  }
+
+  // Prepare dropdown menus
+  // [1] Hide all 2nd level submenus which should not be shown initially
+  .main-navigation__list > li > ul {
+    height: 0; // [1]
+    opacity: 0; // [1]
+    overflow-y: hidden; // [1]
+    position: absolute;
+    top: size(header-height, rem);
+    z-index: layer(main-navigation);
+  }
+}
+
+//------------------------------------------------------------------------------
+// Without JavaScript
+//------------------------------------------------------------------------------
+
+@include respond-to(full-width) {
+  .no-js {
+    // Show dropdown menu on parent mouseover
+    .main-navigation__list > li:hover > ul {
+      height: auto;
+      opacity: 1;
+      overflow-y: visible;
+    }
+  }
+}
+
+//------------------------------------------------------------------------------
+// With JavaScript
+//------------------------------------------------------------------------------
+
+@include respond-to(full-width) {
+  .js {
+    // Show dropdown menu on click
+    .main-navigation__list > .show-submenu > ul {
+      height: auto;
+      opacity: 1;
+      overflow-y: visible;
+    }
+  }
+}

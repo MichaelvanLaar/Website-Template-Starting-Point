@@ -10,7 +10,7 @@
 }
 
 .print-links-footer {
-  border: 1pt solid $mvl-color__black;
+  border: 1pt solid color(black);
   padding: 0 1.25rem;
   page-break-inside: avoid;
 
@@ -28,7 +28,7 @@
   *::after {
     background: transparent !important;
     box-shadow: none !important;
-    color: $mvl-color__black !important;
+    color: color(black) !important;
     text-shadow: none !important;
   }
 
@@ -36,9 +36,9 @@
     margin: 2cm;
   }
 
-  // -------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------
   // Typography
-  // -------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------
 
   pre,
   blockquote,

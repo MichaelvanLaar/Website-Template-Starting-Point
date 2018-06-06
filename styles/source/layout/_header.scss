@@ -2,53 +2,88 @@
 // Page header
 //==============================================================================
 
-.page-header {
-  @include mvl-clearfix;
+//------------------------------------------------------------------------------
+// Variables
+//------------------------------------------------------------------------------
 
-  background-color: $mvl-color__brand-1--darkest;
+// Calculated sizes
+$logo-height: (size(header-height, rem) - size(base-font-size, rem));
+$logo-width: ((size(site-logo-width, px) / size(site-logo-height, px)) * 1em);
+$logo-max-width: (
+  360px - (size(gutter-width, px) * 3) - size(navigation-toggle-width, px)
+);
+$logo-margin: ((size(header-height, rem) - $logo-height) / 2);
+
+//------------------------------------------------------------------------------
+// General header
+//------------------------------------------------------------------------------
+
+.page-header {
+  @include clearfix;
+
+  background-color: color(brand-1, darker);
+  width: 100%;
 
   .js & {
-    display: none;
-
-    @include mvl-respond-to("main-content-width") {
-      display: block;
-    }
-  }
-
-  &__box {
-    @include mvl-clearfix;
-    margin-left: mvl-px-to-rem($mvl-gutter-width);
-
-    margin-right: mvl-px-to-rem($mvl-gutter-width);
-    text-align: center;
-  }
-
-  &__logo-container {
-    margin: mvl-px-to-rem($mvl-base-line-height) auto;
-    max-width: 100%;
-    position: relative;
-    width: mvl-px-to-rem(505px);
-
-    &::before {
-      content: "";
-      display: block;
-      padding-top: 19.8019801980198%; // represents aspect ratio of the logo
-    }
-  }
-
-  &__logo {
-    fill: $mvl-color__white;
-    height: 100%;
-    left: 0;
-    position: absolute;
+    position: fixed;
     top: 0;
-    transition: fill $mvl-default-transition__duration
-      $mvl-default-transition__timing-function;
-    width: 100%;
+    z-index: layer(page-header);
+  }
 
-    &:hover,
-    &:focus {
-      fill: $mvl-color__brand-1--lightest;
-    }
+  @include respond-to(full-width) {
+    position: fixed;
+    top: 0;
+    z-index: layer(page-header);
   }
 }
+
+.page-header__box {
+  display: flex;
+  justify-content: space-between;
+  margin-left: size(gutter-width, rem);
+
+  @include respond-to(full-width) {
+    display: flex;
+    justify-content: space-between;
+    margin-right: size(gutter-width, rem);
+  }
+}
+
+//------------------------------------------------------------------------------
+// Site logo
+//------------------------------------------------------------------------------
+
+.page-header__logo-container {
+  font-size: $logo-height;
+  height: $logo-height;
+  line-height: 1;
+  margin-bottom: $logo-margin;
+  margin-top: $logo-margin;
+  max-width: $logo-max-width;
+  transition: transition(all, default);
+  width: $logo-width;
+}
+
+.page-header__logo {
+  display: block;
+  fill: color(white);
+  height: 100%;
+  transition: transition(fill, default);
+  width: 100%;
+
+  &:hover,
+  &:focus {
+    fill: color(brand-1, lightest);
+  }
+}
+
+//------------------------------------------------------------------------------
+// Main navigation
+//------------------------------------------------------------------------------
+
+@import "main-navigation/main-navigation--functional";
+@import "main-navigation/main-navigation--visual";
+@import "main-navigation/main-navigation__mobile--functional";
+@import "main-navigation/main-navigation__mobile--visual";
+@import "main-navigation/main-navigation__desktop--functional";
+@import "main-navigation/main-navigation__desktop--visual";

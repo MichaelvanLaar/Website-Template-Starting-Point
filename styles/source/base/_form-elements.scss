@@ -17,9 +17,9 @@ input[type="url"],
 input[type="week"],
 select,
 textarea {
-  border: 1px solid $mvl-color__brand-2--darker;
-  color: $mvl-color__default-text;
-  font-family: $mvl-font-stack--text;
+  border: 1px solid color(brand-2, darker);
+  color: color(default-text);
+  font-family: font-stack(text);
 }
 
 input[type="date"],
@@ -36,7 +36,7 @@ input[type="time"],
 input[type="url"],
 input[type="week"],
 textarea {
-  padding: mvl-px-to-rem(3px);
+  padding: px-to-rem(3px);
 }
 
 textarea {
@@ -44,53 +44,52 @@ textarea {
 }
 
 select {
-  padding: mvl-px-to-rem(2px);
+  padding: px-to-rem(2px);
 }
 
 .placeholder {
-  color: $mvl-color__brand-2--darker;
+  color: color(brand-2, darker);
 }
 
 ::-webkit-input-placeholder {
-  color: $mvl-color__brand-2--darker;
+  color: color(brand-2, darker);
 }
 
 ::-moz-placeholder {
-  color: $mvl-color__brand-2--darker;
+  color: color(brand-2, darker);
 }
 
 :-moz-placeholder {
-  color: $mvl-color__brand-2--darker;
+  color: color(brand-2, darker);
 }
 
 :-ms-input-placeholder {
-  color: $mvl-color__brand-2--darker;
+  color: color(brand-2, darker);
 }
 
 button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-  background-color: $mvl-color__brand-2--darker;
+  background-color: color(brand-2, darker);
   background-image: linear-gradient(
     to bottom,
-    $mvl-color__brand-2,
-    $mvl-color__brand-2--darker
+    color(brand-2),
+    color(brand-2, darker)
   );
-  border: 1px solid $mvl-color__brand-2--darker;
-  color: $mvl-color__white;
-  font-family: $mvl-font-stack--text;
-  padding: 0.1875rem 0.5625rem; /* 3px / 16px   and   9px / 16px */
+  border: 1px solid color(brand-2, darker);
+  color: color(white);
+  font-family: font-stack(text);
+  padding: px-to-rem(3px) px-to-rem(9px);
 }
 
 button:focus,
 input:focus,
 select:focus,
 textarea:focus {
-  box-shadow: 1px 1px 3px $mvl-color__brand-1--lighter,
-    -1px 1px 3px $mvl-color__brand-1--lighter,
-    -1px -1px 3px $mvl-color__brand-1--lighter,
-    1px -1px 3px $mvl-color__brand-1--lighter;
+  box-shadow: 1px 1px 3px color(brand-2, lighter),
+    -1px 1px 3px color(brand-2, lighter), -1px -1px 3px color(brand-2, lighter),
+    1px -1px 3px color(brand-2, lighter);
   outline: 0;
 }
 
@@ -98,16 +97,15 @@ button:active,
 input[type="button"]:active,
 input[type="reset"]:active,
 input[type="submit"]:active {
-  background-color: $mvl-color__brand-2;
+  background-color: color(brand-2);
   background-image: linear-gradient(
     to bottom,
-    $mvl-color__brand-2--darker,
-    $mvl-color__brand-2
+    color(brand-2, darker),
+    color(brand-2)
   );
-  box-shadow: 1px 1px 3px $mvl-color__brand-1--lighter,
-    -1px 1px 3px $mvl-color__brand-1--lighter,
-    -1px -1px 3px $mvl-color__brand-1--lighter,
-    1px -1px 3px $mvl-color__brand-1--lighter;
+  box-shadow: 1px 1px 3px color(brand-1, lighter),
+    -1px 1px 3px color(brand-1, lighter), -1px -1px 3px color(brand-1, lighter),
+    1px -1px 3px color(brand-1, lighter);
 }
 
 fieldset {
@@ -118,5 +116,5 @@ fieldset {
 
 input:invalid,
 textarea:invalid {
-  background-color: $mvl-color__validation-error;
+  background-color: color(validation-error);
 }

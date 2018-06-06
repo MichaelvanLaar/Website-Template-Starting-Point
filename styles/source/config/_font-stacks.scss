@@ -1,0 +1,29 @@
+//==============================================================================
+// Font stacks
+//==============================================================================
+
+/// Basic sizes in px, with reference to the non-scaled versions of the layout
+/// @access public
+/// @group Typography
+/// @type Map
+/// @prop {String} text [Arial, Helvetica, sans-serif] - Font stack for copy text
+/// @prop {String} code ['Lucida Console', 'Courier New', 'Courier', monospace] - Font stack for code sections
+$font-stacks: (
+  text: "Arial, Helvetica, sans-serif",
+  code: "'Lucida Console', 'Courier New', Courier, monospace"
+);
+
+/// Return the value of a named font stack as unquoted string
+/// @access public
+/// @group Typography
+/// @requires $font-stacks
+/// @param {String} $font-stack - Named font stack from `$font-stacks` map
+/// @return {String}
+@function font-stack($font-stack) {
+  @if (map-has-key($font-stacks, $font-stack)) {
+    @return #{map-get($font-stacks, $font-stack)};
+  } @else {
+    @error "No value found for `#{$font-stack}`. "
+         + "Please make sure it is defined in `$font-stacks` map.";
+  }
+}

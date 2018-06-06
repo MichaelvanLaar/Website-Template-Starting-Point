@@ -1,0 +1,118 @@
+//==============================================================================
+// Breakpoints
+//==============================================================================
+
+/// Named breakpoints for media queries
+/// @access public
+/// @group Layout
+/// @type Map
+/// @requires $max-columns
+/// @requires $sizes
+/// @requires {function} size
+/// @prop {String} main-content-width
+/// @prop {String} full-width - Corresponds 16px base font size
+/// @prop {String} full-width--scale-1 - Corresponds 17px base font size
+/// @prop {String} full-width--scale-2 - Corresponds 18px base font size
+/// @prop {String} full-width--scale-3 - Corresponds 19px base font size
+/// @prop {String} full-width--scale-4 - Corresponds 20px base font size
+$breakpoints: (
+  main-content-width:
+    (
+      min-width:
+        (
+          (size(column-width, px) * map-get($max-columns, main-content)) +
+            (
+              (
+                size(gutter-width, px) *
+                  (map-get($max-columns, main-content) + 1)
+              )
+            )
+        )
+    ),
+  full-width:
+    (
+      min-width:
+        (
+          (size(column-width, px) * 12) + (size(gutter-width, px) * 13) +
+            (size(gutter-width, px) * 2)
+        )
+    ),
+  full-width--scale-1:
+    (
+      min-width:
+        floor(
+          (
+              (size(column-width, px) * 12) + (size(gutter-width, px) * 13) +
+                (size(column-width, px) * 3)
+            ) * 1.0625
+        )
+    ),
+  full-width--scale-2:
+    (
+      min-width:
+        floor(
+          (
+              (size(column-width, px) * 12) + (size(gutter-width, px) * 13) +
+                (size(column-width, px) * 5)
+            ) * 1.125
+        )
+    ),
+  full-width--scale-3:
+    (
+      min-width:
+        floor(
+          (
+              (size(column-width, px) * 12) + (size(gutter-width, px) * 13) +
+                (size(column-width, px) * 7)
+            ) * 1.1875
+        )
+    ),
+  full-width--scale-4:
+    (
+      min-width:
+        floor(
+          (
+              (size(column-width, px) * 12) + (size(gutter-width, px) * 13) +
+                (size(column-width, px) * 9)
+            ) * 1.25
+        )
+    )
+);
+
+/// Responsive manager
+/// @author Hugo Giraudel
+/// @access public
+/// @group Layout
+/// @param {String} $breakpoint - Named breakpoint from `$breakpoints` map
+/// @requires $breakpoints
+/// @example scss - Input (SCSS)
+///   $breakpoints: (
+///     medium: (min-width: 800px),
+///     large: (min-width: 1000px),
+///   );
+///
+///   @include respond-to(medium) {
+///     /* media query specific CSS rules */
+///   }
+/// @example css - Output (CSS)
+///   @media only screen and (min-width: 800px) {
+///     /* media query specific CSS rules */
+///   }
+@mixin respond-to($breakpoint) {
+  $raw-query: map-get($breakpoints, $breakpoint);
+
+  @if ($raw-query) {
+    $query: if(
+      type-of($raw-query) == "string",
+      unquote($raw-query),
+      inspect($raw-query)
+    );
+
+    @media only screen and #{$query} {
+      @content;
+    }
+  } @else {
+    @error "No value found for `#{$breakpoint}`. "
+         + "Please make sure it is defined in `$breakpoints` map.";
+  }
+}
