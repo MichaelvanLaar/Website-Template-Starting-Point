@@ -1,0 +1,22 @@
+//==============================================================================
+// Page footer
+//==============================================================================
+
+.page-footer {
+  @include clearfix;
+
+  background: color(default-text);
+}
+
+.page-footer__box {
+  @include clearfix;
+
+  color: color(white);
+  font-size: (size(base-font-size, rem) * map-get($scaling-factors, smaller));
+  margin-left: size(gutter-width, rem);
+  margin-right: size(gutter-width, rem);
+
+  @media print {
+    display: none;
+  }
+}

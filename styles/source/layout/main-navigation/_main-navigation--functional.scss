@@ -1,0 +1,37 @@
+//==============================================================================
+// Main navigation:
+// General functional styling
+//==============================================================================
+
+.main-navigation__list > li > ul {
+  transition: transition(opacity, default);
+}
+
+// Hide 4th+ navigation levels
+.main-navigation__list ul ul ul {
+  @include hidden;
+}
+
+//------------------------------------------------------------------------------
+// With JavaScript
+//------------------------------------------------------------------------------
+
+.js {
+  .main-navigation__list > .has-children {
+    cursor: pointer;
+  }
+
+  // Hide all 2nd level submenus which should not be shown initially
+  .main-navigation__list > li > ul {
+    height: 0;
+    opacity: 0;
+    overflow-y: hidden;
+  }
+
+  // Show a 2nd level submenu as soon as its parent is clicked
+  .main-navigation__list > .show-submenu > ul {
+    height: auto;
+    opacity: 1;
+    overflow-y: visible;
+  }
+}

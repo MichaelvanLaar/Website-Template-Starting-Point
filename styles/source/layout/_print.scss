@@ -1,0 +1,57 @@
+//==============================================================================
+// Print styles
+//==============================================================================
+
+.print-only {
+  @media screen {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+.print-links-footer {
+  border: 1pt solid color(black);
+  padding: 0 1.25rem;
+  page-break-inside: avoid;
+
+  h3 {
+    font-size: 1.25rem;
+    line-height: 1.2;
+    margin-bottom: 1.25rem;
+    margin-top: 1.25rem;
+  }
+}
+
+@media print {
+  *,
+  *::before,
+  *::after {
+    background: transparent !important;
+    box-shadow: none !important;
+    color: color(black) !important;
+    text-shadow: none !important;
+  }
+
+  @page {
+    margin: 2cm;
+  }
+
+  // ---------------------------------------------------------------------------
+  // Typography
+  // ---------------------------------------------------------------------------
+
+  pre,
+  blockquote,
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
+
+  thead {
+    display: table-header-group;
+  }
+}

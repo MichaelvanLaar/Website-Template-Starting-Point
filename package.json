@@ -1,0 +1,104 @@
+{
+  "name": "Website-Template-Starting-Point",
+  "version": "4.0.0",
+  "author": "Michael van Laar <michael@van-laar.de> (https://michaelvanlaar.com/)",
+  "private": true,
+  "license": "MIT",
+  "dependencies": {
+    "js-cookie": "^2.2.0",
+    "lazysizes": "^4.0.2",
+    "normalize.css": "^8.0.0",
+    "respimage": "^1.4.2"
+  },
+  "devDependencies": {
+    "asset-cache-bust": "^2.2.0",
+    "autoprefixer": "^8.3.0",
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.6.1",
+    "babelify": "^8.0.0",
+    "browserify": "^16.2.2",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-import": "^2.11.0",
+    "eslint-plugin-prettier": "^2.6.0",
+    "exorcist": "^1.0.1",
+    "node-sass": "^4.8.3",
+    "npm-run-all": "^4.1.2",
+    "postcss-cli": "^5.0.0",
+    "postcss-flexbugs-fixes": "^3.3.1",
+    "prettier": "^1.12.1",
+    "sassdoc": "^2.5.0",
+    "stylelint": "^9.2.0",
+    "stylelint-config-prettier": "^3.2.0",
+    "stylelint-config-recommended-scss": "^3.2.0",
+    "stylelint-order": "^0.8.1",
+    "stylelint-scss": "^3.1.0",
+    "tinyify": "^2.4.0"
+  },
+  "browserslist": [
+    "> 0.5%",
+    "last 2 versions",
+    "Firefox ESR",
+    "ie >= 10"
+  ],
+  "eslintConfig": {
+    "extends": [
+      "airbnb-base",
+      "plugin:prettier/recommended"
+    ],
+    "parserOptions": {
+      "ecmaVersion": 2017
+    },
+    "env": {
+      "browser": true,
+      "es6": true
+    }
+  },
+  "stylelint": {
+    "plugins": [
+      "stylelint-order"
+    ],
+    "extends": [
+      "stylelint-config-recommended-scss",
+      "stylelint-config-prettier"
+    ],
+    "rules": {
+      "order/properties-alphabetical-order": true,
+      "font-family-no-missing-generic-family-keyword": null
+    }
+  },
+  "browserify": {
+    "transform": [
+      [
+        "babelify",
+        {
+          "presets": [
+            "env"
+          ]
+        }
+      ]
+    ]
+  },
+  "scripts": {
+    "postinstall": "npm config set scripts-prepend-node-path true",
+    "lint:scripts": "eslint 'scripts/source/**/*.js'",
+    "lint:scripts:fix": "eslint 'scripts/source/**/*.js' --fix",
+    "postlint:scripts:fix": "npm run format:scripts",
+    "lint:styles": "stylelint 'styles/source/**/*.scss'",
+    "lint:styles:fix": "stylelint 'styles/source/**/*.scss' --fix",
+    "postlint:styles:fix": "npm run format:styles",
+    "format:scripts": "prettier --write 'scripts/source/**/*.js'",
+    "format:styles": "prettier --write 'styles/source/**/*.scss'",
+    "build:scripts:respimage": "browserify scripts/source/respimage.js --plugin tinyify --debug | exorcist scripts/production/respimage-bundle.js.map --base scripts/production/ > scripts/production/respimage-bundle.js",
+    "build:scripts:lazysizes": "browserify scripts/source/lazysizes.js --plugin tinyify --debug | exorcist scripts/production/lazysizes-bundle.js.map --base scripts/production/ > scripts/production/lazysizes-bundle.js",
+    "build:scripts:main": "browserify scripts/source/main.js --plugin tinyify --debug | exorcist scripts/production/main-bundle.js.map --base scripts/production/ > scripts/production/main-bundle.js",
+    "build:scripts": "npm-run-all --parallel build:scripts:*",
+    "prebuild:scripts": "npm run lint:scripts:fix",
+    "build:styles:main": "node-sass --output-style compressed --source-map-root ../../ --source-map-embed true styles/source/main.scss styles/production/main.css",
+    "postbuild:styles:main": "postcss styles/production/main.css --use postcss-flexbugs-fixes autoprefixer --replace true --map",
+    "build:styles:sassdoc": "sassdoc styles/source/ --dest styles/sassdoc/",
+    "build:styles": "npm-run-all --parallel build:styles:* build:styles:sassdoc",
+    "prebuild:styles": "npm run lint:styles:fix"
+  }
+}

@@ -1,0 +1,59 @@
+//==============================================================================
+// General layout
+//==============================================================================
+
+.wrapper {
+  margin: 0 auto;
+  max-width: (
+    (size(column-width, px) * map-get($max-columns, main-content)) +
+      ((size(gutter-width, px) * (map-get($max-columns, main-content) + 1)))
+  );
+  position: relative;
+  width: 100%;
+
+  @include respond-to(full-width) {
+    max-width: px-to-rem(
+      (size(column-width, px) * 12) + (size(gutter-width, px) * 13)
+    );
+    width: px-to-rem(
+      (size(column-width, px) * 12) + (size(gutter-width, px) * 13)
+    );
+  }
+
+  .main-container & {
+    @include respond-to(full-width) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  }
+}
+
+.main-container {
+  @include clearfix;
+
+  flex: 1;
+  margin-top: size(header-height, rem);
+}
+
+//------------------------------------------------------------------------------
+// Upscaling
+//------------------------------------------------------------------------------
+
+html {
+  @include respond-to(full-width--scale-1) {
+    font-size: (size(base-font-size, px) + 1px);
+  }
+
+  @include respond-to(full-width--scale-2) {
+    font-size: (size(base-font-size, px) + 2px);
+  }
+
+  @include respond-to(full-width--scale-3) {
+    font-size: (size(base-font-size, px) + 3px);
+  }
+
+  @include respond-to(full-width--scale-4) {
+    font-size: (size(base-font-size, px) + 4px);
+  }
+}

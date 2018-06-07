@@ -1,0 +1,120 @@
+//==============================================================================
+// Form elements
+//==============================================================================
+
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"],
+select,
+textarea {
+  border: 1px solid color(brand-2, darker);
+  color: color(default-text);
+  font-family: font-stack(text);
+}
+
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"],
+textarea {
+  padding: px-to-rem(3px);
+}
+
+textarea {
+  resize: vertical;
+}
+
+select {
+  padding: px-to-rem(2px);
+}
+
+.placeholder {
+  color: color(brand-2, darker);
+}
+
+::-webkit-input-placeholder {
+  color: color(brand-2, darker);
+}
+
+::-moz-placeholder {
+  color: color(brand-2, darker);
+}
+
+:-moz-placeholder {
+  color: color(brand-2, darker);
+}
+
+:-ms-input-placeholder {
+  color: color(brand-2, darker);
+}
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  background-color: color(brand-2, darker);
+  background-image: linear-gradient(
+    to bottom,
+    color(brand-2),
+    color(brand-2, darker)
+  );
+  border: 1px solid color(brand-2, darker);
+  color: color(white);
+  font-family: font-stack(text);
+  padding: px-to-rem(3px) px-to-rem(9px);
+}
+
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  box-shadow: 1px 1px 3px color(brand-2, lighter),
+    -1px 1px 3px color(brand-2, lighter), -1px -1px 3px color(brand-2, lighter),
+    1px -1px 3px color(brand-2, lighter);
+  outline: 0;
+}
+
+button:active,
+input[type="button"]:active,
+input[type="reset"]:active,
+input[type="submit"]:active {
+  background-color: color(brand-2);
+  background-image: linear-gradient(
+    to bottom,
+    color(brand-2, darker),
+    color(brand-2)
+  );
+  box-shadow: 1px 1px 3px color(brand-1, lighter),
+    -1px 1px 3px color(brand-1, lighter), -1px -1px 3px color(brand-1, lighter),
+    1px -1px 3px color(brand-1, lighter);
+}
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+input:invalid,
+textarea:invalid {
+  background-color: color(validation-error);
+}

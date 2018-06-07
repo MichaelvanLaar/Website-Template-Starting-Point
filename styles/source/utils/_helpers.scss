@@ -1,0 +1,94 @@
+//==============================================================================
+// Helper functions and mixins
+//==============================================================================
+
+//------------------------------------------------------------------------------
+// Functions
+//------------------------------------------------------------------------------
+
+/// Remove the unit of a length
+/// @access public
+/// @group Helpers
+/// @param {Number} $number - Number to remove unit from
+/// @return {Number} - Unitless number
+@function strip-unit($number) {
+  @if (type-of($number) == "number" and not unitless($number)) {
+    @return $number / ($number * 0 + 1);
+  }
+  @return $number;
+}
+
+/// Convert px to rem
+/// @access public
+/// @group Helpers
+/// @requires $sizes
+/// @param {Number} $value - Number (with unit px) to convert to rem
+/// @return {Number} - Number converted to rem
+@function px-to-rem($value) {
+  @if (unit($value) == "px") {
+    @return (($value / map-get($sizes, base-font-size)) * 1rem);
+  } @else {
+    @error "px-to-rem only supports px inputs.";
+  }
+}
+
+//------------------------------------------------------------------------------
+// Mixins
+//------------------------------------------------------------------------------
+
+/// Clearfix: helper to clear inner floats
+/// @author Nicolas Gallagher
+/// @link http://nicolasgallagher.com/micro-clearfix-hack/ Micro Clearfix
+/// @group Helpers
+/// @access public
+@mixin clearfix {
+  &::before,
+  &::after {
+    content: "";
+    display: table;
+  }
+
+  &::after {
+    clear: both;
+  }
+}
+
+/// Hide content from both screenreaders and browsers
+/// @author Jared Smith
+/// @link http://juicystudio.com/article/screen-readers-display-none.php
+/// @group Helpers
+/// @access public
+@mixin hidden {
+  display: none !important;
+  visibility: hidden;
+}
+
+/// Hide content only visually, but have it available for screenreaders
+/// @author Hugo Giraudel
+/// @link http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+/// @group Helpers
+/// @param {String} $focusable - use the string “focusable” to allow the element to be focusable when navigated to via the keyboard
+/// @access public
+@mixin visually-hidden($focusable: null) {
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  clip-path: inset(50%) !important;
+  height: 1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  white-space: nowrap !important;
+  width: 1px !important;
+
+  @if ($focusable == "focusable") {
+    &:active,
+    &:focus {
+      clip: auto !important;
+      clip-path: none !important;
+      height: auto !important;
+      overflow: visible !important;
+      white-space: normal !important;
+      width: auto !important;
+    }
+  }
+}

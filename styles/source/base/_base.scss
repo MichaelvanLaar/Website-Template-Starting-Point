@@ -1,0 +1,78 @@
+//==============================================================================
+// Base styles
+//==============================================================================
+
+html {
+  box-sizing: border-box;
+  font-size: size(base-font-size, px);
+  height: 100%;
+  line-height: (size(base-line-height, px) / size(base-font-size, px));
+  overflow-y: scroll;
+}
+
+// Allow components to change to other box-sizing models if necessary
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html,
+button,
+input,
+select,
+textarea {
+  color: color(default-text);
+}
+
+body {
+  background-color: color(white);
+  display: flex;
+  flex-direction: column;
+  font-family: font-stack(text);
+  min-height: 100%;
+}
+
+// Hack for IE10 and IE11, required due to a flexbox bug
+/* stylelint-disable selector-type-no-unknown */
+_:-ms-lang(x),
+body {
+  display: block;
+}
+/* stylelint-enable */
+
+// Change the selection background color to fit with the used color scheme
+::selection {
+  background: color(brand-1, lighter);
+  color: color(white);
+  text-shadow: none;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid color(brand-2, lighter);
+  display: block;
+  height: 1px;
+  margin: size(base-margin, rem) 0;
+  padding: 0;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+embed,
+img,
+object,
+video {
+  max-width: 100%;
+}
+
+img {
+  height: auto;
+}

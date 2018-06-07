@@ -1,0 +1,39 @@
+//==============================================================================
+// Overlays: Cookie info banner
+//==============================================================================
+
+.cookie-info-banner {
+  @include clearfix;
+
+  background-color: color(brand-2, lighter);
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  width: 100%;
+  z-index: layer(cookie-info-banner);
+
+  @media print {
+    display: none;
+  }
+}
+
+.cookie-info-banner__box {
+  margin-left: size(gutter-width, rem);
+  margin-right: size(gutter-width, rem);
+}
+
+.cookie-info-banner__message {
+  font-size: (size(base-font-size, px) * 0.8);
+  margin-bottom: (size(base-font-size, px) * 0.4);
+  margin-top: (size(base-font-size, px) * 0.4);
+  padding-right: size(gutter-width, px);
+
+  @include respond-to(full-width) {
+    text-align: center;
+  }
+}
+
+.cookie-info-banner__close-button {
+  line-height: 1;
+}

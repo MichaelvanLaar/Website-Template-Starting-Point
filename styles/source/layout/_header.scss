@@ -1,0 +1,98 @@
+//==============================================================================
+// Page header
+//==============================================================================
+
+//------------------------------------------------------------------------------
+// Calculated sizes
+//------------------------------------------------------------------------------
+
+/// Logo height (calculated)
+/// @access public
+/// @group Sizes
+/// @type Number
+$logo-height: (size(header-height, rem) - size(base-font-size, rem));
+
+/// Logo width (calculated)
+/// @access public
+/// @group Sizes
+/// @type Number
+$logo-width: ((size(site-logo-width, px) / size(site-logo-height, px)) * 1em);
+
+/// Logo max. width (calculated)
+/// @access public
+/// @group Sizes
+/// @type Number
+$logo-max-width: (
+  360px - (size(gutter-width, px) * 3) - size(navigation-toggle-width, px)
+);
+
+/// Logo margin (calculated)
+/// @access public
+/// @group Sizes
+/// @type Number
+$logo-margin: ((size(header-height, rem) - $logo-height) / 2);
+
+//------------------------------------------------------------------------------
+// General header
+//------------------------------------------------------------------------------
+
+.page-header {
+  @include clearfix;
+
+  background-color: color(brand-1, darker);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: layer(page-header);
+}
+
+.page-header__box {
+  display: flex;
+  justify-content: space-between;
+  margin-left: size(gutter-width, rem);
+
+  @include respond-to(full-width) {
+    display: flex;
+    justify-content: space-between;
+    margin-right: size(gutter-width, rem);
+  }
+}
+
+//------------------------------------------------------------------------------
+// Site logo
+//------------------------------------------------------------------------------
+
+.page-header__logo-container {
+  font-size: $logo-height;
+  height: $logo-height;
+  line-height: 1;
+  margin-bottom: $logo-margin;
+  margin-top: $logo-margin;
+  max-width: $logo-max-width;
+  transition: transition(all, default);
+  width: $logo-width;
+}
+
+.page-header__logo {
+  display: block;
+  fill: color(white);
+  height: 100%;
+  transition: transition(fill, default);
+  width: 100%;
+
+  &:hover,
+  &:focus {
+    fill: color(brand-1, lightest);
+  }
+}
+
+//------------------------------------------------------------------------------
+// Main navigation
+//------------------------------------------------------------------------------
+
+@import "main-navigation/main-navigation--functional";
+@import "main-navigation/main-navigation--visual";
+@import "main-navigation/main-navigation__mobile--functional";
+@import "main-navigation/main-navigation__mobile--visual";
+@import "main-navigation/main-navigation__desktop--functional";
+@import "main-navigation/main-navigation__desktop--visual";

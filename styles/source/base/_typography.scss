@@ -1,0 +1,145 @@
+//==============================================================================
+// Basic typography
+//==============================================================================
+
+p,
+ul,
+ol {
+  margin-bottom: size(base-margin, rem);
+  margin-top: size(base-margin, rem);
+
+  @media print {
+    orphans: 3;
+    widows: 3;
+  }
+}
+
+ul,
+ol {
+  padding: 0 0 0 size(base-indent, rem);
+
+  li * {
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+
+  ul,
+  ol {
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+
+  nav & {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+dd {
+  margin: 0 0 0 size(base-indent, rem);
+}
+
+blockquote {
+  font-style: italic;
+  margin: size(base-margin, rem) size(base-indent, rem);
+
+  p {
+    font-style: italic;
+  }
+}
+
+cite {
+  font-style: normal;
+}
+
+pre,
+code,
+code var {
+  font-family: font-stack(code);
+}
+
+abbr {
+  cursor: help;
+
+  &[title] {
+    text-decoration: none;
+  }
+}
+
+del {
+  text-decoration: line-through;
+}
+
+small {
+  font-size: 100% * map-get($scaling-factors, smaller);
+}
+
+h1 {
+  font-size: (size(base-font-size, rem) * 2);
+  line-height: 1.25;
+  margin-bottom: size(base-margin, rem);
+  margin-top: size(base-margin, rem);
+
+  @media print {
+    page-break-after: avoid;
+    page-break-inside: avoid;
+  }
+}
+
+h2 {
+  font-size: (size(base-font-size, rem) * 1.5);
+  line-height: 1.25;
+  margin-bottom: size(base-margin, rem);
+  margin-top: (size(base-margin, rem) * 2);
+
+  @media print {
+    page-break-after: avoid;
+    page-break-inside: avoid;
+  }
+}
+
+h3,
+h4,
+h5,
+h6 {
+  font-size: size(base-font-size, rem);
+  line-height: 1.25;
+  margin-bottom: size(base-margin, rem);
+  margin-top: (size(base-margin, rem) * 2);
+
+  @media print {
+    page-break-after: avoid;
+    page-break-inside: avoid;
+  }
+}
+
+td {
+  vertical-align: top;
+}
+
+//------------------------------------------------------------------------------
+// Links
+//------------------------------------------------------------------------------
+
+a {
+  color: color(brand-1);
+  text-decoration: none;
+  transition: transition(color, default);
+
+  @media print {
+    text-decoration: underline;
+  }
+
+  &:visited {
+    color: color(brand-1, darker);
+
+    @media print {
+      text-decoration: underline;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    color: color(brand-1, lighter);
+  }
+}

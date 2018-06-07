@@ -1,0 +1,48 @@
+//==============================================================================
+// Main navigation:
+// Functional styling for mobile screen sizes
+//==============================================================================
+
+//------------------------------------------------------------------------------
+// General
+//------------------------------------------------------------------------------
+
+// Pointer cursor for off-canvas menu toggle
+.main-navigation__toggle {
+  cursor: pointer;
+}
+
+// Prepare and hide off-canvas menu
+.main-navigation__list-container {
+  bottom: 0;
+  max-width: 100%;
+  overflow-y: scroll;
+  position: fixed;
+  right: (size(off-canvas-menu-width, rem) * -1);
+  top: size(header-height, rem);
+  transition: transition(right, default);
+  width: size(off-canvas-menu-width, rem);
+  z-index: layer(main-navigation);
+}
+
+//------------------------------------------------------------------------------
+// Without JavaScript
+//------------------------------------------------------------------------------
+
+.no-js {
+  // Reveal off-canvas menu
+  .main-navigation:hover .main-navigation__list-container {
+    right: 0;
+  }
+}
+
+//------------------------------------------------------------------------------
+// With JavaScript
+//------------------------------------------------------------------------------
+
+.js {
+  // Reveal off-canvas menu
+  .main-navigation__toggle.show-submenu + .main-navigation__list-container {
+    right: 0;
+  }
+}

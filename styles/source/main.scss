@@ -1,0 +1,52 @@
+//==============================================================================
+// Main stylesheet
+//==============================================================================
+
+@charset 'utf-8';
+
+//------------------------------------------------------------------------------
+// Configuration: variables, mixins and functions
+//------------------------------------------------------------------------------
+
+@import "config/colors"; // Colors
+@import "config/font-stacks"; // Font stacks
+@import "config/layers"; // Layers
+@import "config/sizes"; // Basic sizes
+@import "config/transitions"; // Pre-defined transitions
+@import "config/breakpoints"; // Named breakpoints for media queries
+
+//------------------------------------------------------------------------------
+// Utils
+//------------------------------------------------------------------------------
+
+@import "utils/helpers"; // Helper functions and mixins
+
+//------------------------------------------------------------------------------
+// Vendor
+//------------------------------------------------------------------------------
+
+@import "vendor/normalize"; // normalize.css from npm package (copied to be importable)
+
+//------------------------------------------------------------------------------
+// Custom styles
+//------------------------------------------------------------------------------
+
+/*! Custom styles */
+@import "base/fonts"; // @font-face declarations
+@import "base/base"; // Base styles
+@import "base/typography"; // Basic typography
+@import "base/form-elements"; // Form elements
+
+@import "layout/layout-general"; // General layout
+@import "layout/header"; // Page header
+@import "layout/main-content"; // Main content area
+@import "layout/sidebar"; // Sidebar
+@import "layout/footer"; // Page footer
+@import "layout/print"; // Print styles
+
+@import "components/overlays-ie-warnings"; // Overlays: IE warnings
+@import "components/overlays-cookie-info-banner"; // Overlay: Cookie info banner
+
+// @import 'pages/home';
+// @import 'pages/contact';
+// …

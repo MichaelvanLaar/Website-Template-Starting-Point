@@ -1,0 +1,28 @@
+//==============================================================================
+// Pre-defined transitions
+//==============================================================================
+
+/// Pre-defined transition parameter combinations
+/// @access public
+/// @group Transitions
+/// @type Map
+/// @prop {String} default [0.2s ease-out] - Default transition duration and timing function
+$transitions: (
+  default: "0.2s ease-out"
+);
+
+/// Return the value of a named transition parameter combination for a given property
+/// @access public
+/// @group Transitions
+/// @requires $transitions
+/// @param {String} $property [all] - Property parameter for the CSS transition rule
+/// @param {String} $transition [default] - Named parameter combination from the `$transitions` map
+/// @return {String}
+@function transition($property: all, $transition: default) {
+  @if (map-has-key($transitions, $transition)) {
+    @return #{$property} #{map-get($transitions, $transition)};
+  } @else {
+    @error "No value found for `#{$transition}`. "
+         + "Please make sure it is defined in `$transitions` map.";
+  }
+}

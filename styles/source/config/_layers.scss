@@ -1,0 +1,35 @@
+//==============================================================================
+// Layers
+//==============================================================================
+
+/// Named layers and corresponding z-index values
+/// @access public
+/// @group Layout
+/// @type Map
+/// @prop {Number} page-header [10] - Page header
+/// @prop {Number} main-navigation [15] - Main navigation
+/// @prop {Number} main-navigation [20] - Cookie info banner
+/// @prop {Number} main-navigation [30] - IE warning shader
+/// @prop {Number} main-navigation [31] - IE warning message
+$layers: (
+  page-header: 10,
+  main-navigation: 15,
+  cookie-info-banner: 20,
+  ie-warning-shader: 30,
+  ie-warning-message: 31
+);
+
+/// Return the z-index value of a named layer
+/// @access public
+/// @group Layout
+/// @requires $layers
+/// @param {String} $layer - Named layer from `$layers` map
+/// @return {Number}
+@function layer($layer) {
+  @if (map-has-key($layers, $layer)) {
+    @return #{map-get($layers, $layer)};
+  } @else {
+    @error "No value found for `#{$layer}`. "
+         + "Please make sure it is defined in `$layers` map.";
+  }
+}

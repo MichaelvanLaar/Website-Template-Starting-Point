@@ -1,0 +1,28 @@
+//==============================================================================
+// Main content area
+//==============================================================================
+
+.page-main-content {
+  @include clearfix;
+
+  clear: both;
+  margin-left: size(gutter-width, rem);
+  margin-right: size(gutter-width, rem);
+  padding-bottom: size(base-line-height, rem);
+  padding-top: size(base-line-height, rem);
+
+  @include respond-to(full-width) {
+    width: (
+      (size(column-width, rem) * map-get($max-columns, main-content)) +
+        ((size(gutter-width, rem) * (map-get($max-columns, main-content) - 1)))
+    );
+  }
+
+  @media print {
+    padding: 0;
+  }
+}
+
+.image--fullwidth {
+  width: 100%;
+}
