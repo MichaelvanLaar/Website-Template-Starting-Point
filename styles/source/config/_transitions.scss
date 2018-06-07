@@ -7,7 +7,9 @@
 /// @group Transitions
 /// @type Map
 /// @prop {String} default [0.2s ease-out] - Default transition duration and timing function
-$transitions: (default: "0.2s ease-out");
+$transitions: (
+  default: "0.2s ease-out"
+);
 
 /// Return the value of a named transition parameter combination for a given property
 /// @access public

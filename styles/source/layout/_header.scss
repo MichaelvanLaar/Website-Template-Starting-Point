@@ -3,15 +3,33 @@
 //==============================================================================
 
 //------------------------------------------------------------------------------
-// Variables
+// Calculated sizes
 //------------------------------------------------------------------------------
 
-// Calculated sizes
+/// Logo height (calculated)
+/// @access public
+/// @group Sizes
+/// @type Number
 $logo-height: (size(header-height, rem) - size(base-font-size, rem));
+
+/// Logo width (calculated)
+/// @access public
+/// @group Sizes
+/// @type Number
 $logo-width: ((size(site-logo-width, px) / size(site-logo-height, px)) * 1em);
+
+/// Logo max. width (calculated)
+/// @access public
+/// @group Sizes
+/// @type Number
 $logo-max-width: (
   360px - (size(gutter-width, px) * 3) - size(navigation-toggle-width, px)
 );
+
+/// Logo margin (calculated)
+/// @access public
+/// @group Sizes
+/// @type Number
 $logo-margin: ((size(header-height, rem) - $logo-height) / 2);
 
 //------------------------------------------------------------------------------
@@ -22,19 +40,10 @@ $logo-margin: ((size(header-height, rem) - $logo-height) / 2);
   @include clearfix;
 
   background-color: color(brand-1, darker);
+  position: fixed;
+  top: 0;
   width: 100%;
-
-  .js & {
-    position: fixed;
-    top: 0;
-    z-index: layer(page-header);
-  }
-
-  @include respond-to(full-width) {
-    position: fixed;
-    top: 0;
-    z-index: layer(page-header);
-  }
+  z-index: layer(page-header);
 }
 
 .page-header__box {

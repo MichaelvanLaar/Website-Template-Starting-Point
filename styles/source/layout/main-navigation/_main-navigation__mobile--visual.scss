@@ -17,6 +17,11 @@
   fill: color(white);
   height: size(header-height, rem);
   width: 100%;
+
+  &:hover,
+  &:focus {
+    fill: color(brand-1, lightest);
+  }
 }
 
 .no-js .main-navigation:hover .main-navigation__toggle-icon,
@@ -26,8 +31,17 @@
 
 .main-navigation__list-container {
   background-color: color(brand-1, lightest);
+  padding-bottom: size(base-margin, rem);
   padding-left: size(gutter-width, rem);
   padding-right: size(gutter-width, rem);
+}
+
+.main-navigation__list li {
+  padding-top: size(base-margin, rem);
+}
+
+.main-navigation__list > li {
+  padding-top: (size(base-margin, rem) * 1.5);
 }
 
 //------------------------------------------------------------------------------

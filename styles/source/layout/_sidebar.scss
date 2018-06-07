@@ -9,7 +9,9 @@
   margin-left: size(gutter-width, rem);
   margin-right: size(gutter-width, rem);
   padding-bottom: size(base-line-height, rem);
-  padding-top: size(base-line-height, rem);
+  padding-top: (
+    size(base-line-height, rem) + (size(base-font-size, rem) * 0.5)
+  );
 
   @include respond-to(full-width) {
     align-self: flex-start;
@@ -23,7 +25,7 @@
   }
 
   > h2:first-child {
-    margin-top: size(base-line-height, rem);
+    margin-top: size(base-margin, rem);
   }
 
   @media print {

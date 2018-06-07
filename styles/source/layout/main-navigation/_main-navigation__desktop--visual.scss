@@ -7,6 +7,7 @@
   .main-navigation__list-container {
     background: transparent;
     justify-content: flex-end;
+    padding: 0;
   }
 
   .main-navigation__list > li > a,
@@ -38,6 +39,15 @@
 
   .main-navigation__list > li > ul {
     background-color: color(brand-1, lightest);
+    padding-bottom: size(base-margin, rem);
     padding-right: size(gutter-width, rem);
+  }
+
+  .main-navigation__list > li {
+    padding-top: 0;
+  }
+
+  .main-navigation__list ul li {
+    padding-top: size(base-margin, rem);
   }
 }

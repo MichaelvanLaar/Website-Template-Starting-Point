@@ -7,8 +7,7 @@
   <title>[Insert page title]</title>
   <meta name="description" content="[Insert page description]">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!--[if IEMobile]><meta http-equiv="cleartype" content="on"><![endif]-->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -21,21 +20,21 @@
   <!-- Change “no-js” class in <html> to “js” if JavaScript is enabled -->
   <script>
     (function(H) {
-      H.className = H.className.replace(/\bno-js\b/, 'js')
+      H.className = H.className.replace(/\bno-js\b/, "js")
     })(document.documentElement)
   </script>
 
   <!-- Include respimage only if the browser doesn’t support responsive images -->
   <script>
     function loadJS(u) {
-      var r = document.getElementsByTagName('script')[0];
-      var s = document.createElement('script');
+      var r = document.getElementsByTagName("script")[0];
+      var s = document.createElement("script");
       s.src = u;
       r.parentNode.insertBefore(s, r);
     }
     if (!window.HTMLPictureElement) {
-      document.createElement('picture');
-      loadJS('scripts/production/respimage-bundle.js');
+      document.createElement("picture");
+      loadJS("scripts/production/respimage-bundle.js");
     }
   </script>
 
@@ -141,16 +140,6 @@
                       <li><a href="#135">Menu item 1.3.5</a></li>
                     </ul>
                   </li>
-                  <li class="has-children">
-                    <a href="#14">Menu item 1.4</a>
-                    <ul>
-                      <li><a href="#141">Menu item 1.4.1</a></li>
-                      <li><a href="#142">Menu item 1.4.2</a></li>
-                      <li><a href="#143">Menu item 1.4.3</a></li>
-                      <li><a href="#144">Menu item 1.4.4</a></li>
-                      <li><a href="#145">Menu item 1.4.5</a></li>
-                    </ul>
-                  </li>
                 </ul>
               </li>
               <li>
@@ -187,16 +176,6 @@
                     </ul>
                   </li>
                   <li><a href="#34">Menu item 3.4</a></li>
-                  <li class="has-children">
-                    <a href="#35">Menu item 3.5</a>
-                    <ul>
-                      <li><a href="#351">Menu item 3.5.1</a></li>
-                      <li><a href="#352">Menu item 3.5.2</a></li>
-                      <li><a href="#353">Menu item 3.5.3</a></li>
-                      <li><a href="#354">Menu item 3.5.4</a></li>
-                      <li><a href="#355">Menu item 3.5.5</a></li>
-                    </ul>
-                  </li>
                 </ul>
               </li>
               <li>
@@ -226,14 +205,17 @@
 
       <main class="page-main-content  js-page-main-content">
         <h1>(H1) Lorem ipsum dolor sit amet</h1>
-        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper
+        <p>Lorem ipsum <a href="https://www.google.com/">dolor sit amet</a>, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper
           suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
         <p>
           <picture>
-            <source media="(max-width: 320px)" data-srcset="images/288x154.png 1x, images/576x308.png 2x">
-            <source media="(max-width: 1164px)" data-srcset="images/560x300.png 1x, images/1120x600.png 2x">
-            <source media="(min-width: 1165px)" data-srcset="images/840x450.png 1x, images/1680x900.png 2x">
-            <img src="images/288x154.png" data-srcset="images/576x308.png 2x" width="840" height="450" alt="Test image" class="fullwidth lazyload">
+            <source media="(max-width: 420px)" data-srcset="images/379x198.png">
+            <!-- “max-width” should be set to a reasonable mobile viewport width. No “2x” version for better loading speed. -->
+            <source media="(max-width: 993px)" data-srcset="images/552x288.png 1x, images/1104x576.png 2x">
+            <!-- “max-width” corresponds viewport width below “full-width--scale-1” breakpoint in Sass files (see $breakpoints variable). -->
+            <source media="(min-width: 994px)" data-srcset="images/690x360.png 1x, images/1380x720.png 2x">
+            <!-- “min-width” corresponds viewport width “full-width--scale-1” breakpoint in Sass files (see $breakpoints variable). -->
+            <img src="images/379x198.png" width="379" height="198" alt="Test image" class="[ image  image--fullwidth ]  lazyload">
           </picture>
         </p>
         <h2>(H2) Lorem ipsum dolor sit amet</h2>
@@ -241,6 +223,7 @@
           <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip
             ex ea commodo consequat.</p>
         </blockquote>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
         <ul>
           <li>Lorem ipsum dolor sit amet</li>
           <li>consectetuer adipiscing elit</li>
@@ -258,7 +241,7 @@
       </main>
       <!-- end of .page-main-content -->
 
-      <aside class="page-sidebar">
+      <aside class="page-sidebar  js-page-sidebar">
         <h2>(H2) Lorem ipsum dolor sit amet</h2>
         <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
         <h3>(H3) Lorem ipsum dolor</h3>
