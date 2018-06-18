@@ -16,7 +16,7 @@
 .main-navigation__list-container {
   bottom: 0;
   max-width: 100%;
-  overflow-y: scroll;
+  overflow-y: auto;
   position: fixed;
   right: (size(off-canvas-menu-width, rem) * -1);
   top: size(header-height, rem);
