@@ -44,7 +44,7 @@ const cibElement = document.createElement("div");
 if (Cookies.get(cibPermissionCookieName) !== "ok") {
   // Create the cookie info banner and insert it after the page footer.
   cibElement.classList.add(cibBannerClass);
-  cibElement.innerHTML = `<div class="wrapper"><div class="${cibBannerClass}__box"><p class="${cibBannerClass}__message">${cibBannerText} <button type="button" class="${cibBannerClass}__close-button">OK</button></p></div></div>`;
+  cibElement.innerHTML = `<div class="wrapper"><div class="${cibBannerClass}__box"><p class="${cibBannerClass}__message"><span class="${cibBannerClass}__message-text">${cibBannerText}</span> <button type="button" class="${cibBannerClass}__close-button">OK</button></p></div></div>`;
   cibPageFooter.parentNode.insertBefore(cibElement, cibPageFooter.nextSibling);
 
   // Adjust bottom margin of page footer to make room for the cookie input
