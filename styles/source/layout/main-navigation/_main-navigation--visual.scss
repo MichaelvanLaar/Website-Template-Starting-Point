@@ -10,5 +10,5 @@
 
 .main-navigation__list ul li {
   font-size: (size(base-font-size, rem) * map-get($scaling-factors, smaller));
-  padding-left: size(gutter-width, rem);
+  padding-left: size(outer-gutter-width, rem);
 }

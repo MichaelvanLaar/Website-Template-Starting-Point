@@ -19,21 +19,24 @@ $breakpoints: (
   main-content-width: (
     min-width: (
       (size(column-width, px) * map-get($max-columns, main-content)) +
-        ((size(gutter-width, px) * (map-get($max-columns, main-content) + 1)))
+        (
+          size(inner-gutter-width, px) *
+            (map-get($max-columns, main-content) - 1)
+        ) + (size(outer-gutter-width, px) * 2)
     )
   ),
   full-width: (
     min-width: (
-      (size(column-width, px) * 12) + (size(gutter-width, px) * 13) +
-        (size(gutter-width, px) * 2)
+      (size(column-width, px) * 12) + (size(inner-gutter-width, px) * 11) +
+        (size(outer-gutter-width, px) * 2) + 50px
     )
   ),
   full-width--scale-1: (
     min-width:
       floor(
         (
-            (size(column-width, px) * 12) + (size(gutter-width, px) * 13) +
-              (size(column-width, px) * 3)
+            (size(column-width, px) * 12) + (size(inner-gutter-width, px) * 11) +
+              (size(outer-gutter-width, px) * 2) + 150px
           ) * 1.0625
       )
   ),
@@ -41,8 +44,8 @@ $breakpoints: (
     min-width:
       floor(
         (
-            (size(column-width, px) * 12) + (size(gutter-width, px) * 13) +
-              (size(column-width, px) * 5)
+            (size(column-width, px) * 12) + (size(inner-gutter-width, px) * 11) +
+              (size(outer-gutter-width, px) * 2) + 250px
           ) * 1.125
       )
   ),
@@ -50,8 +53,8 @@ $breakpoints: (
     min-width:
       floor(
         (
-            (size(column-width, px) * 12) + (size(gutter-width, px) * 13) +
-              (size(column-width, px) * 7)
+            (size(column-width, px) * 12) + (size(inner-gutter-width, px) * 11) +
+              (size(outer-gutter-width, px) * 2) + 350px
           ) * 1.1875
       )
   ),
@@ -59,8 +62,8 @@ $breakpoints: (
     min-width:
       floor(
         (
-            (size(column-width, px) * 12) + (size(gutter-width, px) * 13) +
-              (size(column-width, px) * 9)
+            (size(column-width, px) * 12) + (size(inner-gutter-width, px) * 11) +
+              (size(outer-gutter-width, px) * 2) + 450px
           ) * 1.25
       )
   )

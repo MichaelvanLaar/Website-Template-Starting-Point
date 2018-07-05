@@ -30,7 +30,8 @@ $scaling-factors: (
 /// @group Sizes
 /// @type Map
 /// @prop {Number} column-width [48px] - Width (in px) of one column of the 12-column layout grid
-/// @prop {Number} gutter-width [24px] - Width (in px) of the gutter between columns of the 12-column layout grid
+/// @prop {Number} inner-gutter-width [24px] - Width (in px) of the gutter between columns of the 12-column layout grid
+/// @prop {Number} outer-gutter-width [24px] - Width (in px) of the gutter to the left and to the right of the 12-column layout grid (= horizontal page margins)
 /// @prop {Number} base-font-size [16px] - Font size (in px) for basic copy text
 /// @prop {Number} base-line-height [24px] - Line height (in px) for basic copy text
 /// @prop {Number} base-margin [24px] - Top and bottom margin (in px) for basic copy text paragraphs
@@ -42,7 +43,8 @@ $scaling-factors: (
 /// @prop {Number} off-canvas-menu-width [320px] - Width (in px) of the off-canvas-menu, used to display the main navigation on smaller screen sizes
 $sizes: (
   column-width: 48px,
-  gutter-width: 24px,
+  inner-gutter-width: 24px,
+  outer-gutter-width: 24px,
   base-font-size: 16px,
   base-line-height: 24px,
   base-margin: 16px,

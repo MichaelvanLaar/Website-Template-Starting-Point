@@ -23,7 +23,8 @@ $logo-width: ((size(site-logo-width, px) / size(site-logo-height, px)) * 1em);
 /// @group Sizes
 /// @type Number
 $logo-max-width: (
-  360px - (size(gutter-width, px) * 3) - size(navigation-toggle-width, px)
+  360px - (size(inner-gutter-width, px) + (size(outer-gutter-width, px) * 2)) -
+    size(navigation-toggle-width, px)
 );
 
 /// Logo margin (calculated)
@@ -49,12 +50,12 @@ $logo-margin: ((size(header-height, rem) - $logo-height) / 2);
 .page-header__box {
   display: flex;
   justify-content: space-between;
-  margin-left: size(gutter-width, rem);
+  margin-left: size(outer-gutter-width, rem);
 
   @include respond-to(full-width) {
     display: flex;
     justify-content: space-between;
-    margin-right: size(gutter-width, rem);
+    margin-right: size(outer-gutter-width, rem);
   }
 }
 

@@ -6,8 +6,8 @@
   @include clearfix;
 
   border-top: 1px solid color(brand-2);
-  margin-left: size(gutter-width, rem);
-  margin-right: size(gutter-width, rem);
+  margin-left: size(outer-gutter-width, rem);
+  margin-right: size(outer-gutter-width, rem);
   padding-bottom: size(base-line-height, rem);
   padding-top: (
     size(base-line-height, rem) + (size(base-font-size, rem) * 0.5)
@@ -16,11 +16,12 @@
   @include respond-to(full-width) {
     align-self: flex-start;
     border-top: 0;
+    margin-left: 0;
     position: sticky;
     top: (size(base-line-height, rem) * 2);
     width: (
       (size(column-width, rem) * map-get($max-columns, sidebar)) +
-        ((size(gutter-width, rem) * (map-get($max-columns, sidebar) - 1)))
+        (size(inner-gutter-width, rem) * (map-get($max-columns, sidebar) - 1))
     );
   }
 

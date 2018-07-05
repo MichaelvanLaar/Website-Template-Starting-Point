@@ -50,3 +50,38 @@
 // @import 'pages/home';
 // @import 'pages/contact';
 // …
+
+//------------------------------------------------------------------------------
+// FOR DEVELOPMENT PURPOSES ONLY:
+// Calculated breakpoints used in media queries
+//
+// This section should be comment out in a production environment to make the
+// resulting CSS file a little bit smaller
+//------------------------------------------------------------------------------
+
+/*! Calculated breakpoints used in media queries */
+.breakpoint-sizes {
+  @include respond-to(main-content-width) {
+    /*! main-content-width (base font size: 16px) */
+  }
+
+  @include respond-to(full-width) {
+    /*! full-width (base font size: 16px) */
+  }
+
+  @include respond-to(full-width--scale-1) {
+    /*! full-width--scale-1 (base font size: 17px) */
+  }
+
+  @include respond-to(full-width--scale-2) {
+    /*! full-width--scale-2 (base font size: 18px) */
+  }
+
+  @include respond-to(full-width--scale-3) {
+    /*! full-width--scale-3 (base font size: 19px) */
+  }
+
+  @include respond-to(full-width--scale-4) {
+    /*! full-width--scale-4 (base font size: 20px) */
+  }
+}

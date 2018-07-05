@@ -16,7 +16,7 @@
   // Let main navigation fill the remaining space of the header
   // (adding a little room between logo and main navigation)
   .main-navigation {
-    margin-left: size(gutter-width, rem);
+    margin-left: size(inner-gutter-width, rem);
     width: 100%;
   }
 

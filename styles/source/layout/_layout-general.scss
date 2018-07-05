@@ -6,17 +6,20 @@
   margin: 0 auto;
   max-width: (
     (size(column-width, px) * map-get($max-columns, main-content)) +
-      ((size(gutter-width, px) * (map-get($max-columns, main-content) + 1)))
+      (size(inner-gutter-width, px) * (map-get($max-columns, main-content) - 1)) +
+      (size(outer-gutter-width, px) * 2)
   );
   position: relative;
   width: 100%;
 
   @include respond-to(full-width) {
     max-width: px-to-rem(
-      (size(column-width, px) * 12) + (size(gutter-width, px) * 13)
+      (size(column-width, px) * 12) + (size(inner-gutter-width, px) * 11) +
+        (size(outer-gutter-width, px) * 2)
     );
     width: px-to-rem(
-      (size(column-width, px) * 12) + (size(gutter-width, px) * 13)
+      (size(column-width, px) * 12) + (size(inner-gutter-width, px) * 11) +
+        (size(outer-gutter-width, px) * 2)
     );
   }
 
