@@ -6,15 +6,19 @@
   @include clearfix;
 
   clear: both;
-  margin-left: size(gutter-width, rem);
-  margin-right: size(gutter-width, rem);
+  margin-left: size(outer-gutter-width, rem);
+  margin-right: size(outer-gutter-width, rem);
   padding-bottom: size(base-line-height, rem);
   padding-top: size(base-line-height, rem);
 
   @include respond-to(full-width) {
+    margin-right: 0;
     width: (
       (size(column-width, rem) * map-get($max-columns, main-content)) +
-        ((size(gutter-width, rem) * (map-get($max-columns, main-content) - 1)))
+        (
+          size(inner-gutter-width, rem) *
+            (map-get($max-columns, main-content) - 1)
+        )
     );
   }
 

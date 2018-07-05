@@ -19,15 +19,14 @@
 }
 
 .cookie-info-banner__box {
-  margin-left: size(gutter-width, rem);
-  margin-right: size(gutter-width, rem);
+  margin-left: size(outer-gutter-width, rem);
+  margin-right: size(outer-gutter-width, rem);
 }
 
 .cookie-info-banner__message {
   font-size: (size(base-font-size, px) * 0.8);
   margin-bottom: (size(base-font-size, px) * 0.4);
   margin-top: (size(base-font-size, px) * 0.4);
-  padding-right: size(gutter-width, px);
 
   @include respond-to(full-width) {
     text-align: center;

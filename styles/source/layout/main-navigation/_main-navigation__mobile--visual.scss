@@ -8,9 +8,12 @@
 //------------------------------------------------------------------------------
 
 .main-navigation__toggle {
-  padding-left: size(gutter-width, rem);
-  padding-right: size(gutter-width, rem);
-  width: (size(navigation-toggle-width, rem) + (size(gutter-width, rem) * 2));
+  padding-left: size(inner-gutter-width, rem);
+  padding-right: size(outer-gutter-width, rem);
+  width: (
+    size(navigation-toggle-width, rem) + size(inner-gutter-width, rem) +
+      size(outer-gutter-width, rem)
+  );
 }
 
 .main-navigation__toggle-icon {
@@ -32,8 +35,8 @@
 .main-navigation__list-container {
   background-color: color(brand-1, lightest);
   padding-bottom: size(base-margin, rem);
-  padding-left: size(gutter-width, rem);
-  padding-right: size(gutter-width, rem);
+  padding-left: size(outer-gutter-width, rem);
+  padding-right: size(outer-gutter-width, rem);
 }
 
 .main-navigation__list li {

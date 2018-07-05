@@ -13,8 +13,8 @@
 
   color: color(white);
   font-size: (size(base-font-size, rem) * map-get($scaling-factors, smaller));
-  margin-left: size(gutter-width, rem);
-  margin-right: size(gutter-width, rem);
+  margin-left: size(outer-gutter-width, rem);
+  margin-right: size(outer-gutter-width, rem);
 
   @media print {
     display: none;
