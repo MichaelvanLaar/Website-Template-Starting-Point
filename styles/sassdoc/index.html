@@ -1,4 +1,407 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Website-template-starting-point - v4.1.2</title><link rel="stylesheet" href="assets/css/main.css"><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,500,700" rel="stylesheet" type="text/css"><meta name="viewport" content="width=device-width"><meta content="IE=edge, chrome=1" http-equiv="X-UA-Compatible"><!-- Open Graph tags --><meta property="og:title" content="Website-template-starting-point - SassDoc"><meta property="og:type" content="website"><meta property="og:description" content="Release the docs!"><!-- Thanks to Sass-lang.com for the icons --><link href="assets/images/favicon.png" rel="shortcut icon"></head><body><aside class="sidebar" role="nav"><div class="sidebar__header"><h1 class="sidebar__title">Website-template-starting-point - 4.1.2</h1></div><div class="sidebar__body"><button type="button" class="btn-toggle js-btn-toggle" data-alt="Open all">Close all</button><p class="sidebar__item sidebar__item--heading" data-slug="colors"><a href="#colors">colors</a></p><div><p class="sidebar__item sidebar__item--sub-heading" data-slug="colors-variable"><a href="#colors-variable">variables</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="colors" data-name="colors" data-type="variable"><a href="#colors-variable-colors">colors</a></li><li class="sidebar__item sassdoc__item" data-group="colors" data-name="shades" data-type="variable"><a href="#colors-variable-shades">shades</a></li></ul><p class="sidebar__item sidebar__item--sub-heading" data-slug="colors-function"><a href="#colors-function">functions</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="colors" data-name="color" data-type="function"><a href="#colors-function-color">color</a></li></ul></div><p class="sidebar__item sidebar__item--heading" data-slug="helpers"><a href="#helpers">helpers</a></p><div><p class="sidebar__item sidebar__item--sub-heading" data-slug="helpers-function"><a href="#helpers-function">functions</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="helpers" data-name="strip-unit" data-type="function"><a href="#helpers-function-strip-unit">strip-unit</a></li><li class="sidebar__item sassdoc__item" data-group="helpers" data-name="px-to-rem" data-type="function"><a href="#helpers-function-px-to-rem">px-to-rem</a></li></ul><p class="sidebar__item sidebar__item--sub-heading" data-slug="helpers-mixin"><a href="#helpers-mixin">mixins</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="helpers" data-name="clearfix" data-type="mixin"><a href="#helpers-mixin-clearfix">clearfix</a></li><li class="sidebar__item sassdoc__item" data-group="helpers" data-name="hidden" data-type="mixin"><a href="#helpers-mixin-hidden">hidden</a></li><li class="sidebar__item sassdoc__item" data-group="helpers" data-name="visually-hidden" data-type="mixin"><a href="#helpers-mixin-visually-hidden">visually-hidden</a></li></ul></div><p class="sidebar__item sidebar__item--heading" data-slug="layout"><a href="#layout">layout</a></p><div><p class="sidebar__item sidebar__item--sub-heading" data-slug="layout-variable"><a href="#layout-variable">variables</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="layout" data-name="breakpoints" data-type="variable"><a href="#layout-variable-breakpoints">breakpoints</a></li><li class="sidebar__item sassdoc__item" data-group="layout" data-name="layers" data-type="variable"><a href="#layout-variable-layers">layers</a></li><li class="sidebar__item sassdoc__item" data-group="layout" data-name="max-columns" data-type="variable"><a href="#layout-variable-max-columns">max-columns</a></li></ul><p class="sidebar__item sidebar__item--sub-heading" data-slug="layout-mixin"><a href="#layout-mixin">mixins</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="layout" data-name="respond-to" data-type="mixin"><a href="#layout-mixin-respond-to">respond-to</a></li></ul><p class="sidebar__item sidebar__item--sub-heading" data-slug="layout-function"><a href="#layout-function">functions</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="layout" data-name="layer" data-type="function"><a href="#layout-function-layer">layer</a></li></ul></div><p class="sidebar__item sidebar__item--heading" data-slug="sizes"><a href="#sizes">sizes</a></p><div><p class="sidebar__item sidebar__item--sub-heading" data-slug="sizes-variable"><a href="#sizes-variable">variables</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="sizes" data-name="scaling-factors" data-type="variable"><a href="#sizes-variable-scaling-factors">scaling-factors</a></li><li class="sidebar__item sassdoc__item" data-group="sizes" data-name="sizes" data-type="variable"><a href="#sizes-variable-sizes">sizes</a></li><li class="sidebar__item sassdoc__item" data-group="sizes" data-name="logo-height" data-type="variable"><a href="#sizes-variable-logo-height">logo-height</a></li><li class="sidebar__item sassdoc__item" data-group="sizes" data-name="logo-width" data-type="variable"><a href="#sizes-variable-logo-width">logo-width</a></li><li class="sidebar__item sassdoc__item" data-group="sizes" data-name="logo-max-width" data-type="variable"><a href="#sizes-variable-logo-max-width">logo-max-width</a></li><li class="sidebar__item sassdoc__item" data-group="sizes" data-name="logo-margin" data-type="variable"><a href="#sizes-variable-logo-margin">logo-margin</a></li></ul><p class="sidebar__item sidebar__item--sub-heading" data-slug="sizes-function"><a href="#sizes-function">functions</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="sizes" data-name="size" data-type="function"><a href="#sizes-function-size">size</a></li></ul></div><p class="sidebar__item sidebar__item--heading" data-slug="transitions"><a href="#transitions">transitions</a></p><div><p class="sidebar__item sidebar__item--sub-heading" data-slug="transitions-variable"><a href="#transitions-variable">variables</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="transitions" data-name="transitions" data-type="variable"><a href="#transitions-variable-transitions">transitions</a></li></ul><p class="sidebar__item sidebar__item--sub-heading" data-slug="transitions-function"><a href="#transitions-function">functions</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="transitions" data-name="transition" data-type="function"><a href="#transitions-function-transition">transition</a></li></ul></div><p class="sidebar__item sidebar__item--heading" data-slug="typography"><a href="#typography">typography</a></p><div><p class="sidebar__item sidebar__item--sub-heading" data-slug="typography-variable"><a href="#typography-variable">variables</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="typography" data-name="font-stacks" data-type="variable"><a href="#typography-variable-font-stacks">font-stacks</a></li></ul><p class="sidebar__item sidebar__item--sub-heading" data-slug="typography-function"><a href="#typography-function">functions</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="typography" data-name="font-stack" data-type="function"><a href="#typography-function-font-stack">font-stack</a></li></ul></div></div></aside><article class="main" role="main"><header class="header" role="banner"><div class="container"><div class="sassdoc__searchbar searchbar"><label for="js-search-input" class="visually-hidden">Search</label><div class="searchbar__form" id="js-search"><input name="search" type="search" class="searchbar__field" autocomplete="off" autofocus id="js-search-input" placeholder="Search"><ul class="searchbar__suggestions" id="js-search-suggestions"></ul></div></div></div></header><section class="main__section"><h1 class="main__heading" id="colors"><div class="container">colors</div></h1><section class="main__sub-section" id="colors-variable"><h2 class="main__heading--secondary"><div class="container">variables</div></h2><section class="main__item container item" id="colors-variable-colors"><h3 class="item__heading"><a class="item__name" href="#variable-colors">colors</a></h3><div class="item__code-wrapper"><pre class="item__code language-scss"><code>$colors: (
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Website-template-starting-point - v4.1.2</title>
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:400,500,700"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <meta name="viewport" content="width=device-width" />
+    <meta content="IE=edge, chrome=1" http-equiv="X-UA-Compatible" />
+    <!-- Open Graph tags -->
+    <meta
+      property="og:title"
+      content="Website-template-starting-point - SassDoc"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="Release the docs!" />
+    <!-- Thanks to Sass-lang.com for the icons -->
+    <link href="assets/images/favicon.png" rel="shortcut icon" />
+  </head>
+  <body>
+    <aside class="sidebar" role="nav">
+      <div class="sidebar__header">
+        <h1 class="sidebar__title">Website-template-starting-point - 4.1.2</h1>
+      </div>
+      <div class="sidebar__body">
+        <button
+          type="button"
+          class="btn-toggle js-btn-toggle"
+          data-alt="Open all"
+        >
+          Close all
+        </button>
+        <p class="sidebar__item sidebar__item--heading" data-slug="colors">
+          <a href="#colors">colors</a>
+        </p>
+        <div>
+          <p
+            class="sidebar__item sidebar__item--sub-heading"
+            data-slug="colors-variable"
+          >
+            <a href="#colors-variable">variables</a>
+          </p>
+          <ul class="list-unstyled">
+            <li
+              class="sidebar__item sassdoc__item"
+              data-group="colors"
+              data-name="colors"
+              data-type="variable"
+            >
+              <a href="#colors-variable-colors">colors</a>
+            </li>
+            <li
+              class="sidebar__item sassdoc__item"
+              data-group="colors"
+              data-name="shades"
+              data-type="variable"
+            >
+              <a href="#colors-variable-shades">shades</a>
+            </li>
+          </ul>
+          <p
+            class="sidebar__item sidebar__item--sub-heading"
+            data-slug="colors-function"
+          >
+            <a href="#colors-function">functions</a>
+          </p>
+          <ul class="list-unstyled">
+            <li
+              class="sidebar__item sassdoc__item"
+              data-group="colors"
+              data-name="color"
+              data-type="function"
+            >
+              <a href="#colors-function-color">color</a>
+            </li>
+          </ul>
+        </div>
+        <p class="sidebar__item sidebar__item--heading" data-slug="helpers">
+          <a href="#helpers">helpers</a>
+        </p>
+        <div>
+          <p
+            class="sidebar__item sidebar__item--sub-heading"
+            data-slug="helpers-function"
+          >
+            <a href="#helpers-function">functions</a>
+          </p>
+          <ul class="list-unstyled">
+            <li
+              class="sidebar__item sassdoc__item"
+              data-group="helpers"
+              data-name="strip-unit"
+              data-type="function"
+            >
+              <a href="#helpers-function-strip-unit">strip-unit</a>
+            </li>
+            <li
+              class="sidebar__item sassdoc__item"
+              data-group="helpers"
+              data-name="px-to-rem"
+              data-type="function"
+            >
+              <a href="#helpers-function-px-to-rem">px-to-rem</a>
+            </li>
+          </ul>
+          <p
+            class="sidebar__item sidebar__item--sub-heading"
+            data-slug="helpers-mixin"
+          >
+            <a href="#helpers-mixin">mixins</a>
+          </p>
+          <ul class="list-unstyled">
+            <li
+              class="sidebar__item sassdoc__item"
+              data-group="helpers"
+              data-name="clearfix"
+              data-type="mixin"
+            >
+              <a href="#helpers-mixin-clearfix">clearfix</a>
+            </li>
+            <li
+              class="sidebar__item sassdoc__item"
+              data-group="helpers"
+              data-name="hidden"
+              data-type="mixin"
+            >
+              <a href="#helpers-mixin-hidden">hidden</a>
+            </li>
+            <li
+              class="sidebar__item sassdoc__item"
+              data-group="helpers"
+              data-name="visually-hidden"
+              data-type="mixin"
+            >
+              <a href="#helpers-mixin-visually-hidden">visually-hidden</a>
+            </li>
+          </ul>
+        </div>
+        <p class="sidebar__item sidebar__item--heading" data-slug="layout">
+          <a href="#layout">layout</a>
+        </p>
+        <div>
+          <p
+            class="sidebar__item sidebar__item--sub-heading"
+            data-slug="layout-variable"
+          >
+            <a href="#layout-variable">variables</a>
+          </p>
+          <ul class="list-unstyled">
+            <li
+              class="sidebar__item sassdoc__item"
+              data-group="layout"
+              data-name="breakpoints"
+              data-type="variable"
+            >
+              <a href="#layout-variable-breakpoints">breakpoints</a>
+            </li>
+            <li
+              class="sidebar__item sassdoc__item"
+              data-group="layout"
+              data-name="layers"
+              data-type="variable"
+            >
+              <a href="#layout-variable-layers">layers</a>
+            </li>
+            <li
+              class="sidebar__item sassdoc__item"
+              data-group="layout"
+              data-name="max-columns"
+              data-type="variable"
+            >
+              <a href="#layout-variable-max-columns">max-columns</a>
+            </li>
+          </ul>
+          <p
+            class="sidebar__item sidebar__item--sub-heading"
+            data-slug="layout-mixin"
+          >
+            <a href="#layout-mixin">mixins</a>
+          </p>
+          <ul class="list-unstyled">
+            <li
+              class="sidebar__item sassdoc__item"
+              data-group="layout"
+              data-name="respond-to"
+              data-type="mixin"
+            >
+              <a href="#layout-mixin-respond-to">respond-to</a>
+            </li>
+          </ul>
+          <p
+            class="sidebar__item sidebar__item--sub-heading"
+            data-slug="layout-function"
+          >
+            <a href="#layout-function">functions</a>
+          </p>
+          <ul class="list-unstyled">
+            <li
+              class="sidebar__item sassdoc__item"
+              data-group="layout"
+              data-name="layer"
+              data-type="function"
+            >
+              <a href="#layout-function-layer">layer</a>
+            </li>
+          </ul>
+        </div>
+        <p class="sidebar__item sidebar__item--heading" data-slug="sizes">
+          <a href="#sizes">sizes</a>
+        </p>
+        <div>
+          <p
+            class="sidebar__item sidebar__item--sub-heading"
+            data-slug="sizes-variable"
+          >
+            <a href="#sizes-variable">variables</a>
+          </p>
+          <ul class="list-unstyled">
+            <li
+              class="sidebar__item sassdoc__item"
+              data-group="sizes"
+              data-name="scaling-factors"
+              data-type="variable"
+            >
+              <a href="#sizes-variable-scaling-factors">scaling-factors</a>
+            </li>
+            <li
+              class="sidebar__item sassdoc__item"
+              data-group="sizes"
+              data-name="sizes"
+              data-type="variable"
+            >
+              <a href="#sizes-variable-sizes">sizes</a>
+            </li>
+            <li
+              class="sidebar__item sassdoc__item"
+              data-group="sizes"
+              data-name="logo-height"
+              data-type="variable"
+            >
+              <a href="#sizes-variable-logo-height">logo-height</a>
+            </li>
+            <li
+              class="sidebar__item sassdoc__item"
+              data-group="sizes"
+              data-name="logo-width"
+              data-type="variable"
+            >
+              <a href="#sizes-variable-logo-width">logo-width</a>
+            </li>
+            <li
+              class="sidebar__item sassdoc__item"
+              data-group="sizes"
+              data-name="logo-max-width"
+              data-type="variable"
+            >
+              <a href="#sizes-variable-logo-max-width">logo-max-width</a>
+            </li>
+            <li
+              class="sidebar__item sassdoc__item"
+              data-group="sizes"
+              data-name="logo-margin"
+              data-type="variable"
+            >
+              <a href="#sizes-variable-logo-margin">logo-margin</a>
+            </li>
+          </ul>
+          <p
+            class="sidebar__item sidebar__item--sub-heading"
+            data-slug="sizes-function"
+          >
+            <a href="#sizes-function">functions</a>
+          </p>
+          <ul class="list-unstyled">
+            <li
+              class="sidebar__item sassdoc__item"
+              data-group="sizes"
+              data-name="size"
+              data-type="function"
+            >
+              <a href="#sizes-function-size">size</a>
+            </li>
+          </ul>
+        </div>
+        <p class="sidebar__item sidebar__item--heading" data-slug="transitions">
+          <a href="#transitions">transitions</a>
+        </p>
+        <div>
+          <p
+            class="sidebar__item sidebar__item--sub-heading"
+            data-slug="transitions-variable"
+          >
+            <a href="#transitions-variable">variables</a>
+          </p>
+          <ul class="list-unstyled">
+            <li
+              class="sidebar__item sassdoc__item"
+              data-group="transitions"
+              data-name="transitions"
+              data-type="variable"
+            >
+              <a href="#transitions-variable-transitions">transitions</a>
+            </li>
+          </ul>
+          <p
+            class="sidebar__item sidebar__item--sub-heading"
+            data-slug="transitions-function"
+          >
+            <a href="#transitions-function">functions</a>
+          </p>
+          <ul class="list-unstyled">
+            <li
+              class="sidebar__item sassdoc__item"
+              data-group="transitions"
+              data-name="transition"
+              data-type="function"
+            >
+              <a href="#transitions-function-transition">transition</a>
+            </li>
+          </ul>
+        </div>
+        <p class="sidebar__item sidebar__item--heading" data-slug="typography">
+          <a href="#typography">typography</a>
+        </p>
+        <div>
+          <p
+            class="sidebar__item sidebar__item--sub-heading"
+            data-slug="typography-variable"
+          >
+            <a href="#typography-variable">variables</a>
+          </p>
+          <ul class="list-unstyled">
+            <li
+              class="sidebar__item sassdoc__item"
+              data-group="typography"
+              data-name="font-stacks"
+              data-type="variable"
+            >
+              <a href="#typography-variable-font-stacks">font-stacks</a>
+            </li>
+          </ul>
+          <p
+            class="sidebar__item sidebar__item--sub-heading"
+            data-slug="typography-function"
+          >
+            <a href="#typography-function">functions</a>
+          </p>
+          <ul class="list-unstyled">
+            <li
+              class="sidebar__item sassdoc__item"
+              data-group="typography"
+              data-name="font-stack"
+              data-type="function"
+            >
+              <a href="#typography-function-font-stack">font-stack</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </aside>
+    <article class="main" role="main">
+      <header class="header" role="banner">
+        <div class="container">
+          <div class="sassdoc__searchbar searchbar">
+            <label for="js-search-input" class="visually-hidden">Search</label>
+            <div class="searchbar__form" id="js-search">
+              <input
+                name="search"
+                type="search"
+                class="searchbar__field"
+                autocomplete="off"
+                autofocus
+                id="js-search-input"
+                placeholder="Search"
+              />
+              <ul
+                class="searchbar__suggestions"
+                id="js-search-suggestions"
+              ></ul>
+            </div>
+          </div>
+        </div>
+      </header>
+      <section class="main__section">
+        <h1 class="main__heading" id="colors">
+          <div class="container">colors</div>
+        </h1>
+        <section class="main__sub-section" id="colors-variable">
+          <h2 class="main__heading--secondary">
+            <div class="container">variables</div>
+          </h2>
+          <section
+            class="main__item container item"
+            id="colors-variable-colors"
+          >
+            <h3 class="item__heading">
+              <a class="item__name" href="#variable-colors">colors</a>
+            </h3>
+            <div class="item__code-wrapper">
+              <pre class="item__code language-scss"><code>$colors: (
   white: rgb(255, 255, 255),
   black: rgb(0, 0, 0),
   default-text: rgb(51, 51, 51),
@@ -6,13 +409,250 @@
   drop-shadow: rgba(0, 0, 0, 0.5),
   brand-1: rgb(10, 75, 170),
   brand-2: rgb(190, 190, 190)
-);</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Project colors</p></div><h3 class="item__sub-heading">Type</h3><p><code>Map</code></p><h3 class="item__sub-heading">Map structure</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">Map key </span>Name</th><th scope="col"><span class="visually-hidden">Map key </span>Description</th><th scope="col"><span class="visually-hidden">Map key </span>Type</th><th scope="col"><span class="visually-hidden">Map key </span>Value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>white</code></th><td data-label="desc"><p>HEX: #ffffff</p></td><td data-label="type"><code>Color</code></td><td data-label="default"><code class="color-preview--inline" style="background: rgb(255, 255, 255); color: #000;">rgb(255, 255, 255)</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>black</code></th><td data-label="desc"><p>HEX: #000000</p></td><td data-label="type"><code>Color</code></td><td data-label="default"><code class="color-preview--inline" style="background: rgb(0, 0, 0); color: #fff;">rgb(0, 0, 0)</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>default-text</code></th><td data-label="desc"><p>HEX: #333333</p></td><td data-label="type"><code>Color</code></td><td data-label="default"><code class="color-preview--inline" style="background: rgb(51, 51, 51); color: #fff;">rgb(51, 51, 51)</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>validation-error</code></th><td data-label="desc"><p>HEX: #ffaaaa</p></td><td data-label="type"><code>Color</code></td><td data-label="default"><code class="color-preview--inline" style="background: rgb(255, 170, 170); color: #000;">rgb(255, 170, 170)</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>drop-shadow</code></th><td data-label="desc"><p>Half transparent black for drop shadows</p></td><td data-label="type"><code>Color</code></td><td data-label="default"><code class="color-preview--inline" style="background: rgba(0, 0, 0, 0.5); color: #fff;">rgba(0, 0, 0, 0.5)</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>brand-1</code></th><td data-label="desc"><p>Main brand color</p></td><td data-label="type"><code>Color</code></td><td data-label="default"><code class="color-preview--inline" style="background: rgb(10, 75, 170); color: #fff;">rgb(10, 75, 170)</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>brand-2</code></th><td data-label="desc"><p>Secondary brand color</p></td><td data-label="type"><code>Color</code></td><td data-label="default"><code class="color-preview--inline" style="background: rgb(190, 190, 190); color: #000;">rgb(190, 190, 190)</code></td></tr></tbody></table><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[function]</span> <a href="#colors-function-color"><code>color</code></a></li></ul></section><section class="main__item container item" id="colors-variable-shades"><h3 class="item__heading"><a class="item__name" href="#variable-shades">shades</a></h3><div class="item__code-wrapper"><pre class="item__code language-scss"><code>$shades: (
+);</code></pre>
+            </div>
+            <h3 class="item__sub-heading">Description</h3>
+            <div class="item__description"><p>Project colors</p></div>
+            <h3 class="item__sub-heading">Type</h3>
+            <p><code>Map</code></p>
+            <h3 class="item__sub-heading">Map structure</h3>
+            <table class="item__parameters">
+              <thead>
+                <tr>
+                  <th scope="col">
+                    <span class="visually-hidden">Map key </span>Name
+                  </th>
+                  <th scope="col">
+                    <span class="visually-hidden">Map key </span>Description
+                  </th>
+                  <th scope="col">
+                    <span class="visually-hidden">Map key </span>Type
+                  </th>
+                  <th scope="col">
+                    <span class="visually-hidden">Map key </span>Value
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="item__parameter">
+                  <th scope="row" data-label="name"><code>white</code></th>
+                  <td data-label="desc"><p>HEX: #ffffff</p></td>
+                  <td data-label="type"><code>Color</code></td>
+                  <td data-label="default">
+                    <code
+                      class="color-preview--inline"
+                      style="background: rgb(255, 255, 255); color: #000;"
+                      >rgb(255, 255, 255)</code
+                    >
+                  </td>
+                </tr>
+                <tr class="item__parameter">
+                  <th scope="row" data-label="name"><code>black</code></th>
+                  <td data-label="desc"><p>HEX: #000000</p></td>
+                  <td data-label="type"><code>Color</code></td>
+                  <td data-label="default">
+                    <code
+                      class="color-preview--inline"
+                      style="background: rgb(0, 0, 0); color: #fff;"
+                      >rgb(0, 0, 0)</code
+                    >
+                  </td>
+                </tr>
+                <tr class="item__parameter">
+                  <th scope="row" data-label="name">
+                    <code>default-text</code>
+                  </th>
+                  <td data-label="desc"><p>HEX: #333333</p></td>
+                  <td data-label="type"><code>Color</code></td>
+                  <td data-label="default">
+                    <code
+                      class="color-preview--inline"
+                      style="background: rgb(51, 51, 51); color: #fff;"
+                      >rgb(51, 51, 51)</code
+                    >
+                  </td>
+                </tr>
+                <tr class="item__parameter">
+                  <th scope="row" data-label="name">
+                    <code>validation-error</code>
+                  </th>
+                  <td data-label="desc"><p>HEX: #ffaaaa</p></td>
+                  <td data-label="type"><code>Color</code></td>
+                  <td data-label="default">
+                    <code
+                      class="color-preview--inline"
+                      style="background: rgb(255, 170, 170); color: #000;"
+                      >rgb(255, 170, 170)</code
+                    >
+                  </td>
+                </tr>
+                <tr class="item__parameter">
+                  <th scope="row" data-label="name">
+                    <code>drop-shadow</code>
+                  </th>
+                  <td data-label="desc">
+                    <p>Half transparent black for drop shadows</p>
+                  </td>
+                  <td data-label="type"><code>Color</code></td>
+                  <td data-label="default">
+                    <code
+                      class="color-preview--inline"
+                      style="background: rgba(0, 0, 0, 0.5); color: #fff;"
+                      >rgba(0, 0, 0, 0.5)</code
+                    >
+                  </td>
+                </tr>
+                <tr class="item__parameter">
+                  <th scope="row" data-label="name"><code>brand-1</code></th>
+                  <td data-label="desc"><p>Main brand color</p></td>
+                  <td data-label="type"><code>Color</code></td>
+                  <td data-label="default">
+                    <code
+                      class="color-preview--inline"
+                      style="background: rgb(10, 75, 170); color: #fff;"
+                      >rgb(10, 75, 170)</code
+                    >
+                  </td>
+                </tr>
+                <tr class="item__parameter">
+                  <th scope="row" data-label="name"><code>brand-2</code></th>
+                  <td data-label="desc"><p>Secondary brand color</p></td>
+                  <td data-label="type"><code>Color</code></td>
+                  <td data-label="default">
+                    <code
+                      class="color-preview--inline"
+                      style="background: rgb(190, 190, 190); color: #000;"
+                      >rgb(190, 190, 190)</code
+                    >
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <h3 class="item__sub-heading">Used by</h3>
+            <ul class="list-unstyled">
+              <li>
+                <span class="item__cross-type">[function]</span>
+                <a href="#colors-function-color"><code>color</code></a>
+              </li>
+            </ul>
+          </section>
+          <section
+            class="main__item container item"
+            id="colors-variable-shades"
+          >
+            <h3 class="item__heading">
+              <a class="item__name" href="#variable-shades">shades</a>
+            </h3>
+            <div class="item__code-wrapper">
+              <pre class="item__code language-scss"><code>$shades: (
   original: 100%,
   lighter: 66%,
   lightest: 33%,
   darker: 74%,
   darkest: 48%
-);</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Named shades of colors</p></div><h3 class="item__sub-heading">Type</h3><p><code>Map</code></p><h3 class="item__sub-heading">Map structure</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">Map key </span>Name</th><th scope="col"><span class="visually-hidden">Map key </span>Description</th><th scope="col"><span class="visually-hidden">Map key </span>Type</th><th scope="col"><span class="visually-hidden">Map key </span>Value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>original</code></th><td data-label="desc"><p>Original color</p></td><td data-label="type"><code>Number</code></td><td data-label="default"><code>100%</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>lighter</code></th><td data-label="desc"><p>Lighter version of the original color (The <code>color</code> function will return a mix of 66% color and 34% white.)</p></td><td data-label="type"><code>Number</code></td><td data-label="default"><code>66%</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>lightest</code></th><td data-label="desc"><p>Lightest version of the original color (The <code>color</code> function will return a mix of 33% color and 67% white.)</p></td><td data-label="type"><code>Number</code></td><td data-label="default"><code>33%</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>darker</code></th><td data-label="desc"><p>Darker version of the original color (The <code>color</code> function will return a mix of 74% color and 26% black.)</p></td><td data-label="type"><code>Number</code></td><td data-label="default"><code>74%</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>darkest</code></th><td data-label="desc"><p>Darkest version of the original color (The <code>color</code> function will return a mix of 48% color and 52% black.)</p></td><td data-label="type"><code>Number</code></td><td data-label="default"><code>48%</code></td></tr></tbody></table><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[function]</span> <a href="#colors-function-color"><code>color</code></a></li></ul></section></section><section class="main__sub-section" id="colors-function"><h2 class="main__heading--secondary"><div class="container">functions</div></h2><section class="main__item container item" id="colors-function-color"><h3 class="item__heading"><a class="item__name" href="#function-color">color</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@function color($color, $shade: original) { 
+);</code></pre>
+            </div>
+            <h3 class="item__sub-heading">Description</h3>
+            <div class="item__description"><p>Named shades of colors</p></div>
+            <h3 class="item__sub-heading">Type</h3>
+            <p><code>Map</code></p>
+            <h3 class="item__sub-heading">Map structure</h3>
+            <table class="item__parameters">
+              <thead>
+                <tr>
+                  <th scope="col">
+                    <span class="visually-hidden">Map key </span>Name
+                  </th>
+                  <th scope="col">
+                    <span class="visually-hidden">Map key </span>Description
+                  </th>
+                  <th scope="col">
+                    <span class="visually-hidden">Map key </span>Type
+                  </th>
+                  <th scope="col">
+                    <span class="visually-hidden">Map key </span>Value
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="item__parameter">
+                  <th scope="row" data-label="name"><code>original</code></th>
+                  <td data-label="desc"><p>Original color</p></td>
+                  <td data-label="type"><code>Number</code></td>
+                  <td data-label="default"><code>100%</code></td>
+                </tr>
+                <tr class="item__parameter">
+                  <th scope="row" data-label="name"><code>lighter</code></th>
+                  <td data-label="desc">
+                    <p>
+                      Lighter version of the original color (The
+                      <code>color</code> function will return a mix of 66% color
+                      and 34% white.)
+                    </p>
+                  </td>
+                  <td data-label="type"><code>Number</code></td>
+                  <td data-label="default"><code>66%</code></td>
+                </tr>
+                <tr class="item__parameter">
+                  <th scope="row" data-label="name"><code>lightest</code></th>
+                  <td data-label="desc">
+                    <p>
+                      Lightest version of the original color (The
+                      <code>color</code> function will return a mix of 33% color
+                      and 67% white.)
+                    </p>
+                  </td>
+                  <td data-label="type"><code>Number</code></td>
+                  <td data-label="default"><code>33%</code></td>
+                </tr>
+                <tr class="item__parameter">
+                  <th scope="row" data-label="name"><code>darker</code></th>
+                  <td data-label="desc">
+                    <p>
+                      Darker version of the original color (The
+                      <code>color</code> function will return a mix of 74% color
+                      and 26% black.)
+                    </p>
+                  </td>
+                  <td data-label="type"><code>Number</code></td>
+                  <td data-label="default"><code>74%</code></td>
+                </tr>
+                <tr class="item__parameter">
+                  <th scope="row" data-label="name"><code>darkest</code></th>
+                  <td data-label="desc">
+                    <p>
+                      Darkest version of the original color (The
+                      <code>color</code> function will return a mix of 48% color
+                      and 52% black.)
+                    </p>
+                  </td>
+                  <td data-label="type"><code>Number</code></td>
+                  <td data-label="default"><code>48%</code></td>
+                </tr>
+              </tbody>
+            </table>
+            <h3 class="item__sub-heading">Used by</h3>
+            <ul class="list-unstyled">
+              <li>
+                <span class="item__cross-type">[function]</span>
+                <a href="#colors-function-color"><code>color</code></a>
+              </li>
+            </ul>
+          </section>
+        </section>
+        <section class="main__sub-section" id="colors-function">
+          <h2 class="main__heading--secondary">
+            <div class="container">functions</div>
+          </h2>
+          <section class="main__item container item" id="colors-function-color">
+            <h3 class="item__heading">
+              <a class="item__name" href="#function-color">color</a>
+            </h3>
+            <div class="item__code-wrapper">
+              <pre
+                class="item__code item__code--togglable language-scss"
+                data-current-state="collapsed"
+                data-expanded="@function color($color, $shade: original) { 
   @if (map-has-key($colors, $color)) {
     @if (map-has-key($shades, $shade)) {
       @if ($shade == lighter or $shade == lightest) {
@@ -38,18 +678,236 @@
     @error &quot;No value found for `#{$color}`. &quot;
          + &quot;Please make sure it is defined in `$colors` map.&quot;;
   }
- }" data-collapsed="@function color($color, $shade: original) { ... }"><code>@function color($color, $shade: original) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Return the value of a named color or of a shaded version</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$color</code></th><td data-label="desc"><p>Color name from <code>$colors</code> map</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$shade</code></th><td data-label="desc"><p>Shade name from <code>$shades</code> map</p></td><td data-label="type"><code>String</code></td><td data-label="default"><code>original</code></td></tr></tbody></table><h3 class="item__sub-heading">Returns</h3><div class="item__description item__description--inline"><code>Color</code> &mdash;<p>Color value</p></div><h3 class="item__sub-heading">Throws</h3><ul class="list-unstyled"><li><p>No value found for <code>#{$shade}</code>.</p></li><li><p>No value found for <code>#{$color}</code>.</p></li></ul><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#colors-variable-colors"><code>colors</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#colors-variable-shades"><code>shades</code></a></li></ul></section></section></section><section class="main__section"><h1 class="main__heading" id="helpers"><div class="container">helpers</div></h1><section class="main__sub-section" id="helpers-function"><h2 class="main__heading--secondary"><div class="container">functions</div></h2><section class="main__item container item" id="helpers-function-strip-unit"><h3 class="item__heading"><a class="item__name" href="#function-strip-unit">strip-unit</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@function strip-unit($number) { 
+ }"
+                data-collapsed="@function color($color, $shade: original) { ... }"
+              ><code>@function color($color, $shade: original) { ... }</code></pre>
+            </div>
+            <h3 class="item__sub-heading">Description</h3>
+            <div class="item__description">
+              <p>Return the value of a named color or of a shaded version</p>
+            </div>
+            <h3 class="item__sub-heading">Parameters</h3>
+            <table class="item__parameters">
+              <thead>
+                <tr>
+                  <th scope="col">
+                    <span class="visually-hidden">parameter </span>Name
+                  </th>
+                  <th scope="col">
+                    <span class="visually-hidden">parameter </span>Description
+                  </th>
+                  <th scope="col">
+                    <span class="visually-hidden">parameter </span>Type
+                  </th>
+                  <th scope="col">
+                    <span class="visually-hidden">parameter </span>Default value
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="item__parameter">
+                  <th scope="row" data-label="name"><code>$color</code></th>
+                  <td data-label="desc">
+                    <p>Color name from <code>$colors</code> map</p>
+                  </td>
+                  <td data-label="type"><code>String</code></td>
+                  <td data-label="default">
+                    &mdash;<span class="visually-hidden"> none</span>
+                  </td>
+                </tr>
+                <tr class="item__parameter">
+                  <th scope="row" data-label="name"><code>$shade</code></th>
+                  <td data-label="desc">
+                    <p>Shade name from <code>$shades</code> map</p>
+                  </td>
+                  <td data-label="type"><code>String</code></td>
+                  <td data-label="default"><code>original</code></td>
+                </tr>
+              </tbody>
+            </table>
+            <h3 class="item__sub-heading">Returns</h3>
+            <div class="item__description item__description--inline">
+              <code>Color</code> &mdash;
+              <p>Color value</p>
+            </div>
+            <h3 class="item__sub-heading">Throws</h3>
+            <ul class="list-unstyled">
+              <li>
+                <p>No value found for <code>#{$shade}</code>.</p>
+              </li>
+              <li>
+                <p>No value found for <code>#{$color}</code>.</p>
+              </li>
+            </ul>
+            <h3 class="item__sub-heading">Requires</h3>
+            <ul class="list-unstyled">
+              <li class="item__description item__description--inline">
+                <span class="item__cross-type">[variable]</span>
+                <a href="#colors-variable-colors"><code>colors</code></a>
+              </li>
+              <li class="item__description item__description--inline">
+                <span class="item__cross-type">[variable]</span>
+                <a href="#colors-variable-shades"><code>shades</code></a>
+              </li>
+            </ul>
+          </section>
+        </section>
+      </section>
+      <section class="main__section">
+        <h1 class="main__heading" id="helpers">
+          <div class="container">helpers</div>
+        </h1>
+        <section class="main__sub-section" id="helpers-function">
+          <h2 class="main__heading--secondary">
+            <div class="container">functions</div>
+          </h2>
+          <section
+            class="main__item container item"
+            id="helpers-function-strip-unit"
+          >
+            <h3 class="item__heading">
+              <a class="item__name" href="#function-strip-unit">strip-unit</a>
+            </h3>
+            <div class="item__code-wrapper">
+              <pre
+                class="item__code item__code--togglable language-scss"
+                data-current-state="collapsed"
+                data-expanded="@function strip-unit($number) { 
   @if (type-of($number) == &quot;number&quot; and not unitless($number)) {
     @return $number / ($number * 0 + 1);
   }
   @return $number;
- }" data-collapsed="@function strip-unit($number) { ... }"><code>@function strip-unit($number) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Remove the unit of a length</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$number</code></th><td data-label="desc"><p>Number to remove unit from</p></td><td data-label="type"><code>Number</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr></tbody></table><h3 class="item__sub-heading">Returns</h3><div class="item__description item__description--inline"><code>Number</code> &mdash;<p>Unitless number</p></div></section><section class="main__item container item" id="helpers-function-px-to-rem"><h3 class="item__heading"><a class="item__name" href="#function-px-to-rem">px-to-rem</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@function px-to-rem($value) { 
+ }"
+                data-collapsed="@function strip-unit($number) { ... }"
+              ><code>@function strip-unit($number) { ... }</code></pre>
+            </div>
+            <h3 class="item__sub-heading">Description</h3>
+            <div class="item__description">
+              <p>Remove the unit of a length</p>
+            </div>
+            <h3 class="item__sub-heading">Parameters</h3>
+            <table class="item__parameters">
+              <thead>
+                <tr>
+                  <th scope="col">
+                    <span class="visually-hidden">parameter </span>Name
+                  </th>
+                  <th scope="col">
+                    <span class="visually-hidden">parameter </span>Description
+                  </th>
+                  <th scope="col">
+                    <span class="visually-hidden">parameter </span>Type
+                  </th>
+                  <th scope="col">
+                    <span class="visually-hidden">parameter </span>Default value
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="item__parameter">
+                  <th scope="row" data-label="name"><code>$number</code></th>
+                  <td data-label="desc"><p>Number to remove unit from</p></td>
+                  <td data-label="type"><code>Number</code></td>
+                  <td data-label="default">
+                    &mdash;<span class="visually-hidden"> none</span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <h3 class="item__sub-heading">Returns</h3>
+            <div class="item__description item__description--inline">
+              <code>Number</code> &mdash;
+              <p>Unitless number</p>
+            </div>
+          </section>
+          <section
+            class="main__item container item"
+            id="helpers-function-px-to-rem"
+          >
+            <h3 class="item__heading">
+              <a class="item__name" href="#function-px-to-rem">px-to-rem</a>
+            </h3>
+            <div class="item__code-wrapper">
+              <pre
+                class="item__code item__code--togglable language-scss"
+                data-current-state="collapsed"
+                data-expanded="@function px-to-rem($value) { 
   @if (unit($value) == &quot;px&quot;) {
     @return (($value / map-get($sizes, base-font-size)) * 1rem);
   } @else {
     @error &quot;px-to-rem only supports px inputs.&quot;;
   }
- }" data-collapsed="@function px-to-rem($value) { ... }"><code>@function px-to-rem($value) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Convert px to rem</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$value</code></th><td data-label="desc"><p>Number (with unit px) to convert to rem</p></td><td data-label="type"><code>Number</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr></tbody></table><h3 class="item__sub-heading">Returns</h3><div class="item__description item__description--inline"><code>Number</code> &mdash;<p>Number converted to rem</p></div><h3 class="item__sub-heading">Throws</h3><ul class="list-unstyled"><li><p>px-to-rem only supports px inputs.</p></li></ul><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#sizes-variable-sizes"><code>sizes</code></a></li></ul></section></section><section class="main__sub-section" id="helpers-mixin"><h2 class="main__heading--secondary"><div class="container">mixins</div></h2><section class="main__item container item" id="helpers-mixin-clearfix"><h3 class="item__heading"><a class="item__name" href="#mixin-clearfix">clearfix</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin clearfix() { 
+ }"
+                data-collapsed="@function px-to-rem($value) { ... }"
+              ><code>@function px-to-rem($value) { ... }</code></pre>
+            </div>
+            <h3 class="item__sub-heading">Description</h3>
+            <div class="item__description"><p>Convert px to rem</p></div>
+            <h3 class="item__sub-heading">Parameters</h3>
+            <table class="item__parameters">
+              <thead>
+                <tr>
+                  <th scope="col">
+                    <span class="visually-hidden">parameter </span>Name
+                  </th>
+                  <th scope="col">
+                    <span class="visually-hidden">parameter </span>Description
+                  </th>
+                  <th scope="col">
+                    <span class="visually-hidden">parameter </span>Type
+                  </th>
+                  <th scope="col">
+                    <span class="visually-hidden">parameter </span>Default value
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="item__parameter">
+                  <th scope="row" data-label="name"><code>$value</code></th>
+                  <td data-label="desc">
+                    <p>Number (with unit px) to convert to rem</p>
+                  </td>
+                  <td data-label="type"><code>Number</code></td>
+                  <td data-label="default">
+                    &mdash;<span class="visually-hidden"> none</span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <h3 class="item__sub-heading">Returns</h3>
+            <div class="item__description item__description--inline">
+              <code>Number</code> &mdash;
+              <p>Number converted to rem</p>
+            </div>
+            <h3 class="item__sub-heading">Throws</h3>
+            <ul class="list-unstyled">
+              <li><p>px-to-rem only supports px inputs.</p></li>
+            </ul>
+            <h3 class="item__sub-heading">Requires</h3>
+            <ul class="list-unstyled">
+              <li class="item__description item__description--inline">
+                <span class="item__cross-type">[variable]</span>
+                <a href="#sizes-variable-sizes"><code>sizes</code></a>
+              </li>
+            </ul>
+          </section>
+        </section>
+        <section class="main__sub-section" id="helpers-mixin">
+          <h2 class="main__heading--secondary">
+            <div class="container">mixins</div>
+          </h2>
+          <section
+            class="main__item container item"
+            id="helpers-mixin-clearfix"
+          >
+            <h3 class="item__heading">
+              <a class="item__name" href="#mixin-clearfix">clearfix</a>
+            </h3>
+            <div class="item__code-wrapper">
+              <pre
+                class="item__code item__code--togglable language-scss"
+                data-current-state="collapsed"
+                data-expanded="@mixin clearfix() { 
   &amp;::before,
   &amp;::after {
     content: &quot;&quot;;
@@ -59,10 +917,78 @@
   &amp;::after {
     clear: both;
   }
- }" data-collapsed="@mixin clearfix() { ... }"><code>@mixin clearfix() { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Clearfix: helper to clear inner floats</p></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p><h3 class="item__sub-heading">Links</h3><ul class="list-unstyled"><li><a href="http://nicolasgallagher.com/micro-clearfix-hack/">Micro Clearfix</a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Nicolas Gallagher</p></li></ul></section><section class="main__item container item" id="helpers-mixin-hidden"><h3 class="item__heading"><a class="item__name" href="#mixin-hidden">hidden</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin hidden() { 
+ }"
+                data-collapsed="@mixin clearfix() { ... }"
+              ><code>@mixin clearfix() { ... }</code></pre>
+            </div>
+            <h3 class="item__sub-heading">Description</h3>
+            <div class="item__description">
+              <p>Clearfix: helper to clear inner floats</p>
+            </div>
+            <h3 class="item__sub-heading">Parameters</h3>
+            <p>None.</p>
+            <h3 class="item__sub-heading">Links</h3>
+            <ul class="list-unstyled">
+              <li>
+                <a href="http://nicolasgallagher.com/micro-clearfix-hack/"
+                  >Micro Clearfix</a
+                >
+              </li>
+            </ul>
+            <h3 class="item__sub-heading">Author</h3>
+            <ul class="list-unstyled">
+              <li><p>Nicolas Gallagher</p></li>
+            </ul>
+          </section>
+          <section class="main__item container item" id="helpers-mixin-hidden">
+            <h3 class="item__heading">
+              <a class="item__name" href="#mixin-hidden">hidden</a>
+            </h3>
+            <div class="item__code-wrapper">
+              <pre
+                class="item__code item__code--togglable language-scss"
+                data-current-state="collapsed"
+                data-expanded="@mixin hidden() { 
   display: none !important;
   visibility: hidden;
- }" data-collapsed="@mixin hidden() { ... }"><code>@mixin hidden() { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Hide content from both screenreaders and browsers</p></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p><h3 class="item__sub-heading">Links</h3><ul class="list-unstyled"><li><a href="http://juicystudio.com/article/screen-readers-display-none.php">http://juicystudio.com/article/screen-readers-display-none.php</a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Jared Smith</p></li></ul></section><section class="main__item container item" id="helpers-mixin-visually-hidden"><h3 class="item__heading"><a class="item__name" href="#mixin-visually-hidden">visually-hidden</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin visually-hidden($focusable) { 
+ }"
+                data-collapsed="@mixin hidden() { ... }"
+              ><code>@mixin hidden() { ... }</code></pre>
+            </div>
+            <h3 class="item__sub-heading">Description</h3>
+            <div class="item__description">
+              <p>Hide content from both screenreaders and browsers</p>
+            </div>
+            <h3 class="item__sub-heading">Parameters</h3>
+            <p>None.</p>
+            <h3 class="item__sub-heading">Links</h3>
+            <ul class="list-unstyled">
+              <li>
+                <a
+                  href="http://juicystudio.com/article/screen-readers-display-none.php"
+                  >http://juicystudio.com/article/screen-readers-display-none.php</a
+                >
+              </li>
+            </ul>
+            <h3 class="item__sub-heading">Author</h3>
+            <ul class="list-unstyled">
+              <li><p>Jared Smith</p></li>
+            </ul>
+          </section>
+          <section
+            class="main__item container item"
+            id="helpers-mixin-visually-hidden"
+          >
+            <h3 class="item__heading">
+              <a class="item__name" href="#mixin-visually-hidden"
+                >visually-hidden</a
+              >
+            </h3>
+            <div class="item__code-wrapper">
+              <pre
+                class="item__code item__code--togglable language-scss"
+                data-current-state="collapsed"
+                data-expanded="@mixin visually-hidden($focusable) { 
   border: 0 !important;
   clip: rect(1px, 1px, 1px, 1px) !important;
   clip-path: inset(50%) !important;
@@ -84,7 +1010,84 @@
       width: auto !important;
     }
   }
- }" data-collapsed="@mixin visually-hidden($focusable) { ... }"><code>@mixin visually-hidden($focusable) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Hide content only visually, but have it available for screenreaders</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$focusable</code></th><td data-label="desc"><p>use the string “focusable” to allow the element to be focusable when navigated to via the keyboard</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr></tbody></table><h3 class="item__sub-heading">Links</h3><ul class="list-unstyled"><li><a href="http://snook.ca/archives/html_and_css/hiding-content-for-accessibility">http://snook.ca/archives/html_and_css/hiding-content-for-accessibility</a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Hugo Giraudel</p></li></ul></section></section></section><section class="main__section"><h1 class="main__heading" id="layout"><div class="container">layout</div></h1><section class="main__sub-section" id="layout-variable"><h2 class="main__heading--secondary"><div class="container">variables</div></h2><section class="main__item container item" id="layout-variable-breakpoints"><h3 class="item__heading"><a class="item__name" href="#variable-breakpoints">breakpoints</a></h3><div class="item__code-wrapper"><pre class="item__code language-scss"><code>$breakpoints: (
+ }"
+                data-collapsed="@mixin visually-hidden($focusable) { ... }"
+              ><code>@mixin visually-hidden($focusable) { ... }</code></pre>
+            </div>
+            <h3 class="item__sub-heading">Description</h3>
+            <div class="item__description">
+              <p>
+                Hide content only visually, but have it available for
+                screenreaders
+              </p>
+            </div>
+            <h3 class="item__sub-heading">Parameters</h3>
+            <table class="item__parameters">
+              <thead>
+                <tr>
+                  <th scope="col">
+                    <span class="visually-hidden">parameter </span>Name
+                  </th>
+                  <th scope="col">
+                    <span class="visually-hidden">parameter </span>Description
+                  </th>
+                  <th scope="col">
+                    <span class="visually-hidden">parameter </span>Type
+                  </th>
+                  <th scope="col">
+                    <span class="visually-hidden">parameter </span>Default value
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="item__parameter">
+                  <th scope="row" data-label="name"><code>$focusable</code></th>
+                  <td data-label="desc">
+                    <p>
+                      use the string “focusable” to allow the element to be
+                      focusable when navigated to via the keyboard
+                    </p>
+                  </td>
+                  <td data-label="type"><code>String</code></td>
+                  <td data-label="default">
+                    &mdash;<span class="visually-hidden"> none</span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <h3 class="item__sub-heading">Links</h3>
+            <ul class="list-unstyled">
+              <li>
+                <a
+                  href="http://snook.ca/archives/html_and_css/hiding-content-for-accessibility"
+                  >http://snook.ca/archives/html_and_css/hiding-content-for-accessibility</a
+                >
+              </li>
+            </ul>
+            <h3 class="item__sub-heading">Author</h3>
+            <ul class="list-unstyled">
+              <li><p>Hugo Giraudel</p></li>
+            </ul>
+          </section>
+        </section>
+      </section>
+      <section class="main__section">
+        <h1 class="main__heading" id="layout">
+          <div class="container">layout</div>
+        </h1>
+        <section class="main__sub-section" id="layout-variable">
+          <h2 class="main__heading--secondary">
+            <div class="container">variables</div>
+          </h2>
+          <section
+            class="main__item container item"
+            id="layout-variable-breakpoints"
+          >
+            <h3 class="item__heading">
+              <a class="item__name" href="#variable-breakpoints">breakpoints</a>
+            </h3>
+            <div class="item__code-wrapper">
+              <pre class="item__code language-scss"><code>$breakpoints: (
   main-content-width: (
     min-width: (
       (size(column-width, px) * map-get($max-columns, main-content)) +
@@ -136,16 +1139,305 @@
           ) * 1.25
       )
   )
-);</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Named breakpoints for media queries</p></div><h3 class="item__sub-heading">Type</h3><p><code>Map</code></p><h3 class="item__sub-heading">Map structure</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">Map key </span>Name</th><th scope="col"><span class="visually-hidden">Map key </span>Description</th><th scope="col"><span class="visually-hidden">Map key </span>Type</th><th scope="col"><span class="visually-hidden">Map key </span>Value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>main-content-width</code></th><td data-label="desc">&mdash;<span class="visually-hidden"> none</span></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>full-width</code></th><td data-label="desc"><p>Corresponds 16px base font size</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>full-width--scale-1</code></th><td data-label="desc"><p>Corresponds 17px base font size</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>full-width--scale-2</code></th><td data-label="desc"><p>Corresponds 18px base font size</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>full-width--scale-3</code></th><td data-label="desc"><p>Corresponds 19px base font size</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>full-width--scale-4</code></th><td data-label="desc"><p>Corresponds 20px base font size</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr></tbody></table><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#layout-variable-max-columns"><code>max-columns</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#sizes-variable-sizes"><code>sizes</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[function]</span> <a href="#sizes-function-size"><code>size</code></a></li></ul><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#layout-mixin-respond-to"><code>respond-to</code></a></li></ul></section><section class="main__item container item" id="layout-variable-layers"><h3 class="item__heading"><a class="item__name" href="#variable-layers">layers</a></h3><div class="item__code-wrapper"><pre class="item__code language-scss"><code>$layers: (
+);</code></pre>
+            </div>
+            <h3 class="item__sub-heading">Description</h3>
+            <div class="item__description">
+              <p>Named breakpoints for media queries</p>
+            </div>
+            <h3 class="item__sub-heading">Type</h3>
+            <p><code>Map</code></p>
+            <h3 class="item__sub-heading">Map structure</h3>
+            <table class="item__parameters">
+              <thead>
+                <tr>
+                  <th scope="col">
+                    <span class="visually-hidden">Map key </span>Name
+                  </th>
+                  <th scope="col">
+                    <span class="visually-hidden">Map key </span>Description
+                  </th>
+                  <th scope="col">
+                    <span class="visually-hidden">Map key </span>Type
+                  </th>
+                  <th scope="col">
+                    <span class="visually-hidden">Map key </span>Value
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="item__parameter">
+                  <th scope="row" data-label="name">
+                    <code>main-content-width</code>
+                  </th>
+                  <td data-label="desc">
+                    &mdash;<span class="visually-hidden"> none</span>
+                  </td>
+                  <td data-label="type"><code>String</code></td>
+                  <td data-label="default">
+                    &mdash;<span class="visually-hidden"> none</span>
+                  </td>
+                </tr>
+                <tr class="item__parameter">
+                  <th scope="row" data-label="name"><code>full-width</code></th>
+                  <td data-label="desc">
+                    <p>Corresponds 16px base font size</p>
+                  </td>
+                  <td data-label="type"><code>String</code></td>
+                  <td data-label="default">
+                    &mdash;<span class="visually-hidden"> none</span>
+                  </td>
+                </tr>
+                <tr class="item__parameter">
+                  <th scope="row" data-label="name">
+                    <code>full-width--scale-1</code>
+                  </th>
+                  <td data-label="desc">
+                    <p>Corresponds 17px base font size</p>
+                  </td>
+                  <td data-label="type"><code>String</code></td>
+                  <td data-label="default">
+                    &mdash;<span class="visually-hidden"> none</span>
+                  </td>
+                </tr>
+                <tr class="item__parameter">
+                  <th scope="row" data-label="name">
+                    <code>full-width--scale-2</code>
+                  </th>
+                  <td data-label="desc">
+                    <p>Corresponds 18px base font size</p>
+                  </td>
+                  <td data-label="type"><code>String</code></td>
+                  <td data-label="default">
+                    &mdash;<span class="visually-hidden"> none</span>
+                  </td>
+                </tr>
+                <tr class="item__parameter">
+                  <th scope="row" data-label="name">
+                    <code>full-width--scale-3</code>
+                  </th>
+                  <td data-label="desc">
+                    <p>Corresponds 19px base font size</p>
+                  </td>
+                  <td data-label="type"><code>String</code></td>
+                  <td data-label="default">
+                    &mdash;<span class="visually-hidden"> none</span>
+                  </td>
+                </tr>
+                <tr class="item__parameter">
+                  <th scope="row" data-label="name">
+                    <code>full-width--scale-4</code>
+                  </th>
+                  <td data-label="desc">
+                    <p>Corresponds 20px base font size</p>
+                  </td>
+                  <td data-label="type"><code>String</code></td>
+                  <td data-label="default">
+                    &mdash;<span class="visually-hidden"> none</span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <h3 class="item__sub-heading">Requires</h3>
+            <ul class="list-unstyled">
+              <li class="item__description item__description--inline">
+                <span class="item__cross-type">[variable]</span>
+                <a href="#layout-variable-max-columns"
+                  ><code>max-columns</code></a
+                >
+              </li>
+              <li class="item__description item__description--inline">
+                <span class="item__cross-type">[variable]</span>
+                <a href="#sizes-variable-sizes"><code>sizes</code></a>
+              </li>
+              <li class="item__description item__description--inline">
+                <span class="item__cross-type">[function]</span>
+                <a href="#sizes-function-size"><code>size</code></a>
+              </li>
+            </ul>
+            <h3 class="item__sub-heading">Used by</h3>
+            <ul class="list-unstyled">
+              <li>
+                <span class="item__cross-type">[mixin]</span>
+                <a href="#layout-mixin-respond-to"><code>respond-to</code></a>
+              </li>
+            </ul>
+          </section>
+          <section
+            class="main__item container item"
+            id="layout-variable-layers"
+          >
+            <h3 class="item__heading">
+              <a class="item__name" href="#variable-layers">layers</a>
+            </h3>
+            <div class="item__code-wrapper">
+              <pre class="item__code language-scss"><code>$layers: (
   page-header: 10,
   main-navigation: 15,
   cookie-info-banner: 20,
   ie-warning-shader: 30,
   ie-warning-message: 31
-);</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Named layers and corresponding z-index values</p></div><h3 class="item__sub-heading">Type</h3><p><code>Map</code></p><h3 class="item__sub-heading">Map structure</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">Map key </span>Name</th><th scope="col"><span class="visually-hidden">Map key </span>Description</th><th scope="col"><span class="visually-hidden">Map key </span>Type</th><th scope="col"><span class="visually-hidden">Map key </span>Value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>page-header</code></th><td data-label="desc"><p>Page header</p></td><td data-label="type"><code>Number</code></td><td data-label="default"><code>10</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>main-navigation</code></th><td data-label="desc"><p>Main navigation</p></td><td data-label="type"><code>Number</code></td><td data-label="default"><code>15</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>main-navigation</code></th><td data-label="desc"><p>Cookie info banner</p></td><td data-label="type"><code>Number</code></td><td data-label="default"><code>20</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>main-navigation</code></th><td data-label="desc"><p>IE warning shader</p></td><td data-label="type"><code>Number</code></td><td data-label="default"><code>30</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>main-navigation</code></th><td data-label="desc"><p>IE warning message</p></td><td data-label="type"><code>Number</code></td><td data-label="default"><code>31</code></td></tr></tbody></table><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[function]</span> <a href="#layout-function-layer"><code>layer</code></a></li></ul></section><section class="main__item container item" id="layout-variable-max-columns"><h3 class="item__heading"><a class="item__name" href="#variable-max-columns">max-columns</a></h3><div class="item__code-wrapper"><pre class="item__code language-scss"><code>$max-columns: (
+);</code></pre>
+            </div>
+            <h3 class="item__sub-heading">Description</h3>
+            <div class="item__description">
+              <p>Named layers and corresponding z-index values</p>
+            </div>
+            <h3 class="item__sub-heading">Type</h3>
+            <p><code>Map</code></p>
+            <h3 class="item__sub-heading">Map structure</h3>
+            <table class="item__parameters">
+              <thead>
+                <tr>
+                  <th scope="col">
+                    <span class="visually-hidden">Map key </span>Name
+                  </th>
+                  <th scope="col">
+                    <span class="visually-hidden">Map key </span>Description
+                  </th>
+                  <th scope="col">
+                    <span class="visually-hidden">Map key </span>Type
+                  </th>
+                  <th scope="col">
+                    <span class="visually-hidden">Map key </span>Value
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="item__parameter">
+                  <th scope="row" data-label="name">
+                    <code>page-header</code>
+                  </th>
+                  <td data-label="desc"><p>Page header</p></td>
+                  <td data-label="type"><code>Number</code></td>
+                  <td data-label="default"><code>10</code></td>
+                </tr>
+                <tr class="item__parameter">
+                  <th scope="row" data-label="name">
+                    <code>main-navigation</code>
+                  </th>
+                  <td data-label="desc"><p>Main navigation</p></td>
+                  <td data-label="type"><code>Number</code></td>
+                  <td data-label="default"><code>15</code></td>
+                </tr>
+                <tr class="item__parameter">
+                  <th scope="row" data-label="name">
+                    <code>main-navigation</code>
+                  </th>
+                  <td data-label="desc"><p>Cookie info banner</p></td>
+                  <td data-label="type"><code>Number</code></td>
+                  <td data-label="default"><code>20</code></td>
+                </tr>
+                <tr class="item__parameter">
+                  <th scope="row" data-label="name">
+                    <code>main-navigation</code>
+                  </th>
+                  <td data-label="desc"><p>IE warning shader</p></td>
+                  <td data-label="type"><code>Number</code></td>
+                  <td data-label="default"><code>30</code></td>
+                </tr>
+                <tr class="item__parameter">
+                  <th scope="row" data-label="name">
+                    <code>main-navigation</code>
+                  </th>
+                  <td data-label="desc"><p>IE warning message</p></td>
+                  <td data-label="type"><code>Number</code></td>
+                  <td data-label="default"><code>31</code></td>
+                </tr>
+              </tbody>
+            </table>
+            <h3 class="item__sub-heading">Used by</h3>
+            <ul class="list-unstyled">
+              <li>
+                <span class="item__cross-type">[function]</span>
+                <a href="#layout-function-layer"><code>layer</code></a>
+              </li>
+            </ul>
+          </section>
+          <section
+            class="main__item container item"
+            id="layout-variable-max-columns"
+          >
+            <h3 class="item__heading">
+              <a class="item__name" href="#variable-max-columns">max-columns</a>
+            </h3>
+            <div class="item__code-wrapper">
+              <pre class="item__code language-scss"><code>$max-columns: (
   main-content: 8,
   sidebar: 3
-);</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Max. width of named layout sections in terms of layout columns (based on a 12 columns layout grid)</p></div><h3 class="item__sub-heading">Type</h3><p><code>Map</code></p><h3 class="item__sub-heading">Map structure</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">Map key </span>Name</th><th scope="col"><span class="visually-hidden">Map key </span>Description</th><th scope="col"><span class="visually-hidden">Map key </span>Type</th><th scope="col"><span class="visually-hidden">Map key </span>Value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>main-content</code></th><td data-label="desc"><p>Main content area</p></td><td data-label="type"><code>Number</code></td><td data-label="default"><code>8</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>sidebar</code></th><td data-label="desc"><p>Sidebar</p></td><td data-label="type"><code>Number</code></td><td data-label="default"><code>3</code></td></tr></tbody></table><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[variable]</span> <a href="#layout-variable-breakpoints"><code>breakpoints</code></a></li></ul></section></section><section class="main__sub-section" id="layout-mixin"><h2 class="main__heading--secondary"><div class="container">mixins</div></h2><section class="main__item container item" id="layout-mixin-respond-to"><h3 class="item__heading"><a class="item__name" href="#mixin-respond-to">respond-to</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin respond-to($breakpoint) { 
+);</code></pre>
+            </div>
+            <h3 class="item__sub-heading">Description</h3>
+            <div class="item__description">
+              <p>
+                Max. width of named layout sections in terms of layout columns
+                (based on a 12 columns layout grid)
+              </p>
+            </div>
+            <h3 class="item__sub-heading">Type</h3>
+            <p><code>Map</code></p>
+            <h3 class="item__sub-heading">Map structure</h3>
+            <table class="item__parameters">
+              <thead>
+                <tr>
+                  <th scope="col">
+                    <span class="visually-hidden">Map key </span>Name
+                  </th>
+                  <th scope="col">
+                    <span class="visually-hidden">Map key </span>Description
+                  </th>
+                  <th scope="col">
+                    <span class="visually-hidden">Map key </span>Type
+                  </th>
+                  <th scope="col">
+                    <span class="visually-hidden">Map key </span>Value
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="item__parameter">
+                  <th scope="row" data-label="name">
+                    <code>main-content</code>
+                  </th>
+                  <td data-label="desc"><p>Main content area</p></td>
+                  <td data-label="type"><code>Number</code></td>
+                  <td data-label="default"><code>8</code></td>
+                </tr>
+                <tr class="item__parameter">
+                  <th scope="row" data-label="name"><code>sidebar</code></th>
+                  <td data-label="desc"><p>Sidebar</p></td>
+                  <td data-label="type"><code>Number</code></td>
+                  <td data-label="default"><code>3</code></td>
+                </tr>
+              </tbody>
+            </table>
+            <h3 class="item__sub-heading">Used by</h3>
+            <ul class="list-unstyled">
+              <li>
+                <span class="item__cross-type">[variable]</span>
+                <a href="#layout-variable-breakpoints"
+                  ><code>breakpoints</code></a
+                >
+              </li>
+            </ul>
+          </section>
+        </section>
+        <section class="main__sub-section" id="layout-mixin">
+          <h2 class="main__heading--secondary">
+            <div class="container">mixins</div>
+          </h2>
+          <section
+            class="main__item container item"
+            id="layout-mixin-respond-to"
+          >
+            <h3 class="item__heading">
+              <a class="item__name" href="#mixin-respond-to">respond-to</a>
+            </h3>
+            <div class="item__code-wrapper">
+              <pre
+                class="item__code item__code--togglable language-scss"
+                data-current-state="collapsed"
+                data-expanded="@mixin respond-to($breakpoint) { 
   $raw-query: map-get($breakpoints, $breakpoint);
 
   @if ($raw-query) {
@@ -162,26 +1454,236 @@
     @error &quot;No value found for `#{$breakpoint}`. &quot;
          + &quot;Please make sure it is defined in `$breakpoints` map.&quot;;
   }
- }" data-collapsed="@mixin respond-to($breakpoint) { ... }"><code>@mixin respond-to($breakpoint) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Responsive manager</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$breakpoint</code></th><td data-label="desc"><p>Named breakpoint from <code>$breakpoints</code> map</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr></tbody></table><h3 class="item__sub-heading">Content</h3><p>This mixin allows extra content to be passed (through the <code>@content</code> directive).</p><h3 class="item__sub-heading">Example</h3><div class="item__example example"><div class="example__description"><p>Input (SCSS)</p></div><pre class="example__code language-scss"><code>$breakpoints: (
+ }"
+                data-collapsed="@mixin respond-to($breakpoint) { ... }"
+              ><code>@mixin respond-to($breakpoint) { ... }</code></pre>
+            </div>
+            <h3 class="item__sub-heading">Description</h3>
+            <div class="item__description"><p>Responsive manager</p></div>
+            <h3 class="item__sub-heading">Parameters</h3>
+            <table class="item__parameters">
+              <thead>
+                <tr>
+                  <th scope="col">
+                    <span class="visually-hidden">parameter </span>Name
+                  </th>
+                  <th scope="col">
+                    <span class="visually-hidden">parameter </span>Description
+                  </th>
+                  <th scope="col">
+                    <span class="visually-hidden">parameter </span>Type
+                  </th>
+                  <th scope="col">
+                    <span class="visually-hidden">parameter </span>Default value
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="item__parameter">
+                  <th scope="row" data-label="name">
+                    <code>$breakpoint</code>
+                  </th>
+                  <td data-label="desc">
+                    <p>Named breakpoint from <code>$breakpoints</code> map</p>
+                  </td>
+                  <td data-label="type"><code>String</code></td>
+                  <td data-label="default">
+                    &mdash;<span class="visually-hidden"> none</span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <h3 class="item__sub-heading">Content</h3>
+            <p>
+              This mixin allows extra content to be passed (through the
+              <code>@content</code> directive).
+            </p>
+            <h3 class="item__sub-heading">Example</h3>
+            <div class="item__example example">
+              <div class="example__description"><p>Input (SCSS)</p></div>
+              <pre class="example__code language-scss"><code>$breakpoints: (
   medium: (min-width: 800px),
   large: (min-width: 1000px),
 );
 
 @include respond-to(medium) {
   /* media query specific CSS rules */
-}</code></pre></div><div class="item__example example"><div class="example__description"><p>Output (CSS)</p></div><pre class="example__code language-css"><code>@media only screen and (min-width: 800px) {
+}</code></pre>
+            </div>
+            <div class="item__example example">
+              <div class="example__description"><p>Output (CSS)</p></div>
+              <pre
+                class="example__code language-css"
+              ><code>@media only screen and (min-width: 800px) {
   /* media query specific CSS rules */
-}</code></pre></div><h3 class="item__sub-heading">Throws</h3><ul class="list-unstyled"><li><p>No value found for <code>#{$breakpoint}</code>.</p></li></ul><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#layout-variable-breakpoints"><code>breakpoints</code></a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Hugo Giraudel</p></li></ul></section></section><section class="main__sub-section" id="layout-function"><h2 class="main__heading--secondary"><div class="container">functions</div></h2><section class="main__item container item" id="layout-function-layer"><h3 class="item__heading"><a class="item__name" href="#function-layer">layer</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@function layer($layer) { 
+}</code></pre>
+            </div>
+            <h3 class="item__sub-heading">Throws</h3>
+            <ul class="list-unstyled">
+              <li>
+                <p>No value found for <code>#{$breakpoint}</code>.</p>
+              </li>
+            </ul>
+            <h3 class="item__sub-heading">Requires</h3>
+            <ul class="list-unstyled">
+              <li class="item__description item__description--inline">
+                <span class="item__cross-type">[variable]</span>
+                <a href="#layout-variable-breakpoints"
+                  ><code>breakpoints</code></a
+                >
+              </li>
+            </ul>
+            <h3 class="item__sub-heading">Author</h3>
+            <ul class="list-unstyled">
+              <li><p>Hugo Giraudel</p></li>
+            </ul>
+          </section>
+        </section>
+        <section class="main__sub-section" id="layout-function">
+          <h2 class="main__heading--secondary">
+            <div class="container">functions</div>
+          </h2>
+          <section class="main__item container item" id="layout-function-layer">
+            <h3 class="item__heading">
+              <a class="item__name" href="#function-layer">layer</a>
+            </h3>
+            <div class="item__code-wrapper">
+              <pre
+                class="item__code item__code--togglable language-scss"
+                data-current-state="collapsed"
+                data-expanded="@function layer($layer) { 
   @if (map-has-key($layers, $layer)) {
     @return #{map-get($layers, $layer)};
   } @else {
     @error &quot;No value found for `#{$layer}`. &quot;
          + &quot;Please make sure it is defined in `$layers` map.&quot;;
   }
- }" data-collapsed="@function layer($layer) { ... }"><code>@function layer($layer) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Return the z-index value of a named layer</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$layer</code></th><td data-label="desc"><p>Named layer from <code>$layers</code> map</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr></tbody></table><h3 class="item__sub-heading">Returns</h3><div class="item__description item__description--inline"><code>Number</code></div><h3 class="item__sub-heading">Throws</h3><ul class="list-unstyled"><li><p>No value found for <code>#{$layer}</code>.</p></li></ul><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#layout-variable-layers"><code>layers</code></a></li></ul></section></section></section><section class="main__section"><h1 class="main__heading" id="sizes"><div class="container">sizes</div></h1><section class="main__sub-section" id="sizes-variable"><h2 class="main__heading--secondary"><div class="container">variables</div></h2><section class="main__item container item" id="sizes-variable-scaling-factors"><h3 class="item__heading"><a class="item__name" href="#variable-scaling-factors">scaling-factors</a></h3><div class="item__code-wrapper"><pre class="item__code language-scss"><code>$scaling-factors: (
+ }"
+                data-collapsed="@function layer($layer) { ... }"
+              ><code>@function layer($layer) { ... }</code></pre>
+            </div>
+            <h3 class="item__sub-heading">Description</h3>
+            <div class="item__description">
+              <p>Return the z-index value of a named layer</p>
+            </div>
+            <h3 class="item__sub-heading">Parameters</h3>
+            <table class="item__parameters">
+              <thead>
+                <tr>
+                  <th scope="col">
+                    <span class="visually-hidden">parameter </span>Name
+                  </th>
+                  <th scope="col">
+                    <span class="visually-hidden">parameter </span>Description
+                  </th>
+                  <th scope="col">
+                    <span class="visually-hidden">parameter </span>Type
+                  </th>
+                  <th scope="col">
+                    <span class="visually-hidden">parameter </span>Default value
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="item__parameter">
+                  <th scope="row" data-label="name"><code>$layer</code></th>
+                  <td data-label="desc">
+                    <p>Named layer from <code>$layers</code> map</p>
+                  </td>
+                  <td data-label="type"><code>String</code></td>
+                  <td data-label="default">
+                    &mdash;<span class="visually-hidden"> none</span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <h3 class="item__sub-heading">Returns</h3>
+            <div class="item__description item__description--inline">
+              <code>Number</code>
+            </div>
+            <h3 class="item__sub-heading">Throws</h3>
+            <ul class="list-unstyled">
+              <li>
+                <p>No value found for <code>#{$layer}</code>.</p>
+              </li>
+            </ul>
+            <h3 class="item__sub-heading">Requires</h3>
+            <ul class="list-unstyled">
+              <li class="item__description item__description--inline">
+                <span class="item__cross-type">[variable]</span>
+                <a href="#layout-variable-layers"><code>layers</code></a>
+              </li>
+            </ul>
+          </section>
+        </section>
+      </section>
+      <section class="main__section">
+        <h1 class="main__heading" id="sizes">
+          <div class="container">sizes</div>
+        </h1>
+        <section class="main__sub-section" id="sizes-variable">
+          <h2 class="main__heading--secondary">
+            <div class="container">variables</div>
+          </h2>
+          <section
+            class="main__item container item"
+            id="sizes-variable-scaling-factors"
+          >
+            <h3 class="item__heading">
+              <a class="item__name" href="#variable-scaling-factors"
+                >scaling-factors</a
+              >
+            </h3>
+            <div class="item__code-wrapper">
+              <pre class="item__code language-scss"><code>$scaling-factors: (
   bigger: 1.25,
   smaller: 0.8
-);</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Scaling factors</p></div><h3 class="item__sub-heading">Type</h3><p><code>Map</code></p><h3 class="item__sub-heading">Map structure</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">Map key </span>Name</th><th scope="col"><span class="visually-hidden">Map key </span>Description</th><th scope="col"><span class="visually-hidden">Map key </span>Type</th><th scope="col"><span class="visually-hidden">Map key </span>Value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>bigger</code></th><td data-label="desc"><p>Scale up</p></td><td data-label="type"><code>Number</code></td><td data-label="default"><code>1.25</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>smaller</code></th><td data-label="desc"><p>Scale down</p></td><td data-label="type"><code>Number</code></td><td data-label="default"><code>0.8</code></td></tr></tbody></table></section><section class="main__item container item" id="sizes-variable-sizes"><h3 class="item__heading"><a class="item__name" href="#variable-sizes">sizes</a></h3><div class="item__code-wrapper"><pre class="item__code language-scss"><code>$sizes: (
+);</code></pre>
+            </div>
+            <h3 class="item__sub-heading">Description</h3>
+            <div class="item__description"><p>Scaling factors</p></div>
+            <h3 class="item__sub-heading">Type</h3>
+            <p><code>Map</code></p>
+            <h3 class="item__sub-heading">Map structure</h3>
+            <table class="item__parameters">
+              <thead>
+                <tr>
+                  <th scope="col">
+                    <span class="visually-hidden">Map key </span>Name
+                  </th>
+                  <th scope="col">
+                    <span class="visually-hidden">Map key </span>Description
+                  </th>
+                  <th scope="col">
+                    <span class="visually-hidden">Map key </span>Type
+                  </th>
+                  <th scope="col">
+                    <span class="visually-hidden">Map key </span>Value
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="item__parameter">
+                  <th scope="row" data-label="name"><code>bigger</code></th>
+                  <td data-label="desc"><p>Scale up</p></td>
+                  <td data-label="type"><code>Number</code></td>
+                  <td data-label="default"><code>1.25</code></td>
+                </tr>
+                <tr class="item__parameter">
+                  <th scope="row" data-label="name"><code>smaller</code></th>
+                  <td data-label="desc"><p>Scale down</p></td>
+                  <td data-label="type"><code>Number</code></td>
+                  <td data-label="default"><code>0.8</code></td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+          <section class="main__item container item" id="sizes-variable-sizes">
+            <h3 class="item__heading">
+              <a class="item__name" href="#variable-sizes">sizes</a>
+            </h3>
+            <div class="item__code-wrapper">
+              <pre class="item__code language-scss"><code>$sizes: (
   column-width: 48px,
   inner-gutter-width: 24px,
   outer-gutter-width: 24px,
@@ -194,10 +1696,290 @@
   header-height: 48px,
   navigation-toggle-width: 24px,
   off-canvas-menu-width: 320px
-);</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Basic sizes in px, with reference to the non-scaled versions of the layout</p></div><h3 class="item__sub-heading">Type</h3><p><code>Map</code></p><h3 class="item__sub-heading">Map structure</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">Map key </span>Name</th><th scope="col"><span class="visually-hidden">Map key </span>Description</th><th scope="col"><span class="visually-hidden">Map key </span>Type</th><th scope="col"><span class="visually-hidden">Map key </span>Value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>column-width</code></th><td data-label="desc"><p>Width (in px) of one column of the 12-column layout grid</p></td><td data-label="type"><code>Number</code></td><td data-label="default"><code>48px</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>inner-gutter-width</code></th><td data-label="desc"><p>Width (in px) of the gutter between columns of the 12-column layout grid</p></td><td data-label="type"><code>Number</code></td><td data-label="default"><code>24px</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>outer-gutter-width</code></th><td data-label="desc"><p>Width (in px) of the gutter to the left and to the right of the 12-column layout grid (= horizontal page margins)</p></td><td data-label="type"><code>Number</code></td><td data-label="default"><code>24px</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>base-font-size</code></th><td data-label="desc"><p>Font size (in px) for basic copy text</p></td><td data-label="type"><code>Number</code></td><td data-label="default"><code>16px</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>base-line-height</code></th><td data-label="desc"><p>Line height (in px) for basic copy text</p></td><td data-label="type"><code>Number</code></td><td data-label="default"><code>24px</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>base-margin</code></th><td data-label="desc"><p>Top and bottom margin (in px) for basic copy text paragraphs</p></td><td data-label="type"><code>Number</code></td><td data-label="default"><code>24px</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>base-indent</code></th><td data-label="desc"><p>Indent (in px) for basic lists and blockquotes</p></td><td data-label="type"><code>Number</code></td><td data-label="default"><code>35px</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>site-logo-width</code></th><td data-label="desc"><p>Original width (in px) of the website’s logo (used for aspect ratio calculation)</p></td><td data-label="type"><code>Number</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>site-logo-height</code></th><td data-label="desc"><p>Original height (in px) of the website’s logo (used for aspect ratio calculation)</p></td><td data-label="type"><code>Number</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>header-height</code></th><td data-label="desc"><p>Height (in px) of the fixed header bar</p></td><td data-label="type"><code>Number</code></td><td data-label="default"><code>48px</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>navigation-toggle-width</code></th><td data-label="desc"><p>Width (in px) of the hamburger icon to slide out the main navigation menu</p></td><td data-label="type"><code>Number</code></td><td data-label="default"><code>24px</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>off-canvas-menu-width</code></th><td data-label="desc"><p>Width (in px) of the off-canvas-menu, used to display the main navigation on smaller screen sizes</p></td><td data-label="type"><code>Number</code></td><td data-label="default"><code>320px</code></td></tr></tbody></table><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[function]</span> <a href="#helpers-function-px-to-rem"><code>px-to-rem</code></a></li><li><span class="item__cross-type">[variable]</span> <a href="#layout-variable-breakpoints"><code>breakpoints</code></a></li><li><span class="item__cross-type">[function]</span> <a href="#sizes-function-size"><code>size</code></a></li></ul></section><section class="main__item container item" id="sizes-variable-logo-height"><h3 class="item__heading"><a class="item__name" href="#variable-logo-height">logo-height</a></h3><div class="item__code-wrapper"><pre class="item__code language-scss"><code>$logo-height: (size(header-height, rem) - size(base-font-size, rem));</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Logo height (calculated)</p></div><h3 class="item__sub-heading">Type</h3><p><code>Number</code></p></section><section class="main__item container item" id="sizes-variable-logo-width"><h3 class="item__heading"><a class="item__name" href="#variable-logo-width">logo-width</a></h3><div class="item__code-wrapper"><pre class="item__code language-scss"><code>$logo-width: ((size(site-logo-width, px) / size(site-logo-height, px)) * 1em);</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Logo width (calculated)</p></div><h3 class="item__sub-heading">Type</h3><p><code>Number</code></p></section><section class="main__item container item" id="sizes-variable-logo-max-width"><h3 class="item__heading"><a class="item__name" href="#variable-logo-max-width">logo-max-width</a></h3><div class="item__code-wrapper"><pre class="item__code language-scss"><code>$logo-max-width: (
+);</code></pre>
+            </div>
+            <h3 class="item__sub-heading">Description</h3>
+            <div class="item__description">
+              <p>
+                Basic sizes in px, with reference to the non-scaled versions of
+                the layout
+              </p>
+            </div>
+            <h3 class="item__sub-heading">Type</h3>
+            <p><code>Map</code></p>
+            <h3 class="item__sub-heading">Map structure</h3>
+            <table class="item__parameters">
+              <thead>
+                <tr>
+                  <th scope="col">
+                    <span class="visually-hidden">Map key </span>Name
+                  </th>
+                  <th scope="col">
+                    <span class="visually-hidden">Map key </span>Description
+                  </th>
+                  <th scope="col">
+                    <span class="visually-hidden">Map key </span>Type
+                  </th>
+                  <th scope="col">
+                    <span class="visually-hidden">Map key </span>Value
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="item__parameter">
+                  <th scope="row" data-label="name">
+                    <code>column-width</code>
+                  </th>
+                  <td data-label="desc">
+                    <p>
+                      Width (in px) of one column of the 12-column layout grid
+                    </p>
+                  </td>
+                  <td data-label="type"><code>Number</code></td>
+                  <td data-label="default"><code>48px</code></td>
+                </tr>
+                <tr class="item__parameter">
+                  <th scope="row" data-label="name">
+                    <code>inner-gutter-width</code>
+                  </th>
+                  <td data-label="desc">
+                    <p>
+                      Width (in px) of the gutter between columns of the
+                      12-column layout grid
+                    </p>
+                  </td>
+                  <td data-label="type"><code>Number</code></td>
+                  <td data-label="default"><code>24px</code></td>
+                </tr>
+                <tr class="item__parameter">
+                  <th scope="row" data-label="name">
+                    <code>outer-gutter-width</code>
+                  </th>
+                  <td data-label="desc">
+                    <p>
+                      Width (in px) of the gutter to the left and to the right
+                      of the 12-column layout grid (= horizontal page margins)
+                    </p>
+                  </td>
+                  <td data-label="type"><code>Number</code></td>
+                  <td data-label="default"><code>24px</code></td>
+                </tr>
+                <tr class="item__parameter">
+                  <th scope="row" data-label="name">
+                    <code>base-font-size</code>
+                  </th>
+                  <td data-label="desc">
+                    <p>Font size (in px) for basic copy text</p>
+                  </td>
+                  <td data-label="type"><code>Number</code></td>
+                  <td data-label="default"><code>16px</code></td>
+                </tr>
+                <tr class="item__parameter">
+                  <th scope="row" data-label="name">
+                    <code>base-line-height</code>
+                  </th>
+                  <td data-label="desc">
+                    <p>Line height (in px) for basic copy text</p>
+                  </td>
+                  <td data-label="type"><code>Number</code></td>
+                  <td data-label="default"><code>24px</code></td>
+                </tr>
+                <tr class="item__parameter">
+                  <th scope="row" data-label="name">
+                    <code>base-margin</code>
+                  </th>
+                  <td data-label="desc">
+                    <p>
+                      Top and bottom margin (in px) for basic copy text
+                      paragraphs
+                    </p>
+                  </td>
+                  <td data-label="type"><code>Number</code></td>
+                  <td data-label="default"><code>24px</code></td>
+                </tr>
+                <tr class="item__parameter">
+                  <th scope="row" data-label="name">
+                    <code>base-indent</code>
+                  </th>
+                  <td data-label="desc">
+                    <p>Indent (in px) for basic lists and blockquotes</p>
+                  </td>
+                  <td data-label="type"><code>Number</code></td>
+                  <td data-label="default"><code>35px</code></td>
+                </tr>
+                <tr class="item__parameter">
+                  <th scope="row" data-label="name">
+                    <code>site-logo-width</code>
+                  </th>
+                  <td data-label="desc">
+                    <p>
+                      Original width (in px) of the website’s logo (used for
+                      aspect ratio calculation)
+                    </p>
+                  </td>
+                  <td data-label="type"><code>Number</code></td>
+                  <td data-label="default">
+                    &mdash;<span class="visually-hidden"> none</span>
+                  </td>
+                </tr>
+                <tr class="item__parameter">
+                  <th scope="row" data-label="name">
+                    <code>site-logo-height</code>
+                  </th>
+                  <td data-label="desc">
+                    <p>
+                      Original height (in px) of the website’s logo (used for
+                      aspect ratio calculation)
+                    </p>
+                  </td>
+                  <td data-label="type"><code>Number</code></td>
+                  <td data-label="default">
+                    &mdash;<span class="visually-hidden"> none</span>
+                  </td>
+                </tr>
+                <tr class="item__parameter">
+                  <th scope="row" data-label="name">
+                    <code>header-height</code>
+                  </th>
+                  <td data-label="desc">
+                    <p>Height (in px) of the fixed header bar</p>
+                  </td>
+                  <td data-label="type"><code>Number</code></td>
+                  <td data-label="default"><code>48px</code></td>
+                </tr>
+                <tr class="item__parameter">
+                  <th scope="row" data-label="name">
+                    <code>navigation-toggle-width</code>
+                  </th>
+                  <td data-label="desc">
+                    <p>
+                      Width (in px) of the hamburger icon to slide out the main
+                      navigation menu
+                    </p>
+                  </td>
+                  <td data-label="type"><code>Number</code></td>
+                  <td data-label="default"><code>24px</code></td>
+                </tr>
+                <tr class="item__parameter">
+                  <th scope="row" data-label="name">
+                    <code>off-canvas-menu-width</code>
+                  </th>
+                  <td data-label="desc">
+                    <p>
+                      Width (in px) of the off-canvas-menu, used to display the
+                      main navigation on smaller screen sizes
+                    </p>
+                  </td>
+                  <td data-label="type"><code>Number</code></td>
+                  <td data-label="default"><code>320px</code></td>
+                </tr>
+              </tbody>
+            </table>
+            <h3 class="item__sub-heading">Used by</h3>
+            <ul class="list-unstyled">
+              <li>
+                <span class="item__cross-type">[function]</span>
+                <a href="#helpers-function-px-to-rem"><code>px-to-rem</code></a>
+              </li>
+              <li>
+                <span class="item__cross-type">[variable]</span>
+                <a href="#layout-variable-breakpoints"
+                  ><code>breakpoints</code></a
+                >
+              </li>
+              <li>
+                <span class="item__cross-type">[function]</span>
+                <a href="#sizes-function-size"><code>size</code></a>
+              </li>
+            </ul>
+          </section>
+          <section
+            class="main__item container item"
+            id="sizes-variable-logo-height"
+          >
+            <h3 class="item__heading">
+              <a class="item__name" href="#variable-logo-height">logo-height</a>
+            </h3>
+            <div class="item__code-wrapper">
+              <pre
+                class="item__code language-scss"
+              ><code>$logo-height: (size(header-height, rem) - size(base-font-size, rem));</code></pre>
+            </div>
+            <h3 class="item__sub-heading">Description</h3>
+            <div class="item__description"><p>Logo height (calculated)</p></div>
+            <h3 class="item__sub-heading">Type</h3>
+            <p><code>Number</code></p>
+          </section>
+          <section
+            class="main__item container item"
+            id="sizes-variable-logo-width"
+          >
+            <h3 class="item__heading">
+              <a class="item__name" href="#variable-logo-width">logo-width</a>
+            </h3>
+            <div class="item__code-wrapper">
+              <pre
+                class="item__code language-scss"
+              ><code>$logo-width: ((size(site-logo-width, px) / size(site-logo-height, px)) * 1em);</code></pre>
+            </div>
+            <h3 class="item__sub-heading">Description</h3>
+            <div class="item__description"><p>Logo width (calculated)</p></div>
+            <h3 class="item__sub-heading">Type</h3>
+            <p><code>Number</code></p>
+          </section>
+          <section
+            class="main__item container item"
+            id="sizes-variable-logo-max-width"
+          >
+            <h3 class="item__heading">
+              <a class="item__name" href="#variable-logo-max-width"
+                >logo-max-width</a
+              >
+            </h3>
+            <div class="item__code-wrapper">
+              <pre class="item__code language-scss"><code>$logo-max-width: (
   360px - (size(inner-gutter-width, px) + (size(outer-gutter-width, px) * 2)) -
     size(navigation-toggle-width, px)
-);</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Logo max. width (calculated)</p></div><h3 class="item__sub-heading">Type</h3><p><code>Number</code></p></section><section class="main__item container item" id="sizes-variable-logo-margin"><h3 class="item__heading"><a class="item__name" href="#variable-logo-margin">logo-margin</a></h3><div class="item__code-wrapper"><pre class="item__code language-scss"><code>$logo-margin: ((size(header-height, rem) - $logo-height) / 2);</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Logo margin (calculated)</p></div><h3 class="item__sub-heading">Type</h3><p><code>Number</code></p></section></section><section class="main__sub-section" id="sizes-function"><h2 class="main__heading--secondary"><div class="container">functions</div></h2><section class="main__item container item" id="sizes-function-size"><h3 class="item__heading"><a class="item__name" href="#function-size">size</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@function size($size, $unit: px) { 
+);</code></pre>
+            </div>
+            <h3 class="item__sub-heading">Description</h3>
+            <div class="item__description">
+              <p>Logo max. width (calculated)</p>
+            </div>
+            <h3 class="item__sub-heading">Type</h3>
+            <p><code>Number</code></p>
+          </section>
+          <section
+            class="main__item container item"
+            id="sizes-variable-logo-margin"
+          >
+            <h3 class="item__heading">
+              <a class="item__name" href="#variable-logo-margin">logo-margin</a>
+            </h3>
+            <div class="item__code-wrapper">
+              <pre
+                class="item__code language-scss"
+              ><code>$logo-margin: ((size(header-height, rem) - $logo-height) / 2);</code></pre>
+            </div>
+            <h3 class="item__sub-heading">Description</h3>
+            <div class="item__description"><p>Logo margin (calculated)</p></div>
+            <h3 class="item__sub-heading">Type</h3>
+            <p><code>Number</code></p>
+          </section>
+        </section>
+        <section class="main__sub-section" id="sizes-function">
+          <h2 class="main__heading--secondary">
+            <div class="container">functions</div>
+          </h2>
+          <section class="main__item container item" id="sizes-function-size">
+            <h3 class="item__heading">
+              <a class="item__name" href="#function-size">size</a>
+            </h3>
+            <div class="item__code-wrapper">
+              <pre
+                class="item__code item__code--togglable language-scss"
+                data-current-state="collapsed"
+                data-expanded="@function size($size, $unit: px) { 
   @if ($unit == px or $unit == rem) {
     @if (map-has-key($sizes, $size)) {
       @if ($unit == rem) {
@@ -214,23 +1996,435 @@
   } @else {
     @error &quot;`size()` only accepts px and rem as unit.&quot;;
   }
- }" data-collapsed="@function size($size, $unit: px) { ... }"><code>@function size($size, $unit: px) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Return the value of a named basic size as px or rem</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$size</code></th><td data-label="desc"><p>Size name from $sizes map</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$unit</code></th><td data-label="desc"><p>Unit, only accepts px and rem</p></td><td data-label="type"><code>String</code></td><td data-label="default"><code>px</code></td></tr></tbody></table><h3 class="item__sub-heading">Returns</h3><div class="item__description item__description--inline"><code>Number</code></div><h3 class="item__sub-heading">Throws</h3><ul class="list-unstyled"><li><p>No value found for <code>#{$size}</code>.</p></li><li><p><code>size()</code> only accepts px and rem as unit.</p></li></ul><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#sizes-variable-sizes"><code>sizes</code></a></li></ul><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[variable]</span> <a href="#layout-variable-breakpoints"><code>breakpoints</code></a></li></ul></section></section></section><section class="main__section"><h1 class="main__heading" id="transitions"><div class="container">transitions</div></h1><section class="main__sub-section" id="transitions-variable"><h2 class="main__heading--secondary"><div class="container">variables</div></h2><section class="main__item container item" id="transitions-variable-transitions"><h3 class="item__heading"><a class="item__name" href="#variable-transitions">transitions</a></h3><div class="item__code-wrapper"><pre class="item__code language-scss"><code>$transitions: (
+ }"
+                data-collapsed="@function size($size, $unit: px) { ... }"
+              ><code>@function size($size, $unit: px) { ... }</code></pre>
+            </div>
+            <h3 class="item__sub-heading">Description</h3>
+            <div class="item__description">
+              <p>Return the value of a named basic size as px or rem</p>
+            </div>
+            <h3 class="item__sub-heading">Parameters</h3>
+            <table class="item__parameters">
+              <thead>
+                <tr>
+                  <th scope="col">
+                    <span class="visually-hidden">parameter </span>Name
+                  </th>
+                  <th scope="col">
+                    <span class="visually-hidden">parameter </span>Description
+                  </th>
+                  <th scope="col">
+                    <span class="visually-hidden">parameter </span>Type
+                  </th>
+                  <th scope="col">
+                    <span class="visually-hidden">parameter </span>Default value
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="item__parameter">
+                  <th scope="row" data-label="name"><code>$size</code></th>
+                  <td data-label="desc"><p>Size name from $sizes map</p></td>
+                  <td data-label="type"><code>String</code></td>
+                  <td data-label="default">
+                    &mdash;<span class="visually-hidden"> none</span>
+                  </td>
+                </tr>
+                <tr class="item__parameter">
+                  <th scope="row" data-label="name"><code>$unit</code></th>
+                  <td data-label="desc">
+                    <p>Unit, only accepts px and rem</p>
+                  </td>
+                  <td data-label="type"><code>String</code></td>
+                  <td data-label="default"><code>px</code></td>
+                </tr>
+              </tbody>
+            </table>
+            <h3 class="item__sub-heading">Returns</h3>
+            <div class="item__description item__description--inline">
+              <code>Number</code>
+            </div>
+            <h3 class="item__sub-heading">Throws</h3>
+            <ul class="list-unstyled">
+              <li>
+                <p>No value found for <code>#{$size}</code>.</p>
+              </li>
+              <li>
+                <p><code>size()</code> only accepts px and rem as unit.</p>
+              </li>
+            </ul>
+            <h3 class="item__sub-heading">Requires</h3>
+            <ul class="list-unstyled">
+              <li class="item__description item__description--inline">
+                <span class="item__cross-type">[variable]</span>
+                <a href="#sizes-variable-sizes"><code>sizes</code></a>
+              </li>
+            </ul>
+            <h3 class="item__sub-heading">Used by</h3>
+            <ul class="list-unstyled">
+              <li>
+                <span class="item__cross-type">[variable]</span>
+                <a href="#layout-variable-breakpoints"
+                  ><code>breakpoints</code></a
+                >
+              </li>
+            </ul>
+          </section>
+        </section>
+      </section>
+      <section class="main__section">
+        <h1 class="main__heading" id="transitions">
+          <div class="container">transitions</div>
+        </h1>
+        <section class="main__sub-section" id="transitions-variable">
+          <h2 class="main__heading--secondary">
+            <div class="container">variables</div>
+          </h2>
+          <section
+            class="main__item container item"
+            id="transitions-variable-transitions"
+          >
+            <h3 class="item__heading">
+              <a class="item__name" href="#variable-transitions">transitions</a>
+            </h3>
+            <div class="item__code-wrapper">
+              <pre class="item__code language-scss"><code>$transitions: (
   default: &quot;0.2s ease-out&quot;
-);</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Pre-defined transition parameter combinations</p></div><h3 class="item__sub-heading">Type</h3><p><code>Map</code></p><h3 class="item__sub-heading">Map structure</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">Map key </span>Name</th><th scope="col"><span class="visually-hidden">Map key </span>Description</th><th scope="col"><span class="visually-hidden">Map key </span>Type</th><th scope="col"><span class="visually-hidden">Map key </span>Value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>default</code></th><td data-label="desc"><p>Default transition duration and timing function</p></td><td data-label="type"><code>String</code></td><td data-label="default"><code>0.2s ease-out</code></td></tr></tbody></table><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[function]</span> <a href="#transitions-function-transition"><code>transition</code></a></li></ul></section></section><section class="main__sub-section" id="transitions-function"><h2 class="main__heading--secondary"><div class="container">functions</div></h2><section class="main__item container item" id="transitions-function-transition"><h3 class="item__heading"><a class="item__name" href="#function-transition">transition</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@function transition($property: all, $transition: default) { 
+);</code></pre>
+            </div>
+            <h3 class="item__sub-heading">Description</h3>
+            <div class="item__description">
+              <p>Pre-defined transition parameter combinations</p>
+            </div>
+            <h3 class="item__sub-heading">Type</h3>
+            <p><code>Map</code></p>
+            <h3 class="item__sub-heading">Map structure</h3>
+            <table class="item__parameters">
+              <thead>
+                <tr>
+                  <th scope="col">
+                    <span class="visually-hidden">Map key </span>Name
+                  </th>
+                  <th scope="col">
+                    <span class="visually-hidden">Map key </span>Description
+                  </th>
+                  <th scope="col">
+                    <span class="visually-hidden">Map key </span>Type
+                  </th>
+                  <th scope="col">
+                    <span class="visually-hidden">Map key </span>Value
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="item__parameter">
+                  <th scope="row" data-label="name"><code>default</code></th>
+                  <td data-label="desc">
+                    <p>Default transition duration and timing function</p>
+                  </td>
+                  <td data-label="type"><code>String</code></td>
+                  <td data-label="default"><code>0.2s ease-out</code></td>
+                </tr>
+              </tbody>
+            </table>
+            <h3 class="item__sub-heading">Used by</h3>
+            <ul class="list-unstyled">
+              <li>
+                <span class="item__cross-type">[function]</span>
+                <a href="#transitions-function-transition"
+                  ><code>transition</code></a
+                >
+              </li>
+            </ul>
+          </section>
+        </section>
+        <section class="main__sub-section" id="transitions-function">
+          <h2 class="main__heading--secondary">
+            <div class="container">functions</div>
+          </h2>
+          <section
+            class="main__item container item"
+            id="transitions-function-transition"
+          >
+            <h3 class="item__heading">
+              <a class="item__name" href="#function-transition">transition</a>
+            </h3>
+            <div class="item__code-wrapper">
+              <pre
+                class="item__code item__code--togglable language-scss"
+                data-current-state="collapsed"
+                data-expanded="@function transition($property: all, $transition: default) { 
   @if (map-has-key($transitions, $transition)) {
     @return #{$property} #{map-get($transitions, $transition)};
   } @else {
     @error &quot;No value found for `#{$transition}`. &quot;
          + &quot;Please make sure it is defined in `$transitions` map.&quot;;
   }
- }" data-collapsed="@function transition($property: all, $transition: default) { ... }"><code>@function transition($property: all, $transition: default) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Return the value of a named transition parameter combination for a given property</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$property</code></th><td data-label="desc"><p>Property parameter for the CSS transition rule</p></td><td data-label="type"><code>String</code></td><td data-label="default"><code>all</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$transition</code></th><td data-label="desc"><p>Named parameter combination from the <code>$transitions</code> map</p></td><td data-label="type"><code>String</code></td><td data-label="default"><code>default</code></td></tr></tbody></table><h3 class="item__sub-heading">Returns</h3><div class="item__description item__description--inline"><code>String</code></div><h3 class="item__sub-heading">Throws</h3><ul class="list-unstyled"><li><p>No value found for <code>#{$transition}</code>.</p></li></ul><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#transitions-variable-transitions"><code>transitions</code></a></li></ul></section></section></section><section class="main__section"><h1 class="main__heading" id="typography"><div class="container">typography</div></h1><section class="main__sub-section" id="typography-variable"><h2 class="main__heading--secondary"><div class="container">variables</div></h2><section class="main__item container item" id="typography-variable-font-stacks"><h3 class="item__heading"><a class="item__name" href="#variable-font-stacks">font-stacks</a></h3><div class="item__code-wrapper"><pre class="item__code language-scss"><code>$font-stacks: (
+ }"
+                data-collapsed="@function transition($property: all, $transition: default) { ... }"
+              ><code>@function transition($property: all, $transition: default) { ... }</code></pre>
+            </div>
+            <h3 class="item__sub-heading">Description</h3>
+            <div class="item__description">
+              <p>
+                Return the value of a named transition parameter combination for
+                a given property
+              </p>
+            </div>
+            <h3 class="item__sub-heading">Parameters</h3>
+            <table class="item__parameters">
+              <thead>
+                <tr>
+                  <th scope="col">
+                    <span class="visually-hidden">parameter </span>Name
+                  </th>
+                  <th scope="col">
+                    <span class="visually-hidden">parameter </span>Description
+                  </th>
+                  <th scope="col">
+                    <span class="visually-hidden">parameter </span>Type
+                  </th>
+                  <th scope="col">
+                    <span class="visually-hidden">parameter </span>Default value
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="item__parameter">
+                  <th scope="row" data-label="name"><code>$property</code></th>
+                  <td data-label="desc">
+                    <p>Property parameter for the CSS transition rule</p>
+                  </td>
+                  <td data-label="type"><code>String</code></td>
+                  <td data-label="default"><code>all</code></td>
+                </tr>
+                <tr class="item__parameter">
+                  <th scope="row" data-label="name">
+                    <code>$transition</code>
+                  </th>
+                  <td data-label="desc">
+                    <p>
+                      Named parameter combination from the
+                      <code>$transitions</code> map
+                    </p>
+                  </td>
+                  <td data-label="type"><code>String</code></td>
+                  <td data-label="default"><code>default</code></td>
+                </tr>
+              </tbody>
+            </table>
+            <h3 class="item__sub-heading">Returns</h3>
+            <div class="item__description item__description--inline">
+              <code>String</code>
+            </div>
+            <h3 class="item__sub-heading">Throws</h3>
+            <ul class="list-unstyled">
+              <li>
+                <p>No value found for <code>#{$transition}</code>.</p>
+              </li>
+            </ul>
+            <h3 class="item__sub-heading">Requires</h3>
+            <ul class="list-unstyled">
+              <li class="item__description item__description--inline">
+                <span class="item__cross-type">[variable]</span>
+                <a href="#transitions-variable-transitions"
+                  ><code>transitions</code></a
+                >
+              </li>
+            </ul>
+          </section>
+        </section>
+      </section>
+      <section class="main__section">
+        <h1 class="main__heading" id="typography">
+          <div class="container">typography</div>
+        </h1>
+        <section class="main__sub-section" id="typography-variable">
+          <h2 class="main__heading--secondary">
+            <div class="container">variables</div>
+          </h2>
+          <section
+            class="main__item container item"
+            id="typography-variable-font-stacks"
+          >
+            <h3 class="item__heading">
+              <a class="item__name" href="#variable-font-stacks">font-stacks</a>
+            </h3>
+            <div class="item__code-wrapper">
+              <pre class="item__code language-scss"><code>$font-stacks: (
   text: &quot;Arial, Helvetica, sans-serif&quot;,
   code: &quot;&#39;Lucida Console&#39;, &#39;Courier New&#39;, Courier, monospace&quot;
-);</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Basic sizes in px, with reference to the non-scaled versions of the layout</p></div><h3 class="item__sub-heading">Type</h3><p><code>Map</code></p><h3 class="item__sub-heading">Map structure</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">Map key </span>Name</th><th scope="col"><span class="visually-hidden">Map key </span>Description</th><th scope="col"><span class="visually-hidden">Map key </span>Type</th><th scope="col"><span class="visually-hidden">Map key </span>Value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>text</code></th><td data-label="desc"><p>Font stack for copy text</p></td><td data-label="type"><code>String</code></td><td data-label="default"><code>Arial, Helvetica, sans-serif</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>code</code></th><td data-label="desc"><p>Font stack for code sections</p></td><td data-label="type"><code>String</code></td><td data-label="default"><code>&#39;Lucida Console&#39;, &#39;Courier New&#39;, &#39;Courier&#39;, monospace</code></td></tr></tbody></table><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[function]</span> <a href="#typography-function-font-stack"><code>font-stack</code></a></li></ul></section></section><section class="main__sub-section" id="typography-function"><h2 class="main__heading--secondary"><div class="container">functions</div></h2><section class="main__item container item" id="typography-function-font-stack"><h3 class="item__heading"><a class="item__name" href="#function-font-stack">font-stack</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@function font-stack($font-stack) { 
+);</code></pre>
+            </div>
+            <h3 class="item__sub-heading">Description</h3>
+            <div class="item__description">
+              <p>
+                Basic sizes in px, with reference to the non-scaled versions of
+                the layout
+              </p>
+            </div>
+            <h3 class="item__sub-heading">Type</h3>
+            <p><code>Map</code></p>
+            <h3 class="item__sub-heading">Map structure</h3>
+            <table class="item__parameters">
+              <thead>
+                <tr>
+                  <th scope="col">
+                    <span class="visually-hidden">Map key </span>Name
+                  </th>
+                  <th scope="col">
+                    <span class="visually-hidden">Map key </span>Description
+                  </th>
+                  <th scope="col">
+                    <span class="visually-hidden">Map key </span>Type
+                  </th>
+                  <th scope="col">
+                    <span class="visually-hidden">Map key </span>Value
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="item__parameter">
+                  <th scope="row" data-label="name"><code>text</code></th>
+                  <td data-label="desc"><p>Font stack for copy text</p></td>
+                  <td data-label="type"><code>String</code></td>
+                  <td data-label="default">
+                    <code>Arial, Helvetica, sans-serif</code>
+                  </td>
+                </tr>
+                <tr class="item__parameter">
+                  <th scope="row" data-label="name"><code>code</code></th>
+                  <td data-label="desc"><p>Font stack for code sections</p></td>
+                  <td data-label="type"><code>String</code></td>
+                  <td data-label="default">
+                    <code
+                      >&#39;Lucida Console&#39;, &#39;Courier New&#39;,
+                      &#39;Courier&#39;, monospace</code
+                    >
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <h3 class="item__sub-heading">Used by</h3>
+            <ul class="list-unstyled">
+              <li>
+                <span class="item__cross-type">[function]</span>
+                <a href="#typography-function-font-stack"
+                  ><code>font-stack</code></a
+                >
+              </li>
+            </ul>
+          </section>
+        </section>
+        <section class="main__sub-section" id="typography-function">
+          <h2 class="main__heading--secondary">
+            <div class="container">functions</div>
+          </h2>
+          <section
+            class="main__item container item"
+            id="typography-function-font-stack"
+          >
+            <h3 class="item__heading">
+              <a class="item__name" href="#function-font-stack">font-stack</a>
+            </h3>
+            <div class="item__code-wrapper">
+              <pre
+                class="item__code item__code--togglable language-scss"
+                data-current-state="collapsed"
+                data-expanded="@function font-stack($font-stack) { 
   @if (map-has-key($font-stacks, $font-stack)) {
     @return #{map-get($font-stacks, $font-stack)};
   } @else {
     @error &quot;No value found for `#{$font-stack}`. &quot;
          + &quot;Please make sure it is defined in `$font-stacks` map.&quot;;
   }
- }" data-collapsed="@function font-stack($font-stack) { ... }"><code>@function font-stack($font-stack) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Return the value of a named font stack as unquoted string</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$font-stack</code></th><td data-label="desc"><p>Named font stack from <code>$font-stacks</code> map</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr></tbody></table><h3 class="item__sub-heading">Returns</h3><div class="item__description item__description--inline"><code>String</code></div><h3 class="item__sub-heading">Throws</h3><ul class="list-unstyled"><li><p>No value found for <code>#{$font-stack}</code>.</p></li></ul><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#typography-variable-font-stacks"><code>font-stacks</code></a></li></ul></section></section></section><footer class="footer" role="contentinfo"><div class="container"><div class="footer__project-info project-info"><!-- Name and URL --> <span class="project-info__name">Website-template-starting-point</span><!-- Version --> <span class="project-info__version">- v4.1.2</span><!-- License --> <span class="project-info__license">, under MIT</span></div><a class="footer__watermark" href="http://sassdoc.com"><img src="assets/images/logo_light_inline.svg" alt="SassDoc Logo"></a></div></footer></article><script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script><script>window.jQuery || document.write('<script src="assets/js/vendor/jquery.min.js"><\/script>')</script><script src="assets/js/main.min.js"></script></body></html>
+ }"
+                data-collapsed="@function font-stack($font-stack) { ... }"
+              ><code>@function font-stack($font-stack) { ... }</code></pre>
+            </div>
+            <h3 class="item__sub-heading">Description</h3>
+            <div class="item__description">
+              <p>Return the value of a named font stack as unquoted string</p>
+            </div>
+            <h3 class="item__sub-heading">Parameters</h3>
+            <table class="item__parameters">
+              <thead>
+                <tr>
+                  <th scope="col">
+                    <span class="visually-hidden">parameter </span>Name
+                  </th>
+                  <th scope="col">
+                    <span class="visually-hidden">parameter </span>Description
+                  </th>
+                  <th scope="col">
+                    <span class="visually-hidden">parameter </span>Type
+                  </th>
+                  <th scope="col">
+                    <span class="visually-hidden">parameter </span>Default value
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="item__parameter">
+                  <th scope="row" data-label="name">
+                    <code>$font-stack</code>
+                  </th>
+                  <td data-label="desc">
+                    <p>Named font stack from <code>$font-stacks</code> map</p>
+                  </td>
+                  <td data-label="type"><code>String</code></td>
+                  <td data-label="default">
+                    &mdash;<span class="visually-hidden"> none</span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <h3 class="item__sub-heading">Returns</h3>
+            <div class="item__description item__description--inline">
+              <code>String</code>
+            </div>
+            <h3 class="item__sub-heading">Throws</h3>
+            <ul class="list-unstyled">
+              <li>
+                <p>No value found for <code>#{$font-stack}</code>.</p>
+              </li>
+            </ul>
+            <h3 class="item__sub-heading">Requires</h3>
+            <ul class="list-unstyled">
+              <li class="item__description item__description--inline">
+                <span class="item__cross-type">[variable]</span>
+                <a href="#typography-variable-font-stacks"
+                  ><code>font-stacks</code></a
+                >
+              </li>
+            </ul>
+          </section>
+        </section>
+      </section>
+      <footer class="footer" role="contentinfo">
+        <div class="container">
+          <div class="footer__project-info project-info">
+            <!-- Name and URL -->
+            <span class="project-info__name"
+              >Website-template-starting-point</span
+            ><!-- Version -->
+            <span class="project-info__version">- v4.1.2</span
+            ><!-- License -->
+            <span class="project-info__license">, under MIT</span>
+          </div>
+          <a class="footer__watermark" href="http://sassdoc.com"
+            ><img src="assets/images/logo_light_inline.svg" alt="SassDoc Logo"
+          /></a>
+        </div>
+      </footer>
+    </article>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script
+    ><script>
+      window.jQuery ||
+        document.write(
+          '<script src="assets/js/vendor/jquery.min.js"><\/script>'
+        );</script
+    ><script src="assets/js/main.min.js"></script>
+  </body>
+</html>

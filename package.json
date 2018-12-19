@@ -90,6 +90,7 @@
     "postlint:styles:fix": "npm run format:styles",
     "format:scripts": "prettier --write 'scripts/source/**/*.js'",
     "format:styles": "prettier --write 'styles/source/**/*.scss'",
+    "format:markup": "prettier --write './**/*.html'",
     "build:scripts:respimage": "browserify scripts/source/respimage.js --plugin tinyify --debug | exorcist scripts/production/respimage-bundle.js.map --base scripts/production/ > scripts/production/respimage-bundle.js",
     "build:scripts:lazysizes": "browserify scripts/source/lazysizes.js --plugin tinyify --debug | exorcist scripts/production/lazysizes-bundle.js.map --base scripts/production/ > scripts/production/lazysizes-bundle.js",
     "build:scripts:main": "browserify scripts/source/main.js --plugin tinyify --debug | exorcist scripts/production/main-bundle.js.map --base scripts/production/ > scripts/production/main-bundle.js",
@@ -99,6 +100,7 @@
     "postbuild:styles:main": "postcss styles/production/main.css --use postcss-flexbugs-fixes autoprefixer --replace true --map",
     "build:styles:sassdoc": "sassdoc styles/source/ --dest styles/sassdoc/",
     "build:styles": "npm-run-all --parallel build:styles:* build:styles:sassdoc",
-    "prebuild:styles": "npm run lint:styles:fix"
+    "prebuild:styles": "npm run lint:styles:fix",
+    "build:markup": "npm run format:markup"
   }
 }
