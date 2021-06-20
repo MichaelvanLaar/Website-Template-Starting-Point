@@ -6,7 +6,7 @@
   "license": "MIT",
   "dependencies": {
     "js-cookie": "^2.2.0",
-    "lazysizes": "^4.0.2",
+    "lazysizes": "^5.2.1",
     "normalize.css": "^8.0.0",
     "respimage": "^1.4.2"
   },
